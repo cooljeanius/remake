@@ -696,9 +696,6 @@
 /* Define to `int' if <sys/types.h> does not define. */
 #undef pid_t
 
-/* Same as program_name expect for _LIBC */
-#undef program_invocation_name
-
 /* The calling program should define program_name and set it to the name of
    the executing program. */
 #undef program_name

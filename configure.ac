@@ -306,8 +306,6 @@ if test "x${make_name}" != "x"; then
   AC_DEFINE_UNQUOTED([program_name],["${make_name}"],[
 The calling program should define program_name and set it to the name
 of the executing program.])
-  AC_DEFINE_UNQUOTED([program_invocation_name],["${make_name}"],[
-Same as program_name expect for _LIBC])
 else
   test -z "${make_name}"
   AC_MSG_WARN([make_name is empty])

@@ -10654,11 +10654,6 @@ cat >>confdefs.h <<_ACEOF
 #define program_name "${make_name}"
 _ACEOF
 
-
-cat >>confdefs.h <<_ACEOF
-#define program_invocation_name "${make_name}"
-_ACEOF
-
 else
   test -z "${make_name}"
   { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: make_name is empty" >&5
