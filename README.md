@@ -1,11 +1,11 @@
-[![Build Status](https://travis-ci.org/rocky/remake.png)](https://travis-ci.org/rocky/remake)
+[![Build Status](https://travis-ci.org/cooljeanius/remake.png)](https://travis-ci.org/cooljeanius/remake)
 
 Patched GNU Make 3.82 sources to add improved error reporting, tracing,
 and a debugger.
 
-Although there's a full debugger here, most of the time I can get by
+Although there is a full debugger here, most of the time I can get by
 using no options since normal output is a little more verbose and detailed.
-When that isn't enough, I use the --trace or -x option, e.g
+When that is not enough, I use the --trace or -x option, e.g
 
     remake -x <other make options>
 
@@ -31,10 +31,13 @@ If the project has commented its Makefile using remake-friendly comments you may
 
 To build:
 
-    $ autoreconf -i
     $ ./configure
     $ make update
     $ make && make check && sudo make install
+    
+Optionally you can regenerate the build system first with:
+
+    $ autoreconf -fvi -Wall
 
 See README.cvs for more detail regarding the above and for
 GNU Make CVS source instructions.
