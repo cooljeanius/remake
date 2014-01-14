@@ -2,12 +2,15 @@ language: C
 
 install:
   # Prerequisites
-  - "sudo apt-get install autopoint libreadline-dev wget texinfo"
+  - "sudo apt-get install autopoint libreadline-dev wget texinfo dejagnu"
 
 # get info on environment
 before_script: env | uniq | sort | uniq
 
-# run the tests
-script: autoreconf -fvi -Wall -Wno-obsolete && ./configure && make update && (cd doc && make stamp-vti) && make && make check
+# just build now, run tests later
+script: autoreconf -fvi -Wall -Wno-obsolete && ./configure && make update && (cd doc && make stamp-vti) && make
 
 after_failure: cat /usr/include/errno.h
+
+# if we built, then we can run the tests
+after_success: make check
