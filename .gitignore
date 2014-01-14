@@ -13,6 +13,7 @@
 /SMakefile
 /autom4te.cache
 /build.sh
+/conf*/*.awk
 /confdefs.h
 /config.ami
 /config.h
