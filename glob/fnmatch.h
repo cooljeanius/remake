@@ -1,4 +1,5 @@
-/* Copyright (C) 1991, 1992, 1993, 1996, 1997, 1998, 1999 Free Software
+/* fnmatch.h
+   Copyright (C) 1991, 1992, 1993, 1996, 1997, 1998, 1999 Free Software
 Foundation, Inc.
 This file is part of the GNU C Library.
 
@@ -22,13 +23,13 @@ USA.  */
 
 #ifdef	__cplusplus
 extern "C" {
-#endif
+#endif /* __cplusplus */
 
 #if defined __cplusplus || (defined __STDC__ && __STDC__) || defined WINDOWS32
 # if !defined __GLIBC__
 #  undef	__P
 #  define __P(protos)	protos
-# endif
+# endif /* !__GLIBC__ */
 #else /* Not C++ or ANSI C.  */
 # undef	__P
 # define __P(protos)	()
@@ -42,8 +43,8 @@ extern "C" {
 #  define __const	const
 # else
 #  define __const
-# endif
-#endif
+# endif /* __STDC__ || __cplusplus || WINDOWS32 */
+#endif /* !const */
 
 /* We #undef these before defining them because some losing systems
    (HP-UX A.08.07 for example) define these in <unistd.h>.  */
@@ -60,7 +61,7 @@ extern "C" {
 # define FNM_FILE_NAME	 FNM_PATHNAME	/* Preferred GNU name.  */
 # define FNM_LEADING_DIR (1 << 3)	/* Ignore `/...' after a match.  */
 # define FNM_CASEFOLD	 (1 << 4)	/* Compare without regard to case.  */
-#endif
+#endif /* !_POSIX_C_SOURCE || _GNU_SOURCE */
 
 /* Value returned by `fnmatch' if STRING does not match PATTERN.  */
 #define	FNM_NOMATCH	1
@@ -71,7 +72,7 @@ extern "C" {
    to be defined.  */
 #ifdef _XOPEN_SOURCE
 # define FNM_NOSYS	(-1)
-#endif
+#endif /* _XOPEN_SOURCE */
 
 /* Match NAME against the filename pattern PATTERN,
    returning zero if it matches, FNM_NOMATCH if not.  */
@@ -80,6 +81,6 @@ extern int fnmatch __P ((__const char *__pattern, __const char *__name,
 
 #ifdef	__cplusplus
 }
-#endif
+#endif /* __cplusplus */
 
 #endif /* fnmatch.h */

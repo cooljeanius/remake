@@ -29,22 +29,22 @@ Boston, MA 02111-1307, USA.  */
 #include "filedef.h"
 
 /*! Like variable_expand_for_file, but the returned string is malloc'd.
-   This function is called a lot.  It wants to be efficient.  */
+ *  This function is called a lot. It wants to be efficient.  */
 
-extern char *allocated_variable_expand_for_file(const char *psz_line, 
+extern char *allocated_variable_expand_for_file(const char *psz_line,
 						file_t *p_file);
 
 
-/*! Expand an argument for an expansion function.  The text starting
+/*! Expand an argument for an expansion function. The text starting
    at STR and ending at END is variable-expanded into a
-   null-terminated string that is returned as the value.  This is done
+   null-terminated string that is returned as the value. This is done
    without clobbering `variable_buffer' or the current
    variable-expansion that is in progress.  */
 
 extern char *expand_argument(const char *str, const char *end);
 
 /*! Install a new variable_buffer context, returning the current one for
-   safe-keeping.  */
+ *  safe-keeping.  */
 
 extern void install_variable_buffer (char **pp_buf, unsigned int *pi_len);
 
@@ -59,14 +59,16 @@ extern char *recursively_expand_for_file(variable_t *v, file_t *file);
 /*! Subroutine of variable_expand and friends:
    The text to add is LENGTH chars starting at STRING to the variable_buffer.
    The text is added to the buffer at PTR, and the updated pointer into
-   the buffer is returned as the value.  Thus, the value returned by
+   the buffer is returned as the value. Thus, the value returned by
    each call to variable_buffer_output should be the first argument to
    the following call.  */
 
 extern void restore_variable_buffer(char *p_buf, unsigned int len);
 
 /** Expand PSZ_LINE. Expansion uses P_FILE_SET if it is not NULL. */
-extern char *variable_expand_set (char *psz_line, 
+extern char *variable_expand_set (char *psz_line,
 				  variable_set_list_t *p_file_set);
 
 #endif /*REMAKE_EXPAND_H*/
+
+/* EOF */

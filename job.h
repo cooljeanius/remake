@@ -1,4 +1,5 @@
-/* Definitions for managing subprocesses in GNU Make.
+/* job.h
+   Definitions for managing subprocesses in GNU Make.
 Copyright (C) 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001,
 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010 Free Software
 Foundation, Inc.
@@ -26,7 +27,7 @@ this program.  If not, see <http://www.gnu.org/licenses/>.  */
 # include <fcntl.h>
 #else
 # include <sys/file.h>
-#endif
+#endif /* HAVE_FCNTL_H */
 
 /* How to set close-on-exec for a file descriptor.  */
 
@@ -35,18 +36,17 @@ this program.  If not, see <http://www.gnu.org/licenses/>.  */
 #else
 # ifndef FD_CLOEXEC
 #  define FD_CLOEXEC 1
-# endif
+# endif /* !FD_CLOEXEC */
 # define CLOSE_ON_EXEC(_d) (void) fcntl ((_d), F_SETFD, FD_CLOEXEC)
-#endif
+#endif /* !F_SETFD */
 
 /** \brief Structure describing a running or dead child process.  */
 struct child
   {
     struct child *next;		/* Link in the chain.  */
 
-    floc_t fileinfo;	        /**< Where commands were defined. Note:
-				   this could be a pattern target.
-				 */
+    floc_t fileinfo; /**< Where commands were defined. Note:
+				      * this could be a pattern target. */
 
     struct file *file;		/* File being remade.  */
 
@@ -62,7 +62,7 @@ struct child
     int efn;			/* Completion event flag number */
     int cstatus;		/* Completion status */
     char *comname;              /* Temporary command file name */
-#endif
+#endif /* VMS */
     char *sh_batch_file;        /* Script file for shell commands */
     brkpt_mask_t tracing;	/**< Nonzero child should be traced.  */
 
@@ -80,7 +80,7 @@ extern struct child *children;
 int is_bourne_compatible_shell(const char *path);
 
 extern void new_job (file_t *file, target_stack_node_t *p_call_stack);
-extern void reap_children (int block, int err, 
+extern void reap_children (int block, int err,
 			   target_stack_node_t *p_call_stack);
 
 extern void start_waiting_jobs (target_stack_node_t *p_call_stack);
@@ -93,14 +93,14 @@ int child_execute_job (char *argv, struct child *child);
 int child_execute_job (int stdin_fd, int stdout_fd, char **argv, char **envp);
 #else
 void child_execute_job (int stdin_fd, int stdout_fd, char **argv, char **envp);
-#endif
+#endif /* VMS || __EMX__ */
 #ifdef _AMIGA
 void exec_command (char **argv);
 #elif defined(__EMX__)
 int exec_command (char **argv, char **envp);
 #else
 void exec_command (char **argv, char **envp);
-#endif
+#endif /* _AMIGA || __EMX__ */
 
 extern unsigned int job_slots_used;
 
@@ -108,14 +108,16 @@ void block_sigs (void);
 #ifdef POSIX
 void unblock_sigs (void);
 #else
-#ifdef	HAVE_SIGSETMASK
+# ifdef	HAVE_SIGSETMASK
 extern int fatal_signal_mask;
-#define	unblock_sigs()	sigsetmask (0)
-#else
-#define	unblock_sigs()
-#endif
-#endif
+#  define	unblock_sigs()	sigsetmask (0)
+# else
+#  define	unblock_sigs()
+# endif /* HAVE_SIGSETMASK */
+#endif /* POSIX */
 
 extern unsigned int jobserver_tokens;
 
 #endif /* SEEN_JOB_H */
+
+/* EOF */

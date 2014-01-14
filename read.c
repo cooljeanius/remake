@@ -33,20 +33,23 @@ this program.  If not, see <http://www.gnu.org/licenses/>.  */
 #include "debug.h"
 #include "hash.h"
 
+#ifdef REMAKE_SOURCE_PATH
+# include "debugger/cmd.h"
+#endif /* REMAKE_SOURCE_PATH */
 
 #ifndef WINDOWS32
-#ifndef _AMIGA
-#ifndef VMS
-#include <pwd.h>
-#else
+# ifndef _AMIGA
+#  ifndef VMS
+#   include <pwd.h>
+#  else
 struct passwd *getpwnam (char *name);
-#endif
-#endif
+#  endif /* !VMS */
+# endif /* !_AMIGA */
 #endif /* !WINDOWS32 */
 
 /* A 'struct ebuffer' controls the origin of the makefile we are currently
-   eval'ing.
-*/
+ * eval'ing.
+ */
 
 struct ebuffer
   {

@@ -1,4 +1,5 @@
-/* Definitions of dependency data structures for GNU Make.
+/* dep.h
+   Definitions of dependency data structures for GNU Make.
 Copyright (C) 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997,
 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009,
 2010 Free Software Foundation, Inc.
@@ -25,8 +26,8 @@ this program.  If not, see <http://www.gnu.org/licenses/>.  */
 
 #define RM_NO_DEFAULT_GOAL	(1 << 0) /* Do not set default goal.  */
 #define RM_INCLUDED		(1 << 1) /* Search makefile search path.  */
-#define RM_DONTCARE		(1 << 2) /* No error if it doesn't exist.  */
-#define RM_NO_TILDE		(1 << 3) /* Don't expand ~ in file name.  */
+#define RM_DONTCARE		(1 << 2) /* No error if it does NOT exist.  */
+#define RM_NO_TILDE		(1 << 3) /* Do NOT expand ~ in file name.  */
 #define RM_NOFLAG		0
 
 /* Structure representing one dependency of a file.
@@ -74,13 +75,13 @@ void *parse_file_seq ();
 #else
 void *parse_file_seq (char **stringp, unsigned int size,
                       int stopchar, const char *prefix, int flags);
-#endif
+#endif /* VMS */
 
 char *remake_tilde_expand (const char *name);
 
 #ifndef NO_ARCHIVES
 struct nameseq *ar_glob (const char *arname, const char *member_pattern, unsigned int size);
-#endif
+#endif /* !NO_ARCHIVES */
 
 #define dep_name(d)     ((d)->name == 0 ? (d)->file->name : (d)->name)
 

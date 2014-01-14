@@ -4,25 +4,25 @@
 # This file is part of GNU Make.
 #
 # GNU Make is free software; you can redistribute it and/or modify it under
-# the terms of the GNU General Public License as published by the Free Software
-# Foundation; either version 3 of the License, or (at your option) any later
+# the terms of the GNU GPL as published by the Free Software
+# Foundation; either ver. 3 of the License, or (at your option) any later
 # version.
 #
-# GNU Make is distributed in the hope that it will be useful, but WITHOUT ANY
+# GNUMake is distributed in the hope that it will be useful, but W/OUT ANY
 # WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
 # FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
 # details.
 #
-# You should have received a copy of the GNU General Public License along with
+# You should have received a copy of the GNU General Public License with
 # this program.  If not, see <http://www.gnu.org/licenses/>.
 
 TEXI2HTML = texi2html
 TEXI2HTML_FLAGS = -split_chapter
-TEXI2PDF = texi2dvi --pdf
+MY_TEXI2PDF = texi2dvi --pdf
 
-EXTRA_DIST = test1.mk test2.mk
+EXTRA_DIST = test1.mk test2.mk version-remake.texi
 
-# info_TEXINFOS =	make.texi remake.texi
+FAKE_info_old_TEXINFOS_COMMENTED_OUT = make.texi remake.texi
 info_TEXINFOS =	remake.texi
 make_TEXINFOS = fdl.texi make-stds.texi
 
@@ -34,9 +34,9 @@ CLEANFILES = make*.html make*.info remake.html remake*.info
 ## Other documentation formats.  ##
 ## ----------------------------- ##
 
-html: remake_1.html
+html-local: remake_1.html
 
 remake_1.html: $(info_TEXINFOS) $(make_TEXINFOS)
 	$(TEXI2HTML) $(TEXI2HTML_FLAGS) $(srcdir)/remake.texi --output remake.html
 
-.PHONY: html
+.PHONY: html-local

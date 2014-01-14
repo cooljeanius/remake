@@ -1,1 +1,4 @@
 /*~
+.dirstamp
+*.o
+*deps/*

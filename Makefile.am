@@ -5,20 +5,20 @@
 # This file is part of GNU Make.
 #
 # GNU Make is free software; you can redistribute it and/or modify it under
-# the terms of the GNU General Public License as published by the Free Software
-# Foundation; either version 3 of the License, or (at your option) any later
+# the terms of the GNU GPL as published by the Free Software
+# Foundation; either ver. 3 of the License, or (at your option) any later
 # version.
 #
-# GNU Make is distributed in the hope that it will be useful, but WITHOUT ANY
+# GNUMake is distributed in the hope that it can be useful, but WITHOUT ANY
 # WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-# FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+# FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
 # details.
 #
-# You should have received a copy of the GNU General Public License along with
-# this program.  If not, see <http://www.gnu.org/licenses/>.
+# You should have received a copy of the GNU GPL along with
+# this program. If not, see <http://www.gnu.org/licenses/>.
 
-AUTOMAKE_OPTIONS = 1.8 dist-bzip2 check-news
-ACLOCAL_AMFLAGS	=  -I config
+AUTOMAKE_OPTIONS = 1.8 dist-bzip2 check-news gnu dejagnu subdir-objects
+ACLOCAL_AMFLAGS	=  -I config --install
 
 transform = s,make,@MAKE_NAME@,
 
@@ -145,7 +145,7 @@ MOSTLYCLEANFILES = *.orig *.rej @MAKE_NAME@
 
 # Forward targets
 
-html:
+html-local:
 	cd doc && $(MAKE) $(AM_MAKEFLAGS) $@
 
 make$(EXEEXT): $(make_OBJECTS) $(make_DEPENDENCIES) 
@@ -153,7 +153,7 @@ make$(EXEEXT): $(make_OBJECTS) $(make_DEPENDENCIES)
 	$(LINK) $(make_OBJECTS) $(make_LDADD) $(LIBS)
 	$(LN_S) make$(EXEEXT) @MAKE_NAME@$(EXEEXT)
 
-.PHONY: html
+.PHONY: html-local
 
 # --------------- Internationalization Section
 
@@ -219,10 +219,11 @@ check-loadavg: loadavg$(EXEEXT)
 	@echo The GNU load average checking code thinks:
 	-./loadavg$(EXEEXT)
 
-# FIXME: doesn't work.
+# FIXME: does NOT work.
 ##: Run remake-specific tests using Ruby rspec
-#check-rspec: 
-#	$(SHELL) -c 'ruby tests/spec/run-tests.rb'
+check-rspec-broken: 
+	$(SHELL) -c 'ruby tests/spec/run-tests.rb'
+.PHONY: check-rspec-broken
 
 # The loadavg function is invoked during "make check" to test getloadavg.
 check_PROGRAMS = loadavg
@@ -233,8 +234,8 @@ loadavg_LDADD = @GETLOADAVG_LIBS@
 # > check-regression
 #
 # Look for the make test suite, and run it if found and we can find perl.
-# If we're building outside the tree, we use symlinks to make a local copy of
-# the test suite.  Unfortunately the test suite itself isn't localizable yet.
+# If we are building out-of-tree, we use symlinks to make a local copy of
+# the test suite. Unfortunately the test suite itself is NOT localized yet.
 #
 MAKETESTFLAGS =
 
@@ -253,7 +254,7 @@ check-regression:
 	    echo "cd tests && $(PERL) ./run_make_tests.pl -make ../make$(EXEEXT) $(MAKETESTFLAGS)"; \
 	    cd tests && $(PERL) ./run_make_tests.pl -make ../make$(EXEEXT) $(MAKETESTFLAGS); \
 	  else \
-	    echo "Can't find a working Perl ($(PERL)); the test suite requires Perl."; \
+	    echo "Cannot find a working Perl ($(PERL)); the test suite requires Perl."; \
 	  fi; \
 	 else \
 	  echo "Can't find the GNU Make test suite ($(srcdir)/tests)."; \
@@ -264,15 +265,33 @@ check-regression:
 
 # --------------- Maintainer's Section
 
-# Tell automake that I haven't forgotten about this file and it will be
+# Tell automake that I have NOT forgotten about this file and it will be
 # created before we build a distribution (see maintMakefile in the CVS
 # distribution).
 
 if MAINTAINER_MODE
 
-#: create ChangeLog for distirbution from 'git log'
+#: create ChangeLog for distribution from 'git log'
 ChangeLog:
 	git log --pretty --numstat --summary | $(GIT2CL) > $@
+
+# another way of doing it:
+PHONY: update-ChangeLog
+update-ChangeLog:
+	    if test -d $(srcdir)/.git; then                         \
+	       $(srcdir)/config/gitlog-to-changelog                 \
+	          --format='%s%n%n%b%n' --no-cluster                \
+	          --strip-tab --strip-cherry-pick                   \
+	          -- $$(cat $(srcdir)/.last-cl-gen)..               \
+	        >ChangeLog.tmp                                      \
+	      && git rev-list -n 1 HEAD >.last-cl-gen.tmp           \
+	      && (echo; cat $(srcdir)/ChangeLog) >>ChangeLog.tmp    \
+	      && mv -f ChangeLog.tmp $(srcdir)/ChangeLog            \
+	      && mv -f .last-cl-gen.tmp $(srcdir)/.last-cl-gen      \
+	      && rm -f ChangeLog.tmp;                               \
+	    fi
+
+EXTRA_DIST += .last-cl-gen
 
 endif
 

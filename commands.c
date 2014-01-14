@@ -1,4 +1,5 @@
-/* Command processing for GNU Make.
+/* commands.c
+   Command processing for GNU Make.
 Copyright (C) 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997,
 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009,
 2010 Free Software Foundation, Inc.
@@ -24,22 +25,22 @@ this program.  If not, see <http://www.gnu.org/licenses/>.  */
 #include "job.h"
 #include "commands.h"
 #ifdef WINDOWS32
-#include <windows.h>
-#include "w32err.h"
-#endif
+# include <windows.h>
+# include "w32err.h"
+#endif /* WINDOWS32 */
 
 #if VMS
 # define FILE_LIST_SEPARATOR ','
 #else
 # define FILE_LIST_SEPARATOR ' '
-#endif
+#endif /* VMS */
 
 int remote_kill (int id, int sig);
 
 #ifndef	HAVE_UNISTD_H
 int getpid ();
-#endif
-
+#endif /* !HAVE_UNISTD_H */
+
 
 static unsigned long
 dep_hash_1 (const void *key)
@@ -93,18 +94,18 @@ set_file_variables (struct file *file)
       percent = p;
     }
   else
-#endif	/* NO_ARCHIVES.  */
+#endif	/* !NO_ARCHIVES.  */
     {
       at = file->name;
       percent = "";
     }
 
-  /* $* is the stem from an implicit or static pattern rule.  */
+  /* $* is the stem from an implicit or static pattern rule. */
   if (file->stem == 0)
     {
       /* In Unix make, $* is set to the target name with
-	 any suffix in the .SUFFIXES list stripped off for
-	 explicit rules.  We store this in the `stem' member.  */
+	   * any suffix in the .SUFFIXES list stripped off for
+	   * explicit rules. We store this in the `stem' member. */
       const char *name;
       unsigned int len;
 
@@ -115,7 +116,7 @@ set_file_variables (struct file *file)
 	  len = strlen (name) - 1;
 	}
       else
-#endif
+#endif	/* !NO_ARCHIVES.  */
 	{
 	  name = file->name;
 	  len = strlen (name);
@@ -216,14 +217,14 @@ set_file_variables (struct file *file)
               len = strlen (c) - 1;
             }
           else
-#endif
+#endif	/* !NO_ARCHIVES.  */
             len = strlen (c);
 
           memcpy (cp, c, len);
           cp += len;
           *cp++ = FILE_LIST_SEPARATOR;
           if (! (d->changed || always_make_flag))
-            qmark_len -= len + 1;	/* Don't space in $? for this one.  */
+            qmark_len -= len + 1;	/* Do NOT space in $? for this one. */
         }
 
     /* Kill the last space and define the variable.  */
@@ -233,7 +234,7 @@ set_file_variables (struct file *file)
 
     /* Compute the values for $^, $?, and $|.  */
 
-    cp = caret_value = plus_value; /* Reuse the buffer; it's big enough.  */
+    cp = caret_value = plus_value; /* Reuse the buffer; it is big enough. */
 
     if (qmark_len > qmark_max)
       qmark_value = xrealloc (qmark_value, qmark_max = qmark_len);
@@ -244,7 +245,7 @@ set_file_variables (struct file *file)
     bp = bar_value;
 
     /* Make sure that no dependencies are repeated in $^, $?, and $|.  It
-       would be natural to combine the next two loops but we can't do it
+       would be natural to combine the next two loops but we cannot do it
        because of a situation where we have two dep entries, the first
        is order-only and the second is normal (see below).  */
 
@@ -285,7 +286,7 @@ set_file_variables (struct file *file)
 	    len = strlen (c) - 1;
 	  }
 	else
-#endif
+#endif	/* !NO_ARCHIVES.  */
 	  len = strlen (c);
 
         if (d->ignore_mtime)
@@ -334,11 +335,12 @@ chop_commands (struct commands *cmds)
   unsigned int nlines, idx;
   char **lines;
 
-  /* If we don't have any commands,
+  /* If we do NOT have any commands,
      or we already parsed them, never mind.  */
 
-  if (!cmds || cmds->command_lines != 0)
-    return;
+	if (!cmds || cmds->command_lines != 0) {
+		return;
+	}
 
   /* Chop CMDS->commands up into lines in CMDS->command_lines.  */
 
@@ -447,18 +449,18 @@ void expand_command_lines(struct commands *cmds, /*out*/ char **lines,
   for (i = 0; i < cmds->ncommand_lines; ++i)
     {
       /* Collapse backslash-newline combinations that are inside variable
-	 or function references.  These are left alone by the parser so
-	 that they will appear in the echoing of commands (where they look
-	 nice); and collapsed by construct_command_argv when it tokenizes.
-	 But letting them survive inside function invocations loses because
-	 we don't want the functions to see them as part of the text.  */
+	   * or function references. These are left alone by the parser so
+	   * that they will appear in the echoing of commands (where they look
+	   * nice); and collapsed by construct_command_argv when it tokenizes.
+	   * But letting them survive inside function invocations loses because
+	   * we do NOT want the functions to see them as part of the text.  */
 
       char *in, *out, *ref;
 
       /* IN points to where in the line we are scanning.
-	 OUT points to where in the line we are writing.
-	 When we collapse a backslash-newline combination,
-	 IN gets ahead of OUT.  */
+	   * OUT points to where in the line we are writing.
+	   * When we collapse a backslash-newline combination,
+	   * IN gets ahead of OUT.  */
 
       in = out = cmds->command_lines[i];
       while ((ref = strchr (in, '$')) != 0)
@@ -484,7 +486,7 @@ void expand_command_lines(struct commands *cmds, /*out*/ char **lines,
 
 	      *out++ = *in++;	/* Copy OPENPAREN.  */
 	      /* IN now points past the opening paren or brace.
-		 Count parens or braces until it is matched.  */
+		   * Count parens or braces until it is matched.  */
 	      count = 0;
 	      while (*in != '\0')
 		{
@@ -493,8 +495,8 @@ void expand_command_lines(struct commands *cmds, /*out*/ char **lines,
 		  else if (*in == '\\' && in[1] == '\n')
 		    {
 		      /* We have found a backslash-newline inside a
-			 variable or function reference.  Eat it and
-			 any following whitespace.  */
+			   * variable or function reference.  Eat it and
+			   * any following whitespace.  */
 
 		      int quoted = 0;
 		      for (p = in - 1; p > ref && *p == '\\'; --p)
@@ -502,7 +504,7 @@ void expand_command_lines(struct commands *cmds, /*out*/ char **lines,
 
 		      if (quoted)
 			/* There were two or more backslashes, so this is
-			   not really a continuation line.  We don't collapse
+			   not really a continuation line. We do NOT collapse
 			   the quoting backslashes here as is done in
 			   collapse_continuations, because the line will
 			   be collapsed again after expansion.  */
@@ -543,11 +545,11 @@ void expand_command_lines(struct commands *cmds, /*out*/ char **lines,
       lines[i] = allocated_variable_expand_for_file (cmds->command_lines[i],
 						     file);
     }
-    
+
 }
 
 
-
+
 /* Execute the commands to remake FILE.  If they are currently executing,
    return or have already finished executing, just return.  Otherwise,
    fork off a child process to run the first command line in the sequence.  */
@@ -557,7 +559,7 @@ execute_file_commands (file_t *file, target_stack_node_t *p_call_stack)
 {
   const char *p;
 
-  /* Don't go through all the preparations if
+  /* Do NOT go through all the preparations if
      the commands are nothing but whitespace.  */
 
   for (p = file->cmds->commands; *p != '\0'; ++p)
@@ -604,14 +606,14 @@ fatal_error_signal (int sig)
   remove_intermediates (1);
   exit (EXIT_FAILURE);
 #else /* not __MSDOS__ */
-#ifdef _AMIGA
+# ifdef _AMIGA
   remove_intermediates (1);
   if (sig == SIGINT)
      fputs (_("*** Break.\n"), stderr);
 
   exit (10);
-#else /* not Amiga */
-#ifdef WINDOWS32
+# else /* not Amiga */
+#  ifdef WINDOWS32
   extern HANDLE main_thread;
 
   /* Windows creates a sperate thread for handling Ctrl+C, so we need
@@ -631,14 +633,14 @@ fatal_error_signal (int sig)
 		   ierr, map_windows32_error_to_string (ierr));
 	}
     }
-#endif
+#  endif /* WINDOWS32 */
   handling_fatal_signal = 1;
 
   /* Set the handling for this signal to the default.
      It is blocked now while we run this handler.  */
   signal (sig, SIG_DFL);
 
-  /* A termination signal won't be sent to the entire
+  /* A termination signal will NOT be sent to the entire
      process group, but it means we want to kill the children.  */
 
   if (sig == SIGTERM)
@@ -653,63 +655,65 @@ fatal_error_signal (int sig)
      wanted to kill make, remove pending targets.  */
 
   if (sig == SIGTERM || sig == SIGINT
-#ifdef SIGHUP
+#  ifdef SIGHUP
     || sig == SIGHUP
-#endif
-#ifdef SIGQUIT
+#  endif /* SIGHUP */
+#  ifdef SIGQUIT
     || sig == SIGQUIT
-#endif
+#  endif /* SIGQUIT */
     )
     {
       struct child *c;
 
-      /* Remote children won't automatically get signals sent
-	 to the process group, so we must send them.  */
+      /* Remote children will NOT automatically get signals sent
+	   * to the process group, so we must send them.  */
       for (c = children; c != 0; c = c->next)
-	if (c->remote)
-	  (void) remote_kill (c->pid, sig);
+		  if (c->remote) {
+			  (void) remote_kill (c->pid, sig);
+		  }
 
       for (c = children; c != 0; c = c->next)
 	delete_child_targets (c);
 
-      /* Clean up the children.  We don't just use the call below because
-	 we don't want to print the "Waiting for children" message.  */
+      /* Clean up the children. We do NOT just use the call below because
+	   * we do NOT want to print the "Waiting for children" message.  */
       while (job_slots_used > 0)
 	reap_children (1, 0, NULL);
     }
   else
     /* Wait for our children to die.  */
-    while (job_slots_used > 0)
-      reap_children (1, 1, NULL);
+	  while (job_slots_used > 0) {
+		  reap_children (1, 1, NULL);
+	  }
 
   /* Delete any non-precious intermediate files that were made.  */
 
   remove_intermediates (1);
 
-#ifdef SIGQUIT
+#  ifdef SIGQUIT
   if (sig == SIGQUIT)
-    /* We don't want to send ourselves SIGQUIT, because it will
-       cause a core dump.  Just exit instead.  */
+    /* We do NOT want to send ourselves SIGQUIT, because it will
+       cause a core dump. Just exit instead.  */
     exit (EXIT_FAILURE);
-#endif
+#  endif /* SIGQUIT */
 
-#ifdef WINDOWS32
+#  ifdef WINDOWS32
   if (main_thread)
     CloseHandle (main_thread);
   /* Cannot call W32_kill with a pid (it needs a handle).  The exit
      status of 130 emulates what happens in Bash.  */
   exit (130);
-#else
+#  else
   /* Signal the same code; this time it will really be fatal.  The signal
      will be unblocked when we return and arrive then to kill us.  */
   if (kill (getpid (), sig) < 0)
     pfatal_with_name ("kill");
-#endif /* not WINDOWS32 */
-#endif /* not Amiga */
+#  endif /* not WINDOWS32 */
+# endif /* not Amiga */
 #endif /* not __MSDOS__  */
 }
 
-/* Delete FILE unless it's precious or not actually a file (phony),
+/* Delete FILE unless it is/was precious or not actually a file (phony),
    and it has changed on disk since we last stat'd it.  */
 
 static void
@@ -718,8 +722,9 @@ delete_target (struct file *file, const char *on_behalf_of)
   struct stat st;
   int e;
 
-  if (file->precious || file->phony)
-    return;
+	if (file->precious || file->phony) {
+		return;
+	}
 
 #ifndef NO_ARCHIVES
   if (ar_name (file->name))
@@ -729,25 +734,29 @@ delete_target (struct file *file, const char *on_behalf_of)
 			  : (time_t) FILE_TIMESTAMP_S (file->last_mtime));
       if (ar_member_date (file->name) != file_date)
 	{
-	  if (on_behalf_of)
+		if (on_behalf_of) {
 	    error (NILF, _("*** [%s] Archive member `%s' may be bogus; not deleted"),
 		   on_behalf_of, file->name);
-	  else
+		} else {
 	    error (NILF, _("*** Archive member `%s' may be bogus; not deleted"),
 		   file->name);
+		}
 	}
       return;
     }
-#endif
+#endif	/* !NO_ARCHIVES.  */
 
   EINTRLOOP (e, stat (file->name, &st));
   if (e == 0
       && S_ISREG (st.st_mode)
-      && FILE_TIMESTAMP_STAT_MODTIME (file->name, st) != file->last_mtime)
+#ifdef ST_MTIM_NSEC
+      && FILE_TIMESTAMP_STAT_MODTIME (file->name, st) != file->last_mtime
+#endif /* ST_MTIM_NSEC */
+	  && e != 1)
     {
-      if (on_behalf_of)
+		if (on_behalf_of) {
 	error (NILF, _("*** [%s] Deleting file `%s'"), on_behalf_of, file->name);
-      else
+		} else
 	error (NILF, _("*** Deleting file `%s'"), file->name);
       if (unlink (file->name) < 0
 	  && errno != ENOENT)	/* It disappeared; so what.  */
@@ -757,29 +766,31 @@ delete_target (struct file *file, const char *on_behalf_of)
 
 
 /* Delete all non-precious targets of CHILD unless they were already deleted.
-   Set the flag in CHILD to say they've been deleted.  */
+   Set the flag in CHILD to say they have been deleted.  */
 
 void
 delete_child_targets (struct child *child)
 {
   struct dep *d;
 
-  if (child->deleted)
-    return;
+	if (child->deleted) {
+		return;
+	}
 
   /* Delete the target file if it changed.  */
   delete_target (child->file, NULL);
 
   /* Also remove any non-precious targets listed in the `also_make' member.  */
-  for (d = child->file->also_make; d != 0; d = d->next)
-    delete_target (d->file, child->file->name);
+	for (d = child->file->also_make; d != 0; d = d->next) {
+		delete_target (d->file, child->file->name);
+	}
 
   child->deleted = 1;
 }
 
 /* Print out the commands in CMDS.  */
 
-/*! 
+/*!
   Print out the commands.
 
   @param p_cmds location of commands to print out.
@@ -827,3 +838,5 @@ print_commands (file_t *p_target, commands_t *p_cmds, bool b_expand)
       s = end;
     }
 }
+
+/* EOF */

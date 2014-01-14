@@ -24,7 +24,7 @@ this program.  If not, see <http://www.gnu.org/licenses/>.  */
 # if !defined __GLIBC__ || !defined __P
 #  undef	__P
 #  define __P(protos)	protos
-# endif
+# endif /* !__GLIBC__ || !__P */
 #else /* Not C++ or ANSI C.  */
 # undef	__P
 # define __P(protos)	()
@@ -76,7 +76,7 @@ void **hash_dump __P((struct hash_table *ht, void **vector_0, qsort_cmp_t compar
 extern void *hash_deleted_item;
 #define HASH_VACANT(item) ((item) == 0 || (void *) (item) == hash_deleted_item)
 
-
+
 /* hash and comparison macros for case-sensitive string keys. */
 
 /* Due to the strcache, it's not uncommon for the string pointers to
@@ -191,7 +191,7 @@ extern void *hash_deleted_item;
 #define ISTRING_COMPARE(X, Y, RESULT) STRING_COMPARE ((X), (Y), (RESULT))
 #define return_ISTRING_COMPARE(X, Y) return_STRING_COMPARE ((X), (Y))
 
-#endif
+#endif /* HAVE_CASE_INSENSITIVE_FS */
 
 /* hash and comparison macros for integer _key_s. */
 

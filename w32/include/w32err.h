@@ -1,4 +1,5 @@
-/* Definitions for Windows error handling.
+/* w32err.h
+   Definitions for Windows error handling.
 Copyright (C) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
 2006, 2007, 2008, 2009, 2010 Free Software Foundation, Inc.
 This file is part of GNU Make.
@@ -19,9 +20,11 @@ this program.  If not, see <http://www.gnu.org/licenses/>.  */
 #define _W32ERR_H_
 
 #ifndef EXTERN_DECL
-#define EXTERN_DECL(entry, args) entry args
-#endif
+# define EXTERN_DECL(entry, args) entry args
+#endif /* !EXTERN_DECL */
 
 EXTERN_DECL(char * map_windows32_error_to_string, (DWORD error));
 
 #endif /* !_W32ERR_H */
+
+/* EOF */

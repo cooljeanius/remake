@@ -1,4 +1,5 @@
-/* Definition of data structures describing shell commands for GNU Make.
+/* commands.h
+   Definition of data structures describing shell commands for GNU Make.
 Copyright (C) 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997,
 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009,
 2010 Free Software Foundation, Inc.
@@ -31,11 +32,10 @@ struct commands
     char *commands;		/* Commands text.  */
     unsigned int ncommand_lines;/* Number of command lines.  */
     char **command_lines;	/* Commands chopped up into lines.  */
-    unsigned int *line_no;	/**< line number offsets of chopped
-				     commands.  */
+    unsigned int *line_no;	/**< line number offsets of chopped commands.  */
     char *lines_flags;		/* One set of flag bits for each line.  */
-    int any_recurse;		/* Nonzero if any `lines_recurse' elt has */
-				/* the COMMANDS_RECURSE bit set.  */
+    int any_recurse; /* Nonzero if any `lines_recurse' elt has */
+				     /* the COMMANDS_RECURSE bit set.  */
   };
 
 /* Bits in `lines_flags'.  */
@@ -47,23 +47,23 @@ struct commands
 extern void expand_command_lines(struct commands *cmds, /*out*/ char **lines,
 				 struct file *file);
 
-/*! 
+/*!
   Execute the commands to remake P_FILE.  If they are currently
   executing, return or have already finished executing, just return.
   Otherwise, fork off a child process to run the first command line
-  in the sequence.  
-  
+  in the sequence.
+
   @param p_file  pointer to file to remake.
 
   @param p_call_stack pointer to current target call stack. This is
   passed down for information reporting.
-  
+
 */
-extern void execute_file_commands (file_t *p_file, 
+extern void execute_file_commands (file_t *p_file,
 				   target_stack_node_t *p_call_stack);
 
 
-/*! 
+/*!
   Print out the commands.
 
   @param p_cmds location of commands to print out.

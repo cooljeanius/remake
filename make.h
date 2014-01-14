@@ -1,4 +1,5 @@
-/* Miscellaneous global declarations and portability cruft for GNU Make.
+/* make.h
+   Miscellaneous global declarations and portability cruft for GNU Make.
 Copyright (C) 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997,
 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009,
 2010 Free Software Foundation, Inc.
@@ -26,7 +27,7 @@ this program.  If not, see <http://www.gnu.org/licenses/>.  */
 #undef  HAVE_CONFIG_H
 #define HAVE_CONFIG_H 1
 
-/* Specify we want GNU source code.  This must be defined before any
+/* Specify we want GNU source code. This must be defined before any
    system headers are included.  */
 
 #define _GNU_SOURCE 1
@@ -41,22 +42,22 @@ this program.  If not, see <http://www.gnu.org/licenses/>.  */
 #  if !defined(__GNUC__) && !defined(WINDOWS32)
 #   ifndef alloca /* predefined by HP cc +Olibcalls */
 char *alloca ();
-#   endif
-#  endif
-# endif
-#endif
+#   endif /* !alloca */
+#  endif /* !__GNUC__ && !WINDOWS32 */
+# endif /* _AIX */
+#endif /* HAVE_ALLOCA_H */
 
 
 #ifdef  CRAY
 /* This must happen before #include <signal.h> so
    that the declaration therein is changed.  */
 # define signal bsdsignal
-#endif
+#endif /* CRAY */
 
-/* If we're compiling for the dmalloc debugger, turn off string inlining.  */
+/* If we are compiling for the dmalloc debugger, turn off string inlining.  */
 #if defined(HAVE_DMALLOC_H) && defined(__GNUC__)
 # define __NO_STRING_INLINES
-#endif
+#endif /* HAVE_DMALLOC_H && __GNUC__ */
 
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -65,10 +66,10 @@ char *alloca ();
 #include <ctype.h>
 #ifdef HAVE_SYS_TIMEB_H
 /* SCO 3.2 "devsys 4.2" has a prototype for `ftime' in <time.h> that bombs
-   unless <sys/timeb.h> has been included first.  Does every system have a
-   <sys/timeb.h>?  If any does not, configure should check for it.  */
+   unless <sys/timeb.h> has been included first. Does every system have a
+   <sys/timeb.h>? If any does not, configure should check for it.  */
 # include <sys/timeb.h>
-#endif
+#endif /* HAVE_SYS_TIMEB_H */
 
 #if TIME_WITH_SYS_TIME
 # include <sys/time.h>
@@ -78,18 +79,18 @@ char *alloca ();
 #  include <sys/time.h>
 # else
 #  include <time.h>
-# endif
-#endif
+# endif /* HAVE_SYS_TIME_H */
+#endif /* TIME_WITH_SYS_TIME */
 
 #include <errno.h>
 
 #ifndef errno
 extern int errno;
-#endif
+#endif /* !errno */
 
 #ifndef isblank
 # define isblank(c)     ((c) == ' ' || (c) == '\t')
-#endif
+#endif /* !isblank */
 
 #ifdef  HAVE_UNISTD_H
 # include <unistd.h>
@@ -97,45 +98,49 @@ extern int errno;
    POSIX.1 behavior with `cc -YPOSIX', which predefines POSIX itself!  */
 # if defined (_POSIX_VERSION) && !defined (ultrix) && !defined (VMS)
 #  define POSIX 1
-# endif
-#endif
+# endif /* _POSIX_VERSION && !ultrix && !VMS */
+#endif /* HAVE_UNISTD_H */
 
 /* Some systems define _POSIX_VERSION but are not really POSIX.1.  */
 #if (defined (butterfly) || defined (__arm) || (defined (__mips) && defined (_SYSTYPE_SVR3)) || (defined (sequent) && defined (i386)))
 # undef POSIX
-#endif
+#endif /* (butterfly || __arm || (__mips && _SYSTYPE_SVR3) || (sequent && i386)) */
 
 #if !defined (POSIX) && defined (_AIX) && defined (_POSIX_SOURCE)
 # define POSIX 1
-#endif
+#endif /* !POSIX && _AIX && _POSIX_SOURCE */
 
 #ifndef RETSIGTYPE
 # define RETSIGTYPE     void
-#endif
+#endif /* !RETSIGTYPE */
 
 #ifndef sigmask
 # define sigmask(sig)   (1 << ((sig) - 1))
-#endif
+#endif /* !sigmask */
 
 #ifndef HAVE_SA_RESTART
 # define SA_RESTART 0
-#endif
+#endif /* !HAVE_SA_RESTART */
 
 #ifdef  HAVE_LIMITS_H
 # include <limits.h>
-#endif
+#else
+# warning make.h expects <limits.h> to be included.
+#endif /* HAVE_LIMITS_H */
 #ifdef  HAVE_SYS_PARAM_H
 # include <sys/param.h>
-#endif
+#else
+# warning make.h expects <sys/param.h> to be included.
+#endif /* HAVE_SYS_PARAM_H */
 
 #ifndef PATH_MAX
 # ifndef POSIX
 #  define PATH_MAX      MAXPATHLEN
-# endif
-#endif
+# endif /* !POSIX */
+#endif /* !PATH_MAX */
 #ifndef MAXPATHLEN
 # define MAXPATHLEN 1024
-#endif
+#endif /* !MAXPATHLEN */
 
 #ifdef  PATH_MAX
 # define GET_PATH_MAX   PATH_MAX
@@ -145,11 +150,11 @@ extern int errno;
 # define GET_PATH_MAX   (get_path_max ())
 # define PATH_VAR(var)  char *var = alloca (GET_PATH_MAX)
 unsigned int get_path_max (void);
-#endif
+#endif /* PATH_MAX */
 
 #ifndef CHAR_BIT
 # define CHAR_BIT 8
-#endif
+#endif /* !CHAR_BIT */
 
 /* Nonzero if the integer type T is signed.  */
 #define INTEGER_TYPE_SIGNED(t) ((t) -1 < 0)
@@ -162,23 +167,23 @@ unsigned int get_path_max (void);
 
 #ifndef CHAR_MAX
 # define CHAR_MAX INTEGER_TYPE_MAXIMUM (char)
-#endif
+#endif /* !CHAR_MAX */
 
 #ifdef STAT_MACROS_BROKEN
 # ifdef S_ISREG
 #  undef S_ISREG
-# endif
+# endif /* S_ISREG */
 # ifdef S_ISDIR
 #  undef S_ISDIR
-# endif
+# endif /* S_ISDIR */
 #endif  /* STAT_MACROS_BROKEN.  */
 
 #ifndef S_ISREG
 # define S_ISREG(mode)  (((mode) & S_IFMT) == S_IFREG)
-#endif
+#endif /* !S_ISREG */
 #ifndef S_ISDIR
 # define S_ISDIR(mode)  (((mode) & S_IFMT) == S_IFDIR)
-#endif
+#endif /* !S_ISDIR */
 
 #ifdef VMS
 # include <types.h>
@@ -187,20 +192,20 @@ unsigned int get_path_max (void);
 # include <perror.h>
 /* Needed to use alloca on VMS.  */
 # include <builtins.h>
-#endif
+#endif /* VMS */
 
 #ifndef __attribute__
 /* This feature is available in gcc versions 2.5 and later.  */
 # if __GNUC__ < 2 || (__GNUC__ == 2 && __GNUC_MINOR__ < 5) || __STRICT_ANSI__
 #  define __attribute__(x)
-# endif
+# endif /* gcc 2.5+ */
 /* The __-protected variants of `format' and `printf' attributes
    are accepted by gcc versions 2.6.4 (effectively 2.7) and later.  */
 # if __GNUC__ < 2 || (__GNUC__ == 2 && __GNUC_MINOR__ < 7)
 #  define __format__ format
 #  define __printf__ printf
-# endif
-#endif
+# endif /* gcc 2.6.4+ */
+#endif /* !__attribute__ */
 #define UNUSED  __attribute__ ((unused))
 
 #if defined (STDC_HEADERS) || defined (__GNU_LIBRARY__)
@@ -213,10 +218,12 @@ unsigned int get_path_max (void);
 #  define ANSI_STRING 1
 # else
 #  include <strings.h>
-# endif
+# endif /* HAVE_STRING_H */
 # ifdef HAVE_MEMORY_H
 #  include <memory.h>
-# endif
+# else
+#  warning make.h expects <memory.h> to be included.
+# endif /* HAVE_MEMORY_H */
 # ifdef HAVE_STDLIB_H
 #  include <stdlib.h>
 # else
@@ -233,49 +240,49 @@ void exit (int) __attribute__ ((noreturn));
 /* These should be in stdlib.h.  Make sure we have them.  */
 #ifndef EXIT_SUCCESS
 # define EXIT_SUCCESS 0
-#endif
+#endif /* !EXIT_SUCCESS */
 #ifndef EXIT_FAILURE
 # define EXIT_FAILURE 1
-#endif
+#endif /* !EXIT_FAILURE */
 
 #ifndef  ANSI_STRING
-
 /* SCO Xenix has a buggy macro definition in <string.h>.  */
-#undef  strerror
-#if !defined(__DECC)
+# undef  strerror
+# if !defined(__DECC)
 char *strerror (int errnum);
-#endif
-
+# endif /* !__DECC */
 #endif  /* !ANSI_STRING.  */
 #undef  ANSI_STRING
 
 #if HAVE_INTTYPES_H
 # include <inttypes.h>
-#endif
+#else
+# warning make.h expects <inttypes.h> to be included.
+#endif /* HAVE_INTTYPES_H */
 #define FILE_TIMESTAMP uintmax_t
 
 #if !defined(HAVE_STRSIGNAL)
 char *strsignal (int signum);
-#endif
+#endif /* !HAVE_STRSIGNAL */
 
 /* ISDIGIT offers the following features:
    - Its arg may be any int or unsigned int; it need not be an unsigned char.
-   - It's guaranteed to evaluate its argument exactly once.
-      NOTE!  Make relies on this behavior, don't change it!
-   - It's typically faster.
+   - It is guaranteed to evaluate its argument exactly once.
+      NOTE!  Make relies on this behavior, do NOT change it!
+   - It is typically faster.
    POSIX 1003.2-1992 section 2.5.2.1 page 50 lines 1556-1558 says that
-   only '0' through '9' are digits.  Prefer ISDIGIT to isdigit() unless
-   it's important to use the locale's definition of `digit' even when the
+   only '0' through '9' are digits. Prefer ISDIGIT to isdigit() unless
+   it is important to use the locale's definition of `digit' even when the
    host does not conform to POSIX.  */
 #define ISDIGIT(c) ((unsigned) (c) - '0' <= 9)
 
-/* Test if two strings are equal. Is this worthwhile?  Should be profiled.  */
+/* Test if two strings are equal. Is this worthwhile? Should be profiled. */
 #define streq(a, b) \
    ((a) == (b) || \
     (*(a) == *(b) && (*(a) == '\0' || !strcmp ((a) + 1, (b) + 1))))
 
 /* Test if two strings are equal, but match case-insensitively on systems
-   which have case-insensitive filesystems.  Should only be used for
+   which have case-insensitive filesystems. Should only be used for
    filenames!  */
 #ifdef HAVE_CASE_INSENSITIVE_FS
 # define patheq(a, b) \
@@ -284,7 +291,7 @@ char *strsignal (int signum);
          && (*(a) == '\0' || !strcasecmp ((a) + 1, (b) + 1))))
 #else
 # define patheq(a, b) streq(a, b)
-#endif
+#endif /* HAVE_CASE_INSENSITIVE_FS */
 
 #define strneq(a, b, l) (strncmp ((a), (b), (l)) == 0)
 
@@ -292,7 +299,7 @@ char *strsignal (int signum);
 # define ENUM_BITFIELD(bits)    :bits
 #else
 # define ENUM_BITFIELD(bits)
-#endif
+#endif /* __GNUC__ || ENUM_BITFIELDS */
 
 /* Handle gettext and locales.  */
 
@@ -300,7 +307,7 @@ char *strsignal (int signum);
 # include <locale.h>
 #else
 # define setlocale(category, locale)
-#endif
+#endif /* HAVE_LOCALE_H */
 
 #include <gettext.h>
 
@@ -316,12 +323,16 @@ char *strsignal (int signum);
 #  define PATH_SEPARATOR_CHAR ','
 # else
 #  define PATH_SEPARATOR_CHAR ':'
-# endif
-#endif
+# endif /* HAVE_DOS_PATHS || VMS */
+#endif /* !PATH_SEPARATOR_CHAR */
 
 /* This is needed for getcwd() and chdir(), on some W32 systems.  */
 #if defined(HAVE_DIRECT_H)
 # include <direct.h>
+#else
+# if defined(WINDOWS32) || defined(W32)
+#  warning make.h expects <direct.h> to be included.
+# endif /* WINDOWS32 || W32 */
 #endif
 
 #ifdef WINDOWS32
@@ -344,11 +355,11 @@ extern int unixy_shell;
 
 #if defined(HAVE_SYS_RESOURCE_H) && defined(HAVE_GETRLIMIT) && defined(HAVE_SETRLIMIT)
 # define SET_STACK_SIZE
-#endif
+#endif /* HAVE_SYS_RESOURCE_H && HAVE_GETRLIMIT && HAVE_SETRLIMIT */
 #ifdef SET_STACK_SIZE
 # include <sys/resource.h>
 struct rlimit stack_limit;
-#endif
+#endif /* SET_STACK_SIZE */
 
 struct floc
   {
@@ -359,15 +370,15 @@ struct floc
 
 #define STRING_SIZE_TUPLE(_s) (_s), (sizeof (_s)-1)
 
-
+
 /* We have to have stdarg.h or varargs.h AND v*printf or doprnt to use
    variadic versions of these functions.  */
 
 #if HAVE_STDARG_H || HAVE_VARARGS_H
 # if HAVE_VPRINTF || HAVE_DOPRNT
 #  define USE_VARIADIC 1
-# endif
-#endif
+# endif /* HAVE_VPRINTF || HAVE_DOPRNT */
+#endif /* HAVE_STDARG_H || HAVE_VARARGS_H */
 
 #if HAVE_ANSI_COMPILER && USE_VARIADIC && HAVE_STDARG_H
 const char *concat (unsigned int, ...);
@@ -382,7 +393,7 @@ const char *concat ();
 void message ();
 void error ();
 void fatal ();
-#endif
+#endif /* HAVE_ANSI_COMPILER && USE_VARIADIC && HAVE_STDARG_H */
 
 void die (int);
 void log_working_directory (int);
@@ -417,10 +428,10 @@ typedef long int (*ar_member_func_t) (int desc, const char *mem, int truncated,
 
 long int ar_scan (const char *archive, ar_member_func_t function, const void *arg);
 int ar_name_equal (const char *name, const char *mem, int truncated);
-#ifndef VMS
+# ifndef VMS
 int ar_member_touch (const char *arname, const char *memname);
-#endif
-#endif
+# endif /* !VMS */
+#endif /* !NO_ARCHIVES */
 
 int dir_file_exists_p (const char *, const char *);
 int file_exists_p (const char *);
@@ -441,8 +452,8 @@ const char *vpath_search (const char *file, FILE_TIMESTAMP *mtime_ptr,
 int gpath_search (const char *file, unsigned int len);
 
 /*! Construct the list of include directories
-   from the arguments and the default list.  
-*/
+ *  from the arguments and the default list.
+ */
 extern void construct_include_path (const char **arg_dirs);
 
 void user_access (void);
@@ -463,7 +474,11 @@ int strcache_setbufsize (int size);
 
 #ifdef  HAVE_VFORK_H
 # include <vfork.h>
-#endif
+#else
+# ifndef __APPLE__
+#  warning make.h expects <vfork.h> to be included.
+# endif /* !__APPLE__ */
+#endif /* HAVE_VFORK_H */
 
 /* We omit these declarations on non-POSIX systems which define _POSIX_VERSION,
    because such systems often declare them in header files anyway.  */
@@ -473,18 +488,18 @@ int strcache_setbufsize (int size);
 long int atol ();
 # ifndef VMS
 long int lseek ();
-# endif
+# endif /* !VMS */
 
 #endif  /* Not GNU C library or POSIX.  */
 
 #ifdef  HAVE_GETCWD
 # if !defined(VMS) && !defined(__DECC)
 char *getcwd ();
-# endif
+# endif /* !VMS && !__DECC */
 #else
 char *getwd ();
 # define getcwd(buf, len)       getwd (buf)
-#endif
+#endif /* HAVE_GETCWD */
 
 #if !HAVE_STRCASECMP
 # if HAVE_STRICMP
@@ -494,8 +509,8 @@ char *getwd ();
 # else
 /* Create our own, in misc.c */
 int strcasecmp (const char *s1, const char *s2);
-# endif
-#endif
+# endif /* HAVE_STRICMP || HAVE_STRCMPI */
+#endif /* !HAVE_STRCASECMP */
 
 #if !HAVE_STRNCASECMP
 # if HAVE_STRNICMP
@@ -505,8 +520,8 @@ int strcasecmp (const char *s1, const char *s2);
 # else
 /* Create our own, in misc.c */
 int strncasecmp (const char *s1, const char *s2, int n);
-# endif
-#endif
+# endif /* HAVE_STRNICMP || HAVE_STRNCMPI */
+#endif /* !HAVE_STRNCASECMP */
 
 extern const struct floc *reading_file;
 extern const struct floc **expanding_var;
@@ -536,7 +551,7 @@ extern int job_rfd;
 extern double max_load_average;
 #else
 extern int max_load_average;
-#endif
+#endif /* !NO_FLOAT */
 
 extern char *program;
 
@@ -562,11 +577,11 @@ extern int handling_fatal_signal;
 
 
 #ifndef MIN
-#define MIN(_a,_b) ((_a)<(_b)?(_a):(_b))
-#endif
+# define MIN(_a,_b) ((_a)<(_b)?(_a):(_b))
+#endif /* !MIN */
 #ifndef MAX
-#define MAX(_a,_b) ((_a)>(_b)?(_a):(_b))
-#endif
+# define MAX(_a,_b) ((_a)>(_b)?(_a):(_b))
+#endif /* !MAX */
 
 #ifdef VMS
 typedef enum {
@@ -580,13 +595,15 @@ typedef enum {
   MAKE_TROUBLE = 1, /**< A we ran failed */
   MAKE_FAILURE = 2  /**< GNU Make had an internal error/failure */
 } make_exit_code_t;
-#endif
+#endif /* VMS */
 
 /* Set up heap debugging library dmalloc.  */
 
 #ifdef HAVE_DMALLOC_H
-#include <dmalloc.h>
-#endif
+# include <dmalloc.h>
+#else
+# define NOT_WARNING_ABOUT_NOT_USING_DMALLOC 1
+#endif /* HAVE_DMALLOC_H */
 
 #ifndef initialize_main
 # ifdef __EMX__
@@ -594,16 +611,16 @@ typedef enum {
                           { _wildcard(pargc, pargv); _response(pargc, pargv); }
 # else
 #  define initialize_main(pargc, pargv)
-# endif
-#endif
+# endif /* __EMX__ */
+#endif /* !initialize_main */
 
 #ifdef __EMX__
 # if !defined chdir
 #  define chdir _chdir2
-# endif
+# endif /* !chdir */
 # if !defined getcwd
 #  define getcwd _getcwd2
-# endif
+# endif /* !getcwd */
 
 /* NO_CHDIR2 causes make not to use _chdir2() and _getcwd2() instead of
    chdir() and getcwd(). This avoids some error messages for the
@@ -612,30 +629,32 @@ typedef enum {
 #  warning NO_CHDIR2: usage of drive letters restricted
 #  undef chdir
 #  undef getcwd
-# endif
-#endif
+# endif /* NO_CHDIR2 */
+#endif /* __EMX__ */
 
 #ifndef initialize_main
 # define initialize_main(pargc, pargv)
-#endif
+#endif /* !initialize_main */
 
 
 /* Some systems (like Solaris, PTX, etc.) do not support the SA_RESTART flag
-   properly according to POSIX.  So, we try to wrap common system calls with
+   properly according to POSIX. So, we try to wrap common system calls with
    checks for EINTR.  Note that there are still plenty of system calls that
    can fail with EINTR but this, reportedly, gets the vast majority of
-   failure cases.  If you still experience failures you'll need to either get
+   failure cases. If you still experience failures you will need to either get
    a system where SA_RESTART works, or you need to avoid -j.  */
 
 #define EINTRLOOP(_v,_c)   while (((_v)=_c)==-1 && errno==EINTR)
 
 /* While system calls that return integers are pretty consistent about
    returning -1 on failure and setting errno in that case, functions that
-   return pointers are not always so well behaved.  Sometimes they return
+   return pointers are not always so well behaved. Sometimes they return
    NULL for expected behavior: one good example is readdir() which returns
-   NULL at the end of the directory--and _doesn't_ reset errno.  So, we have
+   NULL at the end of the directory -- & does _NOT_ reset errno. So, we have
    to do it ourselves here.  */
 
 #define ENULLLOOP(_v,_c)   do { errno = 0; (_v) = _c; } \
                            while((_v)==0 && errno==EINTR)
 #endif /*MAKE_H*/
+
+/* EOF */

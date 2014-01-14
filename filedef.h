@@ -1,4 +1,5 @@
-/* Definition of target file data structures for GNU Make.
+/* filedef.h
+   Definition of target file data structures for GNU Make.
 Copyright (C) 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997,
 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009,
 2010 Free Software Foundation, Inc.
@@ -25,6 +26,7 @@ this program.  If not, see <http://www.gnu.org/licenses/>.  */
 #ifndef FILEDEF_H
 #define FILEDEF_H
 
+#include <config.h>
 #include "hash.h"
 #include "types.h"
 
@@ -38,21 +40,20 @@ struct file
 
     struct dep *deps;		/* all dependencies, including duplicates */
     struct commands *cmds;	/* Commands to execute for this target.  */
-    const char *description;    /* Description of target taken from comment.
-				   Part after #:  */
+    const char *description; /* Description of target taken from comment.
+				              * Part after #:  */
     int command_flags;		/* Flags OR'd in for cmds; see commands.h.  */
-    const char *stem;		/* Implicit stem, if an implicit
-                                   rule has been used */
+    const char *stem; /* Implicit stem, if an implicit rule has been used */
     struct dep *also_make;	/* Targets that are made by making this.  */
     FILE_TIMESTAMP last_mtime;	/* File's modtime, if already known.  */
     FILE_TIMESTAMP mtime_before_update;	/* File's modtime before any updating
                                            has been performed.  */
-    struct file *prev;		/* Previous entry for same file name;
-				   used when there are multiple double-colon
-				   entries for the same file.  */
-    struct file *last;          /* Last entry for the same file name.  */
+    struct file *prev; /* Previous entry for same file name;
+				        * used when there are multiple double-colon
+				        * entries for the same file.  */
+    struct file *last; /* Last entry for the same file name. */
 
-    /* File that this file was renamed to.  After any time that a
+    /* File that this file was renamed to. After any time that a
        file could be renamed, call `check_renamed' (below).  */
     struct file *renamed;
 
@@ -60,19 +61,19 @@ struct file
     struct variable_set_list *variables;
 
     /* Pattern-specific variable reference for this target, or null if there
-       isn't one.  Also see the pat_searched flag, below.  */
+       is NOT one.  Also see the pat_searched flag, below.  */
     struct variable_set_list *pat_variables;
 
     /* Immediate dependent that caused this target to be remade,
-       or nil if there isn't one.  */
+       or nil if there is NOT one.  */
     struct file *parent;
 
     /* For a double-colon entry, this is the first double-colon entry for
        the same file.  Otherwise this is null.  */
     struct file *double_colon;
 
-    short int update_status;	/* Status of the last attempt to update,
-				   or -1 if none has been made.  */
+    short int update_status; /* Status of the last attempt to update,
+				              * or -1 if none has been made.  */
 
     enum cmd_state		/* State of the commands.  */
       {		/* Note: It is important that cs_not_started be zero.  */
@@ -84,23 +85,23 @@ struct file
 
     breakpoint_mask_t tracing;  /* breakpoint status of target. */
 
-    unsigned int precious:1;	/* Non-0 means don't delete file on quit */
-    unsigned int low_resolution_time:1;	/* Nonzero if this file's time stamp
-					   has only one-second resolution.  */
+    unsigned int precious:1;	/* Non-0 means do NOT delete file on quit */
+    unsigned int low_resolution_time:1; /* Nonzero if this file's time stamp
+										 * has only one-second resolution. */
     unsigned int tried_implicit:1; /* Nonzero if have searched
-				      for implicit rule for making
-				      this file; don't search again.  */
+				                    * for implicit rule for making
+				                    * this file; do NOT search again.  */
     unsigned int updating:1;	/* Nonzero while updating deps of this file */
     unsigned int updated:1;	/* Nonzero if this file has been remade.  */
     unsigned int is_target:1;	/* Nonzero if file is described as target.  */
     unsigned int cmd_target:1;	/* Nonzero if file was given on cmd line.  */
     unsigned int phony:1;	/* Nonzero if this is a phony file
-				   i.e., a prerequisite of .PHONY.  */
+				             * i.e., a prerequisite of .PHONY.  */
     unsigned int intermediate:1;/* Nonzero if this is an intermediate file.  */
     unsigned int secondary:1;   /* Nonzero means remove_intermediates should
                                    not delete it.  */
-    unsigned int dontcare:1;	/* Nonzero if no complaint is to be made if
-				   this target cannot be remade.  */
+    unsigned int dontcare:1; /* Nonzero if no complaint is to be made if
+				              * this target cannot be remade.  */
     unsigned int ignore_vpath:1;/* Nonzero if we threw out VPATH name.  */
     unsigned int pat_searched:1;/* Nonzero if we already searched for
                                    pattern-specific variables.  */
@@ -117,9 +118,9 @@ extern struct file *suffix_file, *default_file;
 struct file *lookup_file (const char *name);
 
 /*! Enter PSZ_NAME into the file hash table if it is not already
-  there and return a pointer to that.  If the entry is in the file
-  hash table, return that entry.  Some file fields are initialized on
-  new entry.
+ *  there and return a pointer to that. If the entry is in the file
+ *  hash table, return that entry. Some file fields are initialized on
+ *  new entry.
  */
 extern struct file *enter_file (const char *psz_name, const floc_t *p_floc);
 
@@ -136,13 +137,29 @@ char *build_target_list (char *old_list);
 void print_prereqs (const struct dep *deps);
 void print_file_data_base (void);
 
-#if FILE_TIMESTAMP_HI_RES
-# define FILE_TIMESTAMP_STAT_MODTIME(fname, st) \
+#ifdef HAVE_SYS_STAT_H
+# include <sys/stat.h>
+#else
+# warning filedef.h expects <sys/stat.h> to be included.
+#endif /* HAVE_SYS_STAT_H */
+
+#ifdef __APPLE__
+# undef FILE_TIMESTAMP_HI_RES
+# define FILE_TIMESTAMP_HI_RES 0
+#endif /* __APPLE__ */
+
+#if FILE_TIMESTAMP_HI_RES && defined(ST_MTIM_NSEC)
+# if defined(__IBMCPP__) || defined(_AIX) || defined(_AIX_)
+#  define FILE_TIMESTAMP_STAT_MODTIME(fname, st) \
+    file_timestamp_cons (fname, (st).st_mtime, (st).st_mtime_n)
+# else
+#  define FILE_TIMESTAMP_STAT_MODTIME(fname, st) \
     file_timestamp_cons (fname, (st).st_mtime, (st).st_mtim.ST_MTIM_NSEC)
+# endif /* __IBMCPP__ || _AIX || _AIX_ */
 #else
 # define FILE_TIMESTAMP_STAT_MODTIME(fname, st) \
     file_timestamp_cons (fname, (st).st_mtime, 0)
-#endif
+#endif /* FILE_TIMESTAMP_HI_RES && ST_MTIM_NSEC */
 
 /* If FILE_TIMESTAMP is 64 bits (or more), use nanosecond resolution.
    (Multiply by 2**30 instead of by 10**9 to save time at the cost of
@@ -183,8 +200,8 @@ void file_timestamp_sprintf (char *p, FILE_TIMESTAMP ts);
    The value is NONEXISTENT_MTIME if the file does not exist.  */
 #define file_mtime(f) file_mtime_1 ((f), 1)
 /* Return the mtime of file F (a struct file *), caching it.
-   Don't search using vpath for the file--if it doesn't actually exist,
-   we don't find it.
+   Do NOT search using vpath for the file -- if it does NOT actually exist,
+   we do NOT find it.
    The value is NONEXISTENT_MTIME if the file does not exist.  */
 #define file_mtime_no_search(f) file_mtime_1 ((f), 0)
 FILE_TIMESTAMP f_mtime (struct file *file, int search);
@@ -209,8 +226,8 @@ FILE_TIMESTAMP f_mtime (struct file *file, int search);
 			     << FILE_TIMESTAMP_LO_BITS) \
 			    + ORDINARY_MTIME_MIN + FILE_TIMESTAMPS_PER_S - 1)
 
-/* Modtime value to use for `infinitely new'.  We used to get the current time
-   from the system and use that whenever we wanted `new'.  But that causes
+/* Modtime value to use for `infinitely new'. We used to get the current time
+   from the system and use that whenever we wanted `new'. But that causes
    trouble when the machine running make and the machine holding a file have
    different ideas about what time it is; and can also lose for `force'
    targets, which need to be considered newer than anything that depends on
@@ -224,3 +241,5 @@ FILE_TIMESTAMP f_mtime (struct file *file, int search);
 extern int snapped_deps;
 
 #endif /*FILEDEF_H*/
+
+/* EOF */

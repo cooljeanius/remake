@@ -1,8 +1,8 @@
-/* Output or logging functions for GNU Make.  
+/* Output or logging functions for GNU Make.
 
 Copyright (C) 2005, 2007, 2008 R. Bernstein <rocky@gnu.org>
 This file is part of GNU Make (remake variant).
-Copyright (C) 2004, 2005, 2007, 2008, Free Software Foundation, Inc.  
+Copyright (C) 2004, 2005, 2007, 2008, Free Software Foundation, Inc.
 
 GNU Make is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -28,8 +28,10 @@ Boston, MA 02111-1307, USA.  */
 #include "read.h"
 #include "print.h"
 
+#define _IN_PRINT_C
+
 /* Think of the below not as an enumeration but as #defines done in a
-   way that we'll be able to use the value in a gdb. */
+   way that we will be able to use the value in a gdb. */
 enum debug_print_enums_e debug_print_enums1;
 
 #if HAVE_VPRINTF || HAVE_DOPRNT
@@ -40,12 +42,12 @@ enum debug_print_enums_e debug_print_enums1;
 # else
 #  include <varargs.h>
 #  define VA_START(args, lastarg) va_start(args)
-# endif
+# endif /* __STDC__ */
 # if HAVE_VPRINTF
 #  define VA_PRINTF(fp, lastarg, args) vfprintf((fp), (lastarg), (args))
 # else
 #  define VA_PRINTF(fp, lastarg, args) _doprnt((lastarg), (args), (fp))
-# endif
+# endif /* HAVE_VPRINTF */
 # define VA_END(args) va_end(args)
 #else
 /* # undef HAVE_STDVARARGS */
@@ -54,9 +56,9 @@ enum debug_print_enums_e debug_print_enums1;
 # define VA_START(args, lastarg)
 # define VA_PRINTF(fp, lastarg, args) fprintf((fp), (lastarg), va_alist)
 # define VA_END(args)
-#endif
+#endif /* HAVE_VPRINTF || HAVE_DOPRNT */
 
-
+
 /* Print a message on stdout.  */
 
 void
@@ -64,11 +66,11 @@ void
 message (int prefix, const char *fmt, ...)
 #else
 message (int prefix, const char *fmt, va_alist)
-#endif
+#endif /* __STDC__ && HAVE_STDVARARGS */
 {
 #if HAVE_STDVARARGS
   va_list args;
-#endif
+#endif /* HAVE_STDVARARGS */
 
   log_working_directory (1);
 
@@ -91,7 +93,7 @@ message (int prefix, const char *fmt, va_alist)
 }
 
 /* Print an error message.  */
-
+#ifndef _IN_ERROR_C
 void
 #if HAVE_ANSI_COMPILER && USE_VARIADIC && HAVE_STDARG_H
 error (const floc_t *flocp, const char *fmt, ...)
@@ -100,20 +102,21 @@ error (flocp, fmt, va_alist)
      const floc_t *flocp;
      const char *fmt;
      va_dcl
-#endif
+#endif /* HAVE_ANSI_COMPILER && USE_VARIADIC && HAVE_STDARG_H */
 {
 #if USE_VARIADIC
   va_list args;
-#endif
+#endif /* USE_VARIADIC */
 
   log_working_directory (1);
 
-  if (flocp && flocp->filenm)
-    fprintf (stderr, "%s:%lu: ", flocp->filenm, flocp->lineno);
-  else if (makelevel == 0)
-    fprintf (stderr, "%s: ", program);
-  else
-    fprintf (stderr, "%s[%u]: ", program, makelevel);
+	if (flocp && flocp->filenm) {
+		fprintf (stderr, "%s:%lu: ", flocp->filenm, flocp->lineno);
+	} else if (makelevel == 0) {
+		fprintf (stderr, "%s: ", program);
+	} else {
+		fprintf (stderr, "%s[%u]: ", program, makelevel);
+	}
 
   VA_START(args, fmt);
   VA_PRINTF (stderr, fmt, args);
@@ -121,9 +124,11 @@ error (flocp, fmt, va_alist)
 
   putc ('\n', stderr);
   fflush (stderr);
-  if (debugger_on_error & DEBUGGER_ON_ERROR) 
-    enter_debugger(NULL, NULL, -1, DEBUG_ERROR_HIT);
+	  if (debugger_on_error & DEBUGGER_ON_ERROR) {
+		  enter_debugger(NULL, NULL, -1, DEBUG_ERROR_HIT);
+	  }
 }
+#endif /* !_IN_ERROR_C */
 
 void
 #if __STDC__ && HAVE_STDVARARGS
@@ -133,27 +138,28 @@ err_with_stack (p_call, fmt, va_alist)
      target_stack_node_t *p_call;
      const char *fmt;
      va_dcl
-#endif
+#endif /* __STDC__ && HAVE_STDVARARGS */
 {
 #if HAVE_STDVARARGS
   va_list args;
-#endif
+#endif /* HAVE_STDVARARGS */
   floc_t *p_floc   = NULL;
   file_t *p_target = NULL;
-   
+
   log_working_directory (1);
 
   if (p_call && p_call->p_target) {
     p_target = p_call->p_target;
     p_floc   = &(p_target->floc);
   }
-  
-  if (p_floc && p_floc->filenm)
-    fprintf (stderr, "%s:%lu: ", p_floc->filenm, p_floc->lineno);
-  else if (makelevel == 0)
-    fprintf (stderr, "%s: ", program);
-  else
-    fprintf (stderr, "%s[%u]: ", program, makelevel);
+
+	if (p_floc && p_floc->filenm) {
+		fprintf (stderr, "%s:%lu: ", p_floc->filenm, p_floc->lineno);
+	} else if (makelevel == 0) {
+		fprintf (stderr, "%s: ", program);
+	} else {
+		fprintf (stderr, "%s[%u]: ", program, makelevel);
+	}
 
   VA_START(args, fmt);
   VA_PRINTF (stderr, fmt, args);
@@ -171,8 +177,9 @@ err_with_stack (p_call, fmt, va_alist)
   }
   fflush (stdout);
   fflush (stderr);
-  if (debugger_on_error & DEBUGGER_ON_ERROR) 
-    enter_debugger(p_call, p_target, -1, DEBUG_ERROR_HIT);
+	if (debugger_on_error & DEBUGGER_ON_ERROR) {
+		enter_debugger(p_call, p_target, -1, DEBUG_ERROR_HIT);
+	}
 }
 
 /* Print an error message and exit.  */
@@ -185,20 +192,21 @@ fatal (flocp, fmt, va_alist)
      const floc_t *flocp;
      const char *fmt;
      va_dcl
-#endif
+#endif /* HAVE_ANSI_COMPILER && USE_VARIADIC && HAVE_STDARG_H */
 {
 #if USE_VARIADIC
   va_list args;
-#endif
+#endif /* USE_VARIADIC */
 
   log_working_directory (1);
 
-  if (flocp && flocp->filenm)
-    fprintf (stderr, "%s:%lu: *** ", flocp->filenm, flocp->lineno);
-  else if (makelevel == 0)
-    fprintf (stderr, "%s: *** ", program);
-  else
-    fprintf (stderr, "%s[%u]: *** ", program, makelevel);
+	if (flocp && flocp->filenm) {
+		fprintf (stderr, "%s:%lu: *** ", flocp->filenm, flocp->lineno);
+	} else if (makelevel == 0) {
+		fprintf (stderr, "%s: *** ", program);
+	} else {
+		fprintf (stderr, "%s[%u]: *** ", program, makelevel);
+	}
 
   VA_START(args, fmt);
   VA_PRINTF (stderr, fmt, args);
@@ -206,9 +214,9 @@ fatal (flocp, fmt, va_alist)
 
   fputs (_(".  Stop.\n"), stderr);
 
-  /* If in_debugger == 1 and we don't die or enter a the debugger again.
-     if in_debugger == 77 then we just propagate that wish.
-     
+  /* If in_debugger == 1 and we do NOT die or enter a the debugger again.
+   * if in_debugger == 77 then we just propagate that wish.
+   *
    */
   switch (in_debugger) {
   case 0:
@@ -219,10 +227,10 @@ fatal (flocp, fmt, va_alist)
   case DEBUGGER_QUIT_RC:
     die(DEBUGGER_QUIT_RC);
   default:
-  case 1: 
+  case 1:
     longjmp(debugger_loop, 0);
     break;
-    
+
   }
 }
 
@@ -236,11 +244,11 @@ fatal_err (flocp, fmt, va_alist)
      target_stack_node_t *p_call;
      const char *fmt;
      va_dcl
-#endif
+#endif /* __STDC__ && HAVE_STDVARARGS */
 {
 #if HAVE_STDVARARGS
   va_list args;
-#endif
+#endif /* HAVE_STDVARARGS */
   floc_t *p_floc   = NULL;
   file_t *p_target = NULL;
 
@@ -250,7 +258,7 @@ fatal_err (flocp, fmt, va_alist)
     p_target = p_call->p_target;
     p_floc   = &(p_target->floc);
   }
-  
+
   if (p_floc && p_floc->filenm)
     fprintf (stderr, "%s:%lu: *** ", p_floc->filenm, p_floc->lineno);
   else if (makelevel == 0)
@@ -264,7 +272,7 @@ fatal_err (flocp, fmt, va_alist)
 
   fputs (_(".  Stop.\n"), stderr);
   if (!no_extended_errors) {
-    if (p_call) 
+    if (p_call)
       print_target_stack(p_call, -1, MAX_STACK_SHOW);
     else if (p_stack_floc_top)
       print_floc_stack(-1, MAX_STACK_SHOW);
@@ -275,32 +283,31 @@ fatal_err (flocp, fmt, va_alist)
 }
 
 #ifndef HAVE_STRERROR
-
-#undef	strerror
-
+# undef	strerror
 char *
 strerror (int errnum)
 {
   extern int errno, sys_nerr;
-#ifndef __DECC
+# ifndef __DECC
   extern char *sys_errlist[];
-#endif
+# endif /* !__DECC */
   static char buf[] = "Unknown error 12345678901234567890";
 
-  if (errno < sys_nerr)
-    return sys_errlist[errnum];
+	if (errno < sys_nerr) {
+		return sys_errlist[errnum];
+	}
 
   sprintf (buf, _("Unknown error %d"), errnum);
   return buf;
 }
-#endif
+#endif /* !HAVE_STRERROR */
 
 /*! Print an error message from errno.  */
 void
 perror_with_name (const char *str, const char *name)
 {
   error (NILF, _("%s%s: %s"), str, name, strerror (errno));
-  if (debugger_on_error & DEBUGGER_ON_ERROR) 
+  if (debugger_on_error & DEBUGGER_ON_ERROR)
     enter_debugger(NULL, NULL, -1, DEBUG_ERROR_HIT);
 }
 
@@ -323,13 +330,13 @@ log_access (char *flavor)
 }
 
 /*! Display a variable and its value. */
-void 
+void
 print_variable (variable_t *p_v)
 {
   if (p_v) {
     const char *psz_origin = origin2str(p_v->origin);
     if (NULL != p_v->fileinfo.filenm) {
-      printf(_("%s:%lu (origin: %s) %s = %s\n"), 
+      printf(_("%s:%lu (origin: %s) %s = %s\n"),
 	     p_v->fileinfo.filenm, p_v->fileinfo.lineno,
 	     psz_origin,
 	     p_v->name, p_v->value);
@@ -340,26 +347,26 @@ print_variable (variable_t *p_v)
 }
 
 /*! Display a variable and its value with all substitutions included. */
-void 
+void
 print_variable_expand (variable_t *p_v)
 {
   if (p_v) {
     const char *psz_origin = origin2str(p_v->origin);
     if (NULL != p_v->fileinfo.filenm) {
-      printf(_("%s:%lu (origin: %s) %s := %s\n"), 
+      printf(_("%s:%lu (origin: %s) %s := %s\n"),
 	     p_v->fileinfo.filenm, p_v->fileinfo.lineno,
 	     psz_origin,
 	     p_v->name, variable_expand(p_v->value));
     } else {
-      printf("(origin %s) %s := %s\n", psz_origin, 
+      printf("(origin %s) %s := %s\n", psz_origin,
 	     p_v->name, variable_expand(p_v->value));
     }
   }
 }
 
 /*! Show a command before executing it. */
-extern void 
-print_target_prefix (const char *p_name) 
+extern void
+print_target_prefix (const char *p_name)
 {
   printf(" %s", p_name);
   if (makelevel != 0) {
@@ -368,21 +375,21 @@ print_target_prefix (const char *p_name)
 }
 
 /*! Show target information: location and name. */
-extern void 
-print_file_target_prefix (const file_t *p_target) 
+extern void
+print_file_target_prefix (const file_t *p_target)
 {
   print_floc_prefix(&(p_target->floc));
   print_target_prefix(p_target->name);
 }
 
 /*! Show a command before executing it. */
-extern void 
-print_floc_prefix (const floc_t *p_floc) 
+extern void
+print_floc_prefix (const floc_t *p_floc)
 {
   if (!p_floc) return;
   if (p_floc->filenm) {
-    if (!basename_filenames && strlen(p_floc->filenm) 
-	&& p_floc->filenm[0] != '/') 
+    if (!basename_filenames && strlen(p_floc->filenm)
+	&& p_floc->filenm[0] != '/')
       printf("%s/", starting_directory);
     printf("%s:%lu", p_floc->filenm, p_floc->lineno);
   } else {
@@ -405,11 +412,11 @@ print_child_cmd (child_t *p_child, target_stack_node_t *p)
     debug_enter_reason_t reason = DEBUG_STEP_HIT;
     if (i_debugger_stepping)
       reason = DEBUG_STEP_HIT;
-    else if (p_child->file->tracing & BRK_BEFORE_PREREQ) 
+    else if (p_child->file->tracing & BRK_BEFORE_PREREQ)
       reason = DEBUG_BRKPT_BEFORE_PREREQ;
-    else if (p_child->file->tracing & BRK_BEFORE_PREREQ) 
+    else if (p_child->file->tracing & BRK_BEFORE_PREREQ)
       reason = DEBUG_BRKPT_AFTER_PREREQ;
-      
+
     rc=enter_debugger(p, p_child->file, 0, reason);
   }
 
@@ -417,29 +424,29 @@ print_child_cmd (child_t *p_child, target_stack_node_t *p)
 }
 
 void
-print_target_stack_entry (const file_t *p_target, int i, int i_pos) 
+print_target_stack_entry (const file_t *p_target, int i, int i_pos)
 {
   floc_t floc;
-  const char *psz_target_name = 
+  const char *psz_target_name =
     (p_target && p_target->name) ? p_target->name : "(null)";
-  
-  /* If we don't have a line recorded for the target,
-     but we do have one for the commands it runs,
-     use that.
-  */
+
+  /* If we do NOT have a line recorded for the target,
+   * but we do have one for the commands it runs,
+   * use that.
+   */
   if (p_target->floc.filenm) {
     memcpy(&floc, &(p_target->floc), sizeof(floc_t));
   } else if (p_target->cmds) {
     memcpy(&floc, &(p_target->cmds->fileinfo.filenm), sizeof(floc_t));
     /* HACK: is it okay to assume that the target is on the line
-       before the first command? Or should we list the line
-       that the command starts on - so we know we've faked the location?
-    */
+     * before the first command? Or should we list the line
+     * that the command starts on - so we know we have faked the location?
+     */
     floc.lineno--;
   } else {
     floc.filenm = NULL;
   }
-  
+
   if (floc.filenm) {
     if (i_pos != -1) {
       printf("%s", (i == i_pos) ? "=>" : "  ");
@@ -452,9 +459,9 @@ print_target_stack_entry (const file_t *p_target, int i, int i_pos)
     }
     if (p_target->phony)
       printf ("#%u  %s (.PHONY target)", i, psz_target_name);
-    else 
+    else
       printf ("#%u  %s at ??", i, psz_target_name);
-    
+
   }
   printf ("\n");
 }
@@ -463,11 +470,11 @@ print_target_stack_entry (const file_t *p_target, int i, int i_pos)
 /*! Display the target stack. i_pos is the position we are currently.
   i_max is the maximum number of entries to show.
  */
-extern void 
+extern void
 print_target_stack (target_stack_node_t *p, int i_pos, int i_max)
 {
   int i=0;
-  for ( ; p && i < i_max ; 
+  for ( ; p && i < i_max ;
 	i++, p = p->p_parent  ) {
     print_target_stack_entry (p->p_target, i, i_pos);
   }
@@ -475,13 +482,13 @@ print_target_stack (target_stack_node_t *p, int i_pos, int i_max)
 
 /*! Display the Makefile read stack. i_pos is the position we are currently.
   i_max is the maximum number of entries to show. */
-extern void 
+extern void
 print_floc_stack (int i_pos, int i_max)
 {
   int i=0;
   floc_stack_node_t *p;
   printf("\n");
-  for ( p=p_stack_floc_top; p && i < i_max ; 
+  for ( p=p_stack_floc_top; p && i < i_max ;
 	i++, p = p->p_parent ) {
     if (i_pos != -1) {
       printf("%s", (i == i_pos) ? "=>" : "  ");
@@ -495,7 +502,7 @@ print_floc_stack (int i_pos, int i_max)
 }
 
 /*! Print the file information.  */
-void print_file (file_t *p_file) 
+void print_file (file_t *p_file)
 {
   char buf[FILE_TIMESTAMP_PRINT_LEN_BOUND + 1];
   printf("File %s:\n", p_file->name);
@@ -532,7 +539,7 @@ bool print_read_makefiles(const char *psz_filename)
 }
 
 /*! Print the command line used to invoke Make. */
-void print_cmdline (void) 
+void print_cmdline (void)
 {
   unsigned int i;
   printf(_("Command-line invocation:"));
@@ -550,9 +557,9 @@ void print_cmdline (void)
 }
 
 
-/* 
+/*
  * Local variables:
  * eval: (c-set-style "gnu")
  * indent-tabs-mode: nil
- * End: 
+ * End:
  */

@@ -1,4 +1,5 @@
-/* Definitions for using variables in GNU Make.
+/* variable.h
+   Definitions for using variables in GNU Make.
 Copyright (C) 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997,
 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009,
 2010 Free Software Foundation, Inc.
@@ -81,7 +82,7 @@ struct variable
     enum variable_export
       {
 	v_export,		/* Export this variable.  */
-	v_noexport,		/* Don't export this variable.  */
+	v_noexport,		/* Do NOT export this variable.  */
 	v_ifset,		/* Export it if it has a non-default value.  */
 	v_default		/* Decide in target_environment.  */
       } export ENUM_BITFIELD (2);
@@ -100,7 +101,7 @@ struct variable_set_list
   {
     struct variable_set_list *next;	/* Link in the chain.  */
     struct variable_set *set;		/* Variable set.  */
-    int next_is_parent;                 /* True if next is a parent target.  */
+    int next_is_parent;           /* True if next is a parent target. */
   };
 
 /* Structure used for pattern-specific variables.  */
@@ -131,10 +132,10 @@ void restore_variable_buffer (char *buf, unsigned int len);
 
 /* function.c */
 /*! Check for a function invocation in *STRINGP.  *STRINGP points at
-   the opening ( or { and is not null-terminated.  If a function
-   invocation is found, expand it into the buffer at *OP, updating
-   *OP, incrementing *STRINGP past the reference and returning
-   nonzero.  If not, return zero.  */
+ *  the opening ( or { and is not null-terminated.  If a function
+ *  invocation is found, expand it into the buffer at *OP, updating
+ *  *OP, incrementing *STRINGP past the reference and returning
+ *  nonzero.  If not, return zero.  */
 int handle_function (char **op, const char **stringp);
 
 int pattern_matches (const char *pattern, const char *percent, const char *str);
@@ -162,43 +163,43 @@ char *recursively_expand_for_file (struct variable *v, struct file *file);
 struct variable_set_list *create_new_variable_set (void);
 
 /*!
-  Return a string describing origin.
+ *  Return a string describing origin.
  */
 const char *origin2str(variable_origin_t origin);
 
 void free_variable_set (struct variable_set_list *);
 
 /*! Create a new variable set, push it on the current setlist,
-  and assign current_variable_set_list to it. 
+ *  and assign current_variable_set_list to it.
  */
 struct variable_set_list *push_new_variable_scope (void);
 
 /*! Pop the top set off the current_variable_set_list, and free all
-   its storage.  If b_toplevel set we have the top-most global scope
-   and some things don't get freed because they weren't malloc'd.
-*/
+ *  its storage. If b_toplevel set we have the top-most global scope
+ *  and some things do NOT get freed because they were NOT malloc'd.
+ */
 void pop_variable_scope (void);
 
 /*! Define the automatic variables, and record the addresses of their
-  structures so we can change their values quickly.  */
+ *  structures so we can change their values quickly.  */
 void define_automatic_variables (void);
 
 /*! Initialize FILE's variable set list.  If FILE already has a
-   variable set list, the topmost variable set is left intact, but the
-   the rest of the chain is replaced with FILE->parent's setlist.  If
-   FILE is a double-colon rule, then we will use the "root"
-   double-colon target's variable set as the parent of FILE's variable
-   set.
-
-   If we're READing a makefile, don't do the pattern variable search now,
-   since the pattern variable might not have been defined yet.  */
+ *  variable set list, the topmost variable set is left intact, but the
+ *  the rest of the chain is replaced with FILE->parent's setlist.  If
+ *  FILE is a double-colon rule, then we will use the "root"
+ *  double-colon target's variable set as the parent of FILE's variable
+ *  set.
+ *
+ *  If we are READing a makefile, do NOT do the pattern variable search now,
+ *  since the pattern variable might not have been defined yet.  */
 void initialize_file_variables (struct file *file, int reading);
 
 
-/*! Print all the local variables of P_TARGET.  Lines output have "# "
-    prepended. If you want hash table statistics too, set b_hash_stats
-    true.
-*/
+/*! Print all the local variables of P_TARGET. Lines output have "# "
+ *  prepended. If you want hash table statistics too, set b_hash_stats
+ *  true.
+ */
 extern void print_file_variables(const file_t *p_target, bool b_hash_stats);
 
 /*! Print the data base of variables.  */
@@ -209,10 +210,10 @@ extern void print_variable_data_base (void);
 extern void print_variable_info (const void *item, void *arg);
 
 /*! Print all the variables in SET.  PREFIX is printed before the
-   actual variable definitions (everything else is comments).  If you
-   want hash table statistics too, set b_hash_stats true.
-*/
-void print_variable_set (struct variable_set *set, char *prefix, 
+ *  actual variable definitions (everything else is comments). If you
+ *  want hash table statistics too, set b_hash_stats true.
+ */
+void print_variable_set (struct variable_set *set, char *prefix,
 			 bool b_hash_stats);
 
 void merge_variable_set_lists (struct variable_set_list **to_list,
@@ -297,4 +298,6 @@ extern int export_all_variables;
 #define MAKELEVEL_NAME "MAKELEVEL"
 #define MAKELEVEL_LENGTH (sizeof (MAKELEVEL_NAME) - 1)
 
-#endif
+#endif /* !VARIABLE_H */
+
+/* EOF */

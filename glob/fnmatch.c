@@ -1,4 +1,5 @@
-/* Copyright (C) 1991, 1992, 1993, 1996, 1997, 1998, 1999 Free Software
+/* fnmactch.c
+   Copyright (C) 1991, 1992, 1993, 1996, 1997, 1998, 1999 Free Software
 Foundation, Inc.
 This file is part of the GNU C Library.
 
@@ -19,12 +20,14 @@ USA.  */
 
 #if HAVE_CONFIG_H
 # include <config.h>
-#endif
+#else
+# warning fnmatch.c expects <config.h> to be included.
+#endif /* HAVE_CONFIG_H */
 
 /* Enable GNU extensions in fnmatch.h.  */
 #ifndef _GNU_SOURCE
 # define _GNU_SOURCE	1
-#endif
+#endif /* !_GNU_SOURCE */
 
 #include <errno.h>
 #include <fnmatch.h>
@@ -34,11 +37,13 @@ USA.  */
 # include <string.h>
 #else
 # include <strings.h>
-#endif
+#endif /* HAVE_STRING_H || _LIBC */
 
-#if defined STDC_HEADERS || defined _LIBC
+#if defined STDC_HEADERS || defined _LIBC || defined HAVE_STDLIB_H
 # include <stdlib.h>
-#endif
+#else
+# warning fnmatch.c expects <stdlib.h> to be included.
+#endif /* STDC_HEADERS || _LIBC || HAVE_STRING_H */
 
 /* For platform which support the ISO C amendement 1 functionality we
    support user defined character classes.  */
@@ -46,7 +51,7 @@ USA.  */
 /* Solaris 2.5 has a bug: <wchar.h> must be included before <wctype.h>.  */
 # include <wchar.h>
 # include <wctype.h>
-#endif
+#endif /* _LIBC || (HAVE_WCTYPE_H && HAVE_WCHAR_H */
 
 /* Comment out all this code if we are using the GNU C Library, and are not
    actually compiling the library itself.  This code is part of the GNU C
@@ -63,18 +68,18 @@ USA.  */
 #  define ISASCII(c) 1
 # else
 #  define ISASCII(c) isascii(c)
-# endif
+# endif /* STDC_HEADERS || !isascii */
 
 # ifdef isblank
 #  define ISBLANK(c) (ISASCII (c) && isblank (c))
 # else
 #  define ISBLANK(c) ((c) == ' ' || (c) == '\t')
-# endif
+# endif /* isblank */
 # ifdef isgraph
 #  define ISGRAPH(c) (ISASCII (c) && isgraph (c))
 # else
 #  define ISGRAPH(c) (ISASCII (c) && isprint (c) && !isspace (c))
-# endif
+# endif /* isgraph */
 
 # define ISPRINT(c) (ISASCII (c) && isprint (c))
 # define ISDIGIT(c) (ISASCII (c) && isdigit (c))
@@ -95,16 +100,16 @@ USA.  */
 #  ifdef CHARCLASS_NAME_MAX
 #   define CHAR_CLASS_MAX_LENGTH CHARCLASS_NAME_MAX
 #  else
-/* This shouldn't happen but some implementation might still have this
-   problem.  Use a reasonable default value.  */
+/* This should NOT happen but some implementation might still have this
+   problem. Use a reasonable default value.  */
 #   define CHAR_CLASS_MAX_LENGTH 256
-#  endif
+#  endif /* CHARCLASS_NAME_MAX */
 
 #  ifdef _LIBC
 #   define IS_CHAR_CLASS(string) __wctype (string)
 #  else
 #   define IS_CHAR_CLASS(string) wctype (string)
-#  endif
+#  endif /* _LIBC */
 # else
 #  define CHAR_CLASS_MAX_LENGTH  6 /* Namely, `xdigit'.  */
 
@@ -115,20 +120,20 @@ USA.  */
     || STREQ (string, "space") || STREQ (string, "print")		      \
     || STREQ (string, "punct") || STREQ (string, "graph")		      \
     || STREQ (string, "cntrl") || STREQ (string, "blank"))
-# endif
+# endif /* _LIBC || (HAVE_WCTYPE_H && HAVE_WCHAR_H) */
 
 /* Avoid depending on library functions or files
    whose names are inconsistent.  */
 
 # if !defined _LIBC && !defined getenv
 extern char *getenv ();
-# endif
+# endif /* !LIBC && !getenv */
 
 # ifndef errno
 extern int errno;
-# endif
+# endif /* !errno */
 
-/* This function doesn't exist on most systems.  */
+/* This function does NOT exist on most systems.  */
 
 # if !defined HAVE___STRCHRNUL && !defined _LIBC
 static char *
@@ -141,13 +146,13 @@ __strchrnul (s, c)
     result = strchr (s, '\0');
   return result;
 }
-# endif
+# endif /* !HAVE___STRCHRNUL && !_LIBC */
 
 # ifndef internal_function
-/* Inside GNU libc we mark some function in a special way.  In other
+/* Inside GNU libc we mark some function in a special way. In other
    environments simply ignore the marking.  */
 #  define internal_function
-# endif
+# endif /* !internal_function */
 
 /* Match STRING against the filename pattern PATTERN, returning zero if
    it matches, nonzero if not.  */
@@ -170,7 +175,7 @@ internal_fnmatch (pattern, string, no_leading_period, flags)
 #  define FOLD(c) ((flags & FNM_CASEFOLD) ? tolower (c) : (c))
 # else
 #  define FOLD(c) ((flags & FNM_CASEFOLD) && ISUPPER (c) ? tolower (c) : (c))
-# endif
+# endif /* _LIBC */
 
   while ((c = *p++) != '\0')
     {
@@ -217,11 +222,11 @@ internal_fnmatch (pattern, string, no_leading_period, flags)
 		{
 		  /* A ? needs to match one character.  */
 		  if (*n == '\0')
-		    /* There isn't another character; no match.  */
+		    /* There is NOT another character; no match.  */
 		    return FNM_NOMATCH;
 		  else
 		    /* One character of the string is consumed in matching
-		       this ? wildcard, so *??? won't match if there are
+		       this ? wildcard, so *??? will NOT match if there are
 		       less than three characters.  */
 		    ++n;
 		}
@@ -337,7 +342,7 @@ internal_fnmatch (pattern, string, no_leading_period, flags)
 		    size_t c1 = 0;
 # if defined _LIBC || (defined HAVE_WCTYPE_H && defined HAVE_WCHAR_H)
 		    wctype_t wt;
-# endif
+# endif /* _LIBC || (HAVE_WCTYPE_H && HAVE_WCHAR_H) */
 		    const char *startp = p;
 
 		    for (;;)
@@ -367,12 +372,18 @@ internal_fnmatch (pattern, string, no_leading_period, flags)
 
 # if defined _LIBC || (defined HAVE_WCTYPE_H && defined HAVE_WCHAR_H)
 		    wt = IS_CHAR_CLASS (str);
-		    if (wt == 0)
-		      /* Invalid character class name.  */
-		      return FNM_NOMATCH;
+			  if (wt == 0) {
+				  /* Invalid character class name.  */
+				  return FNM_NOMATCH;
+			  }
 
-		    if (__iswctype (__btowc ((unsigned char) *n), wt))
-		      goto matched;
+#  if defined(HAVE___ISWCTYPE) && defined(HAVE___BTOWC)
+			  if (__iswctype (__btowc ((unsigned char) *n), wt)) {
+				  goto matched;
+			  }
+#  else
+#   warning missing __iswctype() and __btowc() functions wanted for fnmatch.c
+#  endif /* HAVE___ISWCTYPE && HAVE___BTOWC */
 # else
 		    if ((STREQ (str, "alnum") && ISALNUM ((unsigned char) *n))
 			|| (STREQ (str, "alpha") && ISALPHA ((unsigned char) *n))
@@ -387,7 +398,7 @@ internal_fnmatch (pattern, string, no_leading_period, flags)
 			|| (STREQ (str, "upper") && ISUPPER ((unsigned char) *n))
 			|| (STREQ (str, "xdigit") && ISXDIGIT ((unsigned char) *n)))
 		      goto matched;
-# endif
+# endif /* _LIBC || (HAVE_WCTYPE_H && HAVE_WCHAR_H) */
 		  }
 		else if (c == '\0')
 		  /* [ (unterminated) loses.  */
@@ -405,71 +416,83 @@ internal_fnmatch (pattern, string, no_leading_period, flags)
 		      {
 			/* It is a range.  */
 			unsigned char cend = *p++;
-			if (!(flags & FNM_NOESCAPE) && cend == '\\')
-			  cend = *p++;
-			if (cend == '\0')
-			  return FNM_NOMATCH;
+				  if (!(flags & FNM_NOESCAPE) && cend == '\\') {
+					  cend = *p++;
+				  }
+				  if (cend == '\0') {
+					  return FNM_NOMATCH;
+				  }
 
-			if (cold <= fn && fn <= FOLD (cend))
-			  goto matched;
+				  if (cold <= fn && fn <= FOLD (cend)) {
+					  goto matched;
+				  }
 
 			c = *p++;
 		      }
 		  }
 
-		if (c == ']')
-		  break;
+			  if (c == ']') {
+				  break;
+			  }
 	      }
 
-	    if (!not)
-	      return FNM_NOMATCH;
+		  if (!not) {
+			  return FNM_NOMATCH;
+		  }
 	    break;
 
 	  matched:
 	    /* Skip the rest of the [...] that already matched.  */
 	    while (c != ']')
 	      {
-		if (c == '\0')
-		  /* [... (unterminated) loses.  */
-		  return FNM_NOMATCH;
+			  if (c == '\0') {
+				  /* [... (unterminated) loses.  */
+				  return FNM_NOMATCH;
+			  }
 
 		c = *p++;
 		if (!(flags & FNM_NOESCAPE) && c == '\\')
 		  {
-		    if (*p == '\0')
-		      return FNM_NOMATCH;
+			  if (*p == '\0') {
+				  return FNM_NOMATCH;
+			  }
 		    /* XXX 1003.2d11 is unclear if this is right.  */
 		    ++p;
 		  }
 		else if (c == '[' && *p == ':')
 		  {
 		    do
-		      if (*++p == '\0')
-			return FNM_NOMATCH;
+				if (*++p == '\0') {
+					return FNM_NOMATCH;
+				}
 		    while (*p != ':' || p[1] == ']');
 		    p += 2;
 		    c = *p;
 		  }
 	      }
-	    if (not)
-	      return FNM_NOMATCH;
+		  if (not) {
+			  return FNM_NOMATCH;
+		  }
 	  }
 	  break;
 
 	default:
-	  if (c != FOLD ((unsigned char) *n))
-	    return FNM_NOMATCH;
+			if (c != FOLD ((unsigned char) *n)) {
+				return FNM_NOMATCH;
+			}
 	}
 
       ++n;
     }
 
-  if (*n == '\0')
-    return 0;
+	if (*n == '\0') {
+		return 0;
+	}
 
-  if ((flags & FNM_LEADING_DIR) && *n == '/')
-    /* The FNM_LEADING_DIR flag says that "foo*" matches "foobar/frobozz".  */
-    return 0;
+	if ((flags & FNM_LEADING_DIR) && *n == '/') {
+		/* The FNM_LEADING_DIR flag says "foo*" matches "foobar/frobozz". */
+		return 0;
+	}
 
   return FNM_NOMATCH;
 
@@ -487,3 +510,5 @@ fnmatch (pattern, string, flags)
 }
 
 #endif	/* _LIBC or not __GNU_LIBRARY__.  */
+
+/* EOF */
