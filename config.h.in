@@ -257,6 +257,9 @@
 /* Define to 1 if you have the <pwd.h> header file. */
 #undef HAVE_PWD_H
 
+/* Define to 1 if you have the `qsort' function. */
+#undef HAVE_QSORT
+
 /* Define to 1 if you have the <readline.h> header file. */
 #undef HAVE_READLINE_H
 
@@ -546,6 +549,9 @@
 /* Define to the character that separates directories in PATH. */
 #undef PATH_SEPARATOR_CHAR
 
+/* Define to 1 if the C compiler supports function prototypes. */
+#undef PROTOTYPES
+
 /* Full path to remake top_sourcedir. */
 #undef REMAKE_SOURCE_PATH
 
@@ -662,6 +668,9 @@
    <pthread.h>, or <semaphore.h> is not used. If the typedef were allowed, the
    #define below would cause a syntax error. */
 #undef _UINT8_T
+
+/* Define like PROTOTYPES; this can be used by system headers. */
+#undef __PROTOTYPES
 
 /* Define to empty if `const' does not conform to ANSI C. */
 #undef const

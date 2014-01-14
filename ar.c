@@ -1,4 +1,5 @@
-/* Interface to `ar' archives for GNU Make.
+/* ar.c
+   Interface to `ar' archives for GNU Make.
 Copyright (C) 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997,
 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009,
 2010 Free Software Foundation, Inc.
@@ -25,7 +26,7 @@ this program.  If not, see <http://www.gnu.org/licenses/>.  */
 #include "dep.h"
 #include <fnmatch.h>
 
-/* Return nonzero if NAME is an archive-member reference, zero if not.  An
+/* Return nonzero if NAME is an archive-member reference, zero if not. An
    archive-member reference is a name like `lib(member)' where member is a
    non-empty string.
    If a name like `lib((entry))' is used, a fatal error is signaled at
@@ -37,15 +38,18 @@ ar_name (const char *name)
   const char *p = strchr (name, '(');
   const char *end;
 
-  if (p == 0 || p == name)
-    return 0;
+	if (p == 0 || p == name) {
+		return 0;
+	}
 
   end = p + strlen (p) - 1;
-  if (*end != ')' || end == p + 1)
-    return 0;
+	if (*end != ')' || end == p + 1) {
+		return 0;
+	}
 
-  if (p[1] == '(' && end[-1] == ')')
-    fatal (NILF, _("attempt to use unsupported feature: `%s'"), name);
+	if (p[1] == '(' && end[-1] == ')') {
+		fatal (NILF, _("attempt to use unsupported feature: `%s'"), name);
+	}
 
   return 1;
 }
@@ -102,11 +106,13 @@ ar_member_date (const char *name)
   {
     struct file *arfile;
     arfile = lookup_file (arname);
-    if (arfile == 0 && file_exists_p (arname))
-      arfile = enter_file (strcache_add (arname), NILF);
+	  if (arfile == 0 && file_exists_p (arname)) {
+		  arfile = enter_file (strcache_add (arname), NILF);
+	  }
 
-    if (arfile != 0)
-      (void) f_mtime (arfile, 0);
+	  if (arfile != 0) {
+		  (void) f_mtime (arfile, 0);
+	  }
   }
 
   val = ar_scan (arname, ar_member_date_1, memname);
@@ -223,8 +229,9 @@ glob_pattern_p (const char *pattern, int quote)
 	return 1;
 
       case '\\':
-	if (quote)
-	  ++p;
+			  if (quote) {
+				  ++p;
+			  }
 	break;
 
       case '[':
@@ -232,8 +239,9 @@ glob_pattern_p (const char *pattern, int quote)
 	break;
 
       case ']':
-	if (opened)
-	  return 1;
+			  if (opened) {
+				  return 1;
+			  }
 	break;
       }
 
@@ -251,8 +259,9 @@ ar_glob (const char *arname, const char *member_pattern, unsigned int size)
   const char **names;
   unsigned int i;
 
-  if (! glob_pattern_p (member_pattern, 1))
-    return 0;
+	if (! glob_pattern_p (member_pattern, 1)) {
+		return 0;
+	}
 
   /* Scan the archive for matches.
      ar_glob_match will accumulate them in STATE.chain.  */
@@ -263,14 +272,16 @@ ar_glob (const char *arname, const char *member_pattern, unsigned int size)
   state.n = 0;
   ar_scan (arname, ar_glob_match, &state);
 
-  if (state.chain == 0)
-    return 0;
+	if (state.chain == 0) {
+		return 0;
+	}
 
   /* Now put the names into a vector for sorting.  */
   names = alloca (state.n * sizeof (const char *));
   i = 0;
-  for (n = state.chain; n != 0; n = n->next)
-    names[i++] = n->name;
+	for (n = state.chain; n != 0; n = n->next) {
+		names[i++] = n->name;
+	}
 
   /* Sort them alphabetically.  */
   /* MSVC erroneously warns without a cast here.  */
@@ -278,10 +289,13 @@ ar_glob (const char *arname, const char *member_pattern, unsigned int size)
 
   /* Put them back into the chain in the sorted order.  */
   i = 0;
-  for (n = state.chain; n != 0; n = n->next)
-    n->name = names[i++];
+	for (n = state.chain; n != 0; n = n->next) {
+		n->name = names[i++];
+	}
 
   return state.chain;
 }
 
 #endif	/* Not NO_ARCHIVES.  */
+
+/* EOF */

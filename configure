@@ -8510,6 +8510,22 @@ _ACEOF
     ;;
 esac
 
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for function prototypes" >&5
+$as_echo_n "checking for function prototypes... " >&6; }
+if test "$ac_cv_prog_cc_c89" != no; then
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+$as_echo "yes" >&6; }
+
+$as_echo "#define PROTOTYPES 1" >>confdefs.h
+
+
+$as_echo "#define __PROTOTYPES 1" >>confdefs.h
+
+else
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+$as_echo "no" >&6; }
+fi
+
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking return type of signal handlers" >&5
 $as_echo_n "checking return type of signal handlers... " >&6; }
 if ${ac_cv_type_signal+:} false; then :
@@ -8873,10 +8889,10 @@ fi
 for ac_func in alarm atexit bzero clock_gettime dup2 fdopen fileno \
                 getcwd getgroups gethostbyaddr getrlimit gettimeofday \
                 inet_ntoa memmove mempcpy memset mkstemp mktemp pathconf \
-                pipe putenv readlink realpath setegid seteuid setlinebuf \
-                setregid setreuid setrlimit setvbuf sigaction sigsetmask \
-                strchr strdup strerror strndup strpbrk strrchr strsignal \
-                strstr strtol
+                pipe putenv qsort readlink realpath setegid seteuid \
+                setlinebuf setregid setreuid setrlimit setvbuf sigaction \
+                sigsetmask strchr strdup strerror strndup strpbrk \
+                strrchr strsignal strstr strtol
 do :
   as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
 ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"

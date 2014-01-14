@@ -110,6 +110,7 @@ AM_PROG_CC_C_O
 AC_C_BIGENDIAN
 AC_C_CONST
 AC_C_INLINE
+AC_C_PROTOTYPES
 dnl# Begin of what used to be AC\_TYPE\_SIGNAL
 AC_CACHE_CHECK([return type of signal handlers],[ac_cv_type_signal],[AC_COMPILE_IFELSE(
 [AC_LANG_PROGRAM([[#include <sys/types.h>
@@ -198,10 +199,10 @@ fi
 AC_CHECK_FUNCS([alarm atexit bzero clock_gettime dup2 fdopen fileno \
                 getcwd getgroups gethostbyaddr getrlimit gettimeofday \
                 inet_ntoa memmove mempcpy memset mkstemp mktemp pathconf \
-                pipe putenv readlink realpath setegid seteuid setlinebuf \
-                setregid setreuid setrlimit setvbuf sigaction sigsetmask \
-                strchr strdup strerror strndup strpbrk strrchr strsignal \
-                strstr strtol])
+                pipe putenv qsort readlink realpath setegid seteuid \
+                setlinebuf setregid setreuid setrlimit setvbuf sigaction \
+                sigsetmask strchr strdup strerror strndup strpbrk \
+                strrchr strsignal strstr strtol])
 AC_CHECK_FUNCS_ONCE([__iswctype __btowc])
 
 # We need to check declarations, not just existence, because on Tru64 this

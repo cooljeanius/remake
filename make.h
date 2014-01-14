@@ -82,7 +82,11 @@ char *alloca ();
 # endif /* HAVE_SYS_TIME_H */
 #endif /* TIME_WITH_SYS_TIME */
 
-#include <errno.h>
+#ifdef HAVE_ERRNO_H
+# include <errno.h>
+#else
+# warning make.h expects <errno.h> to be included.
+#endif /* HAVE_ERRNO_H */
 
 #ifndef errno
 extern int errno;
@@ -472,6 +476,7 @@ const char *strcache_add (const char *str);
 const char *strcache_add_len (const char *str, int len);
 int strcache_setbufsize (int size);
 
+/* where is this header necessary? */
 #ifdef  HAVE_VFORK_H
 # include <vfork.h>
 #else
