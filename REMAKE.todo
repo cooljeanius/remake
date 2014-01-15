@@ -1,7 +1,7 @@
-Most of what's here are things I know need to be done. Volunteers are
-welcome. I'll probably do only the things that either most interest me
+Most of what is here are things I know need to be done. Volunteers are
+welcome. I will probably do only the things that either most interest me
 or I most want to have. So even though something below may be a major
-gap, Things marked :-( are important but something I'll probably live
+gap, Things marked :-( are important but something I will probably live
 with.
 
 
@@ -9,7 +9,7 @@ with.
 can live outside of the make environment. With this global state like
 breakpoints would survive across forks and subshells returns. Without
 that, something hacky for saving and passing state as is done in the
-bash debugger has to be done. For now, I'll probably live with no
+bash debugger has to be done. For now, I will probably live with no
 global state.
 
 :-( Ability to save breakpoints and debugger state on a restart.

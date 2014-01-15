@@ -1,5 +1,38 @@
 2014-01-14  Eric Gallager  <egall@gwmail.gwu.edu>
 
+	travis tweaks
+
+2014-01-14  Eric Gallager  <egall@gwmail.gwu.edu>
+
+	remove unneeded define
+
+	possible build fix for linux systems like Travis
+
+2014-01-14  Eric Gallager  <egall@gwmail.gwu.edu>
+
+	try to debug travis failure
+
+2014-01-14  Eric Gallager  <egall@gwmail.gwu.edu>
+
+	try to fix travis build
+
+2014-01-14  Eric Gallager  <egall@gwmail.gwu.edu>
+
+	un-gitignore some things in po/
+
+	also add error.c to POTFILES
+	and run `make update`
+
+2014-01-14  Eric Gallager  <egallager@comcast.net>
+
+	Update README.md
+
+2014-01-14  Eric Gallager  <egall@gwmail.gwu.edu>
+
+	update ChangeLog
+
+2014-01-14  Eric Gallager  <egall@gwmail.gwu.edu>
+
 	un-gitignore file needed to be able to just configure and go
 
 2014-01-14  Eric Gallager  <egall@gwmail.gwu.edu>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="make_msvc.net2003" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug Win32">
+				<Option output="Debug/make_msvc" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Debug" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add option="-DHAVE_CONFIG_H=1" />
+					<Add option="-DWINDOWS32=1" />
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-O0" />
+					<Add directory="." />
+					<Add directory="w32/include" />
+					<Add directory="glob" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="." />
+					<Add directory="w32/include" />
+					<Add directory="glob" />
+				</ResourceCompiler>
+				<ExtraCommands>
+					<Add before="if not exist config.h copy config.h.W32 config.h" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release Win32">
+				<Option output="Release/make_msvc" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Release" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add option="-DHAVE_CONFIG_H=1" />
+					<Add option="-DWINDOWS32=1" />
+					<Add option="-Wall" />
+					<Add directory="." />
+					<Add directory="w32/include" />
+					<Add directory="glob" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="." />
+					<Add directory="w32/include" />
+					<Add directory="glob" />
+				</ResourceCompiler>
+				<ExtraCommands>
+					<Add before="if not exist config.h copy config.h.W32 config.h" />
+				</ExtraCommands>
+			</Target>
+		</Build>
+		<Unit filename="ar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="arscan.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="commands.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="commands.h" />
+		<Unit filename="config.h" />
+		<Unit filename="debug.h" />
+		<Unit filename="default.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="dep.h" />
+		<Unit filename="dir.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="expand.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="file.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="filedef.h" />
+		<Unit filename="function.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="getloadavg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="getopt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="getopt.h" />
+		<Unit filename="getopt1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gettext.h" />
+		<Unit filename="glob/fnmatch.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="glob/fnmatch.h" />
+		<Unit filename="glob/glob.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="glob/glob.h" />
+		<Unit filename="hash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="hash.h" />
+		<Unit filename="implicit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="job.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="job.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="make.h" />
+		<Unit filename="misc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="read.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="remake.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="remote-stub.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rule.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rule.h" />
+		<Unit filename="signame.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="strcache.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="variable.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="variable.h" />
+		<Unit filename="version.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="vmsdir.h" />
+		<Unit filename="vpath.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="w32/compat/dirent.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="w32/include/dirent.h" />
+		<Unit filename="w32/include/pathstuff.h" />
+		<Unit filename="w32/include/sub_proc.h" />
+		<Unit filename="w32/include/w32err.h" />
+		<Unit filename="w32/pathstuff.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="w32/subproc/misc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="w32/subproc/proc.h" />
+		<Unit filename="w32/subproc/sub_proc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="w32/subproc/w32err.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

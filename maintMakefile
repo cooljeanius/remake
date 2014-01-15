@@ -11,7 +11,8 @@ AM_CPPFLAGS += $(MAKE_MAINTAINER_MODE)
 # I want this one but I have to wait for the const cleanup!
 # -Wwrite-strings
 
-# Find the glob source files... this might be dangerous, but we're maintainers!
+# Find the glob source files... this might be dangerous, but we are
+# maintainers!
 globsrc := $(wildcard glob/*.c)
 globhdr := $(wildcard glob/*.h)
 
@@ -91,13 +92,13 @@ CVS-CLEAN-FILES +=	$(maintFILES) $(TEMPLATES) $(MTEMPLATES) NMakefile \
 			build.sh.in .deps .dep_segment ABOUT-NLS \
 			ansi2knr.*
 
-# This rule tries to clean the tree right down to how it looks when you do a
+# This rule tries to clean the tree down to how it looks when you do a
 # virgin CVS checkout.
 
 # This target is potentially dangerous since it removes _ANY FILE_ that
 # is not in CVS.  Including files you might mean to add to CVS but
-# haven't yet...  I only use this in subdirectories where it's unlikely
-# we have any new files.  Still... be careful!!
+# have not actually added yet...  I only use this in subdirectories
+# where it is unlikely we have any new files.  Still... be careful!!
 
 cvsclean = $(PERL) -e '$$k{CVS} = 1; open(E,"< CVS/Entries") || die "CVS/Entries: $$!\n"; while (defined ($$_ = <E>)) { m%^/([^/]*)% or next; $$k{$$1} = 1; } close(E) || die "CVS/Entries: $$!\n"; opendir(D, ".") || die ".: $$!\n"; while (defined ($$_ = readdir(D))) { -f $$_ && ! exists $$k{$$_} && unlink($$_); } closedir(D) || die ".: $$!\n";'
 
@@ -201,7 +202,7 @@ update: po-update scm-update
 ## Sanity checks.  ##
 ## --------------- ##
 
-# Checks that don't require cvs.  Run `changelog-check' last as
+# Checks that do NOT require cvs.  Run `changelog-check' last as
 # previous test may reveal problems requiring new ChangeLog entries.
 local-check: po-check changelog-check
 
@@ -230,8 +231,8 @@ po-check:
 ## ------------------------- ##
 
 # This target creates the upload artifacts.
-# Sign it with my key.  If you don't have my key/passphrase then sorry,
-# you're SOL! :)
+# Sign it with my key.  If you do NOT have my key/passphrase then sorry,
+# you are SOL! :)
 
 GPG = gpg
 GPGFLAGS = -u 6338B6D4

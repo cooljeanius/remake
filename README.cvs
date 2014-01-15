@@ -1,6 +1,6 @@
-                                                                     -*-text-*-
+                                                                 -*-text-*-
 
--------------------------------------------------------------------------------
+---------------------------------------------------------------------------
 Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010 Free
 Software Foundation, Inc.  This file is part of GNU Make.
 
@@ -15,12 +15,12 @@ A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along with
 this program.  If not, see <http://www.gnu.org/licenses/>.
--------------------------------------------------------------------------------
+---------------------------------------------------------------------------
 
 Obtaining CVS Code
 ------------------
 
-This seems redundant, since if you're reading this you most likely have
+This seems redundant, since if you are reading this you most likely have
 already performed this step; however, for completeness, you can obtain
 the GNU make source code via anonymous CVS from the FSF's Savannah
 project <http://savannah.gnu.org/projects/make/>:
