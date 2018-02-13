@@ -92,14 +92,15 @@ int child_execute_job (char *argv, struct child *child);
 #elif defined(__EMX__)
 int child_execute_job (int stdin_fd, int stdout_fd, char **argv, char **envp);
 #else
-void child_execute_job (int stdin_fd, int stdout_fd, char **argv, char **envp);
+void child_execute_job (int stdin_fd, int stdout_fd, char **argv, char **envp)
+  ATTR_NORETURN;
 #endif /* VMS || __EMX__ */
 #ifdef _AMIGA
 void exec_command (char **argv);
 #elif defined(__EMX__)
 int exec_command (char **argv, char **envp);
 #else
-void exec_command (char **argv, char **envp);
+void exec_command (char **argv, char **envp) ATTR_NORETURN;
 #endif /* _AMIGA || __EMX__ */
 
 extern unsigned int job_slots_used;

@@ -438,8 +438,11 @@ _getopt_initialize (int argc, char *const *argv, const char *optstring)
 	}
       nonoption_flags_len = nonoption_flags_max_len;
     } else {
-		nonoption_flags_len = 0;
-	}
+      nonoption_flags_len = 0;
+    }
+#else
+  (void)argc;
+  (void)argv;
 #endif /* _LIBC */
 
   return optstring;

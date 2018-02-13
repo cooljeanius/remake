@@ -1,5 +1,5 @@
-#                                               -*- Autoconf -*-
-# Process this file with autoconf to produce a configure script.
+dnl#                                               -*- Autoconf -*-
+dnl# Process this file with autoconf to produce a configure script.
 #
 # Copyright (C) 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002,
 # 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010 FSF, Inc.
@@ -19,16 +19,16 @@
 # You should have received a copy of the GNU GPL along with
 # this program.  If not, see <http://www.gnu.org/licenses/>.
 
-AC_INIT([remake],[3.82+dbg0.9],[https://github.com/rocky/remake/issues])
+AC_INIT([remake],[3.82+dbg0.9],[https://github.com/rocky/remake/issues])dnl
 
-AC_PREREQ([2.59])
-AC_REVISION([[$Id: configure.ac,v 1.156 2010/07/28 05:39:50 psmith Exp $]])
+AC_PREREQ([2.69])
+AC_REVISION([[$Id: configure.ac,v 1.156 2010/07/28 05:39:50 psmith Exp $]])dnl
 
 # Autoconf setup
 AC_CONFIG_AUX_DIR([config])
 AC_CONFIG_MACRO_DIR([config])
 AC_CONFIG_SRCDIR([vpath.c])
-AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_HEADERS([config.h])dnl
 
 # Specialized system macros
 AC_CANONICAL_TARGET
@@ -62,16 +62,16 @@ AM_PROG_AR
 AC_CHECK_PROG([AR],[ar],[ar],[ar])
 ])
 # Perl is needed for the test suite (only)
-AC_CHECK_PROG([PERL],[perl],[perl],[perl])
+AC_CHECK_PROG([PERL],[perl],[perl],[perl])dnl
 
 # Ruby 1.9 and RSPec are needed for the debugger test suite (only)
 AC_CHECK_PROG([RUBY],[ruby],[ruby],[none])
-AC_CHECK_PROG([RSPEC],[rspec],[rspec],[none])
+AC_CHECK_PROG([RSPEC],[rspec],[rspec],[none])dnl
 
 # Enable gettext, in "external" mode.
 
-AM_GNU_GETTEXT_VERSION([0.18.3])
-AM_GNU_GETTEXT([external])
+AM_GNU_GETTEXT_VERSION([0.19.8.1])
+AM_GNU_GETTEXT([external])dnl
 
 # This test must come as early as possible after the compiler configuration
 # tests, because the choice of the file model can (in principle) affect
@@ -80,7 +80,7 @@ AC_SYS_LARGEFILE
 
 # Checks for libraries.
 AC_CHECK_LIB([c],[printf])
-AC_SEARCH_LIBS([getpwnam],[sun])
+AC_SEARCH_LIBS([getpwnam],[sun])dnl
 
 # Checks for header files.
 AC_HEADER_DIRENT
@@ -93,17 +93,17 @@ AC_CHECK_HEADERS([builtins.h ctype.h errno.h features.h fcntl.h fnmatch.h \
                   pwd.h setjmp.h signal.h stddef.h stdio.h sys/file.h \
                   sys/param.h sys/resource.h sys/socket.h \
                   sys/time.h sys/timeb.h time.h types.h \
-                  unixio.h unixlib.h wchar.h wctype.h windows.h])
+                  unixio.h unixlib.h wchar.h wctype.h windows.h])dnl
 
 # Set a flag if we have an ANSI C compiler
-if test "${ac_cv_prog_cc_stdc}" != no; then
+if test "x${ac_cv_prog_cc_stdc}" != "xno"; then
   AC_DEFINE([HAVE_ANSI_COMPILER],[1],
-	      [Define to 1 if your compiler conforms to the ANSI C standard.])
+	    [Define to 1 if your compiler conforms to the ANSI C standard.])
 fi
 
 
 # Determine what kind of variadic function calls we support
-AC_CHECK_HEADERS([stdarg.h varargs.h],[break])
+AC_CHECK_HEADERS([stdarg.h varargs.h],[break])dnl
 
 # Checks for typedefs, structures, and compiler characteristics.
 AM_PROG_CC_C_O
@@ -134,7 +134,7 @@ AC_CHECK_TYPE([uintmax_t],[],[
   uintmax_t="unsigned long"
   AC_CHECK_TYPE([unsigned long long],[uintmax_t="unsigned long long"])
   AC_DEFINE_UNQUOTED([uintmax_t],[${uintmax_t}],
-    [Define uintmax_t if not defined in <stdint.h> or <inttypes.h>.])])
+    [Define uintmax_t if not defined in <stdint.h> or <inttypes.h>.])])dnl
 
 # Find out whether our struct stat returns nanosecond resolution
 # timestamps.
@@ -145,10 +145,12 @@ AC_CACHE_VAL([make_cv_file_timestamp_hi_res],[
   make_cv_file_timestamp_hi_res=no
   if test "${ac_cv_struct_st_mtim_nsec}" != no; then
     AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
-#	if HAVE_INTTYPES_H
+#	if defined(HAVE_INTTYPES_H)
 #	 include <inttypes.h>
 #	else
-#	 warning this conftest expects <inttypes.h> to be included.
+#	 if defined(__GNUC__) && !defined(__STRICT_ANSI__)
+#	  warning "This conftest expects <inttypes.h> to be included."
+#	 endif /* __GNUC__ && !__STRICT_ANSI__ */
 #	endif /* HAVE_INTTYPES_H */
 	]],[[char a[0x7fffffff < (uintmax_t)-1 >> 30 ? 1 : -1];]])],
       [make_cv_file_timestamp_hi_res=yes],
@@ -161,7 +163,7 @@ else
   val=0
 fi
 AC_DEFINE_UNQUOTED([FILE_TIMESTAMP_HI_RES],[${val}],
-		   [Use high resolution file timestamps if nonzero.])
+		   [Use high resolution file timestamps if nonzero.])dnl
 
 if test "${make_cv_file_timestamp_hi_res}" = yes; then
   # Solaris 2.5.1 needs -lposix4 to get the clock_gettime function.
@@ -191,7 +193,7 @@ AC_CACHE_CHECK([for standard gettimeofday],[ac_cv_func_gettimeofday],
 		  [ac_cv_func_gettimeofday=yes],
 		  [ac_cv_func_gettimeofday=no],
 		  [ac_cv_func_gettimeofday="no (cross-compiling)"])])
-if test "${ac_cv_func_gettimeofday}" = yes; then
+if test "x${ac_cv_func_gettimeofday}" = "xyes"; then
   AC_DEFINE([HAVE_GETTIMEOFDAY],[1],
 	    [Define to 1 if you have a standard gettimeofday function])
 fi
@@ -203,19 +205,19 @@ AC_CHECK_FUNCS([alarm atexit bzero clock_gettime dup2 fdopen fileno \
                 setlinebuf setregid setreuid setrlimit setvbuf sigaction \
                 sigsetmask strchr strdup strerror strndup strpbrk \
                 strrchr strsignal strstr strtol])
-AC_CHECK_FUNCS_ONCE([__iswctype __btowc])
+AC_CHECK_FUNCS_ONCE([__iswctype __btowc])dnl
 
 # We need to check declarations, not just existence, because on Tru64 this
 # function is not declared without special flags, which themselves cause
 # other problems. We will just use our own.
-AC_CHECK_DECLS([bsd_signal],[],[],[[#include <signal.h>]])
+AC_CHECK_DECLS([bsd_signal],[],[],[[#include <signal.h>]])dnl
 
 AC_FUNC_SETVBUF_REVERSED
 
 # Rumor has it that strcasecmp lives in -lresolv on some odd systems.
 # It does NOT hurt much to use our own if we cannot find it so I do NOT
 # make the effort here.
-AC_CHECK_FUNCS([strcasecmp strncasecmp strcmpi strncmpi stricmp strnicmp])
+AC_CHECK_FUNCS([strcasecmp strncasecmp strcmpi strncmpi stricmp strnicmp])dnl
 
 # strcoll() is used by the GNU glob library
 AC_FUNC_STRCOLL
@@ -254,12 +256,14 @@ AC_CHECK_DECLS([sys_siglist, _sys_siglist, __sys_siglist],[],[],
   [AC_INCLUDES_DEFAULT
 #include <signal.h>
 /* NetBSD declares sys_siglist in unistd.h.  */
-#if HAVE_UNISTD_H
+#if defined(HAVE_UNISTD_H)
 # include <unistd.h>
 #else
-# warning this conftest expects <unistd.h> to be included.
+# if defined(__GNUC__) && !defined(__STRICT_ANSI__)
+#  warning "This conftest for sys_siglist expects <unistd.h> to be included."
+# endif /* __GNUC__ && !__STRICT_ANSI__ */
 #endif /* HAVE_UNISTD_H */
-])
+])dnl
 
 
 # Check out the wait reality.
@@ -291,7 +295,7 @@ if test "${make_cv_union_wait}" = yes; then
   AC_DEFINE([HAVE_UNION_WAIT],[1],
             [Define to 1 if you have the \`union wait' type in <sys/wait.h>.])
 fi
-AC_MSG_RESULT([${make_cv_union_wait}])
+AC_MSG_RESULT([${make_cv_union_wait}])dnl
 
 
 AC_ARG_WITH([make_name],
@@ -318,7 +322,7 @@ DEFAULT_SHELL="${default_shell}"
 
 AC_ARG_WITH([shell_trace],
 [AS_HELP_STRING([--with-shell-trace],[option to pass to shell to have it trace commands (default -x)])],
-[shell_trace="${withval}"],[shell_trace="-x"])
+[shell_trace="${withval}"],[shell_trace="-x"])dnl
 
 ## Set OS-specific default shell.
 case ${host_os} in
@@ -349,10 +353,10 @@ else
 fi
 
 AC_DEFINE_UNQUOTED([SHELL_TRACE],["${shell_trace}"], 
-     [Define this to be what you need to add to turn on shell tracing])
+     [Define this to be what you need to add to turn on shell tracing])dnl
 
 AC_DEFINE_UNQUOTED([DEFAULT_SHELL],["${default_shell}"],
-     [Define this to the default to be used $(SHELL)])
+     [Define this to the default to be used $(SHELL)])dnl
 
 #
 # Check for readline to see if we can add debugging support.
@@ -376,7 +380,7 @@ int main(int argc, char **argv) {
      AC_DEFINE([HAVE_TILDE_EXPAND],[1], 
      [Define this to 1 if <readline/readline.h> defines tilde_expand()])],
      [AC_MSG_RESULT([no]); ac_have_tilde_expand=no],
-     [AC_MSG_RESULT([no]); ac_have_tilde_expand=no])
+     [AC_MSG_RESULT([no]); ac_have_tilde_expand=no])dnl
 
 AC_CHECK_LIB([readline],[readline])
 AC_MSG_CHECKING([for history_list() in <readline/readline.h>])
@@ -395,13 +399,17 @@ int main(int argc, char **argv) {
      AC_DEFINE([HAVE_HISTORY_LIST],[1], 
      [Define this to 1 if <readline/readline.h> defines history_list()])],
      [AC_MSG_RESULT([no]); ac_have_history_list=no],
-     [AC_MSG_RESULT([no]); ac_have_history_list=no])
+     [AC_MSG_RESULT([no]); ac_have_history_list=no])dnl
+
+if test "x${ac_have_history_list}" = "xno"; then
+  AC_CHECK_HEADERS([readline/history.h])
+fi
 
 AC_SUBST([HAVE_READLINE])
 REMAKE_SOURCE_PATH="`pwd`"
 AC_DEFINE_UNQUOTED([REMAKE_SOURCE_PATH],["${REMAKE_SOURCE_PATH}"],
 	[Full path to remake top_sourcedir.])
-AC_SUBST([REMAKE_SOURCE_PATH])
+AC_SUBST([REMAKE_SOURCE_PATH])dnl
 
 # If we are building on Windows/DOS/OS/2, add support for DOS drive specs.
 if test "${PATH_SEPARATOR}" = ';'; then
@@ -435,7 +443,7 @@ AC_ARG_WITH([customs],
        ;;
   esac])
 # Tell automake about this, so it can include the right .c files.
-AM_CONDITIONAL([USE_CUSTOMS],[test "${use_customs}" = true])
+AM_CONDITIONAL([USE_CUSTOMS],[test "${use_customs}" = true])dnl
 
 # See if the user asked to handle case insensitive file systems.
 
@@ -444,7 +452,7 @@ AC_ARG_ENABLE([case-insensitive-file-system],
   [AS_HELP_STRING([--enable-case-insensitive-file-system],[assume file systems are case insensitive])],
   [case ${enableval} in
      yes) AC_DEFINE([HAVE_CASE_INSENSITIVE_FS],[1],[Define to 1 to use case insensitive file names]) ;;
-   esac])
+   esac])dnl
 
 # See if we can handle the job server feature, and if the user wants it.
 
@@ -452,18 +460,18 @@ AC_ARG_ENABLE([job-server],
   [AS_HELP_STRING([--disable-job-server],
                  [disallow recursive make communication during -jN])],
   [make_cv_job_server="${enableval}" user_job_server="${enableval}"],
-  [make_cv_job_server="yes"])
+  [make_cv_job_server="yes"])dnl
 
 has_wait_nohang=yes
 case "${ac_cv_func_waitpid}/${ac_cv_func_wait3}" in
   no/no) has_wait_nohang=no ;;
 esac
 
-AC_CACHE_CHECK(for SA_RESTART, make_cv_sa_restart, [
+AC_CACHE_CHECK([for SA_RESTART],[make_cv_sa_restart],[
   AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[#include <signal.h>]],
       [[return SA_RESTART;]])],
     [make_cv_sa_restart=yes],
-    [make_cv_sa_restart=no])])
+    [make_cv_sa_restart=no])])dnl
 
 if test "${make_cv_sa_restart}" != no; then
   AC_DEFINE([HAVE_SA_RESTART],[1],
@@ -499,7 +507,7 @@ else
   make_cv_path_sccs_get=get
 fi])
 AC_DEFINE_UNQUOTED([SCCS_GET],["${make_cv_path_sccs_get}"],
-	           [Define to the name of the SCCS 'get' command.])
+	           [Define to the name of the SCCS 'get' command.])dnl
 
 ac_clean_files="${ac_clean_files} s.conftest conftoast" # Remove these later.
 if ( /usr/sccs/admin -n s.conftest || admin -n s.conftest ) >/dev/null 2>&1 &&
@@ -546,16 +554,16 @@ AC_SUBST([GLOBINC])
 AC_SUBST([GLOBLIB])
 
 # Tell automake about this, so it can build the right .c files.
-AM_CONDITIONAL([USE_LOCAL_GLOB],[test "${make_cv_sys_gnu_glob}" = no])
+AM_CONDITIONAL([USE_LOCAL_GLOB],[test "${make_cv_sys_gnu_glob}" = no])dnl
 
 # Let the makefile know what our build host is
 
 AC_DEFINE_UNQUOTED([MAKE_HOST],["${host}"],[Build host information.])
 MAKE_HOST="${host}"
-AC_SUBST([MAKE_HOST])
+AC_SUBST([MAKE_HOST])dnl
 
 w32_target_env=no
-AM_CONDITIONAL([WINDOWSENV],[false])
+AM_CONDITIONAL([WINDOWSENV],[false])dnl
 
 case "${host}" in
   *-*-mingw32)
@@ -566,7 +574,8 @@ case "${host}" in
     ;;
 esac
 
-AC_DEFINE_UNQUOTED([PATH_SEPARATOR_CHAR],['${PATH_SEPARATOR}'],[Define to the character that separates directories in PATH.])
+AC_DEFINE_UNQUOTED([PATH_SEPARATOR_CHAR],['${PATH_SEPARATOR}'],
+           [Define to the character that separates directories in PATH.])dnl
 
 # Include the Maintainer's Makefile section, if it is here.
 
@@ -574,7 +583,7 @@ MAINT_MAKEFILE=/dev/null
 if test -r "${srcdir}/maintMakefile"; then
   MAINT_MAKEFILE="${srcdir}/maintMakefile"
 fi
-AC_SUBST_FILE([MAINT_MAKEFILE])
+AC_SUBST_FILE([MAINT_MAKEFILE])dnl
 
 # Allow building with dmalloc
 AM_WITH_DMALLOC
@@ -586,7 +595,7 @@ SET_MAKE=""
 # Sanity check and inform the user of what we found
 
 case "${make_badcust}" in
-  yes) echo
+  yes) echo ""
        echo "WARNING: --with-customs used but no customs.h could be found;"
        echo "         disabling Customs support."
        echo ;;
@@ -626,7 +635,7 @@ esac
 
 
 # Specify what files are to be created.
-AC_CONFIG_FILES([Makefile glob/Makefile po/Makefile.in config/Makefile doc/Makefile w32/Makefile])
+AC_CONFIG_FILES([Makefile glob/Makefile po/Makefile.in config/Makefile doc/Makefile w32/Makefile])dnl
 
 # OK, do it!
 

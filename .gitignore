@@ -53,3 +53,4 @@ cscope.files
 config*.lineno
 *.tmp
 *.layout
+*.dSYM

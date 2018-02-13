@@ -219,7 +219,7 @@ static void start_job_command (struct child *child,
 			       target_stack_node_t *p_call_stack);
 static int load_too_high (void);
 static int job_next_command (struct child *);
-static int start_waiting_job (child_t *c, 
+static int start_waiting_job (child_t *c,
 			      target_stack_node_t *p_call_stack);
 
 /* Chain of all live (or recently deceased) children.  */
@@ -802,7 +802,7 @@ reap_children (int block, int err_code, target_stack_node_t *p_call_stack)
 	in_debugger = DEBUGGER_QUIT_RC;
 	die(DEBUGGER_QUIT_RC);
       }
-      
+
       if (child_failed && !c->noerror && !ignore_errors_flag)
         {
           /* The commands failed.  Write an error message,
@@ -921,14 +921,14 @@ reap_children (int block, int err_code, target_stack_node_t *p_call_stack)
 	    in_debugger = DEBUGGER_QUIT_RC;
 	    die(DEBUGGER_QUIT_RC);
 	}
-      
+
 	/* If the job failed, and the -k flag was not given, die,
 	   unless we are already in the process of dying.  */
 	if (!err_code && child_failed && !dontcare && !keep_going_flag &&
 	    /* fatal_error_signal will die with the right signal.  */
-	    !handling_fatal_signal) 
+	    !handling_fatal_signal)
 	{
-	  if ( (debugger_on_error & DEBUGGER_ON_FATAL) 
+	  if ( (debugger_on_error & DEBUGGER_ON_FATAL)
 	       || i_debugger_stepping || i_debugger_nexting )
 	      enter_debugger(p_call_stack, &file, 2, DEBUG_ERROR_HIT);
 	  die (2);
@@ -1070,7 +1070,7 @@ set_child_handler_action_flags (int set_handler, int set_alarm)
    it can be cleaned up in the event of a fatal signal.  */
 
 static void
-start_job_command (child_t *child, 
+start_job_command (child_t *child,
 		   target_stack_node_t *p_call_stack)
 {
 #if !defined(_AMIGA) && !defined(WINDOWS32)
@@ -1082,7 +1082,7 @@ start_job_command (child_t *child,
 #ifdef VMS
   char *argv;
 #else
-  char **argv;
+  char **volatile argv;
 #endif
 
   /* If we have a completely empty commandset, stop now.  */
@@ -1193,7 +1193,7 @@ start_job_command (child_t *child,
      appear.  */
 
   {
-    int print_it = 
+    int print_it =
 	(just_print_flag || (!(flags & COMMANDS_SILENT) && !silent_flag))
 	|| (db_level & DB_SHELL);
 
@@ -1639,7 +1639,7 @@ new_job (struct file *file, target_stack_node_t *p_call_stack)
   /* Expand the command lines and store the results in LINES.  */
   lines = xmalloc (cmds->ncommand_lines * sizeof (char *));
   expand_command_lines(cmds, lines, file);
-  
+
   /* Start the command sequence, record it in a new
      `struct child', and add that to the chain.  */
 
@@ -2019,7 +2019,7 @@ child_execute_job (int stdin_fd, int stdout_fd, char **argv, char **envp)
    Replace the current process with one executing the command in ARGV.
    STDIN_FD and STDOUT_FD are used as the process's stdin and stdout; ENVP is
    the environment of the new program.  This function does not return.  */
-void
+void ATTR_NORETURN
 child_execute_job (int stdin_fd, int stdout_fd, char **argv, char **envp)
 {
   if (stdin_fd != 0)
@@ -2045,7 +2045,7 @@ child_execute_job (int stdin_fd, int stdout_fd, char **argv, char **envp)
 # ifdef __EMX__
 int
 # else
-void
+void ATTR_NORETURN
 # endif
 exec_command (char **argv, char **envp)
 {
@@ -2959,6 +2959,8 @@ construct_command_argv_internal (char *line, char **restp, char *shell,
       }
       new_argv[2] = NULL;
     } else
+#else
+    (void)command_ptr;
 #endif /* WINDOWS32 */
 
     if (unixy_shell)
@@ -3053,6 +3055,7 @@ construct_command_argv_internal (char *line, char **restp, char *shell,
   }
 #endif	/* ! AMIGA */
 
+  (void)batch_filename_ptr;
   return new_argv;
 }
 #endif /* !VMS */

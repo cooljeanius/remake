@@ -3,7 +3,7 @@
 # tree, not a dist copy.
 
 # We like mondo-warnings!
-AM_CFLAGS += -Wall -Wextra -Wdeclaration-after-statement -Wshadow -Wpointer-arith -Wbad-function-cast
+AM_CFLAGS += -Wall -Wextra -Wdeclaration-after-statement -Wshadow -Wpointer-arith -Wbad-function-cast -Wmissing-noreturn -Wno-type-limits -Wno-pointer-compare -Wnull-dereference
 
 MAKE_MAINTAINER_MODE := -DMAKE_MAINTAINER_MODE
 AM_CPPFLAGS += $(MAKE_MAINTAINER_MODE)

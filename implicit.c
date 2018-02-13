@@ -976,5 +976,6 @@ pattern_search (struct file *file, int archive,
   free (tryrules);
   free (deplist);
 
+  (void)deps;
   return rule != 0;
 }

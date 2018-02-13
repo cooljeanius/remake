@@ -37,10 +37,10 @@ Found it
     if test "$fits_in_uint" = 1; then
       dnl Even though SIZE_MAX fits in an unsigned int, it must be of type
       dnl 'unsigned long' if the type 'size_t' is the same as 'unsigned long'.
-      AC_TRY_COMPILE([#include <stddef.h>
+      AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[#include <stddef.h>
         extern size_t foo;
         extern unsigned long foo;
-        ], [], fits_in_uint=0)
+        ]], [[]])],[fits_in_uint=0],[])
     fi
     if test -z "$result"; then
       if test "$fits_in_uint" = 1; then

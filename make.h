@@ -212,6 +212,14 @@ unsigned int get_path_max (void);
 #endif /* !__attribute__ */
 #define UNUSED  __attribute__ ((unused))
 
+#ifndef ATTR_NORETURN
+# if defined(__GNUC__) && ((__GNUC__ > 2) || ((__GNUC__ == 2) && (__GNUC_MINOR__ >= 7)))
+#  define ATTR_NORETURN __attribute__((noreturn))
+# else
+#  define ATTR_NORETURN /* nothing */
+# endif /* __GNUC__ version check */
+#endif /* !ATTR_NORETURN */
+
 #if defined (STDC_HEADERS) || defined (__GNU_LIBRARY__)
 # include <stdlib.h>
 # include <string.h>
@@ -235,8 +243,8 @@ void *malloc (int);
 void *realloc (void *, int);
 void free (void *);
 
-void abort (void) __attribute__ ((noreturn));
-void exit (int) __attribute__ ((noreturn));
+void abort (void) ATTR_NORETURN;
+void exit (int) ATTR_NORETURN;
 # endif /* HAVE_STDLIB_H.  */
 
 #endif /* Standard headers.  */
@@ -261,7 +269,9 @@ char *strerror (int errnum);
 #if HAVE_INTTYPES_H
 # include <inttypes.h>
 #else
-# warning make.h expects <inttypes.h> to be included.
+# if defined(__GNUC__) && !defined(__STRICT_ANSI__)
+#  warning make.h expects <inttypes.h> to be included.
+# endif /* __GNUC__ && !__STRICT_ANSI__ */
 #endif /* HAVE_INTTYPES_H */
 #define FILE_TIMESTAMP uintmax_t
 
@@ -278,7 +288,10 @@ char *strsignal (int signum);
    only '0' through '9' are digits. Prefer ISDIGIT to isdigit() unless
    it is important to use the locale's definition of `digit' even when the
    host does not conform to POSIX.  */
-#define ISDIGIT(c) ((unsigned) (c) - '0' <= 9)
+#ifdef ISDIGIT
+# undef ISDIGIT
+#endif /* ISDIGIT */
+#define ISDIGIT(c) ((unsigned int)(c) - '0' <= 9)
 
 /* Test if two strings are equal. Is this worthwhile? Should be profiled. */
 #define streq(a, b) \
@@ -387,11 +400,11 @@ struct floc
 #if HAVE_ANSI_COMPILER && USE_VARIADIC && HAVE_STDARG_H
 const char *concat (unsigned int, ...);
 void message (int prefix, const char *fmt, ...)
-              __attribute__ ((__format__ (__printf__, 2, 3)));
+  __attribute__ ((__format__ (__printf__, 2, 3)));
 void error (const struct floc *flocp, const char *fmt, ...)
-            __attribute__ ((__format__ (__printf__, 2, 3)));
+  __attribute__ ((__format__ (__printf__, 2, 3)));
 void fatal (const struct floc *flocp, const char *fmt, ...)
-                   __attribute__ ((__format__ (__printf__, 2, 3)));
+  __attribute__ ((__format__ (__printf__, 2, 3))) ATTR_NORETURN;
 #else
 const char *concat ();
 void message ();
@@ -399,9 +412,9 @@ void error ();
 void fatal ();
 #endif /* HAVE_ANSI_COMPILER && USE_VARIADIC && HAVE_STDARG_H */
 
-void die (int);
+void die (int) ATTR_NORETURN;
 void log_working_directory (int);
-void pfatal_with_name (const char *);
+void pfatal_with_name (const char *) ATTR_NORETURN;
 void perror_with_name (const char *, const char *);
 void *xmalloc (unsigned int);
 void *xcalloc (unsigned int);

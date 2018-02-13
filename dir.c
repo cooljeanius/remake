@@ -730,6 +730,7 @@ dir_contents_file_exists_p (struct directory_contents *dir,
       closedir (dir->dirstream);
       dir->dirstream = 0;
     }
+  (void)hash;
   return 0;
 }
 

@@ -180,8 +180,8 @@ enter_file (const char *name, const floc_t *p_floc)
   file_slot = (struct file **) hash_find_slot (&files, &file_key);
   f = *file_slot;
   if (! HASH_VACANT (f) && !f->double_colon) {
-    if (f->floc.filenm == '\0' && f->floc.lineno == 0 && p_floc &&
-	p_floc->filenm != '\0' && p_floc->lineno != 0) {
+    if ((f != NULL) && (f->floc.filenm == '\0') && (f->floc.lineno == 0)
+	&& p_floc && (p_floc->filenm != '\0') && (p_floc->lineno != 0)) {
       f->floc.filenm = strdup(p_floc->filenm);
       f->floc.lineno = p_floc->lineno;
     }
@@ -808,8 +808,9 @@ file_timestamp_cons (const char *fname, time_t s, int ns)
   FILE_TIMESTAMP product = (FILE_TIMESTAMP) s << FILE_TIMESTAMP_LO_BITS;
   FILE_TIMESTAMP ts = product + offset;
 
-  if (! (s <= FILE_TIMESTAMP_S (ORDINARY_MTIME_MAX)
-	 && product <= ts && ts <= ORDINARY_MTIME_MAX))
+  /* FIXME: fixing -Wsign-compare leads to test failures: */
+  if (!((s <= FILE_TIMESTAMP_S(ORDINARY_MTIME_MAX))
+	&& (product <= ts) && (ts <= ORDINARY_MTIME_MAX)))
     {
       char buf[FILE_TIMESTAMP_PRINT_LEN_BOUND + 1];
       ts = s <= OLD_MTIME ? ORDINARY_MTIME_MIN : ORDINARY_MTIME_MAX;
@@ -933,11 +934,11 @@ print_target_props (file_t *p_target, print_target_mask_t i_mask)
 	    printf (" %s", dep_name (d));
       }
   }
-  
+
   putchar ('\n');
 
   if (i_mask & PRINT_TARGET_ATTRS) {
-    
+
     if (p_target->precious)
       puts (_("#  Precious file (prerequisite of .PRECIOUS)."));
     if (p_target->phony)
@@ -963,7 +964,7 @@ print_target_props (file_t *p_target, print_target_mask_t i_mask)
   }
 
   if (i_mask & PRINT_TARGET_TIME) {
-    
+
     if (p_target->last_mtime == UNKNOWN_MTIME)
       puts (_("#  Modification time never checked."));
     else if (p_target->last_mtime == NONEXISTENT_MTIME)
@@ -982,7 +983,7 @@ print_target_props (file_t *p_target, print_target_mask_t i_mask)
   }
 
   if (i_mask & PRINT_TARGET_STATE) {
-    
+
     switch (p_target->command_state)
       {
       case cs_running:
@@ -1023,7 +1024,7 @@ print_target_props (file_t *p_target, print_target_mask_t i_mask)
 	abort ();
       }
   }
-  
+
 
   if (p_target->variables != 0 && i_mask & PRINT_TARGET_VARS)
     print_file_variables (p_target, i_mask & PRINT_TARGET_VARS_HASH);
@@ -1065,7 +1066,7 @@ print_prereqs (const struct dep *deps)
   putchar ('\n');
 }
 
-/*! 
+/*!
 Print the data base of files.
 */
 void

@@ -140,13 +140,19 @@ void print_file_data_base (void);
 #ifdef HAVE_SYS_STAT_H
 # include <sys/stat.h>
 #else
-# warning filedef.h expects <sys/stat.h> to be included.
+# if defined(__GNUC__) && !defined(__STRICT_ANSI__)
+#  warning filedef.h expects <sys/stat.h> to be included.
+# endif /* __GNUC__ && !__STRICT_ANSI__ */
 #endif /* HAVE_SYS_STAT_H */
 
 #ifdef __APPLE__
 # undef FILE_TIMESTAMP_HI_RES
 # define FILE_TIMESTAMP_HI_RES 0
 #endif /* __APPLE__ */
+
+#ifdef FILE_TIMESTAMP_STAT_MODTIME
+# undef FILE_TIMESTAMP_STAT_MODTIME
+#endif /* FILE_TIMESTAMP_STAT_MODTIME */
 
 #if FILE_TIMESTAMP_HI_RES && defined(ST_MTIM_NSEC)
 # if defined(__IBMCPP__) || defined(_AIX) || defined(_AIX_)

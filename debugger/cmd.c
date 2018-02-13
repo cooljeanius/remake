@@ -36,12 +36,19 @@ Boston, MA 02111-1307, USA.  */
 #include "file2line.h"
 
 #ifdef HAVE_READLINE_READLINE_H
+# ifdef ISDIGIT
+#  undef ISDIGIT
+# endif /* ISDIGIT */
 # include <readline/readline.h>
 #endif /* HAVE_READLINE_READLINE_H */
 
-#ifdef HAVE_HISTORY_LIST
+#if defined(HAVE_HISTORY_LIST) || defined(HAVE_READLINE_HISTORY_H)
 # include <readline/history.h>
-#endif /* HAVE_HISTORY_LIST */
+#else
+# if defined(__GNUC__) && !defined(__STRICT_ANSI__) && defined(HAVE_READLINE_READLINE_H)
+#  warning "debugger/cmd.c expects <readline/history.h> to be included."
+# endif /* __GNUC__ && !__STRICT_ANSI__ && HAVE_READLINE_READLINE_H */
+#endif /* HAVE_HISTORY_LIST || HAVE_READLINE_HISTORY_H */
 
 /**
    Think of the below not as an enumeration but as #defines done in a
@@ -288,10 +295,9 @@ execute_line (char *psz_line)
 debug_return_t
 dbg_cmd_show_command (const char *psz_args)
 {
- /*
-  if (!psz_arg || *psz_arg) {
-    ;
-    } */
+  if (!psz_args || *psz_args) {
+    ; /* ??? */
+  }
 
 #ifdef HAVE_HISTORY_LIST
   HIST_ENTRY **hist_list = history_list();
@@ -354,7 +360,7 @@ debug_return_t enter_debugger (target_stack_node_t *p,
 			       file_t *p_target, int errcode,
 			       debug_enter_reason_t reason)
 {
-  debug_return_t debug_return = debug_readloop;
+  volatile debug_return_t debug_return = debug_readloop;
   static bool b_init = false;
   static bool b_readline_init = false;
   char open_depth[MAX_NEST_DEPTH];

@@ -3,7 +3,7 @@
 /*.mo
 /*.new.po
 /*.o
-/*.po
+# missing *.po files can break the build; allow them
 /*~
 /Makefile
 /Makefile.in

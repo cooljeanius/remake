@@ -297,4 +297,5 @@ endif
 
 README:
 
+## from the maintMakefile in this same directory:
 @MAINT_MAKEFILE@

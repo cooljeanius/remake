@@ -382,7 +382,9 @@ internal_fnmatch (pattern, string, no_leading_period, flags)
 				  goto matched;
 			  }
 #  else
-#   warning missing __iswctype() and __btowc() functions wanted for fnmatch.c
+#   if defined(__GNUC__) && !defined(__STRICT_ANSI__)
+#    warning "missing __iswctype() and __btowc() functions wanted for fnmatch.c"
+#   endif /* __GNUC__ && !__STRICT_ANSI__ */
 #  endif /* HAVE___ISWCTYPE && HAVE___BTOWC */
 # else
 		    if ((STREQ (str, "alnum") && ISALNUM ((unsigned char) *n))

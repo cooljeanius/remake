@@ -1,0 +1,3163 @@
+# Mensajes en español para GNU make.
+# Copyright (C) 1996, 2001, 2011, 2013, 2014, 2016 Free Software Foundation, Inc.
+# This file is distributed under the same license as the make package.
+# Max de Mendizábal <max.de.mendizabal@gmail.com>, 1996, 2011.
+# Antonio Ceballos <aceballos@gmail.com>, 2013, 2014, 2016
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: GNU make 4.2.1\n"
+"Report-Msgid-Bugs-To: bug-make@gnu.org\n"
+"POT-Creation-Date: 2018-02-12 17:11-0500\n"
+"PO-Revision-Date: 2016-06-26 13:35+0200\n"
+"Last-Translator: Antonio Ceballos <aceballos@gmail.com>\n"
+"Language-Team: Spanish <es@tp.org.es>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+"X-Bugs: Report translation errors to the Language-Team address.\n"
+
+#: ar.c:51
+#, fuzzy, c-format
+msgid "attempt to use unsupported feature: `%s'"
+msgstr "Se intentó utilizar una característica no implementada: '%s'"
+
+# Sugerencia: touch -> `touch'. sv
+# Ok, aceptada. A falta de cursivas... mm
+# No veo porqué no se ha de usar 'tocar' en vez de touch em+
+# El mensaje además hace referencia a un touch de un objeto dentro
+# de una librería, y de eso no se dice nada en el mensaje. Creo que
+# hay que tener cuidado con estas cosas.
+# El programa para tocar un miembro de un archivo ... , y ahi estamos
+# ya en problemas con el dichoso archivo/fichero.
+# A ver que se os ocurre em+
+# Enrique: touch es un programa del sistema operativo y sirve para
+# cambiar la fecha de un programa o archivo. Es decir lo "toca" y
+# modifica sus atributos. Por eso preferí no traducirlo.
+#: ar.c:131
+msgid "touch archive member is not available on VMS"
+msgstr "El programa para hacer un 'touch' no está disponible en VMS"
+
+#: ar.c:155
+#, fuzzy, c-format
+msgid "touch: Archive `%s' does not exist"
+msgstr "touch: El archivo '%s' no existe"
+
+#: ar.c:158
+#, fuzzy, c-format
+msgid "touch: `%s' is not a valid archive"
+msgstr "touch: '%s' no es un archivo válido"
+
+#: ar.c:165
+#, fuzzy, c-format
+msgid "touch: Member `%s' does not exist in `%s'"
+msgstr "touch: El miembro '%s' no existe en '%s'"
+
+#: ar.c:172
+#, fuzzy, c-format
+msgid "touch: Bad return code from ar_member_touch on `%s'"
+msgstr "touch: Código de retorno erróneo de ar_member_touch en '%s'"
+
+#: arscan.c:69
+#, c-format
+msgid "lbr$set_module() failed to extract module info, status = %d"
+msgstr ""
+"fallo en lbr$set_module() para extraer la información del módulo, estado = %d"
+
+#: arscan.c:175
+#, c-format
+msgid "lbr$ini_control() failed with status = %d"
+msgstr "fallo en lbr$ini_control() con estado = %d"
+
+#: arscan.c:187
+#, fuzzy, c-format
+msgid "unable to open library `%s' to lookup member `%s'"
+msgstr ""
+"error al abrir la biblioteca '%s' para buscar el estado %d del elemento"
+
+#: arscan.c:850
+#, fuzzy, c-format
+msgid "Member `%s'%s: %ld bytes at %ld (%ld).\n"
+msgstr "Miembro '%s'%s: %ld bytes en %ld (%ld).\n"
+
+#: arscan.c:851
+msgid " (name might be truncated)"
+msgstr " (el nombre puede estar truncado)"
+
+#: arscan.c:853
+#, c-format
+msgid "  Date %s"
+msgstr "  Fecha %s"
+
+#: arscan.c:854
+#, c-format
+msgid "  uid = %d, gid = %d, mode = 0%o.\n"
+msgstr "  uid = %d, gid = %d, modo = 0%o.\n"
+
+#: commands.c:612
+msgid "*** Break.\n"
+msgstr "*** Interrumpir.\n"
+
+#: commands.c:738
+#, fuzzy, c-format
+msgid "*** [%s] Archive member `%s' may be bogus; not deleted"
+msgstr ""
+"*** [%s] El miembro de archivo '%s' podría estar incorrecto; aunque no se "
+"elimina"
+
+#: commands.c:741
+#, fuzzy, c-format
+msgid "*** Archive member `%s' may be bogus; not deleted"
+msgstr ""
+"*** El miembro del archivo '%s' podría estar incorrecto; aunque no se elimina"
+
+# Propongo un cambio en el tiempo verbal: Se borra el archivo temporal. sv
+# Ok. mm
+#: commands.c:758
+#, fuzzy, c-format
+msgid "*** [%s] Deleting file `%s'"
+msgstr "*** [%s] Se borra el archivo '%s'"
+
+# Propongo un cambio en el tiempo verbal: Se borra el archivo temporal. sv
+# Ok. mm
+#: commands.c:760
+#, fuzzy, c-format
+msgid "*** Deleting file `%s'"
+msgstr "*** Se borra el archivo '%s'"
+
+#: commands.c:805
+#, fuzzy
+msgid "#  commands to execute"
+msgstr "#  las instrucciones para ejecutar"
+
+#: commands.c:808
+msgid " (built-in):"
+msgstr " (integrado):"
+
+#: commands.c:810
+#, fuzzy, c-format
+msgid " (from `%s', line %lu):\n"
+msgstr " (de '%s', linea %lu):\n"
+
+#: debug.c:90
+#, fuzzy, c-format
+msgid "unknown debug level specification `%s'"
+msgstr "se especificó un nivel de depuración desconocido '%s'"
+
+#: dir.c:996
+msgid ""
+"\n"
+"# Directories\n"
+msgstr ""
+"\n"
+"# Directorios\n"
+
+#: dir.c:1008
+#, c-format
+msgid "# %s: could not be stat'd.\n"
+msgstr "# %s: podría no estar establecido.\n"
+
+# ¿No sobraría el "posiblemente"?
+# Propongo dejarlo en " no se pudo abrir ". sv
+# Ok. Es consistente con otras traducciones. mm
+#: dir.c:1012
+#, fuzzy, c-format
+msgid "# %s (key %s, mtime %d): could not be opened.\n"
+msgstr "# %s (llave %s, mtime %I64u): no se pudo abrir.\n"
+
+# En el K & R aparece inode traducido como nodo-i. ¿qué te parece? sv
+# Bien. Me gusta con el guioncito. mm
+#: dir.c:1016
+#, c-format
+msgid "# %s (device %d, inode [%d,%d,%d]): could not be opened.\n"
+msgstr ""
+"# %s (dispositivo %d, nodo-i [%d,%d,%d]): posiblemente no se pueda abrir.\n"
+
+# ¿No sobraría el "posiblemente"?
+# Propongo dejarlo en " no se pudo abrir ". sv
+# Ok. Es consistente con otras traducciones. mm
+#: dir.c:1021
+#, c-format
+msgid "# %s (device %ld, inode %ld): could not be opened.\n"
+msgstr "# %s (dispositivo %ld, nodo-i %ld): no se pudo abrir.\n"
+
+#: dir.c:1048
+#, fuzzy, c-format
+msgid "# %s (key %s, mtime %d): "
+msgstr "# %s (llave %s, mtime %I64u): "
+
+#: dir.c:1052
+#, c-format
+msgid "# %s (device %d, inode [%d,%d,%d]): "
+msgstr "# %s (dispositivo %d, nodo-i [%d,%d,%d]): "
+
+#: dir.c:1057
+#, c-format
+msgid "# %s (device %ld, inode %ld): "
+msgstr "# %s (dispositivo %ld, nodo-i %ld): "
+
+#: dir.c:1063 dir.c:1084
+msgid "No"
+msgstr "No"
+
+#: dir.c:1066 dir.c:1087
+msgid " files, "
+msgstr " archivos, "
+
+#: dir.c:1068 dir.c:1089
+msgid "no"
+msgstr "no"
+
+#: dir.c:1071
+msgid " impossibilities"
+msgstr " imposibilidades"
+
+# ¿"So far" no era "hasta ahora"? (no me hagas mucho caso) sv
+# Si tu traducción es mejor. Aceptada. mm
+#: dir.c:1075
+msgid " so far."
+msgstr " hasta ahora."
+
+#: dir.c:1092
+#, c-format
+msgid " impossibilities in %lu directories.\n"
+msgstr " imposibilidades en %lu directorios.\n"
+
+#: error.c:200
+#, fuzzy
+msgid "Unknown system error"
+msgstr "Error desconocido %d"
+
+# Creo que eventually sería "finalmente" o algo así. sv
+# Si, es finalmente no a veces. Ok. mm
+# referencia me parece que no lleva tilde. sv
+# No, no lleva acento. Me emocioné con elos. mm
+# Creeis de veras que tiene sentido 'finalmente'em+
+# yo pondría ser termina autoreferenciando, por
+# ejemplo em+
+# Mejor lo eliminamos. Es de alguna forma reiterativo e innecesario.
+# Lo de `al final' puede ser más confuso. mm
+#: expand.c:128
+#, fuzzy, c-format
+msgid "Recursive variable `%s' references itself (eventually)"
+msgstr "La variable recursiva '%s' se auto-referencia"
+
+# No me gusta nada ( lo siento )
+# ¿ Qué tal : La referencia a una variable está sin terminar em+
+# Creo que tienes razón la voz pasiva es muy desagradable. mm.
+#: expand.c:277
+msgid "unterminated variable reference"
+msgstr "la referencia a la variable está sin terminar"
+
+#: file.c:281
+#, fuzzy, c-format
+msgid "Recipe was specified for file `%s' at %s:%lu,"
+msgstr "Se especificaron instrucciones para el archivo '%s' en %s:%lu,"
+
+# Buscando en las legras implícitas em+
+# Utilicé por búsqueda en para evitar el gerundio. mm
+#: file.c:286
+#, fuzzy, c-format
+msgid "Recipe for file `%s' was found by implicit rule search,"
+msgstr ""
+"Las instrucciones para el archivo '%s' se encontraron por búsqueda en reglas "
+"implícitas,"
+
+# "now" es "ahora". ¿te lo has comido consciente o inconscientemente? sv
+# inconscientemente. mm
+#: file.c:289
+#, fuzzy, c-format
+msgid "but `%s' is now considered the same file as `%s'."
+msgstr "pero '%s' se considera ahora como el mismo archivo que `%s'."
+
+# Lo repetiré una y mil veces... :-)
+# "To ignore" *no* es ignorar. sv
+# Propongo "no serán tenidas en cuenta" a falta de algo mejor.
+# Ok. Mi necedad sobrepasa el milenio. mm
+#: file.c:292
+#, fuzzy, c-format
+msgid "Recipe for `%s' will be ignored in favor of the one for `%s'."
+msgstr ""
+"Las instrucciones para '%s' no serán tenidas en cuenta en favor de las que "
+"están en '%s'."
+
+# Me suena que eso de colon es algo así como punto, dos puntos o punto y coma.
+# ¿Podrías comprobarlo? sv
+# Es un punto sencillo (.). A ver si te gusta mi propuesta. mm
+#: file.c:312
+#, fuzzy, c-format
+msgid "can't rename single-colon `%s' to double-colon `%s'"
+msgstr "no se puede cambiar un punto (.) '%s' por dos puntos (:) '%s'"
+
+# Lo mismo. sv
+#: file.c:317
+#, fuzzy, c-format
+msgid "can't rename double-colon `%s' to single-colon `%s'"
+msgstr "no se pueden cambiar dos puntos (:) '%s' por un punto (.) '%s'"
+
+# Propongo un cambio en el tiempo verbal: Se borra el archivo temporal. sv
+# Ok. mm
+#: file.c:406
+#, fuzzy, c-format
+msgid "*** Deleting intermediate file `%s'"
+msgstr "*** Se borra el archivo intermedio '%s'"
+
+# Propongo un cambio en el tiempo verbal: Se borra el archivo temporal. sv
+# Ok. mm
+#: file.c:410
+msgid "Removing intermediate files...\n"
+msgstr "*** Se borran los archivos intermedios...\n"
+
+#: file.c:817
+#, c-format
+msgid "%s: Timestamp out of range; substituting %s"
+msgstr "%s: Fecha fuera de intervalo; sustituyéndola %s"
+
+#: file.c:818
+msgid "Current time"
+msgstr "Hora actual"
+
+#: file.c:915
+msgid "# Not a target:"
+msgstr "# No es un objetivo:"
+
+# Pondría: es una dependencia de em+
+# Si, tienes razón. mm
+#: file.c:942
+msgid "#  Precious file (prerequisite of .PRECIOUS)."
+msgstr "#  Archivo valioso (es una dependencia de .PRECIOUS)."
+
+# Lo mismo. Y traducir por falso es poco menos que poco exacto.
+# Los phony target de make son aquellos que se ejecutan siempre
+# sin tener en cuenta si existe un archivo con el nombre del objetivo
+# y de si es actual. Propondría incondicional en vez de falso, ya que
+# explica exactamente qué es un phony target em+
+# No. Incondicional no es una traducción correcta. Que tal si al rato
+# se les ocurre hacer una nueva instrucción .INCONDITIONAL.
+# Si quieres podríamos pensar en otra traducción como señuelo o algo así. mm
+#: file.c:944
+msgid "#  Phony target (prerequisite of .PHONY)."
+msgstr "#  objetivo falso (dependencia de .PHONY)."
+
+# FUZZY
+# Pondria línea de comandos
+# Y creo que no sé exactamente a que se refiere, No creo que haya visto
+# este mensaje nunca en make lo marco con FUZZY em+
+# Están traduciendo commands como comandos? Son más bien ordenes o
+# instrucciones. Por mi parte no hay problema, incluso me gusta más
+# comandos, pero es un anglicismo. mm
+#: file.c:946
+#, fuzzy
+msgid "#  Command-line target."
+msgstr "#  Objetivo en línea de instrucciones."
+
+# Habría que entender esto
+# Creo que esto es lo que significa. El fuente no es demasiado claro. mm
+# Se refiere a que el fichero makefile es uno que encuentra por
+# defecto ( en este orden GNUmakefile, Makefile y makefile ) o uno
+# que está definido en la variable de entorno MAKEFILE em+
+# Así pues tu traducción es completamente equivocada, lo siento.
+# Pondría: Fichero por defecto o definido en la variable MAKEFILE em+
+# Cierto, lo has entendido bien. Arreglo acorde. mm
+#: file.c:948
+msgid "#  A default, MAKEFILES, or -include/sinclude makefile."
+msgstr "#  Por omisión, MAKEFILES, o -include/sinclude makefile."
+
+# Propongo efectuada en lugar de terminada. sv
+# Ok. Es más literal. mm
+# Atención ! , es la búsqueda 'de'reglas implícitas em+
+# Ok. Ojo, debo pluralizar regla e implícita. Platicarlo con Ulrich. mm
+#: file.c:950
+msgid "#  Implicit rule search has been done."
+msgstr "#  La búsqueda de reglas implícitas ha sido efectuada."
+
+# Propongo efectuada en lugar de terminada. sv
+# Ok. Es más literal. mm
+# Atención ! , es la búsqueda 'de'reglas implícitas em+
+# Ok. Ojo, debo pluralizar regla e implícita. Platicarlo con Ulrich. mm
+#: file.c:951
+msgid "#  Implicit rule search has not been done."
+msgstr "#  La búsqueda de reglas implícitas ha sido efectuada."
+
+#: file.c:953
+#, fuzzy, c-format
+msgid "#  Implicit/static pattern stem: `%s'\n"
+msgstr "#  Tema del patrón implícita/estática: '%s'\n"
+
+#: file.c:955
+msgid "#  File is an intermediate prerequisite."
+msgstr "#  El archivo es una dependencia intermedia."
+
+# Sugerencia: "crea". sv
+# Ok. Aunque, viendolo bien, que tal "hace"? mm.
+#: file.c:958
+msgid "#  Also makes:"
+msgstr "#  También hace:"
+
+# ¿y "comprobó"? sv
+# Ok. Mejora. mm
+# No pondría nunca, sino simplemente 'no se comprobó 'em+
+# Si, es lo mismo pero es más español. mm
+#: file.c:968
+msgid "#  Modification time never checked."
+msgstr "#  La fecha de modificación no se comprobó."
+
+#: file.c:970
+msgid "#  File does not exist."
+msgstr "#  El archivo no existe."
+
+#: file.c:972
+msgid "#  File is very old."
+msgstr "#  El archivo es muy viejo."
+
+#: file.c:977
+#, c-format
+msgid "#  Last modified %s\n"
+msgstr "#  Última modificación %s\n"
+
+#: file.c:980
+msgid "#  File has been updated."
+msgstr "#  El archivo ha sido actualizado."
+
+#: file.c:981
+msgid "#  File has not been updated."
+msgstr "#  El archivo ha sido actualizado."
+
+#: file.c:989
+#, fuzzy
+msgid "#  Commands currently running (THIS IS A BUG)."
+msgstr "#  Las instrucciones continúan en ejecución (ESTO ES UN BUG)."
+
+# ¿No sería más bien "las instrucciones de las dependencias"? sv
+# Si, que babas soy. Ahora corrijo. mm
+#: file.c:992
+#, fuzzy
+msgid "#  Dependencies commands running (THIS IS A BUG)."
+msgstr ""
+"#  Las instrucciones de las dependencias continúan en ejecución (ESTO ES UN "
+"BUG)."
+
+# FUZZY
+# Pondria línea de comandos
+# Y creo que no sé exactamente a que se refiere, No creo que haya visto
+# este mensaje nunca en make lo marco con FUZZY em+
+# Están traduciendo commands como comandos? Son más bien ordenes o
+# instrucciones. Por mi parte no hay problema, incluso me gusta más
+# comandos, pero es un anglicismo. mm
+#: file.c:995
+#, fuzzy
+msgid "#  Commands not yet started."
+msgstr "#  Objetivo en línea de instrucciones."
+
+#: file.c:1003
+msgid "#  Successfully updated."
+msgstr "#  Actualizado con éxito."
+
+#: file.c:1007
+msgid "#  Needs to be updated (-q is set)."
+msgstr "#  Necesita ser actualizado (la opción -q está activa)."
+
+#: file.c:1010
+msgid "#  Failed to be updated."
+msgstr "#  Fallo al ser actualizado."
+
+#: file.c:1013
+#, fuzzy
+msgid "#  Invalid value in `update_status' member!"
+msgstr "#  ¡Valor inválido en el miembro 'command_state'!"
+
+#: file.c:1020
+#, fuzzy
+msgid "#  Invalid value in `command_state' member!"
+msgstr "#  ¡Valor inválido en el miembro 'command_state'!"
+
+#: file.c:1081
+msgid ""
+"\n"
+"# Files"
+msgstr ""
+"\n"
+"# Archivos"
+
+#: file.c:1085
+msgid ""
+"\n"
+"# files hash-table stats:\n"
+"# "
+msgstr ""
+"\n"
+"# estadísticas de la tabla «hash» de los archivos:\n"
+"# "
+
+#: function.c:760
+#, fuzzy
+msgid "non-numeric first argument to `word' function"
+msgstr "el primer argumento de la función 'word' no es numérico"
+
+#: function.c:765
+#, fuzzy
+msgid "first argument to `word' function must be greater than 0"
+msgstr "el primer argumento de la función 'word' debe ser mayor que 0"
+
+#: function.c:785
+#, fuzzy
+msgid "non-numeric first argument to `wordlist' function"
+msgstr "el primer argumento de la función 'wordlist' no es numérico"
+
+#: function.c:787
+#, fuzzy
+msgid "non-numeric second argument to `wordlist' function"
+msgstr "el segundo argumento de la función 'wordlist' no es numérico"
+
+#: function.c:1475
+#, fuzzy, c-format
+msgid "windows32_openpipe(): DuplicateHandle(In) failed (e=%ld)\n"
+msgstr "windows32_openpipe: fallo en DuplicateHandle(In), (e=%ld)\n"
+
+#: function.c:1486
+#, fuzzy, c-format
+msgid "windows32_open_pipe(): DuplicateHandle(Err) failed (e=%ld)\n"
+msgstr "windows32_openpipe: fallo en DuplicateHandle(Err), (e=%ld)\n"
+
+#: function.c:1491
+#, c-format
+msgid "CreatePipe() failed (e=%ld)\n"
+msgstr "Fallo en CreatePipe(), (e=%ld)\n"
+
+#: function.c:1496
+msgid "windows32_openpipe(): process_init_fd() failed\n"
+msgstr "windows32_openpipe(): fallo en process_init_fd()\n"
+
+#: function.c:1745
+#, c-format
+msgid "Cleaning up temporary batch file %s\n"
+msgstr "Limpiando el archivo temporal %s\n"
+
+#: function.c:2168
+#, fuzzy, c-format
+msgid "insufficient number of arguments (%d) to function `%s'"
+msgstr "Número de argumentos (%d) insuficientes para la función '%s'"
+
+#: function.c:2180
+#, fuzzy, c-format
+msgid "unimplemented on this platform: function `%s'"
+msgstr "No implementado en esta plataforma: función '%s'"
+
+#: function.c:2230
+#, fuzzy, c-format
+msgid "unterminated call to function `%s': missing `%c'"
+msgstr "la llamada a la función '%s' no concluyó: falta '%c'"
+
+#: getopt.c:665
+#, fuzzy, c-format
+msgid "%s: option `%s' is ambiguous\n"
+msgstr "%s: la opción '%s' es ambigua\n"
+
+# No admite ningún argumento. sv
+# Ok. Y vuelve la burra al trigo. mm
+#: getopt.c:689
+#, fuzzy, c-format
+msgid "%s: option `--%s' does not allow an argument\n"
+msgstr "%s: la opción '--%s' no admite ningún argumento\n"
+
+# Lo mismo. sv
+# Ok. mm
+#: getopt.c:694
+#, fuzzy, c-format
+msgid "%s: option `%c%s' does not allow an argument\n"
+msgstr "%s: la opción '%c%s' no admite ningún argumento\n"
+
+#: getopt.c:712 getopt.c:887
+#, fuzzy, c-format
+msgid "%s: option `%s' requires an argument\n"
+msgstr "%s: la opción '%s' requiere un argumento\n"
+
+#: getopt.c:743
+#, fuzzy, c-format
+msgid "%s: unrecognized option `--%s'\n"
+msgstr "%s: opción no reconocida '--%s'\n"
+
+#: getopt.c:747
+#, fuzzy, c-format
+msgid "%s: unrecognized option `%c%s'\n"
+msgstr "%s: opción no reconocida '%c%s'\n"
+
+#: getopt.c:773
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr "%s: opción inválida -- %c\n"
+
+#: getopt.c:776
+#, c-format
+msgid "%s: invalid option -- %c\n"
+msgstr "%s: opción inválida -- %c\n"
+
+#: getopt.c:806 getopt.c:936
+#, c-format
+msgid "%s: option requires an argument -- %c\n"
+msgstr "%s: la opción requiere un argumento -- %c\n"
+
+#: getopt.c:853
+#, fuzzy, c-format
+msgid "%s: option `-W %s' is ambiguous\n"
+msgstr "%s: la opción '-W %s' es ambigua\n"
+
+# No admite ningún argumento. sv
+# Ok. Y vuelve la burra al trigo. mm
+#: getopt.c:871
+#, fuzzy, c-format
+msgid "%s: option `-W %s' does not allow an argument\n"
+msgstr "%s: la opción '-W %s' no admite ningún argumento\n"
+
+#: hash.c:49
+#, c-format
+msgid "can't allocate %lu bytes for hash table: memory exhausted"
+msgstr "no se pueden reservar %lu bytes para la tabla «hash»: memoria agotada"
+
+#: hash.c:280
+#, fuzzy, c-format
+msgid "Load=%ld/%ld=%.0f%%, "
+msgstr "Carga=%ld/%ld=%.0f%%, "
+
+#: hash.c:282
+#, fuzzy, c-format
+msgid "Rehash=%d, "
+msgstr "Rehash=%d, "
+
+#: hash.c:283
+#, fuzzy, c-format
+msgid "Collisions=%ld/%ld=%.0f%%"
+msgstr "Colisiones=%ld/%ld=%.0f%%"
+
+# Y no sería mejor "Buscando una regla implícita ..."
+# Ten en cuenta que este mensaje no parece un mensaje de error, sino más
+# de "debug" o de "verbose". sv
+# Cierto. mm
+#: implicit.c:41
+#, fuzzy, c-format
+msgid "Looking for an implicit rule for `%s'.\n"
+msgstr "Buscando una regla implícita para '%s'.\n"
+
+# Lo mismo.
+# Buscando una regla implítita para el miembro del archivo  `%s' em+
+# Se me resbaló. mm
+#: implicit.c:57
+#, fuzzy, c-format
+msgid "Looking for archive-member implicit rule for `%s'.\n"
+msgstr "Buscando una regla implícita para el miembro del archivo '%s'.\n"
+
+# Pues si ilegal le suena a cárcel a Enrique, "evade" me suena a mí a
+# escaparse de la cárcel... (fuga de alcatraz :-)
+# te voy a dar yo a tí fuga ... em+
+# ¿Qué te parecería "se evita"? sv
+# Me gusta evade, pero evita es correcto. Acepto tu sugerencia. mm
+# No me gusta se evita, pondría evitando em+
+# Ok. Pero a mi paranoia de evitar gerundios dónde la dejas? mm
+#: implicit.c:318
+msgid "Avoiding implicit rule recursion.\n"
+msgstr "Evitando la recursión en la regla implícita.\n"
+
+# FUZZY
+# Esto me suena fatal. Se a que se refiere, porque lo
+# he visto, pero en cristiano no se si podría entenderlo.
+# se refiere a las reglas del tipo % , lo pongo FUZZY , tendré
+# que pensar un poco en ello em+
+# De momento cambio la regla patron por una regla de patron , y
+# pondría a toda costa gerundio ( intentando ) em+
+# Ok con el gerundio. Pero también tengo que meditarlo. mm
+#: implicit.c:492
+#, fuzzy, c-format
+msgid "Trying pattern rule with stem `%.*s'.\n"
+msgstr "Intentando una regla de patrón con el tema '%.*s'.\n"
+
+# ## Corrijo la palabra "dependencia". sv
+# Cuando aparezca este mensaje tendrá poco menos que sentido
+# testimonial. Date cuenta que los argumentos estan cambiados.
+# Pon el orden correcto, siempre será más lógico que lo que vaya a
+# aparecer tal y como está ahora (Se rechaza la dependencia imposible
+#  `%s' `%s )'em+
+# Ok. mm
+#: implicit.c:675
+#, fuzzy, c-format
+msgid "Rejecting impossible rule prerequisite `%s'.\n"
+msgstr "Se rechaza la regla de dependencia imposible '%s'.\n"
+
+# ## Corrijo la palabra "dependencia". sv
+# Cuando aparezca este mensaje tendrá poco menos que sentido
+# testimonial. Date cuenta que los argumentos estan cambiados.
+# Pon el orden correcto, siempre será más lógico que lo que vaya a
+# aparecer tal y como está ahora (Se rechaza la dependencia imposible
+#  `%s' `%s )'em+
+# Ok. mm
+#: implicit.c:676
+#, fuzzy, c-format
+msgid "Rejecting impossible implicit prerequisite `%s'.\n"
+msgstr "Se rechaza la dependencia implícita imposible '%s'.\n"
+
+# FUZZY
+# Esto me suena fatal. Se a que se refiere, porque lo
+# he visto, pero en cristiano no se si podría entenderlo.
+# se refiere a las reglas del tipo % , lo pongo FUZZY , tendré
+# que pensar un poco en ello em+
+# De momento cambio la regla patron por una regla de patron , y
+# pondría a toda costa gerundio ( intentando ) em+
+# Ok con el gerundio. Pero también tengo que meditarlo. mm
+#: implicit.c:689
+#, fuzzy, c-format
+msgid "Trying rule prerequisite `%s'.\n"
+msgstr "Intentando la regla de dependencia '%s'.\n"
+
+# Pues si ilegal le suena a cárcel a Enrique, "evade" me suena a mí a
+# escaparse de la cárcel... (fuga de alcatraz :-)
+# te voy a dar yo a tí fuga ... em+
+# ¿Qué te parecería "se evita"? sv
+# Me gusta evade, pero evita es correcto. Acepto tu sugerencia. mm
+# No me gusta se evita, pondría evitando em+
+# Ok. Pero a mi paranoia de evitar gerundios dónde la dejas? mm
+#: implicit.c:690
+#, fuzzy, c-format
+msgid "Trying implicit prerequisite `%s'.\n"
+msgstr "Probando la dependencia implícita '%s'.\n"
+
+#: implicit.c:729
+#, fuzzy, c-format
+msgid "Found prerequisite `%s' as VPATH `%s'\n"
+msgstr "Se encontró la dependencia '%s' como la VPATH '%s'.\n"
+
+#: implicit.c:743
+#, fuzzy, c-format
+msgid "Looking for a rule with intermediate file `%s'.\n"
+msgstr "Se busca una regla con el archivo intermedio '%s'.\n"
+
+#: job.c:341
+msgid "Cannot create a temporary file\n"
+msgstr "No se puede crear un archivo temporal\n"
+
+#: job.c:456
+#, fuzzy, c-format
+msgid "*** [%s] Error 0x%x (ignored)"
+msgstr "%s[%s: %s] Error %d%s"
+
+#: job.c:457
+#, fuzzy, c-format
+msgid "*** [%s] Error 0x%x"
+msgstr "%s[%s: %s] Error %d%s"
+
+#: job.c:461
+#, fuzzy, c-format
+msgid "[%s] Error %d (ignored)"
+msgstr "%s[%s: %s] Error %d%s"
+
+#: job.c:462
+#, fuzzy, c-format
+msgid "*** [%s] Error %d"
+msgstr "%s[%s: %s] Error %d%s"
+
+# Sugerencia: " (volcado de `core')". sv
+# volcado de `core' no significa nada, que te parece si mejor dejamos
+# el core dumped, o bien volcado del núcleo o algo así. Por el momento
+# no cambio nada. mm
+#: job.c:467
+msgid " (core dumped)"
+msgstr " (core dumped) [Núcleo vaciado a un archivo]"
+
+# ¿Y job -> trabajos? sv
+# Si, pero no hablas de una computadora multi-trabajos sino multi-tareas.
+# Por eso elegí tareas. Lo platicamos con más calma? mm
+#: job.c:564
+msgid "*** Waiting for unfinished jobs...."
+msgstr "*** Se espera a que terminen otras tareas...."
+
+# ¿De verdad se dice "vivo"? Si es un proceso, se me ocurre "activo". sv
+# Me gusta lo de activo. mm
+#: job.c:594
+#, c-format
+msgid "Live child %p (%s) PID %s %s\n"
+msgstr "Hijo activo %p (%s) PID %s %s\n"
+
+#: job.c:596 job.c:775 job.c:887 job.c:1595
+msgid " (remote)"
+msgstr " (remoto)"
+
+# Lo mismo, pon Proceso hijo, y quita lo que hay
+# entre paréntesis em+
+#: job.c:773
+#, c-format
+msgid "Reaping losing child %p PID %s %s\n"
+msgstr "Se recupera al proceso hijo perdido %p PID %s %s\n"
+
+# Lo mismo, pon Proceso hijo, y quita lo que hay
+# entre paréntesis em+
+#: job.c:774
+#, c-format
+msgid "Reaping winning child %p PID %s %s\n"
+msgstr "Se recupera al proceso hijo ganador %p PID %s %s\n"
+
+# Give up no es enfocar, es abandonar, o desistir em+
+# Si, metí la pata. mm
+#: job.c:778
+#, c-format
+msgid "Cleaning up temp batch file %s\n"
+msgstr "Se limpia el archivo temporal %s\n"
+
+# Proceso hijo em+
+# Ok.
+#: job.c:886
+#, c-format
+msgid "Removing child %p PID %s%s from chain.\n"
+msgstr "Se elimina al proceso hijo %p PID %s%s de la cadena.\n"
+
+#: job.c:966
+msgid "write jobserver"
+msgstr "escribir en el servidor de tareas"
+
+# Lo mismo, pon Proceso hijo, y quita lo que hay
+# entre paréntesis em+
+#: job.c:968
+#, c-format
+msgid "Released token for child %p (%s).\n"
+msgstr "Se libera el token para el proceso hijo %p (%s).\n"
+
+#: job.c:1521 job.c:2079
+#, c-format
+msgid "process_easy() failed to launch process (e=%ld)\n"
+msgstr "fallo en process_easy() para lanzar al proceso (e=%ld)\n"
+
+#: job.c:1525 job.c:2083
+#, c-format
+msgid ""
+"\n"
+"Counted %d args in failed launch\n"
+msgstr ""
+"\n"
+"Se contaron %d argumentos en el lanzamiento fallido\n"
+
+# Proceso hijo em+
+# Ok.
+#: job.c:1593
+#, c-format
+msgid "Putting child %p (%s) PID %s%s on the chain.\n"
+msgstr "Se pone al proceso hijo %p (%s) PID %s%s en la cadena.\n"
+
+# Lo mismo, pon Proceso hijo, y quita lo que hay
+# entre paréntesis em+
+#: job.c:1751
+#, c-format
+msgid "Obtained token for child %p (%s).\n"
+msgstr "Se obtiene el token para el proceso hijo %p (%s).\n"
+
+#: job.c:1760
+msgid "read jobs pipe"
+msgstr "tubería de trabajos leídos"
+
+#: job.c:1771
+#, c-format
+msgid "Invoking recipe from %s:%lu to update target `%s'.\n"
+msgstr ""
+
+# No me gusta esta traducción de override. Mira a ver
+# si encaja mejor alguna de las dos que se proponen arriba
+# em+
+# Aunque no me acaba de convencer, que te parece ésto? mm
+#: job.c:1785
+#, fuzzy, c-format
+msgid "Invoking builtin recipe to update target `%s'.\n"
+msgstr "atención: se anulan las instrucciones para el objetivo '%s'"
+
+#: job.c:1895
+msgid "cannot enforce load limits on this operating system"
+msgstr "no se pueden forzar los límites de carga en este sistema operativo"
+
+#: job.c:1897
+msgid "cannot enforce load limit: "
+msgstr "no se puede forzar la carga límite: "
+
+#: job.c:1970
+msgid "no more file handles: could not duplicate stdin\n"
+msgstr "no hay más manejadores de archivos: no se puede duplicar stdin\n"
+
+#: job.c:1972
+msgid "no more file handles: could not duplicate stdout\n"
+msgstr "no hay más manejadores de archivos: no se puede duplicar stdout\n"
+
+#: job.c:2000
+msgid "Could not restore stdin\n"
+msgstr "No se puede restaurar stdin\n"
+
+#: job.c:2008
+msgid "Could not restore stdout\n"
+msgstr "No se puede restaurar stdout\n"
+
+#: job.c:2112
+#, c-format
+msgid "make reaped child pid %s, still waiting for pid %s\n"
+msgstr "hacer un hijo descarriado %s, aún se espera por el pid %s\n"
+
+#: job.c:2153
+#, fuzzy, c-format
+msgid "%s: Command not found"
+msgstr "%s: %s: No se encontró el programa\n"
+
+# ¿Y "el programa Shell"? (a secas) sv
+# Si. Suena mucho mejor. mm
+# Suena, pero no es mejor. Tal y como esta escrito, incluso
+# yo pensaria que me falta un programa en mi sistema que se
+# llame shell. No se ha encontrado el 'shell'em+
+# Es bueno contar con una segunda opinión ... mm
+#: job.c:2213
+#, c-format
+msgid "%s: Shell program not found"
+msgstr "%s: No se ha encontrado el `shell'"
+
+#: job.c:2222
+msgid "spawnvpe: environment space might be exhausted"
+msgstr "spawnvpe: el espacio ambiental podría estar agotado"
+
+#: job.c:2446
+#, fuzzy, c-format
+msgid "$SHELL changed (was `%s', now `%s')\n"
+msgstr "$SHELL ha cambiado (era '%s' y ahora es '%s')\n"
+
+#: job.c:2936
+#, c-format
+msgid "Creating temporary batch file %s\n"
+msgstr "Se crea el archivo temporal %s\n"
+
+#: job.c:2948
+#, c-format
+msgid ""
+"Batch file contents:%s\n"
+"\t%s\n"
+msgstr ""
+"Contenido del archivo de lotes:%s\n"
+"\t%s\n"
+
+#: job.c:3050
+#, c-format
+msgid "%s (line %d) Bad shell context (!unixy && !batch_mode_shell)\n"
+msgstr ""
+"%s (linea %d) Contexto de shell erróneo (!unixy && !batch_mode_shell)\n"
+
+#: main.c:386
+msgid "Options:\n"
+msgstr "Opciones:\n"
+
+# Lo mismo de arriba con "ignorar". sv
+# Ok. mm.
+#: main.c:387
+msgid "  -b, -m                      Ignored for compatibility.\n"
+msgstr ""
+"  -b, -m                      No se tendrá en cuenta por compatibilidad.\n"
+
+#: main.c:389
+msgid "  -B, --always-make           Unconditionally make all targets.\n"
+msgstr ""
+"  -B, --always-make           Hace incondicionalmente todos los objetivos.\n"
+
+#: main.c:391
+msgid ""
+"  -C DIRECTORY, --directory=DIRECTORY\n"
+"                              Change to DIRECTORY before doing anything.\n"
+msgstr ""
+"  -C DIRECTORIO, --directory=DIRECTORIO\n"
+"                              Se cambia al DIRECTORIO antes de hacer nada.\n"
+
+# ¿"depurado" o "depuración"? sv
+# Puse de depurado para evitar la cacofonía información depuración.
+# Sugerencias bienvenidas. mm
+#: main.c:394
+msgid "  -d                          Print lots of debugging information.\n"
+msgstr ""
+"  -d          Se imprimirán grandes cantidades de información de depurado.\n"
+
+# ¿"depurado" o "depuración"? sv
+# Puse de depurado para evitar la cacofonía información depuración.
+# Sugerencias bienvenidas. mm
+#: main.c:396
+msgid ""
+"  --debug[=FLAGS]             Print various types of debugging information.\n"
+msgstr ""
+"  --debug[=BANDERAS]    Se imprimirán varios tipos de información de "
+"depurado.\n"
+
+#: main.c:398
+msgid ""
+"  -e, --environment-overrides\n"
+"                              Environment variables override makefiles.\n"
+msgstr ""
+"  -e, --environment-overrides\n"
+"                Las variables ambientales se imponen a las de los "
+"makefiles.\n"
+
+#: main.c:401
+msgid ""
+"  --eval=STRING               Evaluate STRING as a makefile statement.\n"
+msgstr ""
+"   --eval=CADENA               Evalúla la CADENA como una instrucción de un "
+"makefile.\n"
+
+#: main.c:403
+msgid ""
+"  -f FILE, --file=FILE, --makefile=FILE\n"
+"                              Read FILE as a makefile.\n"
+msgstr ""
+"  -f ARCHIVO, --file=ARCHIVO, --makefile=ARCHIVO\n"
+"                                   Lee al ARCHIVO como un makefile.\n"
+
+#: main.c:406
+msgid "  -h, --help                  Print this message and exit.\n"
+msgstr "  -h, --help                  Muestra este mensaje y finaliza.\n"
+
+# Ojo con ignorar. sv
+# Ok. mm
+# Por favor, si has traducido commands como instrucciones , hazlo aqui
+# tambien.
+# No me gusta este mensaje, preferiría: Se ignoran los errores obtenidos
+# en la ejecución de las instrucciones  em+
+#: main.c:408
+msgid "  -i, --ignore-errors         Ignore errors from recipes.\n"
+msgstr ""
+"  -i, --ignore-errors         No se toman en cuenta los errores provenientes "
+"de las instrucciones.\n"
+
+#: main.c:410
+msgid ""
+"  -I DIRECTORY, --include-dir=DIRECTORY\n"
+"                              Search DIRECTORY for included makefiles.\n"
+msgstr ""
+"  -I DIRECTORIO, --include-dir=DIRECTORIO\n"
+"                       Busca dentro del DIRECTORIO los makefiles incluidos.\n"
+
+# Yo traduciría "infinite" por "infinitos", no por "una infinidad", que
+# parece que son muchos menos... sv
+# Ok. mm
+#: main.c:413
+msgid ""
+"  -j [N], --jobs[=N]          Allow N jobs at once; infinite jobs with no "
+"arg.\n"
+msgstr ""
+"  -j [N], --jobs[=N]      Se permiten N trabajos a la vez; si no se "
+"especifica un\n"
+"argumento son infinitos.\n"
+
+# No entiendo por qué aquí empleas subjuntivo: "pudieron". sv
+# Es incorrecto. Es una de las opciones `k' que dice... mm
+#: main.c:415
+msgid ""
+"  -k, --keep-going            Keep going when some targets can't be made.\n"
+msgstr ""
+"  -k, --keep-going            Sigue avanzando aún cuando no se puedan crear "
+"algunos objetivos.\n"
+
+#: main.c:417
+msgid ""
+"  -l [N], --load-average[=N], --max-load[=N]\n"
+"                              Don't start multiple jobs unless load is below "
+"N.\n"
+msgstr ""
+"  -l [N], --load-average[=N], --max-load[=N]\n"
+"      No inicia con trabajos múltiples a menos que la carga esté por debajo "
+"de N.\n"
+
+#: main.c:420
+msgid ""
+"  -L, --check-symlink-times   Use the latest mtime between symlinks and "
+"target.\n"
+msgstr ""
+"  -L, --check-symlink-times   Utiliza el último mtime entre los enlaces "
+"simbólicos y los objetivos.\n"
+
+# Ojo con ignorar. sv
+# Ok. mm
+# Por favor, si has traducido commands como instrucciones , hazlo aqui
+# tambien.
+# No me gusta este mensaje, preferiría: Se ignoran los errores obtenidos
+# en la ejecución de las instrucciones  em+
+#: main.c:422
+#, fuzzy
+msgid ""
+"  --no-extended-errors         Do not give additional error reporting.\n"
+msgstr ""
+"  -i, --ignore-errors         No se toman en cuenta los errores provenientes "
+"de las instrucciones.\n"
+
+#: main.c:424
+msgid ""
+"  -n, --just-print, --dry-run, --recon\n"
+"                              Don't actually run any recipe; just print "
+"them.\n"
+msgstr ""
+"  -n, --just-print, --dry-run, --recon\n"
+"                              No ejecuta ninguna instrucción; sólo las "
+"muestra.\n"
+
+#: main.c:427
+msgid ""
+"  -o FILE, --old-file=FILE, --assume-old=FILE\n"
+"                              Consider FILE to be very old and don't remake "
+"it.\n"
+msgstr ""
+"  -o ARCHIVO, --old-file=ARCHIVO, --assume-old=ARCHIVO\n"
+"                           Supone que ARCHIVO es muy viejo y no lo "
+"reconstruye.\n"
+
+# de 'make' em+
+# ok. mm
+#: main.c:430
+msgid "  -p, --print-data-base       Print make's internal database.\n"
+msgstr ""
+"  -p, --print-data-base       Se imprime la base de datos interna de "
+"'make'.\n"
+
+#: main.c:432
+msgid ""
+"  -q, --question              Run no recipe; exit status says if up to "
+"date.\n"
+msgstr ""
+"  -q, --question             No se ejecutan las instrucciones; el estado de "
+"salida\n"
+"                                     indicará si están actualizados.\n"
+
+# ¿desabilitan o deshabilitan? sv
+# Error de dedo. mm
+# ¡ Por favor ! , ¿ pero qué es eso de interconstruidas ?
+# Pon almacenadas internamente, que es exactamente lo que son :) em+
+# Bueno, bajo protesta. mm
+#: main.c:434
+msgid "  -r, --no-builtin-rules      Disable the built-in implicit rules.\n"
+msgstr ""
+"  -r, --no-builtin-rules      Se deshabilitan las reglas implícitas "
+"almacenadas internamente.\n"
+
+# ¿desabilitan o deshabilitan? sv
+# Error de dedo. mm
+# ¡ Por favor ! , ¿ pero qué es eso de interconstruidas ?
+# Pon almacenadas internamente, que es exactamente lo que son :) em+
+# Bueno, bajo protesta. mm
+#: main.c:436
+msgid "  -R, --no-builtin-variables  Disable the built-in variable settings.\n"
+msgstr ""
+"  -R, --no-builtin-variables  Se deshabilitan los ajustes a las variables "
+"almacenadas internamente.\n"
+
+#: main.c:438
+msgid "  -s, --silent, --quiet       Don't echo recipes.\n"
+msgstr "  -s, --silent, --quiet       No muestra las intrucciones.\n"
+
+#: main.c:440
+msgid ""
+"  -S, --no-keep-going, --stop\n"
+"                              Turns off -k.\n"
+msgstr ""
+"  -S, --no-keep-going, --stop\n"
+"                              Desactiva la opción -k.\n"
+
+# ¿"depurado" o "depuración"? sv
+# Puse de depurado para evitar la cacofonía información depuración.
+# Sugerencias bienvenidas. mm
+#: main.c:443
+#, fuzzy
+msgid "  --targets                   Give list of explicitly-named targets.\n"
+msgstr "  --trace                     Muestra trazas.\n"
+
+#: main.c:445
+msgid ""
+"  --tasks                     Give list of explicitly-named targets which\n"
+"                              have commands associated with them.\n"
+msgstr ""
+
+# Se *tocan*, ¿no? sv
+# Si. mm
+#
+# Pues entonces cámbialo arriba tambien em+
+# En donde? mm
+#: main.c:453
+msgid "  -t, --touch                 Touch targets instead of remaking them.\n"
+msgstr ""
+"  -t, --touch                 Se tocan los objetivos en vez de "
+"reconstruirlos.\n"
+
+# Me comería el "Se" inicial. "Muestra la versión..." sv
+# Ok. mm
+#: main.c:455
+msgid ""
+"  -v, --version               Print the version number of make and exit.\n"
+msgstr ""
+"  -v, --version               Muestra la versión del make y finaliza.\n"
+
+# Lo mismo. sv
+#: main.c:457
+msgid "  -w, --print-directory       Print the current directory.\n"
+msgstr "  -w, --print-directory       Muestra el directorio actual.\n"
+
+# Lo mismo. sv
+# Turn off , desactiva o deshabilita , pero no apaga em+
+# apaga luz Mari Luz apaga luz ,que yo no puedo vivir con
+# tanta luz ... ( canción tradicional ) ( no lo pude evitar ) em+
+# Juar, Juar, Juar. Coincido, pero el sentido es el mismo. mm
+#: main.c:459
+msgid ""
+"  --no-print-directory        Turn off -w, even if it was turned on "
+"implicitly.\n"
+msgstr ""
+"  --no-print-directory        Desactiva -w, aún cuando haya sido activado "
+"implícitamente.\n"
+
+#: main.c:461
+msgid ""
+"  -W FILE, --what-if=FILE, --new-file=FILE, --assume-new=FILE\n"
+"                              Consider FILE to be infinitely new.\n"
+msgstr ""
+"  -W ARCHIVO, --what-if=ARCHIVO, --new-file=ARCHIVO, --assume-new=ARCHIVO\n"
+"                               Supone que ARCHIVO es infinitamente "
+"reciente.\n"
+
+# Lo mismo. sv
+# Todas estas parecen descripciones de opciones.
+#: main.c:464
+msgid ""
+"  --warn-undefined-variables  Warn when an undefined variable is "
+"referenced.\n"
+msgstr ""
+"  --warn-undefined-variables  Advierte cuando se hace una referencia a una "
+"variable no definida.\n"
+
+#: main.c:466
+msgid ""
+"  --trace[=TYPE]              Trace command execution TYPE may be\n"
+"                              \"command\", \"read\", \"normal\",\"\n"
+"                              \"noshell\", or \"full\".\n"
+msgstr ""
+
+# ¿"depurado" o "depuración"? sv
+# Puse de depurado para evitar la cacofonía información depuración.
+# Sugerencias bienvenidas. mm
+#: main.c:470
+#, fuzzy
+msgid "  -x                          Same as --trace=\"normal\"\n"
+msgstr ""
+"  -d          Se imprimirán grandes cantidades de información de depurado.\n"
+
+#: main.c:472
+msgid "  -y                          Same as --trace=\"noshell\"\n"
+msgstr ""
+
+#: main.c:474
+msgid ""
+"  --debugger[=TYPE]            Enter debugger. TYPE may be\n"
+"                               \"goal\", \"preread\", \"preaction\",\n"
+"                               \"full\", \"error\", or \"fatal\".\n"
+msgstr ""
+
+# ¿"depurado" o "depuración"? sv
+# Puse de depurado para evitar la cacofonía información depuración.
+# Sugerencias bienvenidas. mm
+#: main.c:478
+#, fuzzy
+msgid ""
+"\n"
+"  -X                           Same as \"--debugger=preaction\"\n"
+msgstr ""
+"  -d          Se imprimirán grandes cantidades de información de depurado.\n"
+
+#: main.c:480
+msgid "   --no-readline               Do not use GNU ReadLine in debugger.\n"
+msgstr ""
+
+#: main.c:746
+msgid "empty string invalid as file name"
+msgstr "no se permite que una cadena vacía sea el nombre de un archivo"
+
+#: main.c:809
+#, c-format
+msgid "%s: Interrupt/Exception caught (code = 0x%lx, addr = 0x%p)\n"
+msgstr ""
+"%s: Se atrapó una interrupción/excepción (código = 0x%lx, dirección = 0x%p)\n"
+
+#: main.c:816
+#, c-format
+msgid ""
+"\n"
+"Unhandled exception filter called from program %s\n"
+"ExceptionCode = %lx\n"
+"ExceptionFlags = %lx\n"
+"ExceptionAddress = 0x%p\n"
+msgstr ""
+"\n"
+"Se ha llamado un filtro de excepción no manejado desde el programa %s\n"
+"Código de la excepción = %lx\n"
+"Banderas de la excepción = %lx\n"
+"Dirección de la excepción = 0x%p\n"
+
+#: main.c:824
+#, c-format
+msgid "Access violation: write operation at address 0x%p\n"
+msgstr "Violación de acceso: operación de escritura en la dirección 0x%p\n"
+
+#: main.c:825
+#, c-format
+msgid "Access violation: read operation at address 0x%p\n"
+msgstr "Violación de acceso: operación de lectura en la dirección 0x%p\n"
+
+#: main.c:900 main.c:911
+#, c-format
+msgid "find_and_set_shell() setting default_shell = %s\n"
+msgstr "la función find_and_set_shell() pone el valor del default_shell = %s\n"
+
+#: main.c:953
+#, c-format
+msgid "find_and_set_shell() path search set default_shell = %s\n"
+msgstr ""
+"la función find_and_set_shell() pone el valor de la ruta de búsceda "
+"default_shell = %s\n"
+
+#: main.c:1453
+#, c-format
+msgid "%s is suspending for 30 seconds..."
+msgstr "%s está suspendida por 30 segundos..."
+
+#: main.c:1455
+#, c-format
+msgid "done sleep(30). Continuing.\n"
+msgstr "se hizo un sleep(30). Continuando.\n"
+
+#: main.c:1682
+msgid "Makefile from standard input specified twice."
+msgstr ""
+"El archivo Makefile ha sido especificado dos veces desde la entrada estándard"
+
+#: main.c:1720 vmsjobs.c:500
+msgid "fopen (temporary file)"
+msgstr "fopen (archivo temporal)"
+
+#: main.c:1726
+msgid "fwrite (temporary file)"
+msgstr "fwrite (archivo temporal)"
+
+#: main.c:1884
+msgid "Parallel jobs (-j) are not supported on this platform."
+msgstr ""
+"Los trabajos en paralelo (-j) no están implementados en esta plataforma."
+
+#: main.c:1885
+msgid "Resetting to single job (-j1) mode."
+msgstr "Reajustando al modo monotarea (-j1)."
+
+#: main.c:1900
+msgid "internal error: multiple --jobserver-fds options"
+msgstr "error interno: hay varias opciones --jobserver-fds"
+
+#: main.c:1908
+#, fuzzy, c-format
+msgid "internal error: invalid --jobserver-fds string `%s'"
+msgstr "error interno: cadena --jobserver-auth inválida '%s'"
+
+#: main.c:1911
+#, c-format
+msgid "Jobserver client (fds %d,%d)\n"
+msgstr "Cliente del servidor de tareas (fds %d,%d)\n"
+
+#: main.c:1921
+msgid "warning: -jN forced in submake: disabling jobserver mode."
+msgstr ""
+"atención: se fuerza a -jN en el submake: se deshabilita el modo de servidor "
+"de tareas."
+
+#: main.c:1931
+msgid "dup jobserver"
+msgstr "servidor de tareas duplicado"
+
+#: main.c:1934
+#, fuzzy
+msgid ""
+"warning: jobserver unavailable: using -j1.  Add `+' to parent make rule."
+msgstr ""
+"atención: el servidor de tareas no está disponible: se utilizará -j1. Añada "
+"'+' a la regla padre del make."
+
+#: main.c:1958
+msgid "creating jobs pipe"
+msgstr "creando una tubería de tareas"
+
+#: main.c:1973
+msgid "init jobserver pipe"
+msgstr "se inicializa la tubería al servidor de tareas"
+
+#: main.c:1993
+msgid "Symbolic links not supported: disabling -L."
+msgstr "Los enlaces simbólicos no están implementados: se deshabilitan con -L."
+
+# Antes pusiste "makefiles". Coherencia. sv
+# Cierto. mm
+#: main.c:2073
+#, fuzzy
+msgid "Updating makefiles....\n"
+msgstr "Actualizando archivos makefiles....\n"
+
+# Me comería el "archivo" inicial.
+# Ok. mm
+# "El Makefile `%s' ..." sv
+# Pondría ( como en un mensaje anterior ) se autoreferencia ... em+
+# He puesto makefile con minúsculas , par ser coherentes em+
+# Ok. Es más breve. mm.
+#: main.c:2098
+#, fuzzy, c-format
+msgid "Makefile `%s' might loop; not remaking it.\n"
+msgstr ""
+"El makefile '%s' podría entrar en bucle; por lo tanto, no se reconstruye.\n"
+
+# Lo mismo. sv
+#: main.c:2177
+#, fuzzy, c-format
+msgid "Failed to remake makefile `%s'."
+msgstr "Fallo al reconstruir el makefile '%s'."
+
+# Lo mismo. sv
+#: main.c:2194
+#, fuzzy, c-format
+msgid "Included makefile `%s' was not found."
+msgstr "No se encontró el makefile incluído '%s'."
+
+# Lo mismo. sv
+#: main.c:2199
+#, fuzzy, c-format
+msgid "Makefile `%s' was not found"
+msgstr "No se encontró el makefile '%s'"
+
+#: main.c:2267
+msgid "Couldn't change back to original directory."
+msgstr "No se pudo regresar al directorio original."
+
+#: main.c:2283
+#, c-format
+msgid "Re-executing[%u]:"
+msgstr "Re-ejecutando[%u]:"
+
+#: main.c:2396
+msgid "unlink (temporary file): "
+msgstr "unlink (archivo temporal)"
+
+#: main.c:2428
+msgid ".DEFAULT_GOAL contains more than one target"
+msgstr ".DEFAULT_GOAL contien más de un objetivo"
+
+# Sugerencia: "No se especificó ningún objetivo ... " sv
+# Ok. Me gusta. mm
+#: main.c:2451
+msgid "No targets specified and no makefile found"
+msgstr "No se especificó ningún objetivo y no se encontró ningún makefile"
+
+#: main.c:2453
+msgid "No targets"
+msgstr "No hay objetivos"
+
+#: main.c:2468
+#, fuzzy
+msgid "Updating goal targets....\n"
+msgstr "Actualizando los objetivos finales....\n"
+
+#: main.c:2497
+msgid "warning:  Clock skew detected.  Your build may be incomplete."
+msgstr ""
+"atención: Se ha detectado una desviación en el reloj. La construcción podría "
+"estar incompleta."
+
+# ¿Y Modo de empleo? sv
+# Soy medio bestia. Debería hacerlo automático. mm
+# "target" es "objetivo", no "objetivos". Fíjate que lleva puntos
+# suspensivos, permitiendo así varios objetivos. sv
+# Ok. mm
+#: main.c:2661
+#, c-format
+msgid "Usage: %s [options] [target] ...\n"
+msgstr "Modo de empleo: %s [opciones] [objetivo] ...\n"
+
+#: main.c:2667
+#, c-format
+msgid ""
+"\n"
+"This program built for %s\n"
+msgstr ""
+"\n"
+"Este programa fue construido para %s\n"
+
+#: main.c:2669
+#, c-format
+msgid ""
+"\n"
+"This program built for %s (%s)\n"
+msgstr ""
+"\n"
+"Este programa construido para %s (%s)\n"
+
+#: main.c:2672
+#, c-format
+msgid "Report bugs to https://github.com/rocky/remake/issues\n"
+msgstr ""
+
+# Me comería el "de" de "requiere de" sv
+# Ok. mm
+#: main.c:2753
+#, fuzzy, c-format
+msgid "the `%s%s' option requires a non-empty string argument"
+msgstr "la opción '%s%s' requiere un argumento no-vacío de tipo cadena"
+
+# Me comería el "de" de "requiere de" sv
+# Ok. mm
+#: main.c:2808
+#, fuzzy, c-format
+msgid "the `-%c' option requires a positive integral argument"
+msgstr "la opción '-%c' requiere un argumento positivo y entero"
+
+#: main.c:3245
+#, c-format
+msgid "%sBuilt for %s\n"
+msgstr "%sEste programa fue construido para %s\n"
+
+#: main.c:3247
+#, c-format
+msgid "%sBuilt for %s (%s)\n"
+msgstr "%sEste programa fue construido para %s (%s)\n"
+
+#: main.c:3257
+#, c-format
+msgid ""
+"%sLicense GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl."
+"html>\n"
+"%sThis is free software: you are free to change and redistribute it.\n"
+"%sThere is NO WARRANTY, to the extent permitted by law.\n"
+msgstr ""
+"%sLicencia GPLv3+: GNU GPL versión 3 o posterior <http://gnu.org/licenses/"
+"gpl.html>\n"
+"%sEste es software libre: cualquiera es libre para redistribuirlo y "
+"modificarlo.\n"
+"%sNo existe GARANTÍA ALGUNA, hasta los límites permitidos por las leyes "
+"aplicables.\n"
+
+#: main.c:3277
+#, c-format
+msgid ""
+"\n"
+"# Make data base, printed on %s"
+msgstr ""
+"\n"
+"# Base de datos del Make, mostrada en %s"
+
+# make -> Make. sv
+# Ok. mm
+# Porqué 'del', o pones 'del programa' Make o pones
+# 'de Make' em+
+# Ok. mm
+#: main.c:3287
+#, c-format
+msgid ""
+"\n"
+"# Finished Make data base on %s\n"
+msgstr ""
+"\n"
+"# Se termina la base de datos de Make en %s\n"
+
+#: main.c:3434
+#, c-format
+msgid "%s: Entering an unknown directory\n"
+msgstr "%s: se ingresa a un directorio desconocido\n"
+
+#: main.c:3436
+#, c-format
+msgid "%s: Leaving an unknown directory\n"
+msgstr "%s: se sale del directorio desconocido\n"
+
+# Probablemente sea aquí donde haya que ponerle el "el" para que "Entering"
+# concuerde bien con esta frase y con la anterior simultáneamente. sv
+# No. Ya revisé el fuente y transcribo el trozo pertinente:
+#  char *message = entering ? "Entering" : "Leaving";
+#  if (makelevel == 0)
+#    printf ("%s: %s ", program, message);
+#  else
+#    printf ("%s[%u]: %s ", program, makelevel, message);
+# Como notarás lo del directorio va en otro lado.
+#: main.c:3439
+#, fuzzy, c-format
+msgid "%s: Entering directory `%s'\n"
+msgstr "%s: se entra en el directorio '%s'\n"
+
+# Probablemente sea aquí donde haya que ponerle el "el" para que "Entering"
+# concuerde bien con esta frase y con la anterior simultáneamente. sv
+# No. Ya revisé el fuente y transcribo el trozo pertinente:
+#  char *message = entering ? "Entering" : "Leaving";
+#  if (makelevel == 0)
+#    printf ("%s: %s ", program, message);
+#  else
+#    printf ("%s[%u]: %s ", program, makelevel, message);
+# Como notarás lo del directorio va en otro lado.
+#: main.c:3442
+#, fuzzy, c-format
+msgid "%s: Leaving directory `%s'\n"
+msgstr "%s: se sale del directorio '%s'\n"
+
+#: main.c:3447
+#, c-format
+msgid "%s[%u]: Entering an unknown directory\n"
+msgstr "%s[%u]: se ingresa a un directorio desconocido\n"
+
+#: main.c:3450
+#, c-format
+msgid "%s[%u]: Leaving an unknown directory\n"
+msgstr "%s[%u]: se sale del directorio desconocido\n"
+
+# Probablemente sea aquí donde haya que ponerle el "el" para que "Entering"
+# concuerde bien con esta frase y con la anterior simultáneamente. sv
+# No. Ya revisé el fuente y transcribo el trozo pertinente:
+#  char *message = entering ? "Entering" : "Leaving";
+#  if (makelevel == 0)
+#    printf ("%s: %s ", program, message);
+#  else
+#    printf ("%s[%u]: %s ", program, makelevel, message);
+# Como notarás lo del directorio va en otro lado.
+#: main.c:3454
+#, fuzzy, c-format
+msgid "%s[%u]: Entering directory `%s'\n"
+msgstr "%s[%u]: se entra en el directorio '%s'\n"
+
+# Probablemente sea aquí donde haya que ponerle el "el" para que "Entering"
+# concuerde bien con esta frase y con la anterior simultáneamente. sv
+# No. Ya revisé el fuente y transcribo el trozo pertinente:
+#  char *message = entering ? "Entering" : "Leaving";
+#  if (makelevel == 0)
+#    printf ("%s: %s ", program, message);
+#  else
+#    printf ("%s[%u]: %s ", program, makelevel, message);
+# Como notarás lo del directorio va en otro lado.
+#: main.c:3457
+#, fuzzy, c-format
+msgid "%s[%u]: Leaving directory `%s'\n"
+msgstr "%s[%u]: se sale del directorio '%s'\n"
+
+#: misc.c:239 print.c:300
+#, c-format
+msgid "Unknown error %d"
+msgstr "Error desconocido %d"
+
+#: misc.c:249
+#, c-format
+msgid "%s: %s"
+msgstr "%s: %s"
+
+# Propongo eliminar la palabra virtual. sv
+# Pero si es muy bonita. :) Bueno. Como ya platicamos puede que sea
+# una buena idea pero, por ahora la dejaría. mm
+#: misc.c:270 misc.c:281 misc.c:296 misc.c:313 misc.c:332 read.c:3179
+msgid "virtual memory exhausted"
+msgstr "memoria virtual agotada"
+
+#: misc.c:602 print.c:326
+#, c-format
+msgid "%s: user %lu (real %lu), group %lu (real %lu)\n"
+msgstr "%s: usuario %lu (real %lu), grupo %lu (real %lu)\n"
+
+#: misc.c:623
+msgid "Initialized access"
+msgstr "Acceso inicializado"
+
+#: misc.c:702
+msgid "User access"
+msgstr "Acceso del usuario"
+
+#: misc.c:750
+msgid "Make access"
+msgstr "Acceso del Make"
+
+#: misc.c:784
+msgid "Child access"
+msgstr "Acceso del hijo"
+
+#: misc.c:848
+#, fuzzy, c-format
+msgid "write error: %s"
+msgstr "error al escribir"
+
+#: misc.c:850
+msgid "write error"
+msgstr "error al escribir"
+
+# Interrumpido (?). sv
+# Mmgmh... El mensaje indica que hubo algún error muy grave y que por
+# eso se detiene el make. Probablemente sea mejor dejarlo así. mm
+#: print.c:215 print.c:273
+msgid ".  Stop.\n"
+msgstr ".  Alto.\n"
+
+#: print.c:309
+#, c-format
+msgid "%s%s: %s"
+msgstr "%s%s: %s"
+
+#: print.c:339
+#, c-format
+msgid "%s:%lu (origin: %s) %s = %s\n"
+msgstr ""
+
+#: print.c:356
+#, c-format
+msgid "%s:%lu (origin: %s) %s := %s\n"
+msgstr ""
+
+#: print.c:545
+#, c-format
+msgid "Command-line invocation:"
+msgstr ""
+
+#: print.c:554
+#, c-format
+msgid " none"
+msgstr ""
+
+# Sugerencia: eliminar la palabra "archivo". sv
+# Ok. Mejora. mm
+#: read.c:191
+msgid "Reading makefiles...\n"
+msgstr "Leyendo makefiles...\n"
+
+#: read.c:345
+#, fuzzy, c-format
+msgid "Reading makefile `%s'"
+msgstr "Leyendo makefile '%s'"
+
+#: read.c:347
+#, c-format
+msgid " (no default goal)"
+msgstr " (no hay objetivo por defecto)"
+
+#: read.c:349
+#, c-format
+msgid " (search path)"
+msgstr " (ruta de búsqueda)"
+
+#: read.c:351
+#, c-format
+msgid " (don't care)"
+msgstr " (no importa)"
+
+#: read.c:353
+#, c-format
+msgid " (no ~ expansion)"
+msgstr " (no hay expansión del ~)"
+
+# ## Sintaxis no llevaba tilde.
+# Ok. mm
+#: read.c:807
+msgid "invalid syntax in conditional"
+msgstr "sintaxis no válida en condicional"
+
+#: read.c:939
+msgid "recipe commences before first target"
+msgstr "las instrucciones comenzaron antes del primer objetivo"
+
+# "falta una regla". sv
+# (es que extraviada me suena muy raro).
+# Cierto pareciera que se perdió dentro de algún circuito. mm
+# Falta 'la' regla em+
+# No no es la regla sino una regla pues puede ser cualquiera de ellas. mm
+#: read.c:988
+msgid "missing rule before recipe"
+msgstr "falta una regla antes de las instrucciones"
+
+#: read.c:1075
+#, fuzzy, c-format
+msgid "missing separator%s"
+msgstr "falta un separador"
+
+#: read.c:1077
+#, fuzzy
+msgid " (did you mean TAB instead of 8 spaces?)"
+msgstr "falta un separador (¿quiso decir TAB en vez de 8 espacios?)"
+
+#: read.c:1211
+msgid "missing target pattern"
+msgstr "falta un patrón de objetivos"
+
+#: read.c:1213
+msgid "multiple target patterns"
+msgstr "hay varios patrones de objetivos"
+
+#: read.c:1217
+#, fuzzy, c-format
+msgid "target pattern contains no `%%'"
+msgstr "el patrón de objetivo no contiene '%%'"
+
+#: read.c:1341
+#, fuzzy
+msgid "missing `endif'"
+msgstr "falta un 'endif'"
+
+#: read.c:1390 read.c:1435 variable.c:1527
+msgid "empty variable name"
+msgstr "nombre de variable vacío"
+
+#: read.c:1425
+#, fuzzy
+msgid "extraneous text after `define' directive"
+msgstr ""
+"Hay un texto irrelevante o mal colocado después de la instrucción 'define'"
+
+#: read.c:1450
+#, fuzzy
+msgid "missing `endef', unterminated `define'"
+msgstr "falta un 'endef', no se terminó un 'define'"
+
+#: read.c:1478
+#, fuzzy
+msgid "extraneous text after `endef' directive"
+msgstr ""
+"Hay un texto irrelevante o mal colocado después de la instrucción 'endef'"
+
+#: read.c:1548
+#, fuzzy, c-format
+msgid "Extraneous text after `%s' directive"
+msgstr "Texto irrelevante o mal colocado después de la instrucción '%s'"
+
+#: read.c:1557 read.c:1571
+#, fuzzy, c-format
+msgid "extraneous `%s'"
+msgstr "irrelevante o mal colocado '%s'"
+
+#: read.c:1576
+#, fuzzy
+msgid "only one `else' per conditional"
+msgstr "sólo se admite un 'else' por condicional"
+
+#: read.c:1855
+msgid "Malformed target-specific variable definition"
+msgstr ""
+"La definición de las variables específicas al blanco está mal construida"
+
+#: read.c:1914
+msgid "prerequisites cannot be defined in recipes"
+msgstr ""
+"los prerequisitos no pueden ser definidos por los guiones de instrucciones"
+
+#: read.c:1967
+msgid "mixed implicit and static pattern rules"
+msgstr "las reglas implícitas y las de patrón estático están mezcladas"
+
+# Y 'las' normales  em+
+# Ok. mm
+#: read.c:1990 read.c:2173
+msgid "mixed implicit and normal rules"
+msgstr "las reglas implícitas y las normales están mezcladas"
+
+#: read.c:2035
+#, fuzzy, c-format
+msgid "target `%s' doesn't match the target pattern"
+msgstr "el objetivo '%s' no coincide con el patrón de objetivos"
+
+#: read.c:2051 read.c:2096
+#, fuzzy, c-format
+msgid "target file `%s' has both : and :: entries"
+msgstr "el archivo de objetivos '%s' tiene líneas con : y ::"
+
+# Cambiaría given por 'proporcionó' o 'indicó' em+
+# Ok. mm
+#: read.c:2057
+#, fuzzy, c-format
+msgid "target `%s' given more than once in the same rule."
+msgstr "el objetivo '%s' se proporcionó más de una vez en la misma regla"
+
+# No me gusta esta traducción de override. Mira a ver
+# si encaja mejor alguna de las dos que se proponen arriba
+# em+
+# Aunque no me acaba de convencer, que te parece ésto? mm
+#: read.c:2066
+#, fuzzy, c-format
+msgid "warning: overriding recipe for target `%s'"
+msgstr "atención: se anulan las instrucciones para el objetivo '%s'"
+
+# Ojo con ignora. sv
+#: read.c:2069
+#, fuzzy, c-format
+msgid "warning: ignoring old recipe for target `%s'"
+msgstr "atención: se ignoran las instrucciones viejas para el objetivo '%s'"
+
+#: read.c:2453
+msgid "warning: NUL character seen; rest of line ignored"
+msgstr "atención: hay un carácter NUL; se ignora el resto de la línea"
+
+#: remake.c:242
+#, fuzzy, c-format
+msgid "Nothing to be done for `%s'."
+msgstr "No se hace nada para '%s'."
+
+#: remake.c:243
+#, fuzzy, c-format
+msgid "`%s' is up to date."
+msgstr "'%s' está actualizado."
+
+#: remake.c:319
+#, fuzzy, c-format
+msgid "Pruning file `%s'.\n"
+msgstr "Se poda el archivo '%s'.\n"
+
+# Sugerencia: No hay ninguna regla... sv
+# Como una no hay ninguna. mm
+#: remake.c:372
+#, fuzzy, c-format
+msgid "%sNo rule to make target `%s'%s"
+msgstr "%sNo hay ninguna regla para construir el objetivo '%s'%s"
+
+#: remake.c:374
+#, fuzzy, c-format
+msgid "%sNo rule to make target `%s', needed by `%s'%s"
+msgstr ""
+"%sNo hay ninguna regla para construir el objetivo '%s', necesario para '%s'%s"
+
+# ¿target file no sería "archivo objetivo"? sv
+# Literalmente si pero un archivo make puede tener varios objetivos. mm
+# Max , pero no existe un archivo de objetivos. Esta línea, que es
+# de las que aparecen al hacer un make con la opción -d ( debug )
+# se refiere a lo que dice Santiago, es decir, 'archivo objetivo'  em+
+# Ok creo que tienen razón. mm
+#: remake.c:427
+#, fuzzy, c-format
+msgid "Considering target file `%s'.\n"
+msgstr "Se considera el archivo objetivo '%s'.\n"
+
+# Un compañero mío dice que una buena regla es poner siempre que se pueda
+# un número par de comas.
+# Es decir: "Se intentó, sin éxito, actualizar ..."
+# o bien "Se intentó sin éxito actualizar ..."
+# ¿Qué te parece? sv
+# Bien y tiene razón. mm
+#: remake.c:442
+#, fuzzy, c-format
+msgid "Recently tried and failed to update file `%s'.\n"
+msgstr "Se intentó hace poco, sin éxito, actualizar el archivo '%s'.\n"
+
+#: remake.c:454
+#, fuzzy, c-format
+msgid "File `%s' was considered already.\n"
+msgstr "Ya se ha tenido en cuenta el archivo '%s'.\n"
+
+#: remake.c:465
+#, fuzzy, c-format
+msgid "Still updating file `%s'.\n"
+msgstr "Se continúa actualizando el archivo '%s'.\n"
+
+#: remake.c:469
+#, fuzzy, c-format
+msgid "Finished updating file `%s'.\n"
+msgstr "Se terminó de actualizar el archivo '%s'.\n"
+
+#: remake.c:499
+#, fuzzy, c-format
+msgid "File `%s' does not exist.\n"
+msgstr "El archivo '%s' no existe.\n"
+
+#: remake.c:511
+#, fuzzy, c-format
+msgid ""
+"*** Warning: .LOW_RESOLUTION_TIME file `%s' has a high resolution time stamp"
+msgstr ""
+"*** Atención: el archivo .LOW_RESOLUTION_TIME '%s' tiene una marca de tiempo "
+"de alta resolución"
+
+#: remake.c:524 remake.c:1056
+#, fuzzy, c-format
+msgid "Found an implicit rule for `%s'.\n"
+msgstr "Se encontró una regla implícita para '%s'.\n"
+
+# Se ha encontrado em+
+# Ok, pero procuro evitar como a la muerte los gerundios. mm
+#: remake.c:526 remake.c:1058
+#, fuzzy, c-format
+msgid "No implicit rule found for `%s'.\n"
+msgstr "No se ha encontrado ninguna regla implícita para '%s'.\n"
+
+# Por defecto, como haces arriba em+
+# en efecto, mm
+#: remake.c:532
+#, fuzzy, c-format
+msgid "Using default recipe for `%s'.\n"
+msgstr "Se utilizan las instrucciones por omisión para '%s'.\n"
+
+#: remake.c:565 remake.c:1097
+#, c-format
+msgid "Circular %s <- %s dependency dropped."
+msgstr "Se elimina la dependencia circular %s <- %s."
+
+# Lo mismo de antes con "target file". sv
+# Estoy de acuerdo con él ( por una vez ;) ) em+
+# Ok. mm
+#: remake.c:682
+#, fuzzy, c-format
+msgid "Finished prerequisites of target file `%s'.\n"
+msgstr "Se terminaron las dependencias del archivo objetivo '%s'.\n"
+
+#: remake.c:691
+#, fuzzy, c-format
+msgid "The prerequisites of `%s' are being made.\n"
+msgstr "Se están construyendo las dependencias de '%s'.\n"
+
+# Give up no es enfocar, es abandonar, o desistir em+
+# Si, metí la pata. mm
+#: remake.c:705
+#, fuzzy, c-format
+msgid "Giving up on target file `%s'.\n"
+msgstr "Se abandona el archivo objetivo '%s'.\n"
+
+#: remake.c:710
+#, fuzzy, c-format
+msgid "Target `%s' not remade because of errors."
+msgstr "Debido a los errores, el objetivo '%s' no se reconstruyó."
+
+#: remake.c:763
+#, fuzzy, c-format
+msgid "Prerequisite `%s' is order-only for target `%s'.\n"
+msgstr "La dependencia '%s' es solo de orden para el objetivo '%s'.\n"
+
+#: remake.c:768
+#, fuzzy, c-format
+msgid "Prerequisite `%s' of target `%s' does not exist.\n"
+msgstr "La dependencia '%s' del objetivo '%s' no existe.\n"
+
+#: remake.c:773
+#, fuzzy, c-format
+msgid "Prerequisite `%s' is newer than target `%s'.\n"
+msgstr "La dependencia '%s' es más reciente que el objetivo '%s'.\n"
+
+#: remake.c:776
+#, fuzzy, c-format
+msgid "Prerequisite `%s' is older than target `%s'.\n"
+msgstr "La dependencia '%s' es anterior al objetivo '%s'.\n"
+
+# Ahorra espacio, y pon '::'  en vez de eso :) em+
+# Bueno, no es mala idea. A ver si te gusta lo que puse. mm
+#: remake.c:791
+#, fuzzy, c-format
+msgid "Target `%s' is double-colon and has no prerequisites.\n"
+msgstr ""
+"El objetivo '%s' es de tipo dos puntos dos veces (::)\n"
+"y no tiene dependencias.\n"
+
+#: remake.c:798
+#, fuzzy, c-format
+msgid "No recipe for `%s' and no prerequisites actually changed.\n"
+msgstr "No hay instrucciones para '%s' y ninguna dependencia ha cambiado.\n"
+
+#: remake.c:803
+#, fuzzy, c-format
+msgid "Making `%s' due to always-make flag.\n"
+msgstr "Haciendo '%s' debido a la bandera always-make.\n"
+
+#: remake.c:811
+#, fuzzy, c-format
+msgid "No need to remake target `%s'"
+msgstr "No es necesario reconstruir el objetivo '%s'."
+
+#: remake.c:813
+#, fuzzy, c-format
+msgid "; using VPATH name `%s'"
+msgstr "; se usa el nombre del VPATH '%s'"
+
+# Revisa todo el po con un search, y mira a ver si decides usar
+# regenerar o reconstruir ( prefiero lo último 10000 veces ) em+
+# Ok, buena propuesta. mm
+#: remake.c:834
+#, fuzzy, c-format
+msgid "Must remake target `%s'.\n"
+msgstr "Se debe reconstruir el objetivo '%s'.\n"
+
+#: remake.c:840
+#, fuzzy, c-format
+msgid "  Ignoring VPATH name `%s'.\n"
+msgstr "  Se ignora el nombre del VPATH '%s'.\n"
+
+#: remake.c:849
+#, fuzzy, c-format
+msgid "Recipe of `%s' is being run.\n"
+msgstr "Las instrucciones de '%s' se están ejecutando.\n"
+
+# Target file no es archivo de objetivos, sino el archivo objetivo
+# make no tiene ningún archivo de objetivos em+
+# Ok. mm
+#: remake.c:859
+#, fuzzy, c-format
+msgid "Failed to remake target file `%s'.\n"
+msgstr "Fallo al reconstruir el archivo objetivo '%s'.\n"
+
+# Lo mismo em+
+# Ok. mm
+#: remake.c:862
+#, fuzzy, c-format
+msgid "Successfully remade target file `%s'.\n"
+msgstr "Se reconstruyó con éxito el archivo objetivo '%s'.\n"
+
+# Otra vez em+
+# Ok, no te puedes quejar de falta de consistencia en este caso! mm
+#: remake.c:865
+#, fuzzy, c-format
+msgid "Target file `%s' needs remade under -q.\n"
+msgstr "Se necesita reconstruir el archivo objetivo '%s' con la opción -q.\n"
+
+# Por defecto, como haces arriba em+
+# en efecto, mm
+#: remake.c:1064
+#, fuzzy, c-format
+msgid "Using default commands for `%s'.\n"
+msgstr "Se utilizan las instrucciones por defecto para '%s'.\n"
+
+# Ubicada :)) , que tal futura, a secas ? em+
+# Bueno, sonaba como StarTrek, muy chido, pero acepto tu sugerencia. mm
+#: remake.c:1397
+#, fuzzy, c-format
+msgid "Warning: File `%s' has modification time in the future"
+msgstr "Atención: El archivo '%s' tiene una hora de modificación en el futuro"
+
+# Ubicada :)) , que tal futura, a secas ? em+
+# Bueno, sonaba como StarTrek, muy chido, pero acepto tu sugerencia. mm
+#: remake.c:1410
+#, fuzzy, c-format
+msgid "Warning: File `%s' has modification time %s s in the future"
+msgstr ""
+"Atención: El archivo '%s' tiene una hora de modificación %s s en el futuro"
+
+#: remake.c:1609
+#, fuzzy, c-format
+msgid ".LIBPATTERNS element `%s' is not a pattern"
+msgstr "El elemento .LIBPATTERNS '%s' no es un patrón"
+
+# ¿Las aduanas? sv
+# Si, las aduanas de exportación de procesos. Suena rarísimo pero
+# revisé el código y todo parece apuntar a que así son las cosas.
+# Creo que esto es otra cosa. Custom se refiere a los valores dados
+# por el usuario ( customizables ) , y que no se exportarán se refiere
+# a que al llamar a otros makefiles, no serán pasados como valores
+# que se antepongan ( otro término para override ) a los que make
+# tiene por defecto .
+# La traducción exacta por tanto es, los valores definidos por el usuario
+# no se exportarán em+
+# Muchísimo más claro (es más me gusta más en español que en inglés con tu
+# arreglo) mm
+#: remote-cstms.c:125
+#, c-format
+msgid "Customs won't export: %s\n"
+msgstr "Los valores definidos por el usuario no se exportarán: %s\n"
+
+#: rule.c:521
+msgid ""
+"\n"
+"# Implicit Rules"
+msgstr ""
+"\n"
+"# Reglas implícitas."
+
+#: rule.c:540
+msgid ""
+"\n"
+"# No implicit rules."
+msgstr ""
+"\n"
+"# No hay reglas implícitas."
+
+#: rule.c:543
+#, c-format
+msgid ""
+"\n"
+"# %u implicit rules, %u"
+msgstr ""
+"\n"
+"# %u reglas implícitas, %u"
+
+#: rule.c:552
+msgid " terminal."
+msgstr " terminal."
+
+# ## Añado ¡ con tu permiso. sv
+# Gracias. mm
+# ¿ qué tal erróneo ? em+
+# Si, suena mejor. mm
+#: rule.c:560
+#, c-format
+msgid "BUG: num_pattern_rules is wrong!  %u != %u"
+msgstr "BUG: ¡num_pattern_rules erróneo!  %u != %u"
+
+#: signame.c:86
+msgid "unknown signal"
+msgstr "señal desconocida"
+
+#: signame.c:94
+msgid "Hangup"
+msgstr "Colgado"
+
+# ¿ Y por qué no Interrupción ? em+
+# Porque es una acción. De hecho es un mensaje que se envía a través
+# del sistema en este caso le enviarías un kill -INT num_proceso para
+# interrumpir al programa. Lo revisé contra el fuente. mm
+#: signame.c:97
+msgid "Interrupt"
+msgstr "Interrumpir"
+
+#: signame.c:100
+msgid "Quit"
+msgstr "Finalizar"
+
+#: signame.c:103
+msgid "Illegal Instruction"
+msgstr "Instrucción no válida"
+
+# Los trap los hemos dejado como traps, simplemente. em+
+# Ok. mm
+#: signame.c:106
+msgid "Trace/breakpoint trap"
+msgstr "Trace/breakpoint trap"
+
+#: signame.c:111
+msgid "Aborted"
+msgstr "Abortado"
+
+# Ponte de acuerdo con Enrique en cómo se traduce esto.
+# Enrique tiene esta misma frase en glibc. sv
+# Eso es :) IOT trap em+
+# Ok. mm
+#: signame.c:114
+msgid "IOT trap"
+msgstr "IOT trap"
+
+# Otra em+
+# Ok. mm
+#: signame.c:117
+msgid "EMT trap"
+msgstr "EMT trap"
+
+# Coma flotante, por favor. sv
+# Creeme que aquí lo de coma flotante no vale. Somos pro-yanquis y
+# por eso usamos el punto flotante. Debemos llegar a un acuerdo.
+# Por ahora pongo coma flotante para facilitar las cosas, pero bajo
+# protesta ;-) mm
+#: signame.c:120
+msgid "Floating point exception"
+msgstr "Excepción de coma flotante"
+
+# "Terminado por la señal kill" quedaría un poco más suave ... sv
+# Enrique tiene en glibc "Terminado (killed)". sv
+# Bueno, creo que mi traducción es más exacta, concisa y clara
+# pero si insisten... Además recuerda en que estoy en un país
+# en donde asesinado es palabra de todos los días. mm
+#: signame.c:123
+msgid "Killed"
+msgstr "Terminado (killed)"
+
+#: signame.c:126
+msgid "Bus error"
+msgstr "Error en el bus"
+
+#: signame.c:129
+msgid "Segmentation fault"
+msgstr "Fallo de segmentación"
+
+#: signame.c:132
+msgid "Bad system call"
+msgstr "Llamada al sistema errónea"
+
+#: signame.c:135
+msgid "Broken pipe"
+msgstr "Tubería rota"
+
+# ¿Temporizador? (así lo tradujo Enrique en glibc). sv
+# Suena como StarTrek. Mejor lo platico con él. A lo mejor
+# hasta lo convenzo. mm
+# Pues tendrás que darme razones em+
+# Bueno, un alarm clock es una alarma del reloj. No tiene pierde.
+# Temporizador es una bonita palabra pero en donde dice que va a
+# sonar una campana para despertarte? mm
+#: signame.c:138
+msgid "Alarm clock"
+msgstr "Alarma del reloj"
+
+#: signame.c:141
+msgid "Terminated"
+msgstr "Finalizado"
+
+#: signame.c:144
+msgid "User defined signal 1"
+msgstr "Señal 1 definida por el usuario"
+
+#: signame.c:147
+msgid "User defined signal 2"
+msgstr "Señal 2 definida por el usuario"
+
+# Proceso hijo terminado em+
+# Ok. mm
+#: signame.c:152 signame.c:155
+msgid "Child exited"
+msgstr "Proceso hijo terminado"
+
+# Fallo. sv
+# Alimentación eléctrico em+
+# Ok. mm
+#: signame.c:158
+msgid "Power failure"
+msgstr "Falla de alimentación eléctrica"
+
+#: signame.c:161
+msgid "Stopped"
+msgstr "Detenido"
+
+# Enrique hizo una preciosa traducción de este mensaje que, según él,
+# mejora el original. Era algo así como:
+# "Detenido (requiere entrada de terminal)". sv
+# Tiene razón se ve bien. mm
+# Requiere 'de';) , como te vea Santiago que le metes
+# otro 'de' otra vez ... em+
+# Ok. mm
+#: signame.c:164
+msgid "Stopped (tty input)"
+msgstr "Detenido (se requiere entrada de terminal)"
+
+# lo mismo, se requiere entrada de terminal ,  em+
+# Ok. mm
+#: signame.c:167
+msgid "Stopped (tty output)"
+msgstr "Detenido (se requiere salida de terminal)"
+
+# idem em+
+#: signame.c:170
+msgid "Stopped (signal)"
+msgstr "Detenido (se requiere una señal)"
+
+#: signame.c:173
+msgid "CPU time limit exceeded"
+msgstr "Se agotó el tiempo de CPU permitido"
+
+#: signame.c:176
+msgid "File size limit exceeded"
+msgstr "Se excedió el tamaño máximo de archivo permitido"
+
+#: signame.c:179
+msgid "Virtual timer expired"
+msgstr "El contador de tiempo virtual ha expirado"
+
+# Nunca me enteré de cómo se traducía profile, pero perfil me suena raro.
+# ¿De dónde lo has sacado? sv
+# Es lo que quiere decir, ni modo. Perfil de un avión es plane profile.
+# Por cierto, lo más probable es que esta "traducción" haya que
+# modificarla para que sea entendible. mm
+# Esto lo tengo en glibc, lo mirare otro día. Estos mensajes no son
+# importantes em+
+# Agregué unas palabras en aras de claridad (espero) mm
+#: signame.c:182
+msgid "Profiling timer expired"
+msgstr "El contador de tiempo para la generación del perfil ha expirado"
+
+#: signame.c:188
+msgid "Window changed"
+msgstr "La ventana ha cambiado"
+
+#: signame.c:191
+msgid "Continued"
+msgstr "Continuado"
+
+#: signame.c:194
+msgid "Urgent I/O condition"
+msgstr "Condición urgente de I/O"
+
+#: signame.c:201 signame.c:210
+msgid "I/O possible"
+msgstr "Posible I/O"
+
+#: signame.c:204
+msgid "SIGWIND"
+msgstr "SIGWIND"
+
+#: signame.c:207
+msgid "SIGPHONE"
+msgstr "SIGPHONE"
+
+#: signame.c:213
+msgid "Resource lost"
+msgstr "Recurso perdido"
+
+#: signame.c:216
+msgid "Danger signal"
+msgstr "Señal de peligro"
+
+#: signame.c:219
+msgid "Information request"
+msgstr "Petición de información"
+
+#: signame.c:222
+msgid "Floating point co-processor not available"
+msgstr "Coprocesador de punto flotante no disponible"
+
+#: strcache.c:235
+#, fuzzy, c-format
+msgid ""
+"\n"
+"%s # of strings in strcache: %d / lookups = %lu / hits = %lu\n"
+msgstr ""
+"\n"
+"%s rendimiento de strcache: búsquedas = %lu / coincidencias = %lu%%\n"
+
+#: strcache.c:237
+#, c-format
+msgid "%s # of strcache buffers: %d (* %d B/buffer = %d B)\n"
+msgstr ""
+
+#: strcache.c:239
+#, fuzzy, c-format
+msgid "%s strcache used: total = %d (%d) / max = %d / min = %d / avg = %d\n"
+msgstr ""
+"%s otros libre: total = %lu B / máx = %lu B / mín = %lu B / promedio = %hu "
+"B\n"
+
+#: strcache.c:241
+#, fuzzy, c-format
+msgid "%s strcache free: total = %d (%d) / max = %d / min = %d / avg = %d\n"
+msgstr ""
+"%s otros libre: total = %lu B / máx = %lu B / mín = %lu B / promedio = %hu "
+"B\n"
+
+#: strcache.c:244
+#, fuzzy
+msgid ""
+"\n"
+"# strcache hash-table stats:\n"
+"# "
+msgstr ""
+"\n"
+"# estadísticas de la tabla «hash» de los archivos:\n"
+"# "
+
+#: variable.c:52 variable.c:1580
+msgid "default"
+msgstr "por defecto"
+
+#: variable.c:55 variable.c:1583
+msgid "environment"
+msgstr "entorno"
+
+# Sugerencia: No poner archivo. sv
+# Ok. mm
+#: variable.c:58 variable.c:1586
+msgid "makefile"
+msgstr "makefile"
+
+# 'bajo -e' = 'con -e activo' em+
+# Ok. Esta inversión en los idiomas sajones se pega. mm
+#: variable.c:61 variable.c:1589
+msgid "environment under -e"
+msgstr "con -e activo"
+
+# Línea de comandos me parece correcto em+
+# Ver arriba. Estoy de acuerdo si así han traducido en otros lados. mm
+#: variable.c:64 variable.c:1592
+msgid "command line"
+msgstr "línea de instrucciones"
+
+# Creo que tendremos un problema con instrucción, comando
+# , programa y directiva . Está claro que aquí es directiva em+
+# Ok, pero no deja de sonar a RoboCop. A ver que te parece como quedó. mm
+#: variable.c:67 variable.c:1595
+#, fuzzy
+msgid "`override' directive"
+msgstr "directiva 'override'"
+
+# Lo he cmabiado em+
+# Ok. Deberíamos platicarlo con Ulrich. mm
+#: variable.c:70 variable.c:1598
+msgid "automatic"
+msgstr "automática/o"
+
+#: variable.c:73
+msgid "debugger"
+msgstr ""
+
+#: variable.c:77
+msgid "invalid"
+msgstr ""
+
+#: variable.c:1609 variable.c:1659
+#, fuzzy, c-format
+msgid " (from `%s', line %lu)"
+msgstr " (de '%s', línea %lu):"
+
+# Bueno. Aquí un punto de discusión. Traduzco buckets por cubetas o
+# mejor las dejo tal cual? Opiniones bienvenidas. mm
+# Estos mensajes son para debug, no creo que haga falta usar cubetas ;) em+
+# Tienes razón, si el debugueador no lo entiende pues, ... que se
+# dedique a otra cosa. mm
+#: variable.c:1704
+#, fuzzy
+msgid "variable set hash-table stats:\n"
+msgstr "# estadísticas del conjunto de variables de la tabla «hash»:\n"
+
+#: variable.c:1716
+msgid ""
+"\n"
+"# Variables\n"
+msgstr ""
+"\n"
+"# Variables\n"
+
+#: variable.c:1720
+msgid ""
+"\n"
+"# Pattern-specific Variable Values"
+msgstr ""
+"\n"
+"# Valores de variables específicas al patrón"
+
+#: variable.c:1734
+msgid ""
+"\n"
+"# No pattern-specific variable values."
+msgstr ""
+"\n"
+"# No hay valores de variables específicas al patrón."
+
+#: variable.c:1736
+#, fuzzy, c-format
+msgid ""
+"\n"
+"# %u pattern-specific variable values"
+msgstr ""
+"\n"
+"# %u valores de variables específicas al patrón"
+
+# ¿Qué te parece "atención"? Lo hemos usado mucho en otros programas. sv
+# Pero que bestia soy. Perdón por el desbarre. mm
+#: variable.h:287
+#, fuzzy, c-format
+msgid "warning: undefined variable `%.*s'"
+msgstr "atención: la variable '%.*s' no ha sido definida"
+
+#: vmsfunctions.c:92
+#, c-format
+msgid "sys$search() failed with %d\n"
+msgstr "fallo en sys$search() con %d\n"
+
+#: vmsjobs.c:71
+#, c-format
+msgid "Warning: Empty redirection\n"
+msgstr "Atención: redirección vacía\n"
+
+#: vmsjobs.c:184
+#, fuzzy, c-format
+msgid "internal error: `%s' command_state"
+msgstr "error interno: '%s' command_state"
+
+#: vmsjobs.c:289
+#, c-format
+msgid "-warning, you may have to re-enable CTRL-Y handling from DCL.\n"
+msgstr "-atención, deberás rehabilitar el manejo del CTRL-Y desde el DCL.\n"
+
+#: vmsjobs.c:421
+#, c-format
+msgid "BUILTIN [%s][%s]\n"
+msgstr "INTEGRADA(S) [%s][%s]\n"
+
+#: vmsjobs.c:432
+#, c-format
+msgid "BUILTIN CD %s\n"
+msgstr "CD INTEGRADO %s\n"
+
+#: vmsjobs.c:450
+#, c-format
+msgid "BUILTIN RM %s\n"
+msgstr "RM INTERCONSTRUIDO %s\n"
+
+# Por defecto, como haces arriba em+
+# en efecto, mm
+#: vmsjobs.c:471
+#, fuzzy, c-format
+msgid "Unknown builtin command '%s'\n"
+msgstr "Se utilizan las instrucciones por defecto para '%s'.\n"
+
+#: vmsjobs.c:493
+#, c-format
+msgid "Error, empty command\n"
+msgstr "Error, comando vacío\n"
+
+#: vmsjobs.c:506
+#, c-format
+msgid "Redirected input from %s\n"
+msgstr "Entrada redirigida desde %s\n"
+
+# Probablemente sea aquí donde haya que ponerle el "el" para que "Entering"
+# concuerde bien con esta frase y con la anterior simultáneamente. sv
+# No. Ya revisé el fuente y transcribo el trozo pertinente:
+#  char *message = entering ? "Entering" : "Leaving";
+#  if (makelevel == 0)
+#    printf ("%s: %s ", program, message);
+#  else
+#    printf ("%s[%u]: %s ", program, makelevel, message);
+# Como notarás lo del directorio va en otro lado.
+#: vmsjobs.c:513
+#, c-format
+msgid "Redirected error to %s\n"
+msgstr "Se redirecciona el error a %s\n"
+
+#: vmsjobs.c:523
+#, c-format
+msgid "Append output to %s\n"
+msgstr "Salida redirigida a %s\n"
+
+#: vmsjobs.c:529
+#, c-format
+msgid "Redirected output to %s\n"
+msgstr "Salida redirigida a %s\n"
+
+#: vmsjobs.c:599
+#, c-format
+msgid "Append %.*s and cleanup\n"
+msgstr "Agregada a %.*s y limpieza\n"
+
+# "en sustituto" me suena muy raro. Propongo: "en su lugar" en su lugar :-) sv
+# Ok. mm
+#: vmsjobs.c:606
+#, c-format
+msgid "Executing %s instead\n"
+msgstr "En su lugar, se ejecuta %s\n"
+
+#: vmsjobs.c:712
+#, c-format
+msgid "Error spawning, %d\n"
+msgstr "Error al lanzar el proceso %d\n"
+
+# ¿Y al revés?: Rutas de búsqueda VPATH. sv
+# Mejora
+#: vpath.c:586
+msgid ""
+"\n"
+"# VPATH Search Paths\n"
+msgstr ""
+"\n"
+"# Rutas de búsqueda VPATH\n"
+
+# Rutas creo que queda mejor. sv
+# Ok. Es más común. mm
+#: vpath.c:603
+#, fuzzy
+msgid "# No `vpath' search paths."
+msgstr "# No hay rutas de búsqueda 'vpath'."
+
+# ¡Ah! Aquí si que pones el vpath al final, ¿eh? :-) sv
+# You really got me! mm
+#: vpath.c:605
+#, fuzzy, c-format
+msgid ""
+"\n"
+"# %u `vpath' search paths.\n"
+msgstr ""
+"\n"
+"# %u rutas de búsqueda 'vpath'.\n"
+
+#: vpath.c:608
+#, fuzzy
+msgid ""
+"\n"
+"# No general (`VPATH' variable) search path."
+msgstr ""
+"\n"
+"# No hay ruta de búsqueda general (variable 'VPATH')."
+
+#: vpath.c:614
+#, fuzzy
+msgid ""
+"\n"
+"# General (`VPATH' variable) search path:\n"
+"# "
+msgstr ""
+"\n"
+"# Ruta de búsqueda general (variable 'VPATH'):\n"
+"# "
+
+#~ msgid "Recipe has too many lines (%ud)"
+#~ msgstr "Las instrucciones tienen demasiadas líneas (%ud)"
+
+#, fuzzy
+#~ msgid "Note: prerequisite breakpoint already set at target %s."
+#~ msgstr "La dependencia '%s' es anterior al objetivo '%s'.\n"
+
+#, fuzzy
+#~ msgid "Note: command breakpoint already set at target %s."
+#~ msgstr "La dependencia '%s' es anterior al objetivo '%s'.\n"
+
+#, fuzzy
+#~ msgid "Note: target end breakpont set at target %s."
+#~ msgstr "No es necesario reconstruir el objetivo '%s'."
+
+#, fuzzy
+#~ msgid "You need to supply a variable name."
+#~ msgstr "nombre de variable vacío"
+
+# Probablemente sea aquí donde haya que ponerle el "el" para que "Entering"
+# concuerde bien con esta frase y con la anterior simultáneamente. sv
+# No. Ya revisé el fuente y transcribo el trozo pertinente:
+#  char *message = entering ? "Entering" : "Leaving";
+#  if (makelevel == 0)
+#    printf ("%s: %s ", program, message);
+#  else
+#    printf ("%s[%u]: %s ", program, makelevel, message);
+# Como notarás lo del directorio va en otro lado.
+#, fuzzy
+#~ msgid "Argument required (new working directory).\n"
+#~ msgstr "%s: se entra en el directorio '%s'\n"
+
+# Probablemente sea aquí donde haya que ponerle el "el" para que "Entering"
+# concuerde bien con esta frase y con la anterior simultáneamente. sv
+# No. Ya revisé el fuente y transcribo el trozo pertinente:
+#  char *message = entering ? "Entering" : "Leaving";
+#  if (makelevel == 0)
+#    printf ("%s: %s ", program, message);
+#  else
+#    printf ("%s[%u]: %s ", program, makelevel, message);
+# Como notarás lo del directorio va en otro lado.
+#, fuzzy
+#~ msgid "Working directory %s.\n"
+#~ msgstr "%s: se entra en el directorio '%s'\n"
+
+# Probablemente sea aquí donde haya que ponerle el "el" para que "Entering"
+# concuerde bien con esta frase y con la anterior simultáneamente. sv
+# No. Ya revisé el fuente y transcribo el trozo pertinente:
+#  char *message = entering ? "Entering" : "Leaving";
+#  if (makelevel == 0)
+#    printf ("%s: %s ", program, message);
+#  else
+#    printf ("%s[%u]: %s ", program, makelevel, message);
+# Como notarás lo del directorio va en otro lado.
+#, fuzzy
+#~ msgid "Set the working directory to DIR."
+#~ msgstr "%s: se entra en el directorio '%s'\n"
+
+#, fuzzy
+#~ msgid "Running %s\n"
+#~ msgstr "Se poda el archivo '%s'.\n"
+
+# Probablemente sea aquí donde haya que ponerle el "el" para que "Entering"
+# concuerde bien con esta frase y con la anterior simultáneamente. sv
+# No. Ya revisé el fuente y transcribo el trozo pertinente:
+#  char *message = entering ? "Entering" : "Leaving";
+#  if (makelevel == 0)
+#    printf ("%s: %s ", program, message);
+#  else
+#    printf ("%s[%u]: %s ", program, makelevel, message);
+# Como notarás lo del directorio va en otro lado.
+#, fuzzy
+#~ msgid "cannot get target file location\n"
+#~ msgstr "%s: se entra en el directorio '%s'\n"
+
+# Por defecto, como haces arriba em+
+# en efecto, mm
+#, fuzzy
+#~ msgid "Running commands for target %s\n"
+#~ msgstr "Se utilizan las instrucciones por defecto para '%s'.\n"
+
+# Por defecto, como haces arriba em+
+# en efecto, mm
+#, fuzzy
+#~ msgid "Running commands\n"
+#~ msgstr "Instrucción integrada desconocida '%s'\n"
+
+# Probablemente sea aquí donde haya que ponerle el "el" para que "Entering"
+# concuerde bien con esta frase y con la anterior simultáneamente. sv
+# No. Ya revisé el fuente y transcribo el trozo pertinente:
+#  char *message = entering ? "Entering" : "Leaving";
+#  if (makelevel == 0)
+#    printf ("%s: %s ", program, message);
+#  else
+#    printf ("%s[%u]: %s ", program, makelevel, message);
+# Como notarás lo del directorio va en otro lado.
+#, fuzzy
+#~ msgid "Starting directory `%s'\n"
+#~ msgstr "%s: se entra en el directorio '%s'\n"
+
+# Lo mismo. sv
+#, fuzzy
+#~ msgid "Rule %s not found.\n"
+#~ msgstr "No se encontró el makefile '%s'"
+
+# Probablemente sea aquí donde haya que ponerle el "el" para que "Entering"
+# concuerde bien con esta frase y con la anterior simultáneamente. sv
+# No. Ya revisé el fuente y transcribo el trozo pertinente:
+#  char *message = entering ? "Entering" : "Leaving";
+#  if (makelevel == 0)
+#    printf ("%s: %s ", program, message);
+#  else
+#    printf ("%s[%u]: %s ", program, makelevel, message);
+# Como notarás lo del directorio va en otro lado.
+#, fuzzy
+#~ msgid "cannot get current directory %s\n"
+#~ msgstr "%s: se entra en el directorio '%s'\n"
+
+#, fuzzy
+#~ msgid "Target \"%s\" doesn't have commands associated with it.\n"
+#~ msgstr "el objetivo '%s' no coincide con el patrón de objetivos"
+
+#, fuzzy
+#~ msgid "Target \"%s\" doesn't appear to be a target name.\n"
+#~ msgstr "el objetivo '%s' no coincide con el patrón de objetivos"
+
+#, fuzzy
+#~ msgid "You need to supply a variable name.\n"
+#~ msgstr "nombre de variable vacío"
+
+#, fuzzy
+#~ msgid "Error: %s\n"
+#~ msgstr "%s[%s: %s] Error %d%s"
+
+# FUZZY
+# Pondria línea de comandos
+# Y creo que no sé exactamente a que se refiere, No creo que haya visto
+# este mensaje nunca en make lo marco con FUZZY em+
+# Están traduciendo commands como comandos? Son más bien ordenes o
+# instrucciones. Por mi parte no hay problema, incluso me gusta más
+# comandos, pero es un anglicismo. mm
+#~ msgid "#  Command line target."
+#~ msgstr "#  Objetivo en línea de instrucciones."
+
+#~ msgid "#  Builtin rule"
+#~ msgstr "#  Regla incorporada"
+
+#~ msgid "#  Implicit/static pattern stem: '%s'\n"
+#~ msgstr "#  Tema del patrón implícita/estática: '%s'\n"
+
+#~ msgid "#  Recipe currently running (THIS IS A BUG)."
+#~ msgstr "#  Las instrucciones continúan en ejecución (ESTO ES UN BUG)."
+
+# ¿No sería más bien "las instrucciones de las dependencias"? sv
+# Si, que babas soy. Ahora corrijo. mm
+#~ msgid "#  Dependencies recipe running (THIS IS A BUG)."
+#~ msgstr ""
+#~ "#  Las instrucciones de las dependencias continúan en ejecución (ESTO ES "
+#~ "UN BUG)."
+
+#~ msgid "#  Invalid value in 'command_state' member!"
+#~ msgstr "#  ¡Valor inválido en el miembro 'command_state'!"
+
+#~ msgid "%s: Field '%s' not cached: %s"
+#~ msgstr "%s: El campo '%s' no está en «cache»: %s"
+
+#~ msgid "file: missing filename"
+#~ msgstr "archivo: falta el nombre del archivo"
+
+#~ msgid "open: %s: %s"
+#~ msgstr "abrir: %s: %s"
+
+# Probablemente sea aquí donde haya que ponerle el "el" para que "Entering"
+# concuerde bien con esta frase y con la anterior simultáneamente. sv
+# No. Ya revisé el fuente y transcribo el trozo pertinente:
+#  char *message = entering ? "Entering" : "Leaving";
+#  if (makelevel == 0)
+#    printf ("%s: %s ", program, message);
+#  else
+#    printf ("%s[%u]: %s ", program, makelevel, message);
+# Como notarás lo del directorio va en otro lado.
+#~ msgid "write: %s: %s"
+#~ msgstr "escribir: %s: %s"
+
+#~ msgid "close: %s: %s"
+#~ msgstr "cerrar: %s: %s"
+
+#~ msgid "file: too many arguments"
+#~ msgstr "archivo: demasiados argumentos"
+
+# Probablemente sea aquí donde haya que ponerle el "el" para que "Entering"
+# concuerde bien con esta frase y con la anterior simultáneamente. sv
+# No. Ya revisé el fuente y transcribo el trozo pertinente:
+#  char *message = entering ? "Entering" : "Leaving";
+#  if (makelevel == 0)
+#    printf ("%s: %s ", program, message);
+#  else
+#    printf ("%s[%u]: %s ", program, makelevel, message);
+# Como notarás lo del directorio va en otro lado.
+#~ msgid "read: %s: %s"
+#~ msgstr "leer: %s: %s"
+
+#, fuzzy
+#~ msgid "file: invalid file operation: %s"
+#~ msgstr "archivo: operación de archivo no válida: %s"
+
+#~ msgid "Empty function name"
+#~ msgstr "Nombre de función vacío"
+
+#~ msgid "Invalid function name: %s"
+#~ msgstr "Nombre de función no válido: %s"
+
+#~ msgid "Function name too long: %s"
+#~ msgstr "Nombre de función demasiado largo: %s"
+
+#, fuzzy
+#~ msgid "Invalid minimum argument count (%u) for function %s"
+#~ msgstr "Número insuficiente de argumentos (%u) para la función %s"
+
+#, fuzzy
+#~ msgid "Invalid maximum argument count (%u) for function %s"
+#~ msgstr "El número máximo de argumentos (%u) no es válido para la función %s"
+
+#~ msgid "%s: option '%s' requires an argument\n"
+#~ msgstr "%s: la opción '%s' requiere un argumento\n"
+
+#~ msgid "guile: Expanding '%s'\n"
+#~ msgstr "guile: Expandiendo '%s'\n"
+
+#~ msgid "guile: Evaluating '%s'\n"
+#~ msgstr "guile: Evaluando '%s'\n"
+
+#~ msgid "Stem too long: '%.*s'.\n"
+#~ msgstr "Tema demasiado largo: '%.*s'.\n"
+
+# Preferiría mil veces "sin efecto" o algo parecido. sv
+# Ok. Habíamos quedado en `no tiene efecto'. mm
+#~ msgid " (ignored)"
+#~ msgstr " (no tiene efecto)"
+
+#, fuzzy
+#~ msgid "%s[%s] Error %d%s"
+#~ msgstr "%s[%s: %s] Error %d%s"
+
+# Give up no es enfocar, es abandonar, o desistir em+
+# Si, metí la pata. mm
+#~ msgid "Cleaning up temp batch file %s failed (%d)\n"
+#~ msgstr "Fallo al limpiar el archivo temporal por lotes %s (%d)\n"
+
+#~ msgid "<builtin>"
+#~ msgstr "<integrado>"
+
+#~ msgid "%s: target '%s' does not exist"
+#~ msgstr "%s: el objetivo '%s' no existe"
+
+#~ msgid "%s: update target '%s' due to: %s"
+#~ msgstr "%s: actualizar el objetivo '%s' a causa de: %s"
+
+#~ msgid "no more file handles: could not duplicate stderr\n"
+#~ msgstr "no hay más manejadores de archivos: no se puede duplicar stderr\n"
+
+#~ msgid "Could not restore stderr\n"
+#~ msgstr "No se puede restaurar stderr\n"
+
+#, fuzzy
+#~ msgid "%s: %s: Command not found\n"
+#~ msgstr "%s[%u]: %s: No se encontró el programa\n"
+
+#~ msgid "%s[%u]: %s: Command not found\n"
+#~ msgstr "%s[%u]: %s: No se encontró el programa\n"
+
+#~ msgid ""
+#~ "Batch file contents:\n"
+#~ "\t@echo off\n"
+#~ msgstr ""
+#~ "Contenido del archivo de lotes:%s\n"
+#~ "\t@echo off\n"
+
+#~ msgid "-O[TYPE] (--output-sync[=TYPE]) is not configured for this build."
+#~ msgstr ""
+#~ "-O[TIPO] (--output-sync[=TIPO]) no está configurado para este «build»."
+
+#~ msgid "Failed to open global symbol table: %s"
+#~ msgstr "Fallo al abrir tabla global de símbolos: %s"
+
+#~ msgid "Loaded object %s is not declared to be GPL compatible"
+#~ msgstr ""
+#~ "El objeto %s que se ha cargado no está declarado como compatible con GPL"
+
+#~ msgid "Failed to load symbol %s from %s: %s"
+#~ msgstr "Fallo al cargar símbolo %s desde %s: %s"
+
+#~ msgid "Empty symbol name for load: %s"
+#~ msgstr "Nombre de símbolo vacío en la carga: %s"
+
+#~ msgid "Loading symbol %s from %s\n"
+#~ msgstr "Cargando símbolo %s desde %s\n"
+
+#~ msgid "The 'load' operation is not supported on this platform."
+#~ msgstr "La operación 'load' no está implementada en esta plataforma."
+
+#~ msgid ""
+#~ "  -O[TYPE], --output-sync[=TYPE]\n"
+#~ "                              Synchronize output of parallel jobs by "
+#~ "TYPE.\n"
+#~ msgstr ""
+#~ "  -O[TIPO], --output-sync[=TIPO]\n"
+#~ "                              Sincroniza la salida de tareas paralelas "
+#~ "por tipo.\n"
+
+# ¿"depurado" o "depuración"? sv
+# Puse de depurado para evitar la cacofonía información depuración.
+# Sugerencias bienvenidas. mm
+#, fuzzy
+#~ msgid ""
+#~ "  -P, --profile               Print profiling information for each "
+#~ "target.\n"
+#~ msgstr "  --trace                     Muestra trazas.\n"
+
+# ¿"depurado" o "depuración"? sv
+# Puse de depurado para evitar la cacofonía información depuración.
+# Sugerencias bienvenidas. mm
+#~ msgid "  --trace                     Print tracing information.\n"
+#~ msgstr "  --trace                     Muestra trazas.\n"
+
+#~ msgid "unknown debug level specification '%s'"
+#~ msgstr "se especificó un nivel de depuración desconocido '%s'"
+
+#~ msgid "unknown output-sync type '%s'"
+#~ msgstr "tipo de sincronización de salida desconocido '%s'"
+
+# Probablemente sea aquí donde haya que ponerle el "el" para que "Entering"
+# concuerde bien con esta frase y con la anterior simultáneamente. sv
+# No. Ya revisé el fuente y transcribo el trozo pertinente:
+#  char *message = entering ? "Entering" : "Leaving";
+#  if (makelevel == 0)
+#    printf ("%s: %s ", program, message);
+#  else
+#    printf ("%s[%u]: %s ", program, makelevel, message);
+# Como notarás lo del directorio va en otro lado.
+#~ msgid "write error: stdout"
+#~ msgstr "error al escribir: stdout"
+
+# Probablemente sea aquí donde haya que ponerle el "el" para que "Entering"
+# concuerde bien con esta frase y con la anterior simultáneamente. sv
+# No. Ya revisé el fuente y transcribo el trozo pertinente:
+#  char *message = entering ? "Entering" : "Leaving";
+#  if (makelevel == 0)
+#    printf ("%s: %s ", program, message);
+#  else
+#    printf ("%s[%u]: %s ", program, makelevel, message);
+# Como notarás lo del directorio va en otro lado.
+#, fuzzy
+#~ msgid "%s: directory '%s'\n"
+#~ msgstr "%s: se sale del directorio '%s'\n"
+
+#, fuzzy
+#~ msgid "%s[%u]: unknown directory\n"
+#~ msgstr "%s[%u]: se sale del directorio desconocido\n"
+
+# Probablemente sea aquí donde haya que ponerle el "el" para que "Entering"
+# concuerde bien con esta frase y con la anterior simultáneamente. sv
+# No. Ya revisé el fuente y transcribo el trozo pertinente:
+#  char *message = entering ? "Entering" : "Leaving";
+#  if (makelevel == 0)
+#    printf ("%s: %s ", program, message);
+#  else
+#    printf ("%s[%u]: %s ", program, makelevel, message);
+# Como notarás lo del directorio va en otro lado.
+#, fuzzy
+#~ msgid "%s[%u]: directory '%s'\n"
+#~ msgstr "%s[%u]: se sale del directorio '%s'\n"
+
+#~ msgid "duping jobs pipe"
+#~ msgstr "duplicando una tubería de tareas"
+
+#~ msgid "jobserver pipeline"
+#~ msgstr "tubería al servidor de tareas"
+
+#~ msgid "pselect jobs pipe"
+#~ msgstr "tubería de trabajos «pselect»"
+
+#~ msgid "Skipping UTF-8 BOM in makefile '%s'\n"
+#~ msgstr "se salta BOM UTF-8 en el makefile '%s'\n"
+
+#~ msgid "Skipping UTF-8 BOM in makefile buffer\n"
+#~ msgstr "se salta BOM UTF-8 en el «buffer» del makefile\n"
+
+#~ msgid "%s: failed to load"
+#~ msgstr "%s: fallo al cargar"
+
+# Y 'las' normales  em+
+# Ok. mm
+#~ msgid "*** mixed implicit and normal rules: deprecated syntax"
+#~ msgstr ""
+#~ "*** las reglas implícitas y las normales están mezcladas: sintaxis "
+#~ "obsoleta"
+
+#~ msgid ""
+#~ "\n"
+#~ "%s No strcache buffers\n"
+#~ msgstr ""
+#~ "\n"
+#~ "%s No hay «buffers» strcache\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "%s strcache buffers: %lu (%lu) / strings = %lu / storage = %lu B / avg = "
+#~ "%lu B\n"
+#~ msgstr ""
+#~ "\n"
+#~ "%s «buffers» strcache: %lu (%lu) / cadenas = %lu / almacenamiento = %lu "
+#~ "B / promedio = %lu B\n"
+
+#~ msgid ""
+#~ "%s current buf: size = %hu B / used = %hu B / count = %hu / avg = %hu B\n"
+#~ msgstr ""
+#~ "%s «buffer» actual: tamaño = %hu B / utilizado = %hu B / número = %hu / "
+#~ "promedio = %hu B\n"
+
+#~ msgid "%s other used: total = %lu B / count = %lu / avg = %lu B\n"
+#~ msgstr ""
+#~ "%s otros utilizado: total = %lu B / / número = %lu / promedio = %lu B\n"
+
+#~ msgid ""
+#~ "# hash-table stats:\n"
+#~ "# "
+#~ msgstr ""
+#~ "# estadísticas de la tabla «hash»:\n"
+#~ "# "
+
+# Creo que tendremos un problema con instrucción, comando
+# , programa y directiva . Está claro que aquí es directiva em+
+# Ok, pero no deja de sonar a RoboCop. A ver que te parece como quedó. mm
+#~ msgid "'override' directive"
+#~ msgstr "directiva 'override'"
+
+#~ msgid " (from '%s', line %lu)"
+#~ msgstr " (de '%s', línea %lu):"
+
+#~ msgid "Jobserver slots limited to %d\n"
+#~ msgstr "Ranuras del servidor de tareas limitads a %d\n"
+
+#~ msgid "creating jobserver semaphore: (Error %ld: %s)"
+#~ msgstr "creando semáforo del servidor de tareas: (Error %ld: %s)"
+
+#~ msgid ""
+#~ "internal error: unable to open jobserver semaphore '%s': (Error %ld: %s)"
+#~ msgstr ""
+#~ "error interno: no se pudo abrir el semáforo del servidor de tareas '%s': "
+#~ "(Error %ld: %s)"
+
+#~ msgid "Jobserver client (semaphore %s)\n"
+#~ msgstr "Cliente del servidor de tareas (semáforo %s)\n"
+
+#~ msgid "release jobserver semaphore: (Error %ld: %s)"
+#~ msgstr "liberar semáforo del servidor de tareas: (Error %ld: %s)"
+
+#~ msgid "semaphore or child process wait: (Error %ld: %s)"
+#~ msgstr "semáforo o proceso hijo en espera: (Error %ld: %s)"
+
+# No me gusta esta traducción de override. Mira a ver
+# si encaja mejor alguna de las dos que se proponen arriba
+# em+
+# Aunque no me acaba de convencer, que te parece ésto? mm
+#~ msgid "%s: recipe for target '%s' failed"
+#~ msgstr "%s: fallo en las instrucciones para el objetivo '%s'"
+
+#~ msgid "%s[%s] Error 0x%x%s"
+#~ msgstr "%s[%s] Error 0x%x%s"
+
+#~ msgid "Report bugs to <bug-make@gnu.org>\n"
+#~ msgstr "Informe sobre los errores a <bug-make@gnu.org>\n"
+
+#~ msgid "DCL: %s\n"
+#~ msgstr "DCL: %s\n"
+
+#~ msgid "%s[%s] %s%s%s"
+#~ msgstr "%s[%s] %s%s%s"
+
+#~ msgid "BUILTIN ECHO %s->%s\n"
+#~ msgstr "ECO INTEGRADO %s->%s\n"
+
+#~ msgid "Builtin command is unknown or unsupported in .ONESHELL: '%s'\n"
+#~ msgstr ""
+#~ "La instrucción integrada se desconoce o no funciona en .ONESHELL: '%s'\n"
+
+#~ msgid "internal error: multiple --sync-mutex options"
+#~ msgstr "error interno: hay varias opciones --sync-mutex"

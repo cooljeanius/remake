@@ -242,7 +242,7 @@ update_goal_chain (struct dep *goals)
 			       ? _("Nothing to be done for `%s'.")
 			       : _("`%s' is up to date.")),
 			   file->name);
-		  
+
 		  if ( debugger_enabled && b_debugger_goal )
 		    enter_debugger(NULL, file, -2, DEBUG_GOAL_UPDATED_HIT);
 		}
@@ -427,8 +427,8 @@ update_file_1 (struct file *file, unsigned int depth,
   DBF (DB_VERBOSE, _("Considering target file `%s'.\n"));
   p_stack_top = p_call_stack = trace_push_target(p_call_stack, file);
 
-  /* We don't want to step into file dependencies when there are 
-     no associated commands. There or too often too many of them. 
+  /* We don't want to step into file dependencies when there are
+     no associated commands. There or too often too many of them.
   */
   if ( (i_debugger_stepping && file->cmds) ||
        (file->tracing & BRK_BEFORE_PREREQ) )
@@ -501,7 +501,7 @@ update_file_1 (struct file *file, unsigned int depth,
       if (i_debugger_nexting && file->cmds) {
 	enter_debugger(p_call_stack, file, 0, DEBUG_STEP_HIT);
       }
-  } else if (ORDINARY_MTIME_MIN <= this_mtime && 
+  } else if (ORDINARY_MTIME_MIN <= this_mtime &&
 	     this_mtime <= ORDINARY_MTIME_MAX
 	     && file->low_resolution_time)
     {
@@ -1574,8 +1574,9 @@ library_search (const char *lib, FILE_TIMESTAMP *mtime_ptr)
   unsigned int liblen;
 
   /* Information about the earliest (in the vpath sequence) match.  */
-  unsigned int best_vpath, best_path;
-  unsigned int std_dirs = 0;
+  unsigned int best_vpath = 0U;
+  unsigned int best_path = 0U;
+  unsigned int std_dirs = 0U;
 
   char **dp;
 
@@ -1636,9 +1637,9 @@ library_search (const char *lib, FILE_TIMESTAMP *mtime_ptr)
         if (f)
           {
             /* If we have a better match, record it.  */
-            if (file == 0 ||
-                vpath_index < best_vpath ||
-                (vpath_index == best_vpath && path_index < best_path))
+            if ((file == 0)
+		|| (vpath_index < best_vpath)
+		|| ((vpath_index == best_vpath) && (path_index < best_path)))
               {
                 file = f;
                 best_vpath = vpath_index;
@@ -1681,7 +1682,7 @@ library_search (const char *lib, FILE_TIMESTAMP *mtime_ptr)
             mtime = name_mtime (buf);
             if (mtime != NONEXISTENT_MTIME)
 	      {
-                if (file == 0 || vpath_index < best_vpath)
+                if ((file == 0) || (vpath_index < best_vpath))
                   {
                     file = strcache_add (buf);
                     best_vpath = vpath_index;

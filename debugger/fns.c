@@ -1,4 +1,4 @@
-/* 
+/*
 Copyright (C) 2004, 2005, 2007, 2008, 2010, 2011
 R. Bernstein <rocky@gnu.org>
 This file is part of GNU Make (remake variant).
@@ -42,20 +42,23 @@ Boston, MA 02111-1307, USA.  */
 
 # ifdef bcmp
 #   undef bcmp
-# endif 
+# endif
 
 
 # ifdef bzero
 #   undef bzero
-# endif 
+# endif
 
 
 # ifdef bcopy
 #   undef bcopy
-# endif 
+# endif
 
+# ifdef ISDIGIT
+#   undef ISDIGIT
+# endif
 
-#include <readline/readline.h>
+# include <readline/readline.h>
 #endif
 
 floc_t *p_target_loc = NULL;
@@ -70,7 +73,7 @@ floc_t  fake_floc;
 #define whitespace(c) (((c) == ' ') || ((c) == '\t'))
 #endif
 
-brkpt_mask_t 
+brkpt_mask_t
 get_brkpt_option(const char *psz_break_type)
 {
   if (is_abbrev_of (psz_break_type, "all", 1)) {
@@ -95,16 +98,16 @@ get_brkpt_option(const char *psz_break_type)
     any event..
  */
 bool
-get_int(const char *psz_arg, int *pi_result, bool b_warn) 
+get_int(const char *psz_arg, int *pi_result, bool b_warn)
 {
   int i;
   char *endptr;
-  
+
   if (!psz_arg || 0==strlen(psz_arg)) return 0;
 
   i = strtol(psz_arg, &endptr, 10);
   if (*endptr != '\0') {
-    if (b_warn) 
+    if (b_warn)
       dbg_errmsg("expecting %s to be an integer", psz_arg);
     return false;
   }
@@ -113,11 +116,11 @@ get_int(const char *psz_arg, int *pi_result, bool b_warn)
 }
 
 bool
-get_uint(const char *psz_arg, unsigned int *result, bool b_warn) 
+get_uint(const char *psz_arg, unsigned int *result, bool b_warn)
 {
   unsigned int i;
   char *endptr;
-  
+
   if (!psz_arg || 0==strlen(psz_arg)) return 0;
 
   i = strtol(psz_arg, &endptr, 10);
@@ -137,10 +140,10 @@ get_uint(const char *psz_arg, unsigned int *result, bool b_warn)
    termintated.
  */
 char *
-get_word(char **ppsz_str) 
+get_word(char **ppsz_str)
 {
   char *psz_word;
-  
+
   /* Skip leading blanks. */
   while (**ppsz_str && whitespace (**ppsz_str))
     **ppsz_str += 1;
@@ -166,7 +169,7 @@ get_current_target(void)
 {
   if (p_stack && p_stack->p_target)
     return p_stack->p_target;
-  else 
+  else
     return NULL;
 }
 
@@ -180,10 +183,10 @@ get_current_floc(void)
 {
   file_t *p_target = (file_t *) get_current_target();
   floc_t *p_floc;
-  
+
   p_floc = &p_target->floc;
 
-  if (p_floc->filenm && p_floc->lineno != 0)
+  if ((p_floc != NULL) && p_floc->filenm && (p_floc->lineno != 0))
     return p_floc;
   else
     return NULL;
@@ -192,12 +195,12 @@ get_current_floc(void)
 
 /*! Find the target in first word of psz_args or use $@ (the current
     stack) if none.  We also allow $@ or @ explicitly as a target name
-    to mean the current target on the stack. NULL is returned if a lookup 
+    to mean the current target on the stack. NULL is returned if a lookup
     of the target name was not found. ppsz_target is to the name
     looked up.
  */
 file_t *
-get_target(char **ppsz_args, /*out*/ const char **ppsz_target) 
+get_target(char **ppsz_args, /*out*/ const char **ppsz_target)
 {
   if (!*ppsz_args || !**ppsz_args) {
     file_t *p_target = (file_t *) get_current_target();
@@ -211,7 +214,7 @@ get_target(char **ppsz_args, /*out*/ const char **ppsz_target)
   }
 
   *ppsz_target = get_word(ppsz_args);
-  
+
   /* As a special case, we'll allow $@ or @ for the current target. */
   if ( 0 == strcmp("$@", *ppsz_target) || 0 == strcmp("@", *ppsz_target) ) {
     if (p_stack && p_stack->p_target && p_stack->p_target->name)
@@ -221,12 +224,12 @@ get_target(char **ppsz_args, /*out*/ const char **ppsz_target)
       return NULL;
     }
   }
-  
+
   {
     file_t *p_target = lookup_file (*ppsz_target);
 
-    if (!p_target) 
-      printf(_("Target \"%s\" doesn't appear to be a target name.\n"), 
+    if (!p_target)
+      printf(_("Target \"%s\" doesn't appear to be a target name.\n"),
 	     *ppsz_target);
     return p_target;
   }
@@ -235,10 +238,10 @@ get_target(char **ppsz_args, /*out*/ const char **ppsz_target)
 /*! Return true if psz_substr is an initial prefix (abbreviation) of
     psz_word. The empty string is not a valid abbreviation. */
 bool
-is_abbrev_of(const char* psz_substr, const char* psz_word, 
+is_abbrev_of(const char* psz_substr, const char* psz_word,
 	     unsigned int i_min)
 {
-  if (strlen(psz_substr) < i_min) 
+  if (strlen(psz_substr) < i_min)
     return false;
   else {
     const char *psz = strstr(psz_word, psz_substr);
@@ -246,9 +249,9 @@ is_abbrev_of(const char* psz_substr, const char* psz_word,
   }
 }
 
-/*! toggle var on or on or off depending on psz_onoff */    
-void 
-on_off_toggle(const char *psz_onoff, int *var) 
+/*! toggle var on or on or off depending on psz_onoff */
+void
+on_off_toggle(const char *psz_onoff, int *var)
 {
   if (strcmp (psz_onoff, "on") == 0)
     *var = 1;
@@ -256,13 +259,13 @@ on_off_toggle(const char *psz_onoff, int *var)
     *var = 0;
   else if (strcmp (psz_onoff, "toggle") == 0)
     *var = !*var;
-  else 
+  else
     printf(_("expecting \"on\", \"off\", or \"toggle\"; got \"%s\" \n"),
 	   psz_onoff);
 }
 
 /*! Print an interpretation of the debug level mask. */
-void 
+void
 print_db_level(debug_level_mask_t e_debug_level)
 {
   if (e_debug_level & DB_BASIC)
@@ -295,10 +298,10 @@ static char *reason2str[] = {
     ":o"
 };
 
-    
+
 
 /** Print where we are in the Makefile. */
-void 
+void
 print_debugger_location(const file_t *p_target, debug_enter_reason_t reason,
 			const floc_stack_node_t *p_stack_floc)
 {
@@ -306,7 +309,7 @@ print_debugger_location(const file_t *p_target, debug_enter_reason_t reason,
     if (reason != DEBUG_NOT_GIVEN && reason != DEBUG_STACK_CHANGING)
       printf("%s ", reason2str[reason]);
     printf("(");
-    if ( !p_target_loc->filenm && p_target_loc->lineno != 0 
+    if ( !p_target_loc->filenm && p_target_loc->lineno != 0
 	 && p_target && p_target->name ) {
       /* We don't have file location info in the target floc, but we
 	 do have it as part of the name, so use that. This happens for
@@ -326,7 +329,7 @@ print_debugger_location(const file_t *p_target, debug_enter_reason_t reason,
 	printf (")\n");
       } else if (p_target->phony)
 	printf("%s: .PHONY target)\n", p_target->name);
-      else 
+      else
 	printf("%s:0)\n", p_target->name);
     } else {
       print_floc_prefix(p_target_loc);
@@ -343,7 +346,7 @@ print_debugger_location(const file_t *p_target, debug_enter_reason_t reason,
   }
 
   /* Could/should generalize the below into a prompt string. */
-  switch (reason) 
+  switch (reason)
     {
     case DEBUG_BRKPT_BEFORE_PREREQ:
     case DEBUG_STEP_HIT:
@@ -366,7 +369,7 @@ stripwhite (char *string)
 
   for (s = string; whitespace (*s); s++)
     ;
-    
+
   if (*s == 0)
     return (s);
 
@@ -380,14 +383,14 @@ stripwhite (char *string)
 
 /* Show if i_bool is "on" or "off" */
 char *
-var_to_on_off(int i_bool) 
+var_to_on_off(int i_bool)
 {
   return i_bool ? "on" : "off";
 }
 
 /*! See if psz_varname is $varname or $(varname) */
-void 
-try_without_dollar(const char *psz_varname) 
+void
+try_without_dollar(const char *psz_varname)
 {
   printf("Can't find variable `%s'.\n", psz_varname);
   if (psz_varname && psz_varname[0] == '$') {
@@ -408,7 +411,7 @@ try_without_dollar(const char *psz_varname)
    definitions inside the displayed value expanded.
 */
 bool
-dbg_cmd_show_exp (char *psz_varname, bool expand) 
+dbg_cmd_show_exp (char *psz_varname, bool expand)
 {
   if (!psz_varname || 0==strlen(psz_varname)) {
     printf(_("You need to supply a variable name.\n"));
@@ -429,7 +432,7 @@ dbg_cmd_show_exp (char *psz_varname, bool expand)
     }
     if (p_set) {
       p_v = lookup_variable_in_set(psz_varname, strlen(psz_varname), p_set);
-      if (!p_v) 
+      if (!p_v)
 	/* May be a global variable. */
 	p_v = lookup_variable (psz_varname, strlen (psz_varname));
     } else {
@@ -452,7 +455,7 @@ dbg_cmd_show_exp (char *psz_varname, bool expand)
   return true;
 }
 
-void dbg_print_invocation(void) 
+void dbg_print_invocation(void)
 {
   unsigned int i;
   printf("%s ", global_argv[0]);
@@ -475,22 +478,22 @@ rule_t *find_rule (const char *psz_name)
   return NULL;
 }
 
-void chomp(char * line) 
+void chomp(char * line)
 {
   unsigned int len = strlen(line);
   if (line[len-1] == '\n') line[len-1] = '\0';
 }
 
 
-void shell_rc_status(int rc) 
+void shell_rc_status(int rc)
 {
   if (rc == -1)
     printf(_("Error: %s\n"), strerror(errno));
   else if (WEXITSTATUS(rc) != 0)
     printf(_("Warning: return code was %d\n"), WEXITSTATUS(rc));
 }
-  
-/* 
+
+/*
  * Local variables:
  * eval: (c-set-style "gnu")
  * indent-tabs-mode: nil

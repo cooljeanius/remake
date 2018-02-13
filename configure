@@ -2456,8 +2456,6 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
 
 
 
-
-
 # Autoconf setup
 ac_aux_dir=
 for ac_dir in config "$srcdir"/config; do
@@ -2491,7 +2489,6 @@ ac_configure="$SHELL $ac_aux_dir/configure"  # Please don't use this var.
 
 
 ac_config_headers="$ac_config_headers config.h"
-
 
 # Specialized system macros
 # Make sure we can run config.sub.
@@ -2604,8 +2601,8 @@ test -n "$target_alias" &&
   test "$program_prefix$program_suffix$program_transform_name" = \
     NONENONEs,x,x, &&
   program_prefix=${target_alias}-
-# expand $ac_aux_dir to an absolute path
-am_aux_dir=`cd $ac_aux_dir && pwd`
+# Expand $ac_aux_dir to an absolute path.
+am_aux_dir=`cd "$ac_aux_dir" && pwd`
 
 ac_ext=c
 ac_cpp='$CPP $CPPFLAGS'
@@ -3971,7 +3968,7 @@ if test "$ac_res" != no; then :
 fi
 
 # Automake setup
-am__api_version='1.14'
+am__api_version='1.15'
 
 # Find a good install program.  We prefer a C program (faster),
 # so one script is as good as another.  But avoid the broken or
@@ -4160,7 +4157,7 @@ else
 $as_echo "$as_me: WARNING: 'missing' script is too old or missing" >&2;}
 fi
 
-if test x"${install_sh}" != xset; then
+if test x"${install_sh+set}" != xset; then
   case $am_aux_dir in
   *\ * | *\	*)
     install_sh="\${SHELL} '$am_aux_dir/install-sh'" ;;
@@ -4551,8 +4548,8 @@ MAKEINFO=${MAKEINFO-"${am_missing_run}makeinfo"}
 # <http://lists.gnu.org/archive/html/automake/2012-07/msg00014.html>
 mkdir_p='$(MKDIR_P)'
 
-# We need awk for the "check" target.  The system "awk" is bad on
-# some platforms.
+# We need awk for the "check" target (and possibly the TAP driver).  The
+# system "awk" is bad on some platforms.
 # Always define AMTAR for backward compatibility.  Yes, it's still used
 # in the wild :-(  We should find a proper way to deprecate it ...
 AMTAR='$${TAR-tar}'
@@ -4737,6 +4734,7 @@ END
     as_fn_error $? "Your 'rm' program is bad, sorry." "$LINENO" 5
   fi
 fi
+
 
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to enable maintainer-specific portions of Makefiles" >&5
 $as_echo_n "checking whether to enable maintainer-specific portions of Makefiles... " >&6; }
@@ -5826,7 +5824,6 @@ $as_echo "no" >&6; }
 fi
 
 
-
 # Ruby 1.9 and RSPec are needed for the debugger test suite (only)
 # Extract the first word of "ruby", so it can be a program name with args.
 set dummy ruby; ac_word=$2
@@ -5902,7 +5899,6 @@ else
   { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 fi
-
 
 
 # Enable gettext, in "external" mode.
@@ -7482,7 +7478,6 @@ $as_echo "#define HAVE_DCGETTEXT 1" >>confdefs.h
 
 
 
-
 # This test must come as early as possible after the compiler configuration
 # tests, because the choice of the file model can (in principle) affect
 # whether functions and headers are available, whether they work, etc.
@@ -7788,7 +7783,6 @@ if test "$ac_res" != no; then :
   test "$ac_res" = "none required" || LIBS="$ac_res $LIBS"
 
 fi
-
 
 # Checks for header files.
 ac_header_dirent=no
@@ -8137,9 +8131,8 @@ fi
 
 done
 
-
 # Set a flag if we have an ANSI C compiler
-if test "${ac_cv_prog_cc_stdc}" != no; then
+if test "x${ac_cv_prog_cc_stdc}" != "xno"; then
 
 $as_echo "#define HAVE_ANSI_COMPILER 1" >>confdefs.h
 
@@ -8159,7 +8152,6 @@ _ACEOF
 fi
 
 done
-
 
 # Checks for typedefs, structures, and compiler characteristics.
 
@@ -8656,7 +8648,6 @@ _ACEOF
 
 fi
 
-
 # Find out whether our struct stat returns nanosecond resolution
 # timestamps.
 
@@ -8710,10 +8701,12 @@ else
     cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
 
-#	if HAVE_INTTYPES_H
+#	if defined(HAVE_INTTYPES_H)
 #	 include <inttypes.h>
 #	else
-#	 warning this conftest expects <inttypes.h> to be included.
+#	 if defined(__GNUC__) && !defined(__STRICT_ANSI__)
+#	  warning "This conftest expects <inttypes.h> to be included."
+#	 endif /* __GNUC__ && !__STRICT_ANSI__ */
 #	endif /* HAVE_INTTYPES_H */
 
 int
@@ -8742,7 +8735,6 @@ fi
 cat >>confdefs.h <<_ACEOF
 #define FILE_TIMESTAMP_HI_RES ${val}
 _ACEOF
-
 
 if test "${make_cv_file_timestamp_hi_res}" = yes; then
   # Solaris 2.5.1 needs -lposix4 to get the clock_gettime function.
@@ -8880,7 +8872,7 @@ fi
 fi
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_func_gettimeofday" >&5
 $as_echo "$ac_cv_func_gettimeofday" >&6; }
-if test "${ac_cv_func_gettimeofday}" = yes; then
+if test "x${ac_cv_func_gettimeofday}" = "xyes"; then
 
 $as_echo "#define HAVE_GETTIMEOFDAY 1" >>confdefs.h
 
@@ -8924,7 +8916,6 @@ done
 
 
 
-
 # We need to check declarations, not just existence, because on Tru64 this
 # function is not declared without special flags, which themselves cause
 # other problems. We will just use our own.
@@ -8939,7 +8930,6 @@ fi
 cat >>confdefs.h <<_ACEOF
 #define HAVE_DECL_BSD_SIGNAL $ac_have_decl
 _ACEOF
-
 
 if ${ac_cv_func_setvbuf_reversed+:} false; then :
   $as_echo_n "(cached) " >&6
@@ -8963,7 +8953,6 @@ _ACEOF
 
 fi
 done
-
 
 # strcoll() is used by the GNU glob library
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for working strcoll" >&5
@@ -10502,10 +10491,12 @@ fi
 ac_fn_c_check_decl "$LINENO" "sys_siglist" "ac_cv_have_decl_sys_siglist" "$ac_includes_default
 #include <signal.h>
 /* NetBSD declares sys_siglist in unistd.h.  */
-#if HAVE_UNISTD_H
+#if defined(HAVE_UNISTD_H)
 # include <unistd.h>
 #else
-# warning this conftest expects <unistd.h> to be included.
+# if defined(__GNUC__) && !defined(__STRICT_ANSI__)
+#  warning \"This conftest for sys_siglist expects <unistd.h> to be included.\"
+# endif /* __GNUC__ && !__STRICT_ANSI__ */
 #endif /* HAVE_UNISTD_H */
 
 "
@@ -10521,10 +10512,12 @@ _ACEOF
 ac_fn_c_check_decl "$LINENO" "_sys_siglist" "ac_cv_have_decl__sys_siglist" "$ac_includes_default
 #include <signal.h>
 /* NetBSD declares sys_siglist in unistd.h.  */
-#if HAVE_UNISTD_H
+#if defined(HAVE_UNISTD_H)
 # include <unistd.h>
 #else
-# warning this conftest expects <unistd.h> to be included.
+# if defined(__GNUC__) && !defined(__STRICT_ANSI__)
+#  warning \"This conftest for sys_siglist expects <unistd.h> to be included.\"
+# endif /* __GNUC__ && !__STRICT_ANSI__ */
 #endif /* HAVE_UNISTD_H */
 
 "
@@ -10540,10 +10533,12 @@ _ACEOF
 ac_fn_c_check_decl "$LINENO" "__sys_siglist" "ac_cv_have_decl___sys_siglist" "$ac_includes_default
 #include <signal.h>
 /* NetBSD declares sys_siglist in unistd.h.  */
-#if HAVE_UNISTD_H
+#if defined(HAVE_UNISTD_H)
 # include <unistd.h>
 #else
-# warning this conftest expects <unistd.h> to be included.
+# if defined(__GNUC__) && !defined(__STRICT_ANSI__)
+#  warning \"This conftest for sys_siglist expects <unistd.h> to be included.\"
+# endif /* __GNUC__ && !__STRICT_ANSI__ */
 #endif /* HAVE_UNISTD_H */
 
 "
@@ -10556,7 +10551,6 @@ fi
 cat >>confdefs.h <<_ACEOF
 #define HAVE_DECL___SYS_SIGLIST $ac_have_decl
 _ACEOF
-
 
 
 # Check out the wait reality.
@@ -10635,7 +10629,6 @@ fi
 $as_echo "${make_cv_union_wait}" >&6; }
 
 
-
 # Check whether --with-make_name was given.
 if test "${with_make_name+set}" = set; then :
   withval=$with_make_name; make_name="${withval}"
@@ -10678,7 +10671,6 @@ else
   shell_trace="-x"
 fi
 
-
 ## Set OS-specific default shell.
 case ${host_os} in
     cygwin*|mingw*) ;;
@@ -10719,11 +10711,9 @@ cat >>confdefs.h <<_ACEOF
 _ACEOF
 
 
-
 cat >>confdefs.h <<_ACEOF
 #define DEFAULT_SHELL "${default_shell}"
 _ACEOF
-
 
 #
 # Check for readline to see if we can add debugging support.
@@ -10901,7 +10891,6 @@ rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
   conftest.$ac_objext conftest.beam conftest.$ac_ext
 fi
 
-
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for readline in -lreadline" >&5
 $as_echo_n "checking for readline in -lreadline... " >&6; }
 if ${ac_cv_lib_readline_readline+:} false; then :
@@ -10982,6 +10971,20 @@ rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
   conftest.$ac_objext conftest.beam conftest.$ac_ext
 fi
 
+if test "x${ac_have_history_list}" = "xno"; then
+  for ac_header in readline/history.h
+do :
+  ac_fn_c_check_header_mongrel "$LINENO" "readline/history.h" "ac_cv_header_readline_history_h" "$ac_includes_default"
+if test "x$ac_cv_header_readline_history_h" = xyes; then :
+  cat >>confdefs.h <<_ACEOF
+#define HAVE_READLINE_HISTORY_H 1
+_ACEOF
+
+fi
+
+done
+
+fi
 
 
 REMAKE_SOURCE_PATH="`pwd`"
@@ -10989,7 +10992,6 @@ REMAKE_SOURCE_PATH="`pwd`"
 cat >>confdefs.h <<_ACEOF
 #define REMAKE_SOURCE_PATH "${REMAKE_SOURCE_PATH}"
 _ACEOF
-
 
 
 # If we are building on Windows/DOS/OS/2, add support for DOS drive specs.
@@ -11314,7 +11316,6 @@ else
   USE_CUSTOMS_FALSE=
 fi
 
-
 # See if the user asked to handle case insensitive file systems.
 
 
@@ -11327,7 +11328,6 @@ $as_echo "#define HAVE_CASE_INSENSITIVE_FS 1" >>confdefs.h
    esac
 fi
 
-
 # See if we can handle the job server feature, and if the user wants it.
 
 # Check whether --enable-job-server was given.
@@ -11336,7 +11336,6 @@ if test "${enable_job_server+set}" = set; then :
 else
   make_cv_job_server="yes"
 fi
-
 
 has_wait_nohang=yes
 case "${ac_cv_func_waitpid}/${ac_cv_func_wait3}" in
@@ -11369,7 +11368,6 @@ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
 fi
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: $make_cv_sa_restart" >&5
 $as_echo "$make_cv_sa_restart" >&6; }
-
 if test "${make_cv_sa_restart}" != no; then
 
 $as_echo "#define HAVE_SA_RESTART 1" >>confdefs.h
@@ -11418,7 +11416,6 @@ $as_echo "$make_cv_path_sccs_get" >&6; }
 cat >>confdefs.h <<_ACEOF
 #define SCCS_GET "${make_cv_path_sccs_get}"
 _ACEOF
-
 
 ac_clean_files="${ac_clean_files} s.conftest conftoast" # Remove these later.
 if ( /usr/sccs/admin -n s.conftest || admin -n s.conftest ) >/dev/null 2>&1 &&
@@ -11501,7 +11498,6 @@ else
   USE_LOCAL_GLOB_FALSE=
 fi
 
-
 # Let the makefile know what our build host is
 
 
@@ -11511,7 +11507,6 @@ _ACEOF
 
 MAKE_HOST="${host}"
 
-
 w32_target_env=no
  if false; then
   WINDOWSENV_TRUE=
@@ -11520,7 +11515,6 @@ else
   WINDOWSENV_TRUE='#'
   WINDOWSENV_FALSE=
 fi
-
 
 case "${host}" in
   *-*-mingw32)
@@ -11547,14 +11541,12 @@ cat >>confdefs.h <<_ACEOF
 #define PATH_SEPARATOR_CHAR '${PATH_SEPARATOR}'
 _ACEOF
 
-
 # Include the Maintainer's Makefile section, if it is here.
 
 MAINT_MAKEFILE=/dev/null
 if test -r "${srcdir}/maintMakefile"; then
   MAINT_MAKEFILE="${srcdir}/maintMakefile"
 fi
-
 
 # Allow building with dmalloc
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking if malloc debugging is wanted" >&5
@@ -11588,7 +11580,7 @@ SET_MAKE=""
 # Sanity check and inform the user of what we found
 
 case "${make_badcust}" in
-  yes) echo
+  yes) echo ""
        echo "WARNING: --with-customs used but no customs.h could be found;"
        echo "         disabling Customs support."
        echo ;;
@@ -11629,7 +11621,6 @@ esac
 
 # Specify what files are to be created.
 ac_config_files="$ac_config_files Makefile glob/Makefile po/Makefile.in config/Makefile doc/Makefile w32/Makefile"
-
 
 # OK, do it!
 

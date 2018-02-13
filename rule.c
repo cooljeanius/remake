@@ -81,7 +81,7 @@ count_implicit_rule_limits (void)
   name = 0;
   namelen = 0;
   rule = pattern_rules;
-  lastrule = 0;
+  lastrule = NULL;
   while (rule != 0)
     {
       unsigned int ndeps = 0;
@@ -143,6 +143,10 @@ count_implicit_rule_limits (void)
 
       lastrule = rule;
       rule = next;
+
+      if (lastrule != NULL) {
+	; /* ??? */
+      }
     }
 
   if (name != 0)
@@ -468,7 +472,7 @@ create_pattern_rule (const char **targets, const char **target_percents,
     r->floc.filenm = NULL;
     r->floc.lineno = 0;
   }
-  
+
   for (i = 0; i < n; ++i)
     {
       r->lens[i] = strlen (targets[i]);
@@ -481,7 +485,7 @@ create_pattern_rule (const char **targets, const char **target_percents,
 }
 
 /*! Show information about a given rule. Useful from the debugger or gdb.  */
-void	
+void
 print_rule (rule_t *r, bool b_verbose)
 {
   int i;

@@ -1856,6 +1856,9 @@ record_target_var (struct nameseq *filenames, char *defn,
           current_variable_set_list = global;
         }
 
+      if (fname != NULL) {
+	; /* ??? */
+      }
       /* Set up the variable to be *-specific.  */
       v->per_target = 1;
       v->private_var = vmod->private_v;
@@ -2588,7 +2591,7 @@ get_next_mword (char *buffer, char *delim, char **startp, unsigned int *length)
           wtype = w_varassign;
           break;
         }
-
+      /*FALLTHRU*/
     default:
       if (delim && strchr (delim, c))
         wtype = w_static;

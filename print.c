@@ -1,4 +1,4 @@
-/* Output or logging functions for GNU Make.
+/* print.c: Output or logging functions for GNU Make.
 
 Copyright (C) 2005, 2007, 2008 R. Bernstein <rocky@gnu.org>
 This file is part of GNU Make (remake variant).
@@ -110,13 +110,13 @@ error (flocp, fmt, va_alist)
 
   log_working_directory (1);
 
-	if (flocp && flocp->filenm) {
-		fprintf (stderr, "%s:%lu: ", flocp->filenm, flocp->lineno);
-	} else if (makelevel == 0) {
-		fprintf (stderr, "%s: ", program);
-	} else {
-		fprintf (stderr, "%s[%u]: ", program, makelevel);
-	}
+  if (flocp && flocp->filenm) {
+    fprintf (stderr, "%s:%lu: ", flocp->filenm, flocp->lineno);
+  } else if (makelevel == 0) {
+    fprintf (stderr, "%s: ", program);
+  } else {
+    fprintf (stderr, "%s[%u]: ", program, makelevel);
+  }
 
   VA_START(args, fmt);
   VA_PRINTF (stderr, fmt, args);
@@ -124,9 +124,9 @@ error (flocp, fmt, va_alist)
 
   putc ('\n', stderr);
   fflush (stderr);
-	  if (debugger_on_error & DEBUGGER_ON_ERROR) {
-		  enter_debugger(NULL, NULL, -1, DEBUG_ERROR_HIT);
-	  }
+  if (debugger_on_error & DEBUGGER_ON_ERROR) {
+    enter_debugger(NULL, NULL, -1, DEBUG_ERROR_HIT);
+  }
 }
 #endif /* !_IN_ERROR_C */
 
@@ -153,13 +153,13 @@ err_with_stack (p_call, fmt, va_alist)
     p_floc   = &(p_target->floc);
   }
 
-	if (p_floc && p_floc->filenm) {
-		fprintf (stderr, "%s:%lu: ", p_floc->filenm, p_floc->lineno);
-	} else if (makelevel == 0) {
-		fprintf (stderr, "%s: ", program);
-	} else {
-		fprintf (stderr, "%s[%u]: ", program, makelevel);
-	}
+  if (p_floc && p_floc->filenm) {
+    fprintf (stderr, "%s:%lu: ", p_floc->filenm, p_floc->lineno);
+  } else if (makelevel == 0) {
+    fprintf (stderr, "%s: ", program);
+  } else {
+    fprintf (stderr, "%s[%u]: ", program, makelevel);
+  }
 
   VA_START(args, fmt);
   VA_PRINTF (stderr, fmt, args);
@@ -177,9 +177,9 @@ err_with_stack (p_call, fmt, va_alist)
   }
   fflush (stdout);
   fflush (stderr);
-	if (debugger_on_error & DEBUGGER_ON_ERROR) {
-		enter_debugger(p_call, p_target, -1, DEBUG_ERROR_HIT);
-	}
+  if (debugger_on_error & DEBUGGER_ON_ERROR) {
+    enter_debugger(p_call, p_target, -1, DEBUG_ERROR_HIT);
+  }
 }
 
 /* Print an error message and exit.  */
@@ -200,13 +200,13 @@ fatal (flocp, fmt, va_alist)
 
   log_working_directory (1);
 
-	if (flocp && flocp->filenm) {
-		fprintf (stderr, "%s:%lu: *** ", flocp->filenm, flocp->lineno);
-	} else if (makelevel == 0) {
-		fprintf (stderr, "%s: *** ", program);
-	} else {
-		fprintf (stderr, "%s[%u]: *** ", program, makelevel);
-	}
+  if (flocp && flocp->filenm) {
+    fprintf (stderr, "%s:%lu: *** ", flocp->filenm, flocp->lineno);
+  } else if (makelevel == 0) {
+    fprintf (stderr, "%s: *** ", program);
+  } else {
+    fprintf (stderr, "%s[%u]: *** ", program, makelevel);
+  }
 
   VA_START(args, fmt);
   VA_PRINTF (stderr, fmt, args);
@@ -236,7 +236,7 @@ fatal (flocp, fmt, va_alist)
 
 /* Print an error message and exit.  */
 
-void
+void ATTR_NORETURN
 #if __STDC__ && HAVE_STDVARARGS
 fatal_err(target_stack_node_t *p_call, const char *fmt, ...)
 #else
@@ -293,9 +293,9 @@ strerror (int errnum)
 # endif /* !__DECC */
   static char buf[] = "Unknown error 12345678901234567890";
 
-	if (errno < sys_nerr) {
-		return sys_errlist[errnum];
-	}
+  if (errno < sys_nerr) {
+    return sys_errlist[errnum];
+  }
 
   sprintf (buf, _("Unknown error %d"), errnum);
   return buf;

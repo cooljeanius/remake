@@ -1638,7 +1638,7 @@ func_shell (char *o, char **argv, const char *funcname UNUSED)
   /* For error messages.  */
   if (reading_file && reading_file->filenm)
     {
-      char *p = alloca (strlen (reading_file->filenm)+11+4);
+      char *volatile p = alloca(strlen(reading_file->filenm) + 11UL + 4UL);
       sprintf (p, "%s:%lu: ", reading_file->filenm, reading_file->lineno);
       error_prefix = p;
     }

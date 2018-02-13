@@ -209,7 +209,7 @@ concat (num, va_alist)
 
   /* Get some more memory if we don't have enough space for the
      terminating '\0'.   */
-  if (ri == rlen)
+  if (ri == (int)rlen)
     {
       rlen = (rlen ? rlen : 60) * 2;
       result = xrealloc (result, rlen);
