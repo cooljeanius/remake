@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: make 4.2.1\n"
 "Report-Msgid-Bugs-To: bug-make@gnu.org\n"
-"POT-Creation-Date: 2018-02-12 17:11-0500\n"
+"POT-Creation-Date: 2018-02-12 19:14-0500\n"
 "PO-Revision-Date: 2016-06-20 15:03+0200\n"
 "Last-Translator: Philipp Thomas <pth@suse.de>\n"
 "Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
@@ -140,7 +140,7 @@ msgstr " (aus „%s“, Zeile %lu):\n"
 msgid "unknown debug level specification `%s'"
 msgstr "Unbekannte Debug-Level angegeben „%s“"
 
-#: dir.c:996
+#: dir.c:997
 msgid ""
 "\n"
 "# Directories\n"
@@ -148,68 +148,68 @@ msgstr ""
 "\n"
 "# Verzeichnisse\n"
 
-#: dir.c:1008
+#: dir.c:1009
 #, c-format
 msgid "# %s: could not be stat'd.\n"
 msgstr "# %s: Status konnte nicht festgestellt werden.\n"
 
-#: dir.c:1012
+#: dir.c:1013
 #, fuzzy, c-format
 msgid "# %s (key %s, mtime %d): could not be opened.\n"
 msgstr ""
 "# %s ( Schlüssel %s,  letzte Änderung %I64u): Öffnen scheiterte.\n"
 "Konnte nicht geöffnet werden.\n"
 
-#: dir.c:1016
+#: dir.c:1017
 #, c-format
 msgid "# %s (device %d, inode [%d,%d,%d]): could not be opened.\n"
 msgstr ""
 "# %s (Gerät %d, Inode [%d,%d,%d]): \n"
 "Konnte nicht geöffnet werden.\n"
 
-#: dir.c:1021
+#: dir.c:1022
 #, c-format
 msgid "# %s (device %ld, inode %ld): could not be opened.\n"
 msgstr ""
 "# %s (Gerät %ld, Inode %ld): \n"
 "Konnte nicht geöffnet werden.\n"
 
-#: dir.c:1048
+#: dir.c:1049
 #, fuzzy, c-format
 msgid "# %s (key %s, mtime %d): "
 msgstr "# %s (Schlüssel %s,  letzte Änderung %%I64u): "
 
-#: dir.c:1052
+#: dir.c:1053
 #, c-format
 msgid "# %s (device %d, inode [%d,%d,%d]): "
 msgstr "# %s (Gerät %d, Inode [%d,%d,%d]): "
 
-#: dir.c:1057
+#: dir.c:1058
 #, c-format
 msgid "# %s (device %ld, inode %ld): "
 msgstr "# %s (Gerät %ld, Inode %ld): "
 
-#: dir.c:1063 dir.c:1084
+#: dir.c:1064 dir.c:1085
 msgid "No"
 msgstr "Keine"
 
-#: dir.c:1066 dir.c:1087
+#: dir.c:1067 dir.c:1088
 msgid " files, "
 msgstr " Dateien, "
 
-#: dir.c:1068 dir.c:1089
+#: dir.c:1069 dir.c:1090
 msgid "no"
 msgstr "keine"
 
-#: dir.c:1071
+#: dir.c:1072
 msgid " impossibilities"
 msgstr " Unmöglichkeiten"
 
-#: dir.c:1075
+#: dir.c:1076
 msgid " so far."
 msgstr " bisher."
 
-#: dir.c:1092
+#: dir.c:1093
 #, c-format
 msgid " impossibilities in %lu directories.\n"
 msgstr " Unmöglichkeiten in %lu Verzeichnissen.\n"
@@ -277,119 +277,119 @@ msgstr "*** Löschen der übergangsweise angelegten Datei „%s“"
 msgid "Removing intermediate files...\n"
 msgstr "Die übergangsweise angelegte Datei „%s“ wird gelöscht...\n"
 
-#: file.c:817
+#: file.c:818
 #, c-format
 msgid "%s: Timestamp out of range; substituting %s"
 msgstr "%s: Zeitstempel außerhalb des Gültigkeitsbereichs; %s wird ersetzt"
 
-#: file.c:818
+#: file.c:819
 msgid "Current time"
 msgstr "Aktuelle Zeit"
 
-#: file.c:915
+#: file.c:916
 msgid "# Not a target:"
 msgstr "# Dies ist kein Ziel:"
 
-#: file.c:942
+#: file.c:943
 msgid "#  Precious file (prerequisite of .PRECIOUS)."
 msgstr "#  Wertvolle Datei (benötigt von .PRECIOUS)."
 
-#: file.c:944
+#: file.c:945
 msgid "#  Phony target (prerequisite of .PHONY)."
 msgstr "#  Vorgetäuschtes Ziel (benötigt von .PHONY)."
 
-#: file.c:946
+#: file.c:947
 #, fuzzy
 msgid "#  Command-line target."
 msgstr "#  Kommandozeilen-Ziel (target)."
 
-#: file.c:948
+#: file.c:949
 msgid "#  A default, MAKEFILES, or -include/sinclude makefile."
 msgstr "#  Eine standardmässige, MAKEFILES oder -include/sinclude Makedatei."
 
-#: file.c:950
+#: file.c:951
 msgid "#  Implicit rule search has been done."
 msgstr "#  Die Suche nach impliziten Regeln wurde durchgeführt."
 
-#: file.c:951
+#: file.c:952
 msgid "#  Implicit rule search has not been done."
 msgstr "#  Die Suche nach impliziten Regeln wurde nicht durchgeführt."
 
-#: file.c:953
+#: file.c:954
 #, fuzzy, c-format
 msgid "#  Implicit/static pattern stem: `%s'\n"
 msgstr "#  Wurzel impliziter/statischer Muster: „%s“\n"
 
-#: file.c:955
+#: file.c:956
 msgid "#  File is an intermediate prerequisite."
 msgstr "#  Datei ist ein Zwischenschritt in den Abhängigkeiten."
 
-#: file.c:958
+#: file.c:959
 msgid "#  Also makes:"
 msgstr "#  Erzeugt außerdem:"
 
-#: file.c:968
+#: file.c:969
 msgid "#  Modification time never checked."
 msgstr "#  Zeit der letzten Änderung wurde nicht überprüft."
 
-#: file.c:970
+#: file.c:971
 msgid "#  File does not exist."
 msgstr "#  Die Datei existiert nicht."
 
-#: file.c:972
+#: file.c:973
 msgid "#  File is very old."
 msgstr "#  Datei ist sehr alt."
 
-#: file.c:977
+#: file.c:978
 #, c-format
 msgid "#  Last modified %s\n"
 msgstr "#  Zuletzt geändert %s\n"
 
-#: file.c:980
+#: file.c:981
 msgid "#  File has been updated."
 msgstr "#  Datei wurde aktualisiert."
 
-#: file.c:981
+#: file.c:982
 msgid "#  File has not been updated."
 msgstr "#  Datei wurde nicht aktualisiert."
 
-#: file.c:989
+#: file.c:990
 #, fuzzy
 msgid "#  Commands currently running (THIS IS A BUG)."
 msgstr "#  Derzeit laufende Regel (DAS IST EIN FEHLER)."
 
-#: file.c:992
+#: file.c:993
 #, fuzzy
 msgid "#  Dependencies commands running (THIS IS A BUG)."
 msgstr "#  Derzeit läuft die Regel für Abhängigkeiten (DAS IST EIN FEHLER)."
 
-#: file.c:995
+#: file.c:996
 #, fuzzy
 msgid "#  Commands not yet started."
 msgstr "#  Kommandozeilen-Ziel (target)."
 
-#: file.c:1003
+#: file.c:1004
 msgid "#  Successfully updated."
 msgstr "#  Erfolgreich aktualisiert."
 
-#: file.c:1007
+#: file.c:1008
 msgid "#  Needs to be updated (-q is set)."
 msgstr "#  Eine Aktualisierung ist notwendig (-q ist angegeben)."
 
-#: file.c:1010
+#: file.c:1011
 msgid "#  Failed to be updated."
 msgstr "#  Aktualisierung ist fehlgeschlagen."
 
-#: file.c:1013
+#: file.c:1014
 msgid "#  Invalid value in `update_status' member!"
 msgstr "#  Ungültiger Wert in „update_status“-Eintrag!"
 
-#: file.c:1020
+#: file.c:1021
 #, fuzzy
 msgid "#  Invalid value in `command_state' member!"
 msgstr "#  Ungültiger Wert im „command_state“-Strukturelement!"
 
-#: file.c:1081
+#: file.c:1082
 msgid ""
 "\n"
 "# Files"
@@ -397,7 +397,7 @@ msgstr ""
 "\n"
 "# Dateien"
 
-#: file.c:1085
+#: file.c:1086
 msgid ""
 "\n"
 "# files hash-table stats:\n"
@@ -466,57 +466,57 @@ msgstr "Auf dieser Rechnerkonfiguration nicht implementiert: Funktion „%s“"
 msgid "unterminated call to function `%s': missing `%c'"
 msgstr "Nicht beendeter Aufruf der Funktion „%s“: „%c“ fehlt"
 
-#: getopt.c:665
+#: getopt.c:668
 #, fuzzy, c-format
 msgid "%s: option `%s' is ambiguous\n"
 msgstr "%s: Option „%s“ ist mehrdeutig\n"
 
-#: getopt.c:689
+#: getopt.c:692
 #, fuzzy, c-format
 msgid "%s: option `--%s' does not allow an argument\n"
 msgstr "%s: Option „--%s“ erlaubt kein Argument\n"
 
-#: getopt.c:694
+#: getopt.c:697
 #, fuzzy, c-format
 msgid "%s: option `%c%s' does not allow an argument\n"
 msgstr "%s: Option „%c%s“ erlaubt kein Argument\n"
 
-#: getopt.c:712 getopt.c:887
+#: getopt.c:715 getopt.c:890
 #, fuzzy, c-format
 msgid "%s: option `%s' requires an argument\n"
 msgstr "%s: Option „%s“ erfordert ein Argument\n"
 
-#: getopt.c:743
+#: getopt.c:746
 #, fuzzy, c-format
 msgid "%s: unrecognized option `--%s'\n"
 msgstr "%s: unbekannte Option „--%s“\n"
 
-#: getopt.c:747
+#: getopt.c:750
 #, fuzzy, c-format
 msgid "%s: unrecognized option `%c%s'\n"
 msgstr "%s: unbekannte Option „%c%s“\n"
 
-#: getopt.c:773
+#: getopt.c:776
 #, c-format
 msgid "%s: illegal option -- %c\n"
 msgstr "%s: unzulässige Option -- %c\n"
 
-#: getopt.c:776
+#: getopt.c:779
 #, c-format
 msgid "%s: invalid option -- %c\n"
 msgstr "%s: ungültige Option -- %c\n"
 
-#: getopt.c:806 getopt.c:936
+#: getopt.c:809 getopt.c:939
 #, c-format
 msgid "%s: option requires an argument -- %c\n"
 msgstr "%s: Option erfordert ein Argument -- %c\n"
 
-#: getopt.c:853
+#: getopt.c:856
 #, fuzzy, c-format
 msgid "%s: option `-W %s' is ambiguous\n"
 msgstr "%s: Option „-W %s“ ist mehrdeutig\n"
 
-#: getopt.c:871
+#: getopt.c:874
 #, fuzzy, c-format
 msgid "%s: option `-W %s' does not allow an argument\n"
 msgstr "%s: Option „-W %s“ erlaubt kein Argument\n"
@@ -529,17 +529,17 @@ msgstr ""
 "Hauptspeicher erschöpft"
 
 #: hash.c:280
-#, fuzzy, c-format
+#, c-format
 msgid "Load=%ld/%ld=%.0f%%, "
 msgstr "Auslastung=%ld/%ld=%.0f%%, "
 
 #: hash.c:282
-#, fuzzy, c-format
+#, c-format
 msgid "Rehash=%d, "
 msgstr "Rehash=%d, "
 
 #: hash.c:283
-#, fuzzy, c-format
+#, c-format
 msgid "Collisions=%ld/%ld=%.0f%%"
 msgstr "Kollisionen=%ld/%ld%.0f%%"
 
@@ -607,7 +607,7 @@ msgstr "*** [%s] Fehler 0x%x (ignoriert)"
 #: job.c:457
 #, fuzzy, c-format
 msgid "*** [%s] Error 0x%x"
-msgstr "%s[%s: %s] Fehler %d%s"
+msgstr "*** [%s] Fehler 0x%x (ignoriert)"
 
 #: job.c:461
 #, fuzzy, c-format
@@ -617,7 +617,7 @@ msgstr "*** [%s] Fehler 0x%x (ignoriert)"
 #: job.c:462
 #, fuzzy, c-format
 msgid "*** [%s] Error %d"
-msgstr "%s[%s: %s] Fehler %d%s"
+msgstr "*** [%s] Fehler 0x%x (ignoriert)"
 
 #: job.c:467
 msgid " (core dumped)"
@@ -773,7 +773,7 @@ msgstr ""
 "Inhalt der Stapelverarbeitungsdatei:%s\n"
 "\t%s\n"
 
-#: job.c:3050
+#: job.c:3052
 #, c-format
 msgid "%s (line %d) Bad shell context (!unixy && !batch_mode_shell)\n"
 msgstr "%s (Zeile %d) Falscher Shell-Kontext (!unixy && !batch_mode_shell)\n"
@@ -1166,7 +1166,6 @@ msgstr ""
 "Symbolische Verknfungen werdfen nicht unterstützt: -L wird abgeschaltet."
 
 #: main.c:2073
-#, fuzzy
 msgid "Updating makefiles....\n"
 msgstr "Aktualisiere „make“-Steuerdateien...\n"
 
@@ -1218,7 +1217,6 @@ msgid "No targets"
 msgstr "Keine Ziele"
 
 #: main.c:2468
-#, fuzzy
 msgid "Updating goal targets....\n"
 msgstr "Aktualisieren der Ziele...\n"
 
@@ -1308,46 +1306,46 @@ msgstr ""
 "\n"
 "# „Make“-Datenbank beendet am: %s\n"
 
-#: main.c:3434
+#: main.c:3435
 #, c-format
 msgid "%s: Entering an unknown directory\n"
 msgstr "%s: ein unbekanntes Verzeichnis wird betreten\n"
 
-#: main.c:3436
+#: main.c:3437
 #, c-format
 msgid "%s: Leaving an unknown directory\n"
 msgstr "%s: ein unbekanntes Verzeichnis wird verlassen\n"
 
 # !!! Attention: concatenated with the previous messages!!!
-#: main.c:3439
+#: main.c:3440
 #, fuzzy, c-format
 msgid "%s: Entering directory `%s'\n"
 msgstr "%s: Verzeichnis „%s“ wird betreten\n"
 
 # !!! Attention: concatenated with the previous messages!!!
-#: main.c:3442
+#: main.c:3443
 #, fuzzy, c-format
 msgid "%s: Leaving directory `%s'\n"
 msgstr "%s: Verzeichnis „%s“ wird verlassen\n"
 
-#: main.c:3447
+#: main.c:3448
 #, c-format
 msgid "%s[%u]: Entering an unknown directory\n"
 msgstr "%s[%u]: Ein unbekanntes Verzeichnis wird betreten\n"
 
-#: main.c:3450
+#: main.c:3451
 #, c-format
 msgid "%s[%u]: Leaving an unknown directory\n"
 msgstr "%s[%u]: Ein unbekanntes Verzeichnis wird verlassen\n"
 
 # !!! Attention: concatenated with the previous messages!!!
-#: main.c:3454
+#: main.c:3455
 #, fuzzy, c-format
 msgid "%s[%u]: Entering directory `%s'\n"
 msgstr "%s[%u]: Verzeichnis „%s“ wird betreten\n"
 
 # !!! Attention: concatenated with the previous messages!!!
-#: main.c:3457
+#: main.c:3458
 #, fuzzy, c-format
 msgid "%s[%u]: Leaving directory `%s'\n"
 msgstr "%s[%u]: Verzeichnis „%s“ wird verlassen\n"
@@ -1362,7 +1360,7 @@ msgstr "Unbekannter Fehler %d"
 msgid "%s: %s"
 msgstr "%s: %s"
 
-#: misc.c:270 misc.c:281 misc.c:296 misc.c:313 misc.c:332 read.c:3179
+#: misc.c:270 misc.c:281 misc.c:296 misc.c:313 misc.c:332 read.c:3182
 msgid "virtual memory exhausted"
 msgstr "Der virtuelle Speicher ist verbraucht"
 
@@ -1532,44 +1530,44 @@ msgstr "Es ist nur ein „else“ pro Bedingung erlaubt"
 msgid "Malformed target-specific variable definition"
 msgstr "Falsche Ziel-bezogene Variablendefinition"
 
-#: read.c:1914
+#: read.c:1917
 msgid "prerequisites cannot be defined in recipes"
 msgstr "Voraussetzungen können nicht in Regeln definiert werden"
 
-#: read.c:1967
+#: read.c:1970
 msgid "mixed implicit and static pattern rules"
 msgstr "Implizite und statische Muster-Regeln wurden vermischt"
 
-#: read.c:1990 read.c:2173
+#: read.c:1993 read.c:2176
 msgid "mixed implicit and normal rules"
 msgstr "Implizite und normale Regeln wurden vermischt"
 
-#: read.c:2035
+#: read.c:2038
 #, fuzzy, c-format
 msgid "target `%s' doesn't match the target pattern"
 msgstr "Target „%s“ passt nicht zum Ziel-Muster"
 
-#: read.c:2051 read.c:2096
+#: read.c:2054 read.c:2099
 #, fuzzy, c-format
 msgid "target file `%s' has both : and :: entries"
 msgstr "Das Ziel „%s“ enthält sowohl „:“- als auch „::“-Einträge"
 
-#: read.c:2057
+#: read.c:2060
 #, fuzzy, c-format
 msgid "target `%s' given more than once in the same rule."
 msgstr "Das Ziel „%s“ steht mehrfach in derselben Regel."
 
-#: read.c:2066
+#: read.c:2069
 #, fuzzy, c-format
 msgid "warning: overriding recipe for target `%s'"
 msgstr "Warnung: Die Befehle für das Ziel „%s“ werden überschrieben"
 
-#: read.c:2069
+#: read.c:2072
 #, fuzzy, c-format
 msgid "warning: ignoring old recipe for target `%s'"
 msgstr "Warnung: Alte Befehle für das Ziel „%s“ werden ignoriert"
 
-#: read.c:2453
+#: read.c:2456
 msgid "warning: NUL character seen; rest of line ignored"
 msgstr "Warnung: NULL-Zeichen gelesen; der Rest der Zeile wird ignoriert"
 
@@ -1776,7 +1774,7 @@ msgstr "Warnung: Datei „%s“ hat zukünftige Änderungszeit"
 msgid "Warning: File `%s' has modification time %s s in the future"
 msgstr "Warnung: Datei „%s“ hat hat in der Zukunft liegende Änderungszeit %s"
 
-#: remake.c:1609
+#: remake.c:1610
 #, fuzzy, c-format
 msgid ".LIBPATTERNS element `%s' is not a pattern"
 msgstr ".LIBPATTERNS Element „%s“ ist kein Muster"
@@ -1786,7 +1784,7 @@ msgstr ".LIBPATTERNS Element „%s“ ist kein Muster"
 msgid "Customs won't export: %s\n"
 msgstr "Customs wird nicht exportieren: %s\n"
 
-#: rule.c:521
+#: rule.c:525
 msgid ""
 "\n"
 "# Implicit Rules"
@@ -1794,7 +1792,7 @@ msgstr ""
 "\n"
 "# Implizite Regeln"
 
-#: rule.c:540
+#: rule.c:544
 msgid ""
 "\n"
 "# No implicit rules."
@@ -1802,7 +1800,7 @@ msgstr ""
 "\n"
 "# Keine impliziten Regeln vorhanden."
 
-#: rule.c:543
+#: rule.c:547
 #, c-format
 msgid ""
 "\n"
@@ -1811,11 +1809,11 @@ msgstr ""
 "\n"
 "# %u implizite Regeln, %u"
 
-#: rule.c:552
+#: rule.c:556
 msgid " terminal."
 msgstr " Terminal."
 
-#: rule.c:560
+#: rule.c:564
 #, c-format
 msgid "BUG: num_pattern_rules is wrong!  %u != %u"
 msgstr "BUG: „num_pattern_rules“ falsch!  %u != %u"
@@ -2087,7 +2085,7 @@ msgstr ""
 "# Keine musterspezifischen Variablenwerte."
 
 #: variable.c:1736
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "\n"
 "# %u pattern-specific variable values"
@@ -2136,9 +2134,9 @@ msgid "BUILTIN RM %s\n"
 msgstr "BUILTIN RM %s\n"
 
 #: vmsjobs.c:471
-#, fuzzy, c-format
+#, c-format
 msgid "Unknown builtin command '%s'\n"
-msgstr "Die Standard-Kommandos für „%s“ werden verwendet.\n"
+msgstr "Unbekanntes eingebautes Kommando „%s“\n"
 
 #: vmsjobs.c:493
 #, c-format
@@ -2225,101 +2223,8 @@ msgstr ""
 #~ msgid "Recipe has too many lines (%ud)"
 #~ msgstr "Die Regel hat zu viele Zeilen (%ud)"
 
-#, fuzzy
-#~ msgid "Note: prerequisite breakpoint already set at target %s."
-#~ msgstr "Die Datei „%s“ ist älter als das davon abhängige Ziel „%s“.\n"
-
-#, fuzzy
-#~ msgid "Note: command breakpoint already set at target %s."
-#~ msgstr "Die Datei „%s“ ist älter als das davon abhängige Ziel „%s“.\n"
-
-#, fuzzy
-#~ msgid "Note: target end breakpont set at target %s."
-#~ msgstr "Es ist nicht notwendig, das Ziel „%s“ neu zu erzeugen"
-
-#, fuzzy
-#~ msgid "You need to supply a variable name."
-#~ msgstr "Leerer Variablenname"
-
-# !!! Attention: concatenated with the previous messages!!!
-#, fuzzy
-#~ msgid "Argument required (new working directory).\n"
-#~ msgstr "%s: Verzeichnis „%s“ wird betreten\n"
-
-# !!! Attention: concatenated with the previous messages!!!
-#, fuzzy
-#~ msgid "Working directory %s.\n"
-#~ msgstr "%s: Verzeichnis „%s“ wird betreten\n"
-
-# !!! Attention: concatenated with the previous messages!!!
-#, fuzzy
-#~ msgid "Set the working directory to DIR."
-#~ msgstr "%s: Verzeichnis „%s“ wird betreten\n"
-
-#, fuzzy
-#~ msgid "Running %s\n"
-#~ msgstr "Die Datei „%s“ wird \"gestutzt\" (der Abhängigkeitsgraph).\n"
-
-# !!! Attention: concatenated with the previous messages!!!
-#, fuzzy
-#~ msgid "cannot get target file location\n"
-#~ msgstr "%s: Verzeichnis „%s“ wird betreten\n"
-
-#, fuzzy
-#~ msgid "Running commands for target %s\n"
-#~ msgstr "Die Standard-Kommandos für „%s“ werden verwendet.\n"
-
-#, fuzzy
-#~ msgid "Running commands\n"
-#~ msgstr "Unbekanntes eingebautes Kommando „%s“\n"
-
-# !!! Attention: concatenated with the previous messages!!!
-#, fuzzy
-#~ msgid "Starting directory `%s'\n"
-#~ msgstr "%s: Verzeichnis „%s“ wird betreten\n"
-
-#, fuzzy
-#~ msgid "Rule %s not found.\n"
-#~ msgstr "Die „make“-Steuerdatei „%s“ wurde nicht gefunden"
-
-# !!! Attention: concatenated with the previous messages!!!
-#, fuzzy
-#~ msgid "cannot get current directory %s\n"
-#~ msgstr "%s: Verzeichnis „%s“ wird betreten\n"
-
-#, fuzzy
-#~ msgid "Target \"%s\" doesn't have commands associated with it.\n"
-#~ msgstr "Target „%s“ passt nicht zum Ziel-Muster"
-
-#, fuzzy
-#~ msgid "Target \"%s\" doesn't appear to be a target name.\n"
-#~ msgstr "Target „%s“ passt nicht zum Ziel-Muster"
-
-#, fuzzy
-#~ msgid "You need to supply a variable name.\n"
-#~ msgstr "Leerer Variablenname"
-
-#, fuzzy
-#~ msgid "Error: %s\n"
-#~ msgstr "%s[%s: %s] Fehler %d%s"
-
-#~ msgid "#  Command line target."
-#~ msgstr "#  Kommandozeilen-Ziel (target)."
-
 #~ msgid "#  Builtin rule"
 #~ msgstr "# Eingebaute Regel"
-
-#~ msgid "#  Implicit/static pattern stem: '%s'\n"
-#~ msgstr "#  Wurzel impliziter/statischer Muster: „%s“\n"
-
-#~ msgid "#  Recipe currently running (THIS IS A BUG)."
-#~ msgstr "#  Derzeit laufende Regel (DAS IST EIN FEHLER)."
-
-#~ msgid "#  Dependencies recipe running (THIS IS A BUG)."
-#~ msgstr "#  Derzeit läuft die Regel für Abhängigkeiten (DAS IST EIN FEHLER)."
-
-#~ msgid "#  Invalid value in 'command_state' member!"
-#~ msgstr "#  Ungültiger Wert im „command_state“-Strukturelement!"
 
 #~ msgid "%s: Field '%s' not cached: %s"
 #~ msgstr "%s: Feld „%s“ wird nicht zwischengespeichert: %s"
@@ -2342,7 +2247,6 @@ msgstr ""
 #~ msgid "read: %s: %s"
 #~ msgstr "Lesen: %s: %s"
 
-#, fuzzy
 #~ msgid "file: invalid file operation: %s"
 #~ msgstr "Unzulässige Dateioperation: %s"
 
@@ -2355,16 +2259,11 @@ msgstr ""
 #~ msgid "Function name too long: %s"
 #~ msgstr "Der Funktionsname ist zu lang: %s"
 
-#, fuzzy
 #~ msgid "Invalid minimum argument count (%u) for function %s"
 #~ msgstr "Ungültige minimale Anzahl von Argumenten (%u) für die Funktion „%s“"
 
-#, fuzzy
 #~ msgid "Invalid maximum argument count (%u) for function %s"
 #~ msgstr "Ungülte maximale Anzahl an Argumenten (%u) für die Funktion „%s“"
-
-#~ msgid "%s: option '%s' requires an argument\n"
-#~ msgstr "%s: Option „%s“ erfordert ein Argument\n"
 
 #~ msgid "guile: Expanding '%s'\n"
 #~ msgstr "guile: Verarbeite „%s“\n"
@@ -2378,16 +2277,15 @@ msgstr ""
 #~ msgid " (ignored)"
 #~ msgstr " (ignoriert)"
 
-#, fuzzy
-#~ msgid "%s[%s] Error %d%s"
+#~ msgid "<builtin>"
+#~ msgstr "<eingebaut>"
+
+#~ msgid "%s[%s: %s] Error %d%s"
 #~ msgstr "%s[%s: %s] Fehler %d%s"
 
 #~ msgid "Cleaning up temp batch file %s failed (%d)\n"
 #~ msgstr ""
 #~ "Löschen der temporären Stapelverarbeitungsdatei „%s“ scheiterte (%d)\n"
-
-#~ msgid "<builtin>"
-#~ msgstr "<eingebaut>"
 
 #~ msgid "%s: target '%s' does not exist"
 #~ msgstr "%s: Archiv „%s“ existiert nicht"
@@ -2402,10 +2300,6 @@ msgstr ""
 
 #~ msgid "Could not restore stderr\n"
 #~ msgstr "Standardfehler konnte nicht wieder hergestellt werden\n"
-
-#, fuzzy
-#~ msgid "%s: %s: Command not found\n"
-#~ msgstr "%s[%u]: %s: Befehl nicht gefunden\n"
 
 #~ msgid "%s[%u]: %s: Command not found\n"
 #~ msgstr "%s[%u]: %s: Befehl nicht gefunden\n"
@@ -2449,41 +2343,14 @@ msgstr ""
 #~ "                              Synchronisiert die Ausgabe paralleler Jobs "
 #~ "per TYP.\n"
 
-#, fuzzy
-#~ msgid ""
-#~ "  -P, --profile               Print profiling information for each "
-#~ "target.\n"
-#~ msgstr ""
-#~ "  --trace                     Viele Informationen zur Fehlersuche "
-#~ "ausgeben\n"
-
-#~ msgid "  --trace                     Print tracing information.\n"
-#~ msgstr ""
-#~ "  --trace                     Viele Informationen zur Fehlersuche "
-#~ "ausgeben\n"
-
-#~ msgid "unknown debug level specification '%s'"
-#~ msgstr "Unbekannte Debug-Level angegeben „%s“"
-
 #~ msgid "unknown output-sync type '%s'"
 #~ msgstr "unbekannter Typ von Ausgabesynchronisierung „%s“"
 
+#~ msgid "Report bugs to <bug-make@gnu.org>\n"
+#~ msgstr "Fehlermeldungen (auf Englisch) an <bug-make@gnu.org> senden.\n"
+
 #~ msgid "write error: stdout"
 #~ msgstr "Schreibfehler: Standardausgabe"
-
-# !!! Attention: concatenated with the previous messages!!!
-#, fuzzy
-#~ msgid "%s: directory '%s'\n"
-#~ msgstr "%s: Verzeichnis „%s“ wird verlassen\n"
-
-#, fuzzy
-#~ msgid "%s[%u]: unknown directory\n"
-#~ msgstr "%s[%u]: Ein unbekanntes Verzeichnis wird verlassen\n"
-
-# !!! Attention: concatenated with the previous messages!!!
-#, fuzzy
-#~ msgid "%s[%u]: directory '%s'\n"
-#~ msgstr "%s[%u]: Verzeichnis „%s“ wird verlassen\n"
 
 #~ msgid "duping jobs pipe"
 #~ msgstr "Öffnen der Pipe für die Jobs"
@@ -2538,11 +2405,8 @@ msgstr ""
 #~ "# Statistik für Hashtabelle:\n"
 #~ "# "
 
-#~ msgid "'override' directive"
-#~ msgstr "„override“-Anweisung"
-
-#~ msgid " (from '%s', line %lu)"
-#~ msgstr " (aus „%s“, Zeile %lu)"
+#~ msgid "DCL: %s\n"
+#~ msgstr "DCL: %s\n"
 
 #~ msgid "Jobserver slots limited to %d\n"
 #~ msgstr "Zeitschlitze der Jobservers auf %d begranzt\n"
@@ -2571,16 +2435,6 @@ msgstr ""
 
 #~ msgid "%s[%s] Error 0x%x%s"
 #~ msgstr "%s[%s] Fehler 0x%x%s"
-
-#, fuzzy
-#~ msgid "[%s] Error %d%s"
-#~ msgstr "%s[%s: %s] Fehler %d%s"
-
-#~ msgid "Report bugs to <bug-make@gnu.org>\n"
-#~ msgstr "Fehlermeldungen (auf Englisch) an <bug-make@gnu.org> senden.\n"
-
-#~ msgid "DCL: %s\n"
-#~ msgstr "DCL: %s\n"
 
 #~ msgid "%s[%s] %s%s%s"
 #~ msgstr "%s[%s] %s%s%s"

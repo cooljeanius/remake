@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: make-4.2.1\n"
 "Report-Msgid-Bugs-To: bug-make@gnu.org\n"
-"POT-Creation-Date: 2018-02-12 17:11-0500\n"
+"POT-Creation-Date: 2018-02-12 19:14-0500\n"
 "PO-Revision-Date: 2016-08-09 19:23+0200\n"
 "Last-Translator: Benno Schulenberg <benno@vertaalt.nl>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
@@ -130,7 +130,7 @@ msgstr " (uit '%s', regel %lu):\n"
 msgid "unknown debug level specification `%s'"
 msgstr "onbekende aanduiding '%s' voor debug-niveau"
 
-#: dir.c:996
+#: dir.c:997
 msgid ""
 "\n"
 "# Directories\n"
@@ -138,62 +138,62 @@ msgstr ""
 "\n"
 "# Mappen\n"
 
-#: dir.c:1008
+#: dir.c:1009
 #, c-format
 msgid "# %s: could not be stat'd.\n"
 msgstr "# kan status van %s niet opvragen.\n"
 
-#: dir.c:1012
+#: dir.c:1013
 #, fuzzy, c-format
 msgid "# %s (key %s, mtime %d): could not be opened.\n"
 msgstr "# %s (sleutel %s, wijzigingstijd %I64u): kan niet worden geopend.\n"
 
-#: dir.c:1016
+#: dir.c:1017
 #, c-format
 msgid "# %s (device %d, inode [%d,%d,%d]): could not be opened.\n"
 msgstr "# %s (apparaat %d, inode [%d,%d,%d]): kan niet worden geopend.\n"
 
-#: dir.c:1021
+#: dir.c:1022
 #, c-format
 msgid "# %s (device %ld, inode %ld): could not be opened.\n"
 msgstr "# %s (apparaat %ld, inode %ld): kan niet worden geopend.\n"
 
-#: dir.c:1048
+#: dir.c:1049
 #, fuzzy, c-format
 msgid "# %s (key %s, mtime %d): "
 msgstr "# %s (sleutel %s, wijzigingstijd %I64u): "
 
-#: dir.c:1052
+#: dir.c:1053
 #, c-format
 msgid "# %s (device %d, inode [%d,%d,%d]): "
 msgstr "# %s (apparaat %d, inode [%d,%d,%d]): "
 
-#: dir.c:1057
+#: dir.c:1058
 #, c-format
 msgid "# %s (device %ld, inode %ld): "
 msgstr "# %s (apparaat %ld, inode %ld): "
 
-#: dir.c:1063 dir.c:1084
+#: dir.c:1064 dir.c:1085
 msgid "No"
 msgstr "Geen"
 
-#: dir.c:1066 dir.c:1087
+#: dir.c:1067 dir.c:1088
 msgid " files, "
 msgstr " bestanden, "
 
-#: dir.c:1068 dir.c:1089
+#: dir.c:1069 dir.c:1090
 msgid "no"
 msgstr "geen"
 
-#: dir.c:1071
+#: dir.c:1072
 msgid " impossibilities"
 msgstr " onmogelijkheden"
 
-#: dir.c:1075
+#: dir.c:1076
 msgid " so far."
 msgstr " tot nu toe."
 
-#: dir.c:1092
+#: dir.c:1093
 #, c-format
 msgid " impossibilities in %lu directories.\n"
 msgstr " onmogelijkheden in %lu mappen.\n"
@@ -251,121 +251,121 @@ msgstr "*** Verwijderen van tussentijds bestand '%s'"
 msgid "Removing intermediate files...\n"
 msgstr "Verwijderen van tussentijdse bestanden...\n"
 
-#: file.c:817
+#: file.c:818
 #, c-format
 msgid "%s: Timestamp out of range; substituting %s"
 msgstr "%s: Tijdsstempel ligt buiten bereik; wordt vervangen door %s"
 
-#: file.c:818
+#: file.c:819
 msgid "Current time"
 msgstr "Huidige tijd"
 
-#: file.c:915
+#: file.c:916
 msgid "# Not a target:"
 msgstr "# Is geen doel:"
 
-#: file.c:942
+#: file.c:943
 msgid "#  Precious file (prerequisite of .PRECIOUS)."
 msgstr "#  Waardevol bestand (vereiste van .PRECIOUS)."
 
-#: file.c:944
+#: file.c:945
 msgid "#  Phony target (prerequisite of .PHONY)."
 msgstr "#  Nepdoel (vereiste van .PHONY)."
 
-#: file.c:946
+#: file.c:947
 #, fuzzy
 msgid "#  Command-line target."
 msgstr "#  Doel afkomstig van opdrachtregel."
 
-#: file.c:948
+#: file.c:949
 msgid "#  A default, MAKEFILES, or -include/sinclude makefile."
 msgstr ""
 "#  Een standaard Makefile, of eentje via MAKEFILES of '-include/sinclude'."
 
-#: file.c:950
+#: file.c:951
 msgid "#  Implicit rule search has been done."
 msgstr "#  Impliciete regel-zoekopdracht is uitgevoerd."
 
-#: file.c:951
+#: file.c:952
 msgid "#  Implicit rule search has not been done."
 msgstr "#  Impliciete regel-zoekopdracht is niet uitgevoerd."
 
-#: file.c:953
+#: file.c:954
 #, fuzzy, c-format
 msgid "#  Implicit/static pattern stem: `%s'\n"
 msgstr "#  Impliciete/statische patroonstam: '%s'\n"
 
-#: file.c:955
+#: file.c:956
 msgid "#  File is an intermediate prerequisite."
 msgstr "#  Bestand is een tussentijds vereiste."
 
-#: file.c:958
+#: file.c:959
 msgid "#  Also makes:"
 msgstr "#  Maakt ook:"
 
-#: file.c:968
+#: file.c:969
 msgid "#  Modification time never checked."
 msgstr "#  Wijzigingstijd is nooit gecontroleerd."
 
-#: file.c:970
+#: file.c:971
 msgid "#  File does not exist."
 msgstr "#  Bestand bestaat niet."
 
-#: file.c:972
+#: file.c:973
 msgid "#  File is very old."
 msgstr "#  Bestand is erg oud."
 
-#: file.c:977
+#: file.c:978
 #, c-format
 msgid "#  Last modified %s\n"
 msgstr "#  Laatst gewijzigd %s\n"
 
-#: file.c:980
+#: file.c:981
 msgid "#  File has been updated."
 msgstr "#  Bestand is bijgewerkt."
 
-#: file.c:981
+#: file.c:982
 msgid "#  File has not been updated."
 msgstr "#  Bestand is niet bijgewerkt."
 
-#: file.c:989
+#: file.c:990
 #, fuzzy
 msgid "#  Commands currently running (THIS IS A BUG)."
 msgstr "#  Nog lopend recept (DIT IS EEN PROGRAMMAFOUT)."
 
-#: file.c:992
+#: file.c:993
 #, fuzzy
 msgid "#  Dependencies commands running (THIS IS A BUG)."
 msgstr "#  Nog lopende receptafhankelijkheden (DIT IS EEN PROGRAMMAFOUT)."
 
-#: file.c:995
+#: file.c:996
 #, fuzzy
 msgid "#  Commands not yet started."
 msgstr "#  Doel afkomstig van opdrachtregel."
 
-#: file.c:1003
+#: file.c:1004
 msgid "#  Successfully updated."
 msgstr "#  Met succes bijgewerkt."
 
-#: file.c:1007
+#: file.c:1008
 msgid "#  Needs to be updated (-q is set)."
 msgstr "#  Moet worden bijgewerkt ('-q' is ingesteld)."
 
-#: file.c:1010
+#: file.c:1011
 msgid "#  Failed to be updated."
 msgstr "#  Bijwerken is mislukt."
 
-#: file.c:1013
+#: file.c:1014
 #, fuzzy
 msgid "#  Invalid value in `update_status' member!"
 msgstr "#  Ongeldige waarde in 'update_status'-onderdeel!"
 
-#: file.c:1020
+#: file.c:1021
 #, fuzzy
 msgid "#  Invalid value in `command_state' member!"
 msgstr "#  Ongeldige waarde in 'command_state'-onderdeel!"
 
-#: file.c:1081
+#: file.c:1082
 msgid ""
 "\n"
 "# Files"
@@ -373,7 +373,7 @@ msgstr ""
 "\n"
 "# Bestanden"
 
-#: file.c:1085
+#: file.c:1086
 msgid ""
 "\n"
 "# files hash-table stats:\n"
@@ -442,57 +442,57 @@ msgstr "niet-geïmplementeerd op dit platform: functie '%s'"
 msgid "unterminated call to function `%s': missing `%c'"
 msgstr "onafgemaakte aanroep van functie '%s': '%c' ontbreekt"
 
-#: getopt.c:665
+#: getopt.c:668
 #, fuzzy, c-format
 msgid "%s: option `%s' is ambiguous\n"
 msgstr "%s: optie '%s' is niet eenduidig\n"
 
-#: getopt.c:689
+#: getopt.c:692
 #, fuzzy, c-format
 msgid "%s: option `--%s' does not allow an argument\n"
 msgstr "%s: optie '--%s' staat geen argument toe\n"
 
-#: getopt.c:694
+#: getopt.c:697
 #, fuzzy, c-format
 msgid "%s: option `%c%s' does not allow an argument\n"
 msgstr "%s: optie '%c%s' staat geen argument toe\n"
 
-#: getopt.c:712 getopt.c:887
+#: getopt.c:715 getopt.c:890
 #, fuzzy, c-format
 msgid "%s: option `%s' requires an argument\n"
 msgstr "%s: optie '%s' vereist een argument\n"
 
-#: getopt.c:743
+#: getopt.c:746
 #, fuzzy, c-format
 msgid "%s: unrecognized option `--%s'\n"
 msgstr "%s: onbekende optie '--%s'\n"
 
-#: getopt.c:747
+#: getopt.c:750
 #, fuzzy, c-format
 msgid "%s: unrecognized option `%c%s'\n"
 msgstr "%s: onbekende optie '%c%s'\n"
 
-#: getopt.c:773
+#: getopt.c:776
 #, c-format
 msgid "%s: illegal option -- %c\n"
 msgstr "%s: ongeldige optie -- %c\n"
 
-#: getopt.c:776
+#: getopt.c:779
 #, c-format
 msgid "%s: invalid option -- %c\n"
 msgstr "%s: ongeldige optie -- %c\n"
 
-#: getopt.c:806 getopt.c:936
+#: getopt.c:809 getopt.c:939
 #, c-format
 msgid "%s: option requires an argument -- %c\n"
 msgstr "%s: optie vereist een argument -- %c\n"
 
-#: getopt.c:853
+#: getopt.c:856
 #, fuzzy, c-format
 msgid "%s: option `-W %s' is ambiguous\n"
 msgstr "%s: optie '-W %s' is niet eenduidig\n"
 
-#: getopt.c:871
+#: getopt.c:874
 #, fuzzy, c-format
 msgid "%s: option `-W %s' does not allow an argument\n"
 msgstr "%s: optie '-W %s' staat geen argument toe\n"
@@ -505,17 +505,17 @@ msgstr ""
 "beschikbaar"
 
 #: hash.c:280
-#, fuzzy, c-format
+#, c-format
 msgid "Load=%ld/%ld=%.0f%%, "
 msgstr "Belasting=%ld/%ld=%.0f%%, "
 
 #: hash.c:282
-#, fuzzy, c-format
+#, c-format
 msgid "Rehash=%d, "
 msgstr "Herhash=%d, "
 
 #: hash.c:283
-#, fuzzy, c-format
+#, c-format
 msgid "Collisions=%ld/%ld=%.0f%%"
 msgstr "Botsingen=%ld/%ld=%.0f%%"
 
@@ -580,7 +580,7 @@ msgstr "*** [%s] Fout 0x%x (genegeerd)"
 #: job.c:457
 #, fuzzy, c-format
 msgid "*** [%s] Error 0x%x"
-msgstr "%s[%s: %s] Fout %d%s"
+msgstr "*** [%s] Fout 0x%x (genegeerd)"
 
 #: job.c:461
 #, fuzzy, c-format
@@ -590,7 +590,7 @@ msgstr "*** [%s] Fout 0x%x (genegeerd)"
 #: job.c:462
 #, fuzzy, c-format
 msgid "*** [%s] Error %d"
-msgstr "%s[%s: %s] Fout %d%s"
+msgstr "*** [%s] Fout 0x%x (genegeerd)"
 
 #: job.c:467
 msgid " (core dumped)"
@@ -743,7 +743,7 @@ msgstr ""
 "Inhoud van batch-bestand:%s\n"
 "\t%s\n"
 
-#: job.c:3050
+#: job.c:3052
 #, c-format
 msgid "%s (line %d) Bad shell context (!unixy && !batch_mode_shell)\n"
 msgstr "%s (regel %d) Onjuiste shell-context (!unixy && !batch_mode_shell)\n"
@@ -1120,7 +1120,6 @@ msgstr ""
 "Symbolische koppelingen worden niet ondersteund: '-L' wordt uitgeschakeld."
 
 #: main.c:2073
-#, fuzzy
 msgid "Updating makefiles....\n"
 msgstr "Bijwerken van Makefiles...\n"
 
@@ -1170,7 +1169,6 @@ msgid "No targets"
 msgstr "Geen doelen"
 
 #: main.c:2468
-#, fuzzy
 msgid "Updating goal targets....\n"
 msgstr "Bijwerken van doelen...\n"
 
@@ -1260,42 +1258,42 @@ msgstr ""
 "\n"
 "# Make-gegevensbank voltooid op %s\n"
 
-#: main.c:3434
+#: main.c:3435
 #, c-format
 msgid "%s: Entering an unknown directory\n"
 msgstr "%s: Een onbekende map wordt binnengegaan\n"
 
-#: main.c:3436
+#: main.c:3437
 #, c-format
 msgid "%s: Leaving an unknown directory\n"
 msgstr "%s: Een onbekende map wordt verlaten\n"
 
-#: main.c:3439
+#: main.c:3440
 #, fuzzy, c-format
 msgid "%s: Entering directory `%s'\n"
 msgstr "%s: Map '%s' wordt binnengegaan\n"
 
-#: main.c:3442
+#: main.c:3443
 #, fuzzy, c-format
 msgid "%s: Leaving directory `%s'\n"
 msgstr "%s: Map '%s' wordt verlaten\n"
 
-#: main.c:3447
+#: main.c:3448
 #, c-format
 msgid "%s[%u]: Entering an unknown directory\n"
 msgstr "%s[%u]: Een onbekende map wordt binnengegaan\n"
 
-#: main.c:3450
+#: main.c:3451
 #, c-format
 msgid "%s[%u]: Leaving an unknown directory\n"
 msgstr "%s[%u]: Een onbekende map wordt verlaten\n"
 
-#: main.c:3454
+#: main.c:3455
 #, fuzzy, c-format
 msgid "%s[%u]: Entering directory `%s'\n"
 msgstr "%s[%u]: Map '%s' wordt binnengegaan\n"
 
-#: main.c:3457
+#: main.c:3458
 #, fuzzy, c-format
 msgid "%s[%u]: Leaving directory `%s'\n"
 msgstr "%s[%u]: Map '%s' wordt verlaten\n"
@@ -1310,7 +1308,7 @@ msgstr "Onbekende fout %d"
 msgid "%s: %s"
 msgstr "%s: %s"
 
-#: misc.c:270 misc.c:281 misc.c:296 misc.c:313 misc.c:332 read.c:3179
+#: misc.c:270 misc.c:281 misc.c:296 misc.c:313 misc.c:332 read.c:3182
 msgid "virtual memory exhausted"
 msgstr "onvoldoende geheugen beschikbaar"
 
@@ -1481,44 +1479,44 @@ msgstr "slechts één 'else' per voorwaardelijk deel"
 msgid "Malformed target-specific variable definition"
 msgstr "Onjuiste doelspecifieke variabele-definitie"
 
-#: read.c:1914
+#: read.c:1917
 msgid "prerequisites cannot be defined in recipes"
 msgstr "vereisten kunnen niet in recepten gedefinieerd worden"
 
-#: read.c:1967
+#: read.c:1970
 msgid "mixed implicit and static pattern rules"
 msgstr "gemengde impliciete en statische patroonregels"
 
-#: read.c:1990 read.c:2173
+#: read.c:1993 read.c:2176
 msgid "mixed implicit and normal rules"
 msgstr "gemengde impliciete en normale regels"
 
-#: read.c:2035
+#: read.c:2038
 #, fuzzy, c-format
 msgid "target `%s' doesn't match the target pattern"
 msgstr "doel '%s' komt niet overeen met doelpatroon"
 
-#: read.c:2051 read.c:2096
+#: read.c:2054 read.c:2099
 #, fuzzy, c-format
 msgid "target file `%s' has both : and :: entries"
 msgstr "doelbestand '%s' heeft zowel ':'- als '::'-items"
 
-#: read.c:2057
+#: read.c:2060
 #, fuzzy, c-format
 msgid "target `%s' given more than once in the same rule."
 msgstr "doel '%s' is meerdere keren gegeven in dezelfde regel"
 
-#: read.c:2066
+#: read.c:2069
 #, fuzzy, c-format
 msgid "warning: overriding recipe for target `%s'"
 msgstr "Waarschuwing: er wordt voorbijgegaan aan recept voor doel '%s'"
 
-#: read.c:2069
+#: read.c:2072
 #, fuzzy, c-format
 msgid "warning: ignoring old recipe for target `%s'"
 msgstr "Waarschuwing: oud recept voor doel '%s' wordt genegeerd"
 
-#: read.c:2453
+#: read.c:2456
 msgid "warning: NUL character seen; rest of line ignored"
 msgstr "Waarschuwing: NUL-teken gezien; de rest van de regel wordt genegeerd"
 
@@ -1717,7 +1715,7 @@ msgstr ""
 "Waarschuwing: bestand '%s' heeft een wijzigingstijd %s seconden in de "
 "toekomst"
 
-#: remake.c:1609
+#: remake.c:1610
 #, fuzzy, c-format
 msgid ".LIBPATTERNS element `%s' is not a pattern"
 msgstr ".LIBPATTERNS-element '%s' is geen patroon"
@@ -1727,7 +1725,7 @@ msgstr ".LIBPATTERNS-element '%s' is geen patroon"
 msgid "Customs won't export: %s\n"
 msgstr "Customs kan niet exporteren: %s\n"
 
-#: rule.c:521
+#: rule.c:525
 msgid ""
 "\n"
 "# Implicit Rules"
@@ -1735,7 +1733,7 @@ msgstr ""
 "\n"
 "# Impliciete regels"
 
-#: rule.c:540
+#: rule.c:544
 msgid ""
 "\n"
 "# No implicit rules."
@@ -1743,7 +1741,7 @@ msgstr ""
 "\n"
 "# Geen impliciete regels."
 
-#: rule.c:543
+#: rule.c:547
 #, c-format
 msgid ""
 "\n"
@@ -1752,11 +1750,11 @@ msgstr ""
 "\n"
 "# %u impliciete regels, %u"
 
-#: rule.c:552
+#: rule.c:556
 msgid " terminal."
 msgstr " terminal."
 
-#: rule.c:560
+#: rule.c:564
 #, c-format
 msgid "BUG: num_pattern_rules is wrong!  %u != %u"
 msgstr "PROGRAMMAFOUT: num_pattern_rules() is verkeerd!  %u != %u"
@@ -2030,7 +2028,7 @@ msgstr ""
 "# Geen patroonspecifieke variabelewaarden"
 
 #: variable.c:1736
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "\n"
 "# %u pattern-specific variable values"
@@ -2081,9 +2079,9 @@ msgid "BUILTIN RM %s\n"
 msgstr "INGEBOUWDE RM %s\n"
 
 #: vmsjobs.c:471
-#, fuzzy, c-format
+#, c-format
 msgid "Unknown builtin command '%s'\n"
-msgstr "Standaardopdrachten worden gebruikt voor '%s'.\n"
+msgstr "Onbekende ingebouwde opdracht '%s'\n"
 
 #: vmsjobs.c:493
 #, c-format
@@ -2170,95 +2168,8 @@ msgstr ""
 #~ msgid "Recipe has too many lines (%ud)"
 #~ msgstr "Recept bevat te veel regels (%ud)"
 
-#, fuzzy
-#~ msgid "Note: prerequisite breakpoint already set at target %s."
-#~ msgstr "Vereiste '%s' is ouder dan doel '%s'.\n"
-
-#, fuzzy
-#~ msgid "Note: command breakpoint already set at target %s."
-#~ msgstr "Vereiste '%s' is ouder dan doel '%s'.\n"
-
-#, fuzzy
-#~ msgid "Note: target end breakpont set at target %s."
-#~ msgstr "Doel '%s' hoeft niet opnieuw gemaakt te worden"
-
-#, fuzzy
-#~ msgid "You need to supply a variable name."
-#~ msgstr "lege naam van variabele"
-
-#, fuzzy
-#~ msgid "Argument required (new working directory).\n"
-#~ msgstr "%s: Map '%s' wordt binnengegaan\n"
-
-#, fuzzy
-#~ msgid "Working directory %s.\n"
-#~ msgstr "%s: Map '%s' wordt binnengegaan\n"
-
-#, fuzzy
-#~ msgid "Set the working directory to DIR."
-#~ msgstr "%s: Map '%s' wordt binnengegaan\n"
-
-#, fuzzy
-#~ msgid "Running %s\n"
-#~ msgstr "Snoeien van bestand '%s'.\n"
-
-#, fuzzy
-#~ msgid "cannot get target file location\n"
-#~ msgstr "%s: Map '%s' wordt binnengegaan\n"
-
-#, fuzzy
-#~ msgid "Running commands for target %s\n"
-#~ msgstr "Standaardopdrachten worden gebruikt voor '%s'.\n"
-
-#, fuzzy
-#~ msgid "Running commands\n"
-#~ msgstr "Onbekende ingebouwde opdracht '%s'\n"
-
-#, fuzzy
-#~ msgid "Starting directory `%s'\n"
-#~ msgstr "%s: Map '%s' wordt binnengegaan\n"
-
-#, fuzzy
-#~ msgid "Rule %s not found.\n"
-#~ msgstr "Makefile '%s' is niet gevonden."
-
-#, fuzzy
-#~ msgid "cannot get current directory %s\n"
-#~ msgstr "%s: Map '%s' wordt binnengegaan\n"
-
-#, fuzzy
-#~ msgid "Target \"%s\" doesn't have commands associated with it.\n"
-#~ msgstr "doel '%s' komt niet overeen met doelpatroon"
-
-#, fuzzy
-#~ msgid "Target \"%s\" doesn't appear to be a target name.\n"
-#~ msgstr "doel '%s' komt niet overeen met doelpatroon"
-
-#, fuzzy
-#~ msgid "You need to supply a variable name.\n"
-#~ msgstr "lege naam van variabele"
-
-#, fuzzy
-#~ msgid "Error: %s\n"
-#~ msgstr "%s[%s: %s] Fout %d%s"
-
-#~ msgid "#  Command line target."
-#~ msgstr "#  Doel afkomstig van opdrachtregel."
-
 #~ msgid "#  Builtin rule"
 #~ msgstr "#  Ingebouwde regel"
-
-#~ msgid "#  Implicit/static pattern stem: '%s'\n"
-#~ msgstr "#  Impliciete/statische patroonstam: '%s'\n"
-
-#~ msgid "#  Recipe currently running (THIS IS A BUG)."
-#~ msgstr "#  Nog lopend recept (DIT IS EEN PROGRAMMAFOUT)."
-
-#~ msgid "#  Dependencies recipe running (THIS IS A BUG)."
-#~ msgstr "#  Nog lopende receptafhankelijkheden (DIT IS EEN PROGRAMMAFOUT)."
-
-#~ msgid "#  Invalid value in 'command_state' member!"
-#~ msgstr "#  Ongeldige waarde in 'command_state'-onderdeel!"
 
 #~ msgid "%s: Field '%s' not cached: %s"
 #~ msgstr "%s: Veld '%s' is niet gecached: %s"
@@ -2281,7 +2192,6 @@ msgstr ""
 #~ msgid "read: %s: %s"
 #~ msgstr "read(): %s: %s"
 
-#, fuzzy
 #~ msgid "file: invalid file operation: %s"
 #~ msgstr "file: ongeldige bestandsbewerking: %s"
 
@@ -2294,16 +2204,11 @@ msgstr ""
 #~ msgid "Function name too long: %s"
 #~ msgstr "Functienaam is te lang: %s"
 
-#, fuzzy
 #~ msgid "Invalid minimum argument count (%u) for function %s"
 #~ msgstr "Ongeldig minimumaantal argumenten (%u) voor functie %s"
 
-#, fuzzy
 #~ msgid "Invalid maximum argument count (%u) for function %s"
 #~ msgstr "Ongeldig maximumaantal argumenten (%u) voor functie %s"
-
-#~ msgid "%s: option '%s' requires an argument\n"
-#~ msgstr "%s: optie '%s' vereist een argument\n"
 
 #~ msgid "guile: Expanding '%s'\n"
 #~ msgstr "guile: Expanderen van '%s'\n"
@@ -2317,15 +2222,14 @@ msgstr ""
 #~ msgid " (ignored)"
 #~ msgstr " (genegeerd)"
 
-#, fuzzy
-#~ msgid "%s[%s] Error %d%s"
+#~ msgid "<builtin>"
+#~ msgstr "<ingebouwd>"
+
+#~ msgid "%s[%s: %s] Error %d%s"
 #~ msgstr "%s[%s: %s] Fout %d%s"
 
 #~ msgid "Cleaning up temp batch file %s failed (%d)\n"
 #~ msgstr "Opschonen van tijdelijk batch-bestand %s is mislukt (%d)\n"
-
-#~ msgid "<builtin>"
-#~ msgstr "<ingebouwd>"
 
 #~ msgid "%s: target '%s' does not exist"
 #~ msgstr "%s: doel '%s' bestaat niet"
@@ -2340,10 +2244,6 @@ msgstr ""
 
 #~ msgid "Could not restore stderr\n"
 #~ msgstr "Kan standaardfoutuitvoer niet herstellen\n"
-
-#, fuzzy
-#~ msgid "%s: %s: Command not found\n"
-#~ msgstr "%s[%u]: %s: Opdracht niet gevonden\n"
 
 #~ msgid "%s[%u]: %s: Command not found\n"
 #~ msgstr "%s[%u]: %s: Opdracht niet gevonden\n"
@@ -2387,35 +2287,16 @@ msgstr ""
 #~ "                               uitvoer van parallelle taken "
 #~ "synchroniseren op TYPE\n"
 
-#, fuzzy
-#~ msgid ""
-#~ "  -P, --profile               Print profiling information for each "
-#~ "target.\n"
-#~ msgstr "  --trace                      tracing-informatie weergeven\n"
-
-#~ msgid "  --trace                     Print tracing information.\n"
-#~ msgstr "  --trace                      tracing-informatie weergeven\n"
-
-#~ msgid "unknown debug level specification '%s'"
-#~ msgstr "onbekende aanduiding '%s' voor debug-niveau"
-
 #~ msgid "unknown output-sync type '%s'"
 #~ msgstr "onbekend uitvoersynchronisatie-type: '%s'"
 
+#~ msgid "Report bugs to <bug-make@gnu.org>\n"
+#~ msgstr ""
+#~ "Rapporteer programmafouten aan <bug-make@gnu.org>,\n"
+#~ "meld gebreken in de vertaling aan <vertaling@vrijschrift.org>.\n"
+
 #~ msgid "write error: stdout"
 #~ msgstr "schrijffout: standaarduitvoer"
-
-#, fuzzy
-#~ msgid "%s: directory '%s'\n"
-#~ msgstr "%s: Map '%s' wordt verlaten\n"
-
-#, fuzzy
-#~ msgid "%s[%u]: unknown directory\n"
-#~ msgstr "%s[%u]: Een onbekende map wordt verlaten\n"
-
-#, fuzzy
-#~ msgid "%s[%u]: directory '%s'\n"
-#~ msgstr "%s[%u]: Map '%s' wordt verlaten\n"
 
 #~ msgid "duping jobs pipe"
 #~ msgstr "dupliceren van takenpijp"
@@ -2471,11 +2352,8 @@ msgstr ""
 #~ "# hashtabel-statistieken van bestanden:\n"
 #~ "# "
 
-#~ msgid "'override' directive"
-#~ msgstr "'override'-opdracht"
-
-#~ msgid " (from '%s', line %lu)"
-#~ msgstr " (uit '%s', regel %lu)"
+#~ msgid "DCL: %s\n"
+#~ msgstr "DCL: %s\n"
 
 #~ msgid "Jobserver slots limited to %d\n"
 #~ msgstr "Taakserver-plaatsen zijn beperkt tot %d\n"
@@ -2502,18 +2380,6 @@ msgstr ""
 
 #~ msgid "%s[%s] Error 0x%x%s"
 #~ msgstr "%s[%s] Fout 0x%x%s"
-
-#, fuzzy
-#~ msgid "[%s] Error %d%s"
-#~ msgstr "%s[%s: %s] Fout %d%s"
-
-#~ msgid "Report bugs to <bug-make@gnu.org>\n"
-#~ msgstr ""
-#~ "Rapporteer programmafouten aan <bug-make@gnu.org>,\n"
-#~ "meld gebreken in de vertaling aan <vertaling@vrijschrift.org>.\n"
-
-#~ msgid "DCL: %s\n"
-#~ msgstr "DCL: %s\n"
 
 #~ msgid "BUILTIN ECHO %s->%s\n"
 #~ msgstr "INGEBOUWDE ECHO %s->%s\n"

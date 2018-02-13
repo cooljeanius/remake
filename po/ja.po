@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: make 4.2.1\n"
 "Report-Msgid-Bugs-To: bug-make@gnu.org\n"
-"POT-Creation-Date: 2018-02-12 17:11-0500\n"
+"POT-Creation-Date: 2018-02-12 19:14-0500\n"
 "PO-Revision-Date: 2016-06-12 05:43+0900\n"
 "Last-Translator: Takeshi Hamasaki <hmatrjp@users.sourceforge.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
@@ -127,7 +127,7 @@ msgstr " (ファイル '%s', %lu 行目):\n"
 msgid "unknown debug level specification `%s'"
 msgstr "不明なデバッグレベル指定 '%s'"
 
-#: dir.c:996
+#: dir.c:997
 msgid ""
 "\n"
 "# Directories\n"
@@ -135,62 +135,62 @@ msgstr ""
 "\n"
 "# ディレクトリ\n"
 
-#: dir.c:1008
+#: dir.c:1009
 #, c-format
 msgid "# %s: could not be stat'd.\n"
 msgstr "# %s: 状態を調べられませんでした.\n"
 
-#: dir.c:1012
+#: dir.c:1013
 #, fuzzy, c-format
 msgid "# %s (key %s, mtime %d): could not be opened.\n"
 msgstr "# %s (key %s, mtime %I64u): 開けませんでした.\n"
 
-#: dir.c:1016
+#: dir.c:1017
 #, c-format
 msgid "# %s (device %d, inode [%d,%d,%d]): could not be opened.\n"
 msgstr "# %s (device %d, inode [%d,%d,%d]): 開けませんでした.\n"
 
-#: dir.c:1021
+#: dir.c:1022
 #, c-format
 msgid "# %s (device %ld, inode %ld): could not be opened.\n"
 msgstr "# %s (device %ld, inode %ld): 開けませんでした.\n"
 
-#: dir.c:1048
+#: dir.c:1049
 #, fuzzy, c-format
 msgid "# %s (key %s, mtime %d): "
 msgstr "# %s (key %s, mtime %I64u): "
 
-#: dir.c:1052
+#: dir.c:1053
 #, c-format
 msgid "# %s (device %d, inode [%d,%d,%d]): "
 msgstr "# %s (device %d, inode [%d,%d,%d]): "
 
-#: dir.c:1057
+#: dir.c:1058
 #, c-format
 msgid "# %s (device %ld, inode %ld): "
 msgstr "# %s (device %ld, inode %ld): "
 
-#: dir.c:1063 dir.c:1084
+#: dir.c:1064 dir.c:1085
 msgid "No"
 msgstr "0"
 
-#: dir.c:1066 dir.c:1087
+#: dir.c:1067 dir.c:1088
 msgid " files, "
 msgstr " 個のファイル, "
 
-#: dir.c:1068 dir.c:1089
+#: dir.c:1069 dir.c:1090
 msgid "no"
 msgstr "0"
 
-#: dir.c:1071
+#: dir.c:1072
 msgid " impossibilities"
 msgstr " 個の適用不能ファイル名"
 
-#: dir.c:1075
+#: dir.c:1076
 msgid " so far."
 msgstr " (ここまでに)."
 
-#: dir.c:1092
+#: dir.c:1093
 #, c-format
 msgid " impossibilities in %lu directories.\n"
 msgstr " 個の適用不能ファイル名 (%lu 個のディレクトリ内).\n"
@@ -248,119 +248,119 @@ msgstr "*** 中間ファイル '%s'　を削除します"
 msgid "Removing intermediate files...\n"
 msgstr "中間ファイルを削除しています...\n"
 
-#: file.c:817
+#: file.c:818
 #, c-format
 msgid "%s: Timestamp out of range; substituting %s"
 msgstr "%s: タイムスタンプが範囲外です -- 代りに %s とします"
 
-#: file.c:818
+#: file.c:819
 msgid "Current time"
 msgstr "現在時刻"
 
-#: file.c:915
+#: file.c:916
 msgid "# Not a target:"
 msgstr "# ターゲットではありません:"
 
-#: file.c:942
+#: file.c:943
 msgid "#  Precious file (prerequisite of .PRECIOUS)."
 msgstr "#  特別扱いのファイル (.PRECIOUS の必要条件)"
 
-#: file.c:944
+#: file.c:945
 msgid "#  Phony target (prerequisite of .PHONY)."
 msgstr "#  疑似ターゲット (.PHONY の必要条件)"
 
-#: file.c:946
+#: file.c:947
 #, fuzzy
 msgid "#  Command-line target."
 msgstr "#  コマンドラインターゲット."
 
-#: file.c:948
+#: file.c:949
 msgid "#  A default, MAKEFILES, or -include/sinclude makefile."
 msgstr "#  デフォルトまたは MAKEFILES, -include/sinclude Makefile."
 
-#: file.c:950
+#: file.c:951
 msgid "#  Implicit rule search has been done."
 msgstr "#  暗黙ルールの探索が行われました."
 
-#: file.c:951
+#: file.c:952
 msgid "#  Implicit rule search has not been done."
 msgstr "#  暗黙ルールの探索は行われませんでした."
 
-#: file.c:953
+#: file.c:954
 #, fuzzy, c-format
 msgid "#  Implicit/static pattern stem: `%s'\n"
 msgstr "#  暗黙/静的パターン語幹: '%s'\n"
 
-#: file.c:955
+#: file.c:956
 msgid "#  File is an intermediate prerequisite."
 msgstr "#  ファイルは中間必要条件です."
 
-#: file.c:958
+#: file.c:959
 msgid "#  Also makes:"
 msgstr "#  さらに make:"
 
-#: file.c:968
+#: file.c:969
 msgid "#  Modification time never checked."
 msgstr "#  修正時刻がチェックされることはありません."
 
-#: file.c:970
+#: file.c:971
 msgid "#  File does not exist."
 msgstr "#  ファイルが存在しません."
 
-#: file.c:972
+#: file.c:973
 msgid "#  File is very old."
 msgstr "#  ファイルが非常に古いです."
 
-#: file.c:977
+#: file.c:978
 #, c-format
 msgid "#  Last modified %s\n"
 msgstr "#  最終修正 %s\n"
 
-#: file.c:980
+#: file.c:981
 msgid "#  File has been updated."
 msgstr "#  ファイルは更新されています."
 
-#: file.c:981
+#: file.c:982
 msgid "#  File has not been updated."
 msgstr "#  ファイルは更新されていません."
 
-#: file.c:989
+#: file.c:990
 #, fuzzy
 msgid "#  Commands currently running (THIS IS A BUG)."
 msgstr "#  レシピを現在実行中です (*これはバグです*)."
 
-#: file.c:992
+#: file.c:993
 #, fuzzy
 msgid "#  Dependencies commands running (THIS IS A BUG)."
 msgstr "#  依存関係レシピを実行中です (*これはバグです*)."
 
-#: file.c:995
+#: file.c:996
 #, fuzzy
 msgid "#  Commands not yet started."
 msgstr "#  コマンドラインターゲット."
 
-#: file.c:1003
+#: file.c:1004
 msgid "#  Successfully updated."
 msgstr "#  更新に成功しました."
 
-#: file.c:1007
+#: file.c:1008
 msgid "#  Needs to be updated (-q is set)."
 msgstr "#  更新が必要です (-q がセットされています)."
 
-#: file.c:1010
+#: file.c:1011
 msgid "#  Failed to be updated."
 msgstr "#  更新に失敗しました."
 
-#: file.c:1013
+#: file.c:1014
 msgid "#  Invalid value in `update_status' member!"
 msgstr "#  `update_status' メンバに無効な値!"
 
-#: file.c:1020
+#: file.c:1021
 #, fuzzy
 msgid "#  Invalid value in `command_state' member!"
 msgstr "#  'command_state' メンバに無効な値です!"
 
-#: file.c:1081
+#: file.c:1082
 msgid ""
 "\n"
 "# Files"
@@ -368,7 +368,7 @@ msgstr ""
 "\n"
 "# ファイル"
 
-#: file.c:1085
+#: file.c:1086
 msgid ""
 "\n"
 "# files hash-table stats:\n"
@@ -437,57 +437,57 @@ msgstr "このプラットフォームでは実装されていません: 関数 
 msgid "unterminated call to function `%s': missing `%c'"
 msgstr "終端がない関数呼び出し '%s': '%c' がありません"
 
-#: getopt.c:665
+#: getopt.c:668
 #, fuzzy, c-format
 msgid "%s: option `%s' is ambiguous\n"
 msgstr "%s: オプション '%s' は短すぎて正しく判別できません\n"
 
-#: getopt.c:689
+#: getopt.c:692
 #, fuzzy, c-format
 msgid "%s: option `--%s' does not allow an argument\n"
 msgstr "%s: オプション '--%s' は引数を取ることができません\n"
 
-#: getopt.c:694
+#: getopt.c:697
 #, fuzzy, c-format
 msgid "%s: option `%c%s' does not allow an argument\n"
 msgstr "%s: オプション '%c%s' は引数を取ることができません\n"
 
-#: getopt.c:712 getopt.c:887
+#: getopt.c:715 getopt.c:890
 #, fuzzy, c-format
 msgid "%s: option `%s' requires an argument\n"
 msgstr "%s: オプション '%s' には引数が1つ必要です\n"
 
-#: getopt.c:743
+#: getopt.c:746
 #, fuzzy, c-format
 msgid "%s: unrecognized option `--%s'\n"
 msgstr "%s: オプション '--%s' を認識できません\n"
 
-#: getopt.c:747
+#: getopt.c:750
 #, fuzzy, c-format
 msgid "%s: unrecognized option `%c%s'\n"
 msgstr "%s: オプション '%c%s' を認識できません\n"
 
-#: getopt.c:773
+#: getopt.c:776
 #, c-format
 msgid "%s: illegal option -- %c\n"
 msgstr "%s: 不正なオプション ― %c\n"
 
-#: getopt.c:776
+#: getopt.c:779
 #, c-format
 msgid "%s: invalid option -- %c\n"
 msgstr "%s: 無効なオプション ― %c\n"
 
-#: getopt.c:806 getopt.c:936
+#: getopt.c:809 getopt.c:939
 #, c-format
 msgid "%s: option requires an argument -- %c\n"
 msgstr "%s: オプションには引数が必要です ― %c\n"
 
-#: getopt.c:853
+#: getopt.c:856
 #, fuzzy, c-format
 msgid "%s: option `-W %s' is ambiguous\n"
 msgstr "%s: オプション '-W %s' は短すぎて正しく判別できません\n"
 
-#: getopt.c:871
+#: getopt.c:874
 #, fuzzy, c-format
 msgid "%s: option `-W %s' does not allow an argument\n"
 msgstr "%s: オプション '-W %s' は引数を取ることができません\n"
@@ -500,17 +500,17 @@ msgstr ""
 "た"
 
 #: hash.c:280
-#, fuzzy, c-format
+#, c-format
 msgid "Load=%ld/%ld=%.0f%%, "
 msgstr "Load=%ld/%ld=%.0f%%, "
 
 #: hash.c:282
-#, fuzzy, c-format
+#, c-format
 msgid "Rehash=%d, "
 msgstr "Rehash=%d, "
 
 #: hash.c:283
-#, fuzzy, c-format
+#, c-format
 msgid "Collisions=%ld/%ld=%.0f%%"
 msgstr "Collisions=%ld/%ld=%.0f%%"
 
@@ -575,7 +575,7 @@ msgstr "*** [%s] エラー 0x%x (無視されました)"
 #: job.c:457
 #, fuzzy, c-format
 msgid "*** [%s] Error 0x%x"
-msgstr "%s[%s: %s] エラー %d%s"
+msgstr "*** [%s] エラー 0x%x (無視されました)"
 
 #: job.c:461
 #, c-format
@@ -585,7 +585,7 @@ msgstr "[%s] エラー %d (無視されました)"
 #: job.c:462
 #, fuzzy, c-format
 msgid "*** [%s] Error %d"
-msgstr "%s[%s: %s] エラー %d%s"
+msgstr "*** [%s] エラー 0x%x (無視されました)"
 
 #: job.c:467
 msgid " (core dumped)"
@@ -733,7 +733,7 @@ msgstr ""
 "バッチファイルの内容 :%s\n"
 "\t%s\n"
 
-#: job.c:3050
+#: job.c:3052
 #, c-format
 msgid "%s (line %d) Bad shell context (!unixy && !batch_mode_shell)\n"
 msgstr "%s (%d 行目) 不正なシェルコンテキスト (!unixy && !batch_mode_shell)\n"
@@ -1098,7 +1098,6 @@ msgid "Symbolic links not supported: disabling -L."
 msgstr "シンボリックリンクはサポートされていません: -L は無効です."
 
 #: main.c:2073
-#, fuzzy
 msgid "Updating makefiles....\n"
 msgstr "makefile の更新中....\n"
 
@@ -1148,7 +1147,6 @@ msgid "No targets"
 msgstr "ターゲットがありません"
 
 #: main.c:2468
-#, fuzzy
 msgid "Updating goal targets....\n"
 msgstr "最終ターゲットを更新中....\n"
 
@@ -1235,42 +1233,42 @@ msgstr ""
 "\n"
 "# Make データベース終了 %s\n"
 
-#: main.c:3434
+#: main.c:3435
 #, c-format
 msgid "%s: Entering an unknown directory\n"
 msgstr "%s: ディレクトリ(ディレクトリ名不明)に入ります\n"
 
-#: main.c:3436
+#: main.c:3437
 #, c-format
 msgid "%s: Leaving an unknown directory\n"
 msgstr "%s: ディレクトリ(ディレクトリ名不明)から出ます\n"
 
-#: main.c:3439
+#: main.c:3440
 #, fuzzy, c-format
 msgid "%s: Entering directory `%s'\n"
 msgstr "%s: ディレクトリ '%s'　に入ります\n"
 
-#: main.c:3442
+#: main.c:3443
 #, fuzzy, c-format
 msgid "%s: Leaving directory `%s'\n"
 msgstr "%s: ディレクトリ '%s' から出ます\n"
 
-#: main.c:3447
+#: main.c:3448
 #, c-format
 msgid "%s[%u]: Entering an unknown directory\n"
 msgstr "%s[%u]: ディレクトリ(ディレクトリ名不明)に入ります\n"
 
-#: main.c:3450
+#: main.c:3451
 #, c-format
 msgid "%s[%u]: Leaving an unknown directory\n"
 msgstr "%s[%u]: ディレクトリ(ディレクトリ名不明)から出ます\n"
 
-#: main.c:3454
+#: main.c:3455
 #, fuzzy, c-format
 msgid "%s[%u]: Entering directory `%s'\n"
 msgstr "%s[%u]: ディレクトリ '%s' に入ります\n"
 
-#: main.c:3457
+#: main.c:3458
 #, fuzzy, c-format
 msgid "%s[%u]: Leaving directory `%s'\n"
 msgstr "%s[%u]: ディレクトリ '%s' から出ます\n"
@@ -1285,7 +1283,7 @@ msgstr "未知のエラー %d"
 msgid "%s: %s"
 msgstr "%s: %s"
 
-#: misc.c:270 misc.c:281 misc.c:296 misc.c:313 misc.c:332 read.c:3179
+#: misc.c:270 misc.c:281 misc.c:296 misc.c:313 misc.c:332 read.c:3182
 msgid "virtual memory exhausted"
 msgstr "仮想メモリを使い果たしました"
 
@@ -1455,44 +1453,44 @@ msgstr "一つの条件部につき一つしか 'else' を使えません"
 msgid "Malformed target-specific variable definition"
 msgstr "ターゲット特有の変数定義が異常です"
 
-#: read.c:1914
+#: read.c:1917
 msgid "prerequisites cannot be defined in recipes"
 msgstr "必要条件をレシピ内で定義できません"
 
-#: read.c:1967
+#: read.c:1970
 msgid "mixed implicit and static pattern rules"
 msgstr "暗黙ルールと静的パターンルールが混ざりました"
 
-#: read.c:1990 read.c:2173
+#: read.c:1993 read.c:2176
 msgid "mixed implicit and normal rules"
 msgstr "暗黙ルールと通常ルールが混ざりました"
 
-#: read.c:2035
+#: read.c:2038
 #, fuzzy, c-format
 msgid "target `%s' doesn't match the target pattern"
 msgstr "ターゲット '%s' はターゲットパターンと一致しません"
 
-#: read.c:2051 read.c:2096
+#: read.c:2054 read.c:2099
 #, fuzzy, c-format
 msgid "target file `%s' has both : and :: entries"
 msgstr "ターゲットファイル '%s' が : と :: 項目の両方を持っています"
 
-#: read.c:2057
+#: read.c:2060
 #, fuzzy, c-format
 msgid "target `%s' given more than once in the same rule."
 msgstr "ターゲット '%s' が同一ルール内で複数回与えられました"
 
-#: read.c:2066
+#: read.c:2069
 #, fuzzy, c-format
 msgid "warning: overriding recipe for target `%s'"
 msgstr "警告: ターゲット '%s' のためのレシピを置き換えます"
 
-#: read.c:2069
+#: read.c:2072
 #, fuzzy, c-format
 msgid "warning: ignoring old recipe for target `%s'"
 msgstr "警告: ターゲット '%s' のための古いレシピは無視されます"
 
-#: read.c:2453
+#: read.c:2456
 msgid "warning: NUL character seen; rest of line ignored"
 msgstr "警告: NUL 文字があります; 行の残りは無視されます"
 
@@ -1690,7 +1688,7 @@ msgstr "警告: ファイル '%s' の修正時刻は未来のものです"
 msgid "Warning: File `%s' has modification time %s s in the future"
 msgstr "警告: ファイル '%s' の修正時刻 %s は未来の時刻です"
 
-#: remake.c:1609
+#: remake.c:1610
 #, fuzzy, c-format
 msgid ".LIBPATTERNS element `%s' is not a pattern"
 msgstr ".LIBPATTERNS 要素 '%s' がパターンではありません"
@@ -1700,7 +1698,7 @@ msgstr ".LIBPATTERNS 要素 '%s' がパターンではありません"
 msgid "Customs won't export: %s\n"
 msgstr "Customs がエクスポートしてくれません: %s\n"
 
-#: rule.c:521
+#: rule.c:525
 msgid ""
 "\n"
 "# Implicit Rules"
@@ -1708,7 +1706,7 @@ msgstr ""
 "\n"
 "# 暗黙ルール"
 
-#: rule.c:540
+#: rule.c:544
 msgid ""
 "\n"
 "# No implicit rules."
@@ -1716,7 +1714,7 @@ msgstr ""
 "\n"
 "# 暗黙ルールなし."
 
-#: rule.c:543
+#: rule.c:547
 #, c-format
 msgid ""
 "\n"
@@ -1725,11 +1723,11 @@ msgstr ""
 "\n"
 "# %u 個の暗黙ルール, %u"
 
-#: rule.c:552
+#: rule.c:556
 msgid " terminal."
 msgstr " 以上."
 
-#: rule.c:560
+#: rule.c:564
 #, c-format
 msgid "BUG: num_pattern_rules is wrong!  %u != %u"
 msgstr "バグ: num_pattern_rules が間違っている!  %u != %u"
@@ -1998,7 +1996,7 @@ msgstr ""
 "# パターン指定変数の値なし."
 
 #: variable.c:1736
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "\n"
 "# %u pattern-specific variable values"
@@ -2048,9 +2046,9 @@ msgid "BUILTIN RM %s\n"
 msgstr "ビルトイン RM %s\n"
 
 #: vmsjobs.c:471
-#, fuzzy, c-format
+#, c-format
 msgid "Unknown builtin command '%s'\n"
-msgstr "'%s' のためのデフォルトのコマンドを使います.\n"
+msgstr "不明なビルトインコマンド '%s'\n"
 
 #: vmsjobs.c:493
 #, c-format
@@ -2137,95 +2135,8 @@ msgstr ""
 #~ msgid "Recipe has too many lines (%ud)"
 #~ msgstr "レシピの行数が多すぎます (%ud)"
 
-#, fuzzy
-#~ msgid "Note: prerequisite breakpoint already set at target %s."
-#~ msgstr "必要条件 '%s' はターゲット '%s' よりも古い.\n"
-
-#, fuzzy
-#~ msgid "Note: command breakpoint already set at target %s."
-#~ msgstr "必要条件 '%s' はターゲット '%s' よりも古い.\n"
-
-#, fuzzy
-#~ msgid "Note: target end breakpont set at target %s."
-#~ msgstr "ターゲット '%s' を再make する必要はありません"
-
-#, fuzzy
-#~ msgid "You need to supply a variable name."
-#~ msgstr "空の変数名"
-
-#, fuzzy
-#~ msgid "Argument required (new working directory).\n"
-#~ msgstr "%s: ディレクトリ '%s'　に入ります\n"
-
-#, fuzzy
-#~ msgid "Working directory %s.\n"
-#~ msgstr "%s: ディレクトリ '%s'　に入ります\n"
-
-#, fuzzy
-#~ msgid "Set the working directory to DIR."
-#~ msgstr "%s: ディレクトリ '%s'　に入ります\n"
-
-#, fuzzy
-#~ msgid "Running %s\n"
-#~ msgstr "ファイル '%s'　の依存関係を整理しています.\n"
-
-#, fuzzy
-#~ msgid "cannot get target file location\n"
-#~ msgstr "%s: ディレクトリ '%s'　に入ります\n"
-
-#, fuzzy
-#~ msgid "Running commands for target %s\n"
-#~ msgstr "'%s' のためのデフォルトのコマンドを使います.\n"
-
-#, fuzzy
-#~ msgid "Running commands\n"
-#~ msgstr "不明なビルトインコマンド '%s'\n"
-
-#, fuzzy
-#~ msgid "Starting directory `%s'\n"
-#~ msgstr "%s: ディレクトリ '%s'　に入ります\n"
-
-#, fuzzy
-#~ msgid "Rule %s not found.\n"
-#~ msgstr "makefile '%s' が見つかりませんでした"
-
-#, fuzzy
-#~ msgid "cannot get current directory %s\n"
-#~ msgstr "%s: ディレクトリ '%s'　に入ります\n"
-
-#, fuzzy
-#~ msgid "Target \"%s\" doesn't have commands associated with it.\n"
-#~ msgstr "ターゲット '%s' はターゲットパターンと一致しません"
-
-#, fuzzy
-#~ msgid "Target \"%s\" doesn't appear to be a target name.\n"
-#~ msgstr "ターゲット '%s' はターゲットパターンと一致しません"
-
-#, fuzzy
-#~ msgid "You need to supply a variable name.\n"
-#~ msgstr "空の変数名"
-
-#, fuzzy
-#~ msgid "Error: %s\n"
-#~ msgstr "%s[%s: %s] エラー %d%s"
-
-#~ msgid "#  Command line target."
-#~ msgstr "#  コマンドラインターゲット."
-
 #~ msgid "#  Builtin rule"
 #~ msgstr "# ビルトインルール"
-
-#~ msgid "#  Implicit/static pattern stem: '%s'\n"
-#~ msgstr "#  暗黙/静的パターン語幹: '%s'\n"
-
-#~ msgid "#  Recipe currently running (THIS IS A BUG)."
-#~ msgstr "#  レシピを現在実行中です (*これはバグです*)."
-
-#~ msgid "#  Dependencies recipe running (THIS IS A BUG)."
-#~ msgstr "#  依存関係レシピを実行中です (*これはバグです*)."
-
-#~ msgid "#  Invalid value in 'command_state' member!"
-#~ msgstr "#  'command_state' メンバに無効な値です!"
 
 #~ msgid "%s: Field '%s' not cached: %s"
 #~ msgstr "%s: フィールド '%s' はキャッシュされていません: %s"
@@ -2248,7 +2159,6 @@ msgstr ""
 #~ msgid "read: %s: %s"
 #~ msgstr "read: %s: %s"
 
-#, fuzzy
 #~ msgid "file: invalid file operation: %s"
 #~ msgstr "file: 無効なファイル操作: %s"
 
@@ -2261,16 +2171,11 @@ msgstr ""
 #~ msgid "Function name too long: %s"
 #~ msgstr "関数名が長すぎます: %s"
 
-#, fuzzy
 #~ msgid "Invalid minimum argument count (%u) for function %s"
 #~ msgstr "引数個数指定（最小値;%u）が無効です: 関数 %s"
 
-#, fuzzy
 #~ msgid "Invalid maximum argument count (%u) for function %s"
 #~ msgstr "引数個数指定（最大値;%u）が無効です: 関数 %s"
-
-#~ msgid "%s: option '%s' requires an argument\n"
-#~ msgstr "%s: オプション '%s' には引数が1つ必要です\n"
 
 #~ msgid "guile: Expanding '%s'\n"
 #~ msgstr "guile: 展開中 '%s'\n"
@@ -2284,15 +2189,14 @@ msgstr ""
 #~ msgid " (ignored)"
 #~ msgstr " (無視されました)"
 
-#, fuzzy
-#~ msgid "%s[%s] Error %d%s"
+#~ msgid "<builtin>"
+#~ msgstr "<ビルトイン>"
+
+#~ msgid "%s[%s: %s] Error %d%s"
 #~ msgstr "%s[%s: %s] エラー %d%s"
 
 #~ msgid "Cleaning up temp batch file %s failed (%d)\n"
 #~ msgstr "一時的なバッチファイル %s の消去に失敗しました(%d)\n"
-
-#~ msgid "<builtin>"
-#~ msgstr "<ビルトイン>"
 
 #~ msgid "%s: target '%s' does not exist"
 #~ msgstr "%s: ターゲット '%s' が存在しません"
@@ -2306,10 +2210,6 @@ msgstr ""
 
 #~ msgid "Could not restore stderr\n"
 #~ msgstr "標準エラー出力を復元できませんでした\n"
-
-#, fuzzy
-#~ msgid "%s: %s: Command not found\n"
-#~ msgstr "%s[%u]: %s: コマンドが見つかりませんでした\n"
 
 #~ msgid "%s[%u]: %s: Command not found\n"
 #~ msgstr "%s[%u]: %s: コマンドが見つかりませんでした\n"
@@ -2351,35 +2251,14 @@ msgstr ""
 #~ "  -O[TYPE], --output-sync[=TYPE]\n"
 #~ "                              並列ジョブの出力を TYPE で揃える.\n"
 
-#, fuzzy
-#~ msgid ""
-#~ "  -P, --profile               Print profiling information for each "
-#~ "target.\n"
-#~ msgstr "  --trace                     トレース情報を表示する.\n"
-
-#~ msgid "  --trace                     Print tracing information.\n"
-#~ msgstr "  --trace                     トレース情報を表示する.\n"
-
-#~ msgid "unknown debug level specification '%s'"
-#~ msgstr "不明なデバッグレベル指定 '%s'"
-
 #~ msgid "unknown output-sync type '%s'"
 #~ msgstr "未知の出力同期型 '%s'"
 
+#~ msgid "Report bugs to <bug-make@gnu.org>\n"
+#~ msgstr "バグレポートは <bug-make@gnu.org> まで.\n"
+
 #~ msgid "write error: stdout"
 #~ msgstr "書き込みエラー: 標準出力"
-
-#, fuzzy
-#~ msgid "%s: directory '%s'\n"
-#~ msgstr "%s: ディレクトリ '%s' から出ます\n"
-
-#, fuzzy
-#~ msgid "%s[%u]: unknown directory\n"
-#~ msgstr "%s[%u]: ディレクトリ(ディレクトリ名不明)から出ます\n"
-
-#, fuzzy
-#~ msgid "%s[%u]: directory '%s'\n"
-#~ msgstr "%s[%u]: ディレクトリ '%s' から出ます\n"
 
 #~ msgid "duping jobs pipe"
 #~ msgstr "ジョブパイプ複製中"
@@ -2434,11 +2313,8 @@ msgstr ""
 #~ "# ハッシュテーブルの状態:\n"
 #~ "# "
 
-#~ msgid "'override' directive"
-#~ msgstr "'override' 疑似命令"
-
-#~ msgid " (from '%s', line %lu)"
-#~ msgstr " (ファイル '%s', %lu 行目)"
+#~ msgid "DCL: %s\n"
+#~ msgstr "DCL: %s\n"
 
 #~ msgid "Jobserver slots limited to %d\n"
 #~ msgstr "jobserver のスロットは %d までです\n"
@@ -2465,16 +2341,6 @@ msgstr ""
 
 #~ msgid "%s[%s] Error 0x%x%s"
 #~ msgstr "%s[%s] エラー 0x%x%s"
-
-#, fuzzy
-#~ msgid "[%s] Error %d%s"
-#~ msgstr "%s[%s: %s] エラー %d%s"
-
-#~ msgid "Report bugs to <bug-make@gnu.org>\n"
-#~ msgstr "バグレポートは <bug-make@gnu.org> まで.\n"
-
-#~ msgid "DCL: %s\n"
-#~ msgstr "DCL: %s\n"
 
 #~ msgid "%s[%s] %s%s%s"
 #~ msgstr "%s[%s] %s%s%s"

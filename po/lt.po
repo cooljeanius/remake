@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: make-3.81\n"
 "Report-Msgid-Bugs-To: bug-make@gnu.org\n"
-"POT-Creation-Date: 2018-02-12 17:11-0500\n"
+"POT-Creation-Date: 2018-02-12 19:14-0500\n"
 "PO-Revision-Date: 2008-05-17 21:42+0300\n"
 "Last-Translator: Gintautas Miliauskas <gintas@akl.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ar.c:51
-#, fuzzy, c-format
+#, c-format
 msgid "attempt to use unsupported feature: `%s'"
 msgstr "bandymas naudoti nepalaikomą funkcionalumą: „%s“"
 
@@ -30,19 +30,19 @@ msgid "touch archive member is not available on VMS"
 msgstr ""
 
 #: ar.c:155
-#, fuzzy, c-format
+#, c-format
 msgid "touch: Archive `%s' does not exist"
 msgstr "touch: Archyvas „%s“ neegzistuoja"
 
 #: ar.c:158
-#, fuzzy, c-format
+#, c-format
 msgid "touch: `%s' is not a valid archive"
 msgstr "touch: „%s“ nėra taisyklingas archyvas"
 
 #: ar.c:165
-#, fuzzy, c-format
+#, c-format
 msgid "touch: Member `%s' does not exist in `%s'"
-msgstr "touch: Archyvas „%s“ neegzistuoja"
+msgstr ""
 
 #: ar.c:172
 #, c-format
@@ -60,12 +60,12 @@ msgid "lbr$ini_control() failed with status = %d"
 msgstr ""
 
 #: arscan.c:187
-#, fuzzy, c-format
+#, c-format
 msgid "unable to open library `%s' to lookup member `%s'"
 msgstr "nepavyko atverti bibliotekos „%s“ bandant surasti narį „%s“"
 
 #: arscan.c:850
-#, fuzzy, c-format
+#, c-format
 msgid "Member `%s'%s: %ld bytes at %ld (%ld).\n"
 msgstr "Narys „%s“%s: %ld baitų pozicijoje %ld (%ld).\n"
 
@@ -98,17 +98,16 @@ msgid "*** Archive member `%s' may be bogus; not deleted"
 msgstr ""
 
 #: commands.c:758
-#, fuzzy, c-format
+#, c-format
 msgid "*** [%s] Deleting file `%s'"
 msgstr "*** [%s] Trinamas failas „%s“"
 
 #: commands.c:760
-#, fuzzy, c-format
+#, c-format
 msgid "*** Deleting file `%s'"
 msgstr "*** Trinamas failas „%s“"
 
 #: commands.c:805
-#, fuzzy
 msgid "#  commands to execute"
 msgstr "#  vykdytinos komandos"
 
@@ -117,7 +116,7 @@ msgid " (built-in):"
 msgstr "  (integruota)"
 
 #: commands.c:810
-#, fuzzy, c-format
+#, c-format
 msgid " (from `%s', line %lu):\n"
 msgstr " (nuo „%s“, %lu eilutė):\n"
 
@@ -126,7 +125,7 @@ msgstr " (nuo „%s“, %lu eilutė):\n"
 msgid "unknown debug level specification `%s'"
 msgstr "nežinomas debug lygio specifikacija „%s“"
 
-#: dir.c:996
+#: dir.c:997
 msgid ""
 "\n"
 "# Directories\n"
@@ -134,62 +133,62 @@ msgstr ""
 "\n"
 "# Aplankai\n"
 
-#: dir.c:1008
+#: dir.c:1009
 #, c-format
 msgid "# %s: could not be stat'd.\n"
 msgstr "# %s: negalėjo būti stat'intas.\n"
 
-#: dir.c:1012
-#, fuzzy, c-format
+#: dir.c:1013
+#, c-format
 msgid "# %s (key %s, mtime %d): could not be opened.\n"
 msgstr "# %s (key %s, mtime %d): nepavyko atverti.\n"
 
-#: dir.c:1016
+#: dir.c:1017
 #, c-format
 msgid "# %s (device %d, inode [%d,%d,%d]): could not be opened.\n"
 msgstr ""
 
-#: dir.c:1021
+#: dir.c:1022
 #, c-format
 msgid "# %s (device %ld, inode %ld): could not be opened.\n"
 msgstr ""
 
-#: dir.c:1048
-#, fuzzy, c-format
+#: dir.c:1049
+#, c-format
 msgid "# %s (key %s, mtime %d): "
-msgstr "# %s (key %s, mtime %d): nepavyko atverti.\n"
+msgstr ""
 
-#: dir.c:1052
+#: dir.c:1053
 #, c-format
 msgid "# %s (device %d, inode [%d,%d,%d]): "
 msgstr ""
 
-#: dir.c:1057
+#: dir.c:1058
 #, c-format
 msgid "# %s (device %ld, inode %ld): "
 msgstr ""
 
-#: dir.c:1063 dir.c:1084
+#: dir.c:1064 dir.c:1085
 msgid "No"
 msgstr "Ne"
 
-#: dir.c:1066 dir.c:1087
+#: dir.c:1067 dir.c:1088
 msgid " files, "
 msgstr " failai, "
 
-#: dir.c:1068 dir.c:1089
+#: dir.c:1069 dir.c:1090
 msgid "no"
 msgstr "ne"
 
-#: dir.c:1071
+#: dir.c:1072
 msgid " impossibilities"
 msgstr " negalimybės"
 
-#: dir.c:1075
+#: dir.c:1076
 msgid " so far."
 msgstr " kol kas."
 
-#: dir.c:1092
+#: dir.c:1093
 #, c-format
 msgid " impossibilities in %lu directories.\n"
 msgstr " negalimybės %lu aplankuose.\n"
@@ -200,7 +199,7 @@ msgid "Unknown system error"
 msgstr "Nežinoma klaida %d"
 
 #: expand.c:128
-#, fuzzy, c-format
+#, c-format
 msgid "Recursive variable `%s' references itself (eventually)"
 msgstr "Rekursyvus kintamasis „%s“ nukreipia į save (anksčiau ar vėliau)"
 
@@ -219,7 +218,7 @@ msgid "Recipe for file `%s' was found by implicit rule search,"
 msgstr "Komandos failui „%s“ rastos pagal neišreikštinę taisyklių paiešką"
 
 #: file.c:289
-#, fuzzy, c-format
+#, c-format
 msgid "but `%s' is now considered the same file as `%s'."
 msgstr "bet „%s“ dabar laikomas tuo pačiu failu kaip „%s“."
 
@@ -239,7 +238,7 @@ msgid "can't rename double-colon `%s' to single-colon `%s'"
 msgstr ""
 
 #: file.c:406
-#, fuzzy, c-format
+#, c-format
 msgid "*** Deleting intermediate file `%s'"
 msgstr "*** Trinamas tarpinis failas „%s“"
 
@@ -247,118 +246,118 @@ msgstr "*** Trinamas tarpinis failas „%s“"
 msgid "Removing intermediate files...\n"
 msgstr "Šalinami tarpiniai failai...\n"
 
-#: file.c:817
+#: file.c:818
 #, c-format
 msgid "%s: Timestamp out of range; substituting %s"
 msgstr "%s: Laiko žymė už rėžių; keičiama į %s"
 
-#: file.c:818
+#: file.c:819
 msgid "Current time"
 msgstr "Dabartinis laikas"
 
-#: file.c:915
+#: file.c:916
 msgid "# Not a target:"
 msgstr "# Ne tikslas:"
 
-#: file.c:942
+#: file.c:943
 #, fuzzy
 msgid "#  Precious file (prerequisite of .PRECIOUS)."
 msgstr "#  Brangus failas (reikalingas .PRECIOUS)"
 
-#: file.c:944
+#: file.c:945
 #, fuzzy
 msgid "#  Phony target (prerequisite of .PHONY)."
 msgstr "#  Keistas tikslas (reikalingas .PHONY)."
 
-#: file.c:946
+#: file.c:947
 msgid "#  Command-line target."
 msgstr "#  Komandinės eilutės tikslas"
 
-#: file.c:948
+#: file.c:949
 msgid "#  A default, MAKEFILES, or -include/sinclude makefile."
 msgstr "#  Numatytoji reikšmė, MAKEFILES, arba -include/sinclude „make“ failas"
 
-#: file.c:950
+#: file.c:951
 msgid "#  Implicit rule search has been done."
 msgstr "#  Neišreikštinių taisyklių paieška atlikta."
 
-#: file.c:951
+#: file.c:952
 msgid "#  Implicit rule search has not been done."
 msgstr "#  Neišreikštinių taisyklių paieška neatlikta."
 
-#: file.c:953
+#: file.c:954
 #, c-format
 msgid "#  Implicit/static pattern stem: `%s'\n"
 msgstr "#  Išreikštinis/statinis šablono kamienas: „%s“\n"
 
-#: file.c:955
+#: file.c:956
 #, fuzzy
 msgid "#  File is an intermediate prerequisite."
 msgstr "#  Failas yra tarpinė sąlyga"
 
-#: file.c:958
+#: file.c:959
 msgid "#  Also makes:"
 msgstr "#  Taip pat sukuria:"
 
-#: file.c:968
+#: file.c:969
 msgid "#  Modification time never checked."
 msgstr "#  Modifikacijos laikas niekada netikrintas."
 
-#: file.c:970
+#: file.c:971
 msgid "#  File does not exist."
 msgstr "#  Failas neegzistuoja."
 
-#: file.c:972
+#: file.c:973
 msgid "#  File is very old."
 msgstr "#  Failas labai senas."
 
-#: file.c:977
+#: file.c:978
 #, c-format
 msgid "#  Last modified %s\n"
 msgstr "#  Paskutinį kartą pakeista %s\n"
 
-#: file.c:980
+#: file.c:981
 msgid "#  File has been updated."
 msgstr "#  Failas atnaujintas."
 
-#: file.c:981
+#: file.c:982
 msgid "#  File has not been updated."
 msgstr "#  Failas nebuvo atnaujintas."
 
-#: file.c:989
+#: file.c:990
 msgid "#  Commands currently running (THIS IS A BUG)."
 msgstr "#  Dabar vykdomos komandos (TAI KLAIDA)."
 
-#: file.c:992
+#: file.c:993
 msgid "#  Dependencies commands running (THIS IS A BUG)."
 msgstr "#  Vykdomos priklausomybių komandos (TAI KLAIDA)."
 
-#: file.c:995
+#: file.c:996
 #, fuzzy
 msgid "#  Commands not yet started."
 msgstr "#  Komandinės eilutės tikslas"
 
-#: file.c:1003
+#: file.c:1004
 msgid "#  Successfully updated."
 msgstr "#  Sėkmingai atnaujinta."
 
-#: file.c:1007
+#: file.c:1008
 msgid "#  Needs to be updated (-q is set)."
 msgstr "#  Turi būti atnaujinta (-q nustatyta)."
 
-#: file.c:1010
+#: file.c:1011
 msgid "#  Failed to be updated."
 msgstr "#  Nepavyko atnaujinti."
 
-#: file.c:1013
+#: file.c:1014
 msgid "#  Invalid value in `update_status' member!"
 msgstr "#  Netaisyklinga reikšmė „update_status“ naryje!"
 
-#: file.c:1020
+#: file.c:1021
 msgid "#  Invalid value in `command_state' member!"
 msgstr "#  Netaisyklinga reikšmė „command_state“ naryje!"
 
-#: file.c:1081
+#: file.c:1082
 msgid ""
 "\n"
 "# Files"
@@ -366,7 +365,7 @@ msgstr ""
 "\n"
 "# Failai"
 
-#: file.c:1085
+#: file.c:1086
 msgid ""
 "\n"
 "# files hash-table stats:\n"
@@ -431,57 +430,57 @@ msgstr ""
 msgid "unterminated call to function `%s': missing `%c'"
 msgstr ""
 
-#: getopt.c:665
-#, fuzzy, c-format
+#: getopt.c:668
+#, c-format
 msgid "%s: option `%s' is ambiguous\n"
 msgstr "%s: parametras `%s' dviprasmis\n"
 
-#: getopt.c:689
+#: getopt.c:692
 #, fuzzy, c-format
 msgid "%s: option `--%s' does not allow an argument\n"
 msgstr "%s: argumentas „--%s“ neleidžia parametro\n"
 
-#: getopt.c:694
+#: getopt.c:697
 #, fuzzy, c-format
 msgid "%s: option `%c%s' does not allow an argument\n"
 msgstr "%s: argumentas „%c%s“ neleidžia parametro\n"
 
-#: getopt.c:712 getopt.c:887
+#: getopt.c:715 getopt.c:890
 #, c-format
 msgid "%s: option `%s' requires an argument\n"
 msgstr "%s: parametrui „%s“ reikia argumento\n"
 
-#: getopt.c:743
-#, fuzzy, c-format
+#: getopt.c:746
+#, c-format
 msgid "%s: unrecognized option `--%s'\n"
 msgstr "%s: neatpažintas argumentas „--%s“\n"
 
-#: getopt.c:747
-#, fuzzy, c-format
+#: getopt.c:750
+#, c-format
 msgid "%s: unrecognized option `%c%s'\n"
 msgstr "%s: neatpažintas argumentas „%c%s“\n"
 
-#: getopt.c:773
+#: getopt.c:776
 #, c-format
 msgid "%s: illegal option -- %c\n"
 msgstr "%s: neleistinas parametras -- %c\n"
 
-#: getopt.c:776
+#: getopt.c:779
 #, c-format
 msgid "%s: invalid option -- %c\n"
 msgstr "%s: netaisyklingas argumentas -- %c\n"
 
-#: getopt.c:806 getopt.c:936
+#: getopt.c:809 getopt.c:939
 #, c-format
 msgid "%s: option requires an argument -- %c\n"
 msgstr "%s: parametrui reikia argumento -- %c\n"
 
-#: getopt.c:853
-#, fuzzy, c-format
+#: getopt.c:856
+#, c-format
 msgid "%s: option `-W %s' is ambiguous\n"
 msgstr "%s: parametras „-W %s“ dviprasmis\n"
 
-#: getopt.c:871
+#: getopt.c:874
 #, fuzzy, c-format
 msgid "%s: option `-W %s' does not allow an argument\n"
 msgstr "%s: parametras „-W %s“ neleidžia argumento\n"
@@ -507,14 +506,14 @@ msgid "Collisions=%ld/%ld=%.0f%%"
 msgstr ""
 
 #: implicit.c:41
-#, fuzzy, c-format
+#, c-format
 msgid "Looking for an implicit rule for `%s'.\n"
-msgstr "Rasta neišreikštinė taisyklė tikslui „%s“.\n"
+msgstr ""
 
 #: implicit.c:57
-#, fuzzy, c-format
+#, c-format
 msgid "Looking for archive-member implicit rule for `%s'.\n"
-msgstr "Rasta neišreikštinė taisyklė tikslui „%s“.\n"
+msgstr ""
 
 #: implicit.c:318
 msgid "Avoiding implicit rule recursion.\n"
@@ -546,14 +545,14 @@ msgid "Trying implicit prerequisite `%s'.\n"
 msgstr ""
 
 #: implicit.c:729
-#, fuzzy, c-format
+#, c-format
 msgid "Found prerequisite `%s' as VPATH `%s'\n"
-msgstr "Svarstomas tikslo failas „%s“.\n"
+msgstr ""
 
 #: implicit.c:743
-#, fuzzy, c-format
+#, c-format
 msgid "Looking for a rule with intermediate file `%s'.\n"
-msgstr "Šalinami tarpiniai failai...\n"
+msgstr ""
 
 #: job.c:341
 msgid "Cannot create a temporary file\n"
@@ -658,9 +657,9 @@ msgid "Invoking recipe from %s:%lu to update target `%s'.\n"
 msgstr ""
 
 #: job.c:1785
-#, c-format
+#, fuzzy, c-format
 msgid "Invoking builtin recipe to update target `%s'.\n"
-msgstr ""
+msgstr "Nereikia atnaujinti taikinio „%s“"
 
 #: job.c:1895
 msgid "cannot enforce load limits on this operating system"
@@ -693,7 +692,7 @@ msgid "make reaped child pid %s, still waiting for pid %s\n"
 msgstr ""
 
 #: job.c:2153
-#, fuzzy, c-format
+#, c-format
 msgid "%s: Command not found"
 msgstr "%s: Komanda nerasta"
 
@@ -707,7 +706,7 @@ msgid "spawnvpe: environment space might be exhausted"
 msgstr ""
 
 #: job.c:2446
-#, fuzzy, c-format
+#, c-format
 msgid "$SHELL changed (was `%s', now `%s')\n"
 msgstr "$SHELL pakeistas (buvo „%s“, dabar „%s“)\n"
 
@@ -723,7 +722,7 @@ msgid ""
 "\t%s\n"
 msgstr ""
 
-#: job.c:3050
+#: job.c:3052
 #, c-format
 msgid "%s (line %d) Bad shell context (!unixy && !batch_mode_shell)\n"
 msgstr ""
@@ -1018,9 +1017,8 @@ msgid "warning: -jN forced in submake: disabling jobserver mode."
 msgstr ""
 
 #: main.c:1931
-#, fuzzy
 msgid "dup jobserver"
-msgstr "rašymo klaida: %s"
+msgstr ""
 
 #: main.c:1934
 msgid ""
@@ -1040,7 +1038,6 @@ msgid "Symbolic links not supported: disabling -L."
 msgstr ""
 
 #: main.c:2073
-#, fuzzy
 msgid "Updating makefiles....\n"
 msgstr "Atnaujinami „make“ failai....\n"
 
@@ -1050,14 +1047,14 @@ msgid "Makefile `%s' might loop; not remaking it.\n"
 msgstr ""
 
 #: main.c:2177
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to remake makefile `%s'."
-msgstr "Nereikia atnaujinti taikinio „%s“"
+msgstr ""
 
 #: main.c:2194
-#, fuzzy, c-format
+#, c-format
 msgid "Included makefile `%s' was not found."
-msgstr "„Make“ failas „%s“ nerastas"
+msgstr ""
 
 #: main.c:2199
 #, fuzzy, c-format
@@ -1090,7 +1087,6 @@ msgid "No targets"
 msgstr "Nėra tikslų"
 
 #: main.c:2468
-#, fuzzy
 msgid "Updating goal targets....\n"
 msgstr "Atnaujinami tikslai...\n"
 
@@ -1173,43 +1169,43 @@ msgid ""
 "# Finished Make data base on %s\n"
 msgstr ""
 
-#: main.c:3434
+#: main.c:3435
 #, c-format
 msgid "%s: Entering an unknown directory\n"
 msgstr "%s: Įeinama į nežinomą aplanką\n"
 
-#: main.c:3436
+#: main.c:3437
 #, c-format
 msgid "%s: Leaving an unknown directory\n"
 msgstr "%s: Išeinama iš nežinomo aplanko\n"
 
-#: main.c:3439
-#, fuzzy, c-format
+#: main.c:3440
+#, c-format
 msgid "%s: Entering directory `%s'\n"
 msgstr "%s: Įeinama į aplanką „%s“\n"
 
-#: main.c:3442
-#, fuzzy, c-format
+#: main.c:3443
+#, c-format
 msgid "%s: Leaving directory `%s'\n"
 msgstr "%s: Išeinama iš aplanko „%s“\n"
 
-#: main.c:3447
+#: main.c:3448
 #, c-format
 msgid "%s[%u]: Entering an unknown directory\n"
 msgstr "%s[%u]: Įeinama į nežinomą aplanką\n"
 
-#: main.c:3450
+#: main.c:3451
 #, c-format
 msgid "%s[%u]: Leaving an unknown directory\n"
 msgstr "%s[%u]: Išeinama iš nežinomo aplanko\n"
 
-#: main.c:3454
-#, fuzzy, c-format
+#: main.c:3455
+#, c-format
 msgid "%s[%u]: Entering directory `%s'\n"
 msgstr "%s[%u]: Įeinama į aplanką „%s“\n"
 
-#: main.c:3457
-#, fuzzy, c-format
+#: main.c:3458
+#, c-format
 msgid "%s[%u]: Leaving directory `%s'\n"
 msgstr "%s[%u]: Išeinama iš aplanko „%s“\n"
 
@@ -1223,7 +1219,7 @@ msgstr "Nežinoma klaida %d"
 msgid "%s: %s"
 msgstr "%s: %s"
 
-#: misc.c:270 misc.c:281 misc.c:296 misc.c:313 misc.c:332 read.c:3179
+#: misc.c:270 misc.c:281 misc.c:296 misc.c:313 misc.c:332 read.c:3182
 msgid "virtual memory exhausted"
 msgstr "baigėsi virtuali atmintis"
 
@@ -1249,9 +1245,9 @@ msgid "Child access"
 msgstr ""
 
 #: misc.c:848
-#, fuzzy, c-format
+#, c-format
 msgid "write error: %s"
-msgstr "rašymo klaida"
+msgstr "rašymo klaida: %s"
 
 #: misc.c:850
 msgid "write error"
@@ -1291,7 +1287,7 @@ msgid "Reading makefiles...\n"
 msgstr "Skaitomi „make“ failai...\n"
 
 #: read.c:345
-#, fuzzy, c-format
+#, c-format
 msgid "Reading makefile `%s'"
 msgstr "Skaitomas „make“ failas „%s“"
 
@@ -1330,12 +1326,11 @@ msgid "missing rule before recipe"
 msgstr "trūksta taisyklės prieš komandas"
 
 #: read.c:1075
-#, fuzzy, c-format
+#, c-format
 msgid "missing separator%s"
 msgstr "trūksta skirtuko%s"
 
 #: read.c:1077
-#, fuzzy
 msgid " (did you mean TAB instead of 8 spaces?)"
 msgstr " (ar norėjote padėti TAB simbolį vietoje 8 tarpų?)"
 
@@ -1348,12 +1343,11 @@ msgid "multiple target patterns"
 msgstr "keli tikslo šablonai"
 
 #: read.c:1217
-#, fuzzy, c-format
+#, c-format
 msgid "target pattern contains no `%%'"
 msgstr "tikslo šablone nėra „%%“"
 
 #: read.c:1341
-#, fuzzy
 msgid "missing `endif'"
 msgstr "trūksta „endif“"
 
@@ -1367,7 +1361,6 @@ msgid "extraneous text after `define' directive"
 msgstr "Perteklinis tekstas po „endef“ direktyvos"
 
 #: read.c:1450
-#, fuzzy
 msgid "missing `endef', unterminated `define'"
 msgstr "trūksta „endef“, nebaigtas „define“"
 
@@ -1377,12 +1370,12 @@ msgid "extraneous text after `endef' directive"
 msgstr "Perteklinis tekstas po „endef“ direktyvos"
 
 #: read.c:1548
-#, fuzzy, c-format
+#, c-format
 msgid "Extraneous text after `%s' directive"
 msgstr "Perteklinis tekstas po „%s“ direktyvos"
 
 #: read.c:1557 read.c:1571
-#, fuzzy, c-format
+#, c-format
 msgid "extraneous `%s'"
 msgstr "perteklinis „%s“"
 
@@ -1394,99 +1387,99 @@ msgstr ""
 msgid "Malformed target-specific variable definition"
 msgstr ""
 
-#: read.c:1914
+#: read.c:1917
 msgid "prerequisites cannot be defined in recipes"
 msgstr ""
 
-#: read.c:1967
+#: read.c:1970
 msgid "mixed implicit and static pattern rules"
 msgstr ""
 
-#: read.c:1990 read.c:2173
+#: read.c:1993 read.c:2176
 msgid "mixed implicit and normal rules"
 msgstr ""
 
-#: read.c:2035
+#: read.c:2038
 #, c-format
 msgid "target `%s' doesn't match the target pattern"
 msgstr ""
 
-#: read.c:2051 read.c:2096
+#: read.c:2054 read.c:2099
 #, c-format
 msgid "target file `%s' has both : and :: entries"
 msgstr ""
 
-#: read.c:2057
+#: read.c:2060
 #, c-format
 msgid "target `%s' given more than once in the same rule."
 msgstr ""
 
-#: read.c:2066
-#, fuzzy, c-format
-msgid "warning: overriding recipe for target `%s'"
-msgstr "%sNėra taisyklės pasiekti tikslui „%s“, kurio reikia „%s“%s"
-
 #: read.c:2069
+#, c-format
+msgid "warning: overriding recipe for target `%s'"
+msgstr ""
+
+#: read.c:2072
 #, c-format
 msgid "warning: ignoring old recipe for target `%s'"
 msgstr ""
 
-#: read.c:2453
+#: read.c:2456
 msgid "warning: NUL character seen; rest of line ignored"
 msgstr ""
 
 #: remake.c:242
-#, fuzzy, c-format
+#, c-format
 msgid "Nothing to be done for `%s'."
 msgstr "Nėra ką daryti su „%s“."
 
 #: remake.c:243
-#, fuzzy, c-format
+#, c-format
 msgid "`%s' is up to date."
 msgstr "„%s“ atnaujinti nereikia."
 
 #: remake.c:319
-#, fuzzy, c-format
+#, c-format
 msgid "Pruning file `%s'.\n"
-msgstr "Vis dar atnaujinamas failas „%s“.\n"
+msgstr ""
 
 #: remake.c:372
-#, fuzzy, c-format
+#, c-format
 msgid "%sNo rule to make target `%s'%s"
 msgstr "%sNėra taisyklės pasiekti tikslui „%s“%s"
 
 #: remake.c:374
-#, fuzzy, c-format
+#, c-format
 msgid "%sNo rule to make target `%s', needed by `%s'%s"
 msgstr "%sNėra taisyklės pasiekti tikslui „%s“, kurio reikia „%s“%s"
 
 #: remake.c:427
-#, fuzzy, c-format
+#, c-format
 msgid "Considering target file `%s'.\n"
 msgstr "Svarstomas tikslo failas „%s“.\n"
 
 #: remake.c:442
-#, fuzzy, c-format
+#, c-format
 msgid "Recently tried and failed to update file `%s'.\n"
 msgstr "Neseniai bandyta ir nepavyko atnaujinti failo „%s“.\n"
 
 #: remake.c:454
-#, fuzzy, c-format
+#, c-format
 msgid "File `%s' was considered already.\n"
 msgstr "Failas „%s“ jau apsvarstytas.\n"
 
 #: remake.c:465
-#, fuzzy, c-format
+#, c-format
 msgid "Still updating file `%s'.\n"
 msgstr "Vis dar atnaujinamas failas „%s“.\n"
 
 #: remake.c:469
-#, fuzzy, c-format
+#, c-format
 msgid "Finished updating file `%s'.\n"
 msgstr "Baigtas atnaujinti failas „%s“.\n"
 
 #: remake.c:499
-#, fuzzy, c-format
+#, c-format
 msgid "File `%s' does not exist.\n"
 msgstr "Failas „%s“ neegzistuoja.\n"
 
@@ -1497,19 +1490,19 @@ msgid ""
 msgstr ""
 
 #: remake.c:524 remake.c:1056
-#, fuzzy, c-format
+#, c-format
 msgid "Found an implicit rule for `%s'.\n"
 msgstr "Rasta neišreikštinė taisyklė tikslui „%s“.\n"
 
 #: remake.c:526 remake.c:1058
-#, fuzzy, c-format
+#, c-format
 msgid "No implicit rule found for `%s'.\n"
 msgstr "Nerasta neišreikštinių taisyklių tikslui „%s“.\n"
 
 #: remake.c:532
 #, fuzzy, c-format
 msgid "Using default recipe for `%s'.\n"
-msgstr "paskutinė komanda: %s\n"
+msgstr "Nėra ką daryti su „%s“."
 
 #: remake.c:565 remake.c:1097
 #, c-format
@@ -1517,44 +1510,44 @@ msgid "Circular %s <- %s dependency dropped."
 msgstr ""
 
 #: remake.c:682
-#, fuzzy, c-format
+#, c-format
 msgid "Finished prerequisites of target file `%s'.\n"
-msgstr "Svarstomas tikslo failas „%s“.\n"
+msgstr ""
 
 #: remake.c:691
-#, fuzzy, c-format
+#, c-format
 msgid "The prerequisites of `%s' are being made.\n"
-msgstr "Svarstomas tikslo failas „%s“.\n"
+msgstr ""
 
 #: remake.c:705
-#, fuzzy, c-format
+#, c-format
 msgid "Giving up on target file `%s'.\n"
-msgstr "Svarstomas tikslo failas „%s“.\n"
+msgstr ""
 
 #: remake.c:710
-#, fuzzy, c-format
+#, c-format
 msgid "Target `%s' not remade because of errors."
 msgstr "Tikslas „%s“ neatnaujintas dėl klaidų."
 
 #: remake.c:763
-#, fuzzy, c-format
+#, c-format
 msgid "Prerequisite `%s' is order-only for target `%s'.\n"
-msgstr "Failas „%s“ neegzistuoja.\n"
+msgstr ""
 
 #: remake.c:768
-#, fuzzy, c-format
+#, c-format
 msgid "Prerequisite `%s' of target `%s' does not exist.\n"
-msgstr "Failas „%s“ neegzistuoja.\n"
+msgstr ""
 
 #: remake.c:773
-#, fuzzy, c-format
+#, c-format
 msgid "Prerequisite `%s' is newer than target `%s'.\n"
-msgstr "Failas „%s“ neegzistuoja.\n"
+msgstr ""
 
 #: remake.c:776
-#, fuzzy, c-format
+#, c-format
 msgid "Prerequisite `%s' is older than target `%s'.\n"
-msgstr "Failas „%s“ neegzistuoja.\n"
+msgstr ""
 
 #: remake.c:791
 #, c-format
@@ -1572,7 +1565,7 @@ msgid "Making `%s' due to always-make flag.\n"
 msgstr ""
 
 #: remake.c:811
-#, fuzzy, c-format
+#, c-format
 msgid "No need to remake target `%s'"
 msgstr "Nereikia atnaujinti taikinio „%s“"
 
@@ -1582,7 +1575,7 @@ msgid "; using VPATH name `%s'"
 msgstr ""
 
 #: remake.c:834
-#, fuzzy, c-format
+#, c-format
 msgid "Must remake target `%s'.\n"
 msgstr "Būtina atnaujinti taikinį „%s“.\n"
 
@@ -1597,14 +1590,14 @@ msgid "Recipe of `%s' is being run.\n"
 msgstr "Vykdomos „%s“ komandos.\n"
 
 #: remake.c:859
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to remake target file `%s'.\n"
-msgstr "Nereikia atnaujinti taikinio „%s“"
+msgstr ""
 
 #: remake.c:862
-#, fuzzy, c-format
+#, c-format
 msgid "Successfully remade target file `%s'.\n"
-msgstr "Būtina atnaujinti taikinį „%s“.\n"
+msgstr ""
 
 #: remake.c:865
 #, c-format
@@ -1612,9 +1605,9 @@ msgid "Target file `%s' needs remade under -q.\n"
 msgstr ""
 
 #: remake.c:1064
-#, fuzzy, c-format
+#, c-format
 msgid "Using default commands for `%s'.\n"
-msgstr "paskutinė komanda: %s\n"
+msgstr ""
 
 #: remake.c:1397
 #, c-format
@@ -1626,7 +1619,7 @@ msgstr ""
 msgid "Warning: File `%s' has modification time %s s in the future"
 msgstr ""
 
-#: remake.c:1609
+#: remake.c:1610
 #, c-format
 msgid ".LIBPATTERNS element `%s' is not a pattern"
 msgstr ""
@@ -1636,7 +1629,7 @@ msgstr ""
 msgid "Customs won't export: %s\n"
 msgstr ""
 
-#: rule.c:521
+#: rule.c:525
 msgid ""
 "\n"
 "# Implicit Rules"
@@ -1644,7 +1637,7 @@ msgstr ""
 "\n"
 "# Neišreikštinės taisyklės"
 
-#: rule.c:540
+#: rule.c:544
 msgid ""
 "\n"
 "# No implicit rules."
@@ -1652,7 +1645,7 @@ msgstr ""
 "\n"
 "# Nėra neišreikštinių taisyklių."
 
-#: rule.c:543
+#: rule.c:547
 #, c-format
 msgid ""
 "\n"
@@ -1661,11 +1654,11 @@ msgstr ""
 "\n"
 "# %u neišreikštinių taisyklių, %u"
 
-#: rule.c:552
+#: rule.c:556
 msgid " terminal."
 msgstr ""
 
-#: rule.c:560
+#: rule.c:564
 #, c-format
 msgid "BUG: num_pattern_rules is wrong!  %u != %u"
 msgstr ""
@@ -1990,9 +1983,9 @@ msgid "Error, empty command\n"
 msgstr ""
 
 #: vmsjobs.c:506
-#, fuzzy, c-format
+#, c-format
 msgid "Redirected input from %s\n"
-msgstr "skaitymo klaida: %d: %s"
+msgstr ""
 
 #: vmsjobs.c:513
 #, fuzzy, c-format
@@ -2005,9 +1998,9 @@ msgid "Append output to %s\n"
 msgstr ""
 
 #: vmsjobs.c:529
-#, fuzzy, c-format
+#, c-format
 msgid "Redirected output to %s\n"
-msgstr "skaitymo klaida: %d: %s"
+msgstr ""
 
 #: vmsjobs.c:599
 #, c-format
@@ -2031,16 +2024,15 @@ msgid ""
 msgstr ""
 
 #: vpath.c:603
-#, fuzzy
 msgid "# No `vpath' search paths."
-msgstr " (paieškos kelias)"
+msgstr ""
 
 #: vpath.c:605
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "\n"
 "# %u `vpath' search paths.\n"
-msgstr " (paieškos kelias)"
+msgstr ""
 
 #: vpath.c:608
 msgid ""
@@ -2055,198 +2047,14 @@ msgid ""
 "# "
 msgstr ""
 
-#, fuzzy
-#~ msgid "Note: prerequisite breakpoint already set at target %s."
-#~ msgstr "Nereikia atnaujinti taikinio „%s“"
-
-#, fuzzy
-#~ msgid "Note: command breakpoint already set at target %s."
-#~ msgstr "Nereikia atnaujinti taikinio „%s“"
-
-#, fuzzy
-#~ msgid "Note: target end breakpont set at target %s."
-#~ msgstr "Nereikia atnaujinti taikinio „%s“"
-
-#, fuzzy
-#~ msgid "You need to supply a variable name."
-#~ msgstr "tuščias kintamojo pavadinimas"
-
-#, fuzzy
-#~ msgid "Argument required (new working directory).\n"
-#~ msgstr "%s: Įeinama į aplanką „%s“\n"
-
-#, fuzzy
-#~ msgid "Working directory %s.\n"
-#~ msgstr "%s: Įeinama į aplanką „%s“\n"
-
-#, fuzzy
-#~ msgid "Set the working directory to DIR."
-#~ msgstr "%s: Įeinama į aplanką „%s“\n"
-
-#, fuzzy
-#~ msgid "Running %s\n"
-#~ msgstr "paskutinė komanda: %s\n"
-
-#, fuzzy
-#~ msgid "cannot get target file location\n"
-#~ msgstr "%s: Įeinama į aplanką „%s“\n"
-
-#, fuzzy
-#~ msgid "Running commands for target %s\n"
-#~ msgstr "paskutinė komanda: %s\n"
-
-#, fuzzy
-#~ msgid "Running commands\n"
-#~ msgstr "paskutinė komanda: %s\n"
-
-#, fuzzy
-#~ msgid "Starting directory `%s'\n"
-#~ msgstr "%s: Įeinama į aplanką „%s“\n"
-
-#, fuzzy
-#~ msgid "Program invocation:\n"
-#~ msgstr "#  Komandinės eilutės tikslas"
-
-#, fuzzy
-#~ msgid "Rule %s not found.\n"
-#~ msgstr "„Make“ failas „%s“ nerastas"
-
-#, fuzzy
-#~ msgid "cannot get current directory %s\n"
-#~ msgstr "%s: Įeinama į aplanką „%s“\n"
-
-#, fuzzy
-#~ msgid "You need to supply a variable name.\n"
-#~ msgstr "tuščias kintamojo pavadinimas"
-
-#, fuzzy
-#~ msgid "Error: %s\n"
-#~ msgstr "rašymo klaida: %s"
-
-#, fuzzy
-#~ msgid "#  Command line target."
-#~ msgstr "#  Komandinės eilutės tikslas"
-
-#, fuzzy
-#~ msgid "#  Builtin rule"
-#~ msgstr ""
-#~ "\n"
-#~ "# Nėra neišreikštinių taisyklių."
-
-#, fuzzy
-#~ msgid "#  Implicit/static pattern stem: '%s'\n"
-#~ msgstr "#  Išreikštinis/statinis šablono kamienas: „%s“\n"
-
-#, fuzzy
-#~ msgid "#  Recipe currently running (THIS IS A BUG)."
-#~ msgstr "#  Dabar vykdomos komandos (TAI KLAIDA)."
-
-#, fuzzy
-#~ msgid "#  Dependencies recipe running (THIS IS A BUG)."
-#~ msgstr "#  Vykdomos priklausomybių komandos (TAI KLAIDA)."
-
-#, fuzzy
-#~ msgid "#  Invalid value in 'command_state' member!"
-#~ msgstr "#  Netaisyklinga reikšmė „command_state“ naryje!"
-
-#, fuzzy
-#~ msgid "open: %s: %s"
-#~ msgstr "%s: %s"
-
-#, fuzzy
-#~ msgid "write: %s: %s"
-#~ msgstr "rašymo klaida: %s"
-
-#, fuzzy
-#~ msgid "close: %s: %s"
-#~ msgstr "%s%s: %s"
-
-#, fuzzy
-#~ msgid "read: %s: %s"
-#~ msgstr "%s: %s"
-
-#, fuzzy
-#~ msgid "file: invalid file operation: %s"
-#~ msgstr "%s: netaisyklingas argumentas -- %c\n"
-
-#, fuzzy
-#~ msgid "%s: option '%s' requires an argument\n"
-#~ msgstr "%s: parametrui „%s“ reikia argumento\n"
-
-#, fuzzy
-#~ msgid "Cleaning up temp batch file %s failed (%d)\n"
-#~ msgstr "%s: nepavyko atverti laikinojo failo: %s"
-
-#, fuzzy
-#~ msgid "<builtin>"
-#~ msgstr "  (integruota)"
-
-#, fuzzy
-#~ msgid "%s: target '%s' does not exist"
-#~ msgstr "touch: Archyvas „%s“ neegzistuoja"
-
-#, fuzzy
-#~ msgid "%s: update target '%s' due to: %s"
-#~ msgstr "%sNėra taisyklės pasiekti tikslui „%s“, kurio reikia „%s“%s"
-
-#, fuzzy
-#~ msgid "%s: %s: Command not found\n"
-#~ msgstr "%s: Komanda nerasta"
-
-#, fuzzy
-#~ msgid "%s[%u]: %s: Command not found\n"
-#~ msgstr "%s: Komanda nerasta"
-
-#, fuzzy
-#~ msgid "unknown debug level specification '%s'"
-#~ msgstr "nežinomas debug lygio specifikacija „%s“"
-
-#, fuzzy
-#~ msgid "write error: stdout"
-#~ msgstr "rašymo klaida: %s"
-
-#, fuzzy
-#~ msgid "%s: directory '%s'\n"
-#~ msgstr "%s: Išeinama iš aplanko „%s“\n"
-
-#, fuzzy
-#~ msgid "%s[%u]: unknown directory\n"
-#~ msgstr "%s[%u]: Išeinama iš nežinomo aplanko\n"
-
-#, fuzzy
-#~ msgid "%s[%u]: directory '%s'\n"
-#~ msgstr "%s[%u]: Išeinama iš aplanko „%s“\n"
-
-#, fuzzy
-#~ msgid "duping jobs pipe"
-#~ msgstr "rašymo klaida: %s"
-
-#, fuzzy
-#~ msgid "pselect jobs pipe"
-#~ msgstr "rašymo klaida: %s"
-
-#, fuzzy
-#~ msgid ""
-#~ "# hash-table stats:\n"
-#~ "# "
-#~ msgstr ""
-#~ "\n"
-#~ "# failų maišos lentelės statistika:\n"
-#~ "# "
-
-#, fuzzy
-#~ msgid "'override' directive"
-#~ msgstr "tuščia „override“ direktyva"
-
-#, fuzzy
-#~ msgid " (from '%s', line %lu)"
-#~ msgstr " (nuo „%s“, %lu eilutė):\n"
-
 #~ msgid "Report bugs to <bug-make@gnu.org>\n"
 #~ msgstr "Praneškite apie klaidas adresu <bug-make@gnu.org>\n"
 
 #~ msgid "extraneous `endef'"
 #~ msgstr "perteklinis „endef“"
+
+#~ msgid "empty `override' directive"
+#~ msgstr "tuščia „override“ direktyva"
 
 #, fuzzy
 #~ msgid "invalid `override' directive"

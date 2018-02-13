@@ -2752,7 +2752,7 @@ this list, we would like to add your names!
 @printindex cp
 
 @tex
-% I think something like @colophon should be in texinfo.  In the
+% I think something like colophon should be in texinfo.  In the
 % meantime:
 \long\def\colophon{\hbox to0pt{}\vfill
 \centerline{The body of this manual is set in}
@@ -2764,7 +2764,7 @@ this list, we would like to add your names!
 \centerline{{\sl\fontname\tensl\/}}
 \centerline{are used for emphasis.}\vfill}
 \page\colophon
-% Blame: doc@cygnus.com, 1991.
+% Blame: doc at cygnus.com, 1991.
 @end tex
 
 @bye

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GNU make 4.0\n"
 "Report-Msgid-Bugs-To: bug-make@gnu.org\n"
-"POT-Creation-Date: 2018-02-12 17:11-0500\n"
+"POT-Creation-Date: 2018-02-12 19:14-0500\n"
 "PO-Revision-Date: 2014-07-30 18:30+0700\n"
 "Last-Translator: Arif E. Nugroho <arif_endro@yahoo.com>\n"
 "Language-Team: Indonesian <translation-team-id@lists.sourceforge.net>\n"
@@ -123,7 +123,7 @@ msgstr " (dari '%s', baris %lu):\n"
 msgid "unknown debug level specification `%s'"
 msgstr "spesifikasi tingkat debug tidak diketahui '%s'"
 
-#: dir.c:996
+#: dir.c:997
 msgid ""
 "\n"
 "# Directories\n"
@@ -131,62 +131,62 @@ msgstr ""
 "\n"
 "# Direktori\n"
 
-#: dir.c:1008
+#: dir.c:1009
 #, c-format
 msgid "# %s: could not be stat'd.\n"
 msgstr "# %s: tidak dapat melihat statistik.\n"
 
-#: dir.c:1012
-#, fuzzy, c-format
+#: dir.c:1013
+#, c-format
 msgid "# %s (key %s, mtime %d): could not be opened.\n"
 msgstr "# %s (kunci %s, mtime %d): tidak dapat dibuka.\n"
 
-#: dir.c:1016
+#: dir.c:1017
 #, c-format
 msgid "# %s (device %d, inode [%d,%d,%d]): could not be opened.\n"
 msgstr "# %s (perangkat %d, inode [%d,%d,%d]): tidak dapat dibuka.\n"
 
-#: dir.c:1021
+#: dir.c:1022
 #, c-format
 msgid "# %s (device %ld, inode %ld): could not be opened.\n"
 msgstr "# %s (perangkat %ld, inode %ld): tidak dapat dibuka.\n"
 
-#: dir.c:1048
-#, fuzzy, c-format
+#: dir.c:1049
+#, c-format
 msgid "# %s (key %s, mtime %d): "
 msgstr "# %s (kunci %s, mtime %d): "
 
-#: dir.c:1052
+#: dir.c:1053
 #, c-format
 msgid "# %s (device %d, inode [%d,%d,%d]): "
 msgstr "# %s (perangkat %d, inode [%d,%d,%d]): "
 
-#: dir.c:1057
+#: dir.c:1058
 #, c-format
 msgid "# %s (device %ld, inode %ld): "
 msgstr "# %s (perangkat %ld, inode %ld): "
 
-#: dir.c:1063 dir.c:1084
+#: dir.c:1064 dir.c:1085
 msgid "No"
 msgstr "Tidak"
 
-#: dir.c:1066 dir.c:1087
+#: dir.c:1067 dir.c:1088
 msgid " files, "
 msgstr " berkas, "
 
-#: dir.c:1068 dir.c:1089
+#: dir.c:1069 dir.c:1090
 msgid "no"
 msgstr "tidak"
 
-#: dir.c:1071
+#: dir.c:1072
 msgid " impossibilities"
 msgstr " tidak mungkin"
 
-#: dir.c:1075
+#: dir.c:1076
 msgid " so far."
 msgstr " sejauh ini."
 
-#: dir.c:1092
+#: dir.c:1093
 #, c-format
 msgid " impossibilities in %lu directories.\n"
 msgstr " tidak mungkin dalam direktori %lu.\n"
@@ -245,119 +245,119 @@ msgstr "*** Menghapus berkas sementara '%s'"
 msgid "Removing intermediate files...\n"
 msgstr "Menghapus berkas sementara...\n"
 
-#: file.c:817
+#: file.c:818
 #, c-format
 msgid "%s: Timestamp out of range; substituting %s"
 msgstr "%s: Timestamp diluar jangkauan; digantikan dengan %s"
 
-#: file.c:818
+#: file.c:819
 msgid "Current time"
 msgstr "Waktu saat ini"
 
-#: file.c:915
+#: file.c:916
 msgid "# Not a target:"
 msgstr "# Bukan sebuah target:"
 
-#: file.c:942
+#: file.c:943
 msgid "#  Precious file (prerequisite of .PRECIOUS)."
 msgstr "#  Berkas sebelumnya (dibutuhkan oleh .PRECIOUS)."
 
-#: file.c:944
+#: file.c:945
 msgid "#  Phony target (prerequisite of .PHONY)."
 msgstr "#  Phony target (dibutuhkan oleh .PHONY)."
 
-#: file.c:946
+#: file.c:947
 #, fuzzy
 msgid "#  Command-line target."
 msgstr "#  Baris perintah target."
 
-#: file.c:948
+#: file.c:949
 msgid "#  A default, MAKEFILES, or -include/sinclude makefile."
 msgstr "#  Merupakan baku, MAKEFILES atau -include/sinclude makefile."
 
-#: file.c:950
+#: file.c:951
 msgid "#  Implicit rule search has been done."
 msgstr "#  Pencarian aturan implisit sudah selesai."
 
-#: file.c:951
+#: file.c:952
 msgid "#  Implicit rule search has not been done."
 msgstr "#  Pencarian aturan implisit belum selesai."
 
-#: file.c:953
+#: file.c:954
 #, fuzzy, c-format
 msgid "#  Implicit/static pattern stem: `%s'\n"
 msgstr "#  Pola/implisit atau statis stem: '%s'\n"
 
-#: file.c:955
+#: file.c:956
 msgid "#  File is an intermediate prerequisite."
 msgstr "#  Berkas merupakan dibutuhkan untuk sementara."
 
-#: file.c:958
+#: file.c:959
 msgid "#  Also makes:"
 msgstr "#  Juga membuat:"
 
-#: file.c:968
+#: file.c:969
 msgid "#  Modification time never checked."
 msgstr "#  Waktu ubah sudah diperiksa."
 
-#: file.c:970
+#: file.c:971
 msgid "#  File does not exist."
 msgstr "#  Berkas tidak ada."
 
-#: file.c:972
+#: file.c:973
 msgid "#  File is very old."
 msgstr "#  Berkas sudah sangat tua."
 
-#: file.c:977
+#: file.c:978
 #, c-format
 msgid "#  Last modified %s\n"
 msgstr "#  Terakhir dimodifikasi %s\n"
 
-#: file.c:980
+#: file.c:981
 msgid "#  File has been updated."
 msgstr "#  Berkas sudah diperbarui."
 
-#: file.c:981
+#: file.c:982
 msgid "#  File has not been updated."
 msgstr "#  Berkas belum diperbarui."
 
-#: file.c:989
+#: file.c:990
 #, fuzzy
 msgid "#  Commands currently running (THIS IS A BUG)."
 msgstr "#  Perintah sedang berjalan (INI MERUPAKAN SEBUAH BUG)."
 
-#: file.c:992
+#: file.c:993
 #, fuzzy
 msgid "#  Dependencies commands running (THIS IS A BUG)."
 msgstr "#  Perintah ketergantungan sedang berjalan (INI MERUPAKAN SEBUAH BUG)."
 
-#: file.c:995
+#: file.c:996
 #, fuzzy
 msgid "#  Commands not yet started."
 msgstr "#  Baris perintah target."
 
-#: file.c:1003
+#: file.c:1004
 msgid "#  Successfully updated."
 msgstr "#  Sukses memperbarui."
 
-#: file.c:1007
+#: file.c:1008
 msgid "#  Needs to be updated (-q is set)."
 msgstr "#  Perlu untuk diupdate (-q diset)."
 
-#: file.c:1010
+#: file.c:1011
 msgid "#  Failed to be updated."
 msgstr "#  Gagal untuk mengupdate."
 
-#: file.c:1013
+#: file.c:1014
 msgid "#  Invalid value in `update_status' member!"
 msgstr "#  Nilai yang salah dalam anggota `update_status' !"
 
-#: file.c:1020
+#: file.c:1021
 #, fuzzy
 msgid "#  Invalid value in `command_state' member!"
 msgstr "#  Nilai yang salah dalam anggota 'command_state' !"
 
-#: file.c:1081
+#: file.c:1082
 msgid ""
 "\n"
 "# Files"
@@ -365,7 +365,7 @@ msgstr ""
 "\n"
 "# Berksa"
 
-#: file.c:1085
+#: file.c:1086
 msgid ""
 "\n"
 "# files hash-table stats:\n"
@@ -434,57 +434,57 @@ msgstr "Tidak terimplementasi dalam platform ini: fungsi '%s'"
 msgid "unterminated call to function `%s': missing `%c'"
 msgstr "fungsi '%s' tidak diselesaikan: hilang '%c'"
 
-#: getopt.c:665
+#: getopt.c:668
 #, fuzzy, c-format
 msgid "%s: option `%s' is ambiguous\n"
 msgstr "%s: opsi '%s' merupakan ambigu\n"
 
-#: getopt.c:689
+#: getopt.c:692
 #, fuzzy, c-format
 msgid "%s: option `--%s' does not allow an argument\n"
 msgstr "%s: opsi '--%s' tidak memperbolehkan argumen\n"
 
-#: getopt.c:694
+#: getopt.c:697
 #, fuzzy, c-format
 msgid "%s: option `%c%s' does not allow an argument\n"
 msgstr "%s: opsi '%c%s' tidak memperbolehkan argumen\n"
 
-#: getopt.c:712 getopt.c:887
+#: getopt.c:715 getopt.c:890
 #, fuzzy, c-format
 msgid "%s: option `%s' requires an argument\n"
 msgstr "%s: opsi '%s' membutuhkan sebuah argumen\n"
 
-#: getopt.c:743
+#: getopt.c:746
 #, fuzzy, c-format
 msgid "%s: unrecognized option `--%s'\n"
 msgstr "%s: opsi tidak dikenali '--%s'\n"
 
-#: getopt.c:747
+#: getopt.c:750
 #, fuzzy, c-format
 msgid "%s: unrecognized option `%c%s'\n"
 msgstr "%s: opsi tidak dikenali '%c%s'\n"
 
-#: getopt.c:773
+#: getopt.c:776
 #, c-format
 msgid "%s: illegal option -- %c\n"
 msgstr "%s: opsi tidak legal -- %c\n"
 
-#: getopt.c:776
+#: getopt.c:779
 #, c-format
 msgid "%s: invalid option -- %c\n"
 msgstr "%s: opsi tidak valid -- %c\n"
 
-#: getopt.c:806 getopt.c:936
+#: getopt.c:809 getopt.c:939
 #, c-format
 msgid "%s: option requires an argument -- %c\n"
 msgstr "%s: opsi membutuhkan sebuah argumen -- %c\n"
 
-#: getopt.c:853
+#: getopt.c:856
 #, fuzzy, c-format
 msgid "%s: option `-W %s' is ambiguous\n"
 msgstr "%s: opsi '-W %s' merupakan opsi ambigu\n"
 
-#: getopt.c:871
+#: getopt.c:874
 #, fuzzy, c-format
 msgid "%s: option `-W %s' does not allow an argument\n"
 msgstr "%s: opsi '-W %s' tidak memperbolehkan sebuah argumen\n"
@@ -496,17 +496,17 @@ msgstr ""
 "tidak dapat mengalokasikan %lu bytes untuk tabel hash; kehabisan memory"
 
 #: hash.c:280
-#, fuzzy, c-format
+#, c-format
 msgid "Load=%ld/%ld=%.0f%%, "
 msgstr "Beban=%ld/%ld=%.0f%%, "
 
 #: hash.c:282
-#, fuzzy, c-format
+#, c-format
 msgid "Rehash=%d, "
 msgstr "Rehash=%d, "
 
 #: hash.c:283
-#, fuzzy, c-format
+#, c-format
 msgid "Collisions=%ld/%ld=%.0f%%"
 msgstr "Tabrakan=%ld/%ld=%.0f%%"
 
@@ -571,7 +571,7 @@ msgstr "*** [%s] Error 0x%x (diabaikan)"
 #: job.c:457
 #, fuzzy, c-format
 msgid "*** [%s] Error 0x%x"
-msgstr "%s[%s] Error %d%s"
+msgstr "*** [%s] Error 0x%x (diabaikan)"
 
 #: job.c:461
 #, fuzzy, c-format
@@ -697,7 +697,7 @@ msgid "make reaped child pid %s, still waiting for pid %s\n"
 msgstr "make reaped child pid %s, tetap menunggu untuk pid %s\n"
 
 #: job.c:2153
-#, fuzzy, c-format
+#, c-format
 msgid "%s: Command not found"
 msgstr "%s: Perintah tidak ada"
 
@@ -729,7 +729,7 @@ msgstr ""
 "Batch file contents:%s\n"
 "\t%s\n"
 
-#: job.c:3050
+#: job.c:3052
 #, c-format
 msgid "%s (line %d) Bad shell context (!unixy && !batch_mode_shell)\n"
 msgstr "%s (baris %d) shell context tidak baik (!unixy && !batch_mode_shell)\n"
@@ -1104,7 +1104,6 @@ msgid "Symbolic links not supported: disabling -L."
 msgstr "Symbolic links tidak didukung: menonaktifkan opsi -L."
 
 #: main.c:2073
-#, fuzzy
 msgid "Updating makefiles....\n"
 msgstr "Memperbarui makefiles....\n"
 
@@ -1154,7 +1153,6 @@ msgid "No targets"
 msgstr "Tidak ada targets"
 
 #: main.c:2468
-#, fuzzy
 msgid "Updating goal targets....\n"
 msgstr "Memperbarui tujuan target....\n"
 
@@ -1242,42 +1240,42 @@ msgstr ""
 "\n"
 "# Selesai membuat basis data %s\n"
 
-#: main.c:3434
+#: main.c:3435
 #, c-format
 msgid "%s: Entering an unknown directory\n"
 msgstr "%s: Memasuki sebuah direktori yang tidak diketahui\n"
 
-#: main.c:3436
+#: main.c:3437
 #, c-format
 msgid "%s: Leaving an unknown directory\n"
 msgstr "%s: Meninggalkan sebuah direktori yang tidak diketahui\n"
 
-#: main.c:3439
+#: main.c:3440
 #, fuzzy, c-format
 msgid "%s: Entering directory `%s'\n"
 msgstr "%s: Memasuki direktori '%s'\n"
 
-#: main.c:3442
+#: main.c:3443
 #, fuzzy, c-format
 msgid "%s: Leaving directory `%s'\n"
 msgstr "%s: Meninggalkan direktori '%s'\n"
 
-#: main.c:3447
+#: main.c:3448
 #, c-format
 msgid "%s[%u]: Entering an unknown directory\n"
 msgstr "%s[%u]: Memasuki sebuah direktori yang tidak diketahui\n"
 
-#: main.c:3450
+#: main.c:3451
 #, c-format
 msgid "%s[%u]: Leaving an unknown directory\n"
 msgstr "%s[%u]: Meninggalkan sebuah direktori yang tidak diketahui\n"
 
-#: main.c:3454
+#: main.c:3455
 #, fuzzy, c-format
 msgid "%s[%u]: Entering directory `%s'\n"
 msgstr "%s[%u]: Memasuki direktori '%s'\n"
 
-#: main.c:3457
+#: main.c:3458
 #, fuzzy, c-format
 msgid "%s[%u]: Leaving directory `%s'\n"
 msgstr "%s[%u]: Meninggalkan direktori '%s'\n"
@@ -1292,7 +1290,7 @@ msgstr "Kesalahan tidak diketahui %d"
 msgid "%s: %s"
 msgstr "%s: %s"
 
-#: misc.c:270 misc.c:281 misc.c:296 misc.c:313 misc.c:332 read.c:3179
+#: misc.c:270 misc.c:281 misc.c:296 misc.c:313 misc.c:332 read.c:3182
 msgid "virtual memory exhausted"
 msgstr "Kehabisan memori maya"
 
@@ -1318,9 +1316,9 @@ msgid "Child access"
 msgstr "Akses anak"
 
 #: misc.c:848
-#, fuzzy, c-format
+#, c-format
 msgid "write error: %s"
-msgstr "error menulis"
+msgstr "error menulis: %s"
 
 #: misc.c:850
 msgid "write error"
@@ -1397,12 +1395,11 @@ msgid "missing rule before recipe"
 msgstr "hilang aturan sebelum menjalankan perintah"
 
 #: read.c:1075
-#, fuzzy, c-format
+#, c-format
 msgid "missing separator%s"
 msgstr "pemisah %s hilang"
 
 #: read.c:1077
-#, fuzzy
 msgid " (did you mean TAB instead of 8 spaces?)"
 msgstr " (apakah yang anda maksud TAB dari pada 8 buah spasi?)"
 
@@ -1462,44 +1459,44 @@ msgstr "hanya satu 'else' dalam setiap kondisi"
 msgid "Malformed target-specific variable definition"
 msgstr "Definisi variable target-specific memiliki format yang salah"
 
-#: read.c:1914
+#: read.c:1917
 msgid "prerequisites cannot be defined in recipes"
 msgstr "persyaratan tidak dapat didefinisikan dalam script perintah"
 
-#: read.c:1967
+#: read.c:1970
 msgid "mixed implicit and static pattern rules"
 msgstr "aturan pola implisit dan static tercampur"
 
-#: read.c:1990 read.c:2173
+#: read.c:1993 read.c:2176
 msgid "mixed implicit and normal rules"
 msgstr "aturan implisit dan aturan normal tercampur"
 
-#: read.c:2035
+#: read.c:2038
 #, fuzzy, c-format
 msgid "target `%s' doesn't match the target pattern"
 msgstr "target '%s' tidak cocok dengan pola target"
 
-#: read.c:2051 read.c:2096
+#: read.c:2054 read.c:2099
 #, fuzzy, c-format
 msgid "target file `%s' has both : and :: entries"
 msgstr "target berkas '%s' keduanya memiliki masukan : dan ::"
 
-#: read.c:2057
+#: read.c:2060
 #, fuzzy, c-format
 msgid "target `%s' given more than once in the same rule."
 msgstr "target '%s' memberikan lebih dari sekali dalam aturan sama."
 
-#: read.c:2066
+#: read.c:2069
 #, fuzzy, c-format
 msgid "warning: overriding recipe for target `%s'"
 msgstr "peringatan: memaksa perintah untuk target '%s'"
 
-#: read.c:2069
+#: read.c:2072
 #, fuzzy, c-format
 msgid "warning: ignoring old recipe for target `%s'"
 msgstr "peringatan: menghiraukan perintah lama untuk target '%s'"
 
-#: read.c:2453
+#: read.c:2456
 msgid "warning: NUL character seen; rest of line ignored"
 msgstr "peringatan: karakter NUL terlihat; baris selanjutnya dihiraukan"
 
@@ -1697,7 +1694,7 @@ msgstr "Peringatan: Berkas '%s' memiliki waktu modifikasi dimasa depan"
 msgid "Warning: File `%s' has modification time %s s in the future"
 msgstr "Peringatan: Berkas '%s' memiliki waktu modifikasi %s s kedepan"
 
-#: remake.c:1609
+#: remake.c:1610
 #, fuzzy, c-format
 msgid ".LIBPATTERNS element `%s' is not a pattern"
 msgstr ".LIBPATTERNS elemen '%s' bukan merupakan sebuah pattern"
@@ -1707,7 +1704,7 @@ msgstr ".LIBPATTERNS elemen '%s' bukan merupakan sebuah pattern"
 msgid "Customs won't export: %s\n"
 msgstr "Custom tidak akan men-export: %s\n"
 
-#: rule.c:521
+#: rule.c:525
 msgid ""
 "\n"
 "# Implicit Rules"
@@ -1715,7 +1712,7 @@ msgstr ""
 "\n"
 "# Aturan implisit."
 
-#: rule.c:540
+#: rule.c:544
 msgid ""
 "\n"
 "# No implicit rules."
@@ -1723,7 +1720,7 @@ msgstr ""
 "\n"
 "# Tidak ada aturan implisit."
 
-#: rule.c:543
+#: rule.c:547
 #, c-format
 msgid ""
 "\n"
@@ -1732,11 +1729,11 @@ msgstr ""
 "\n"
 "# %u aturan implisit, %u"
 
-#: rule.c:552
+#: rule.c:556
 msgid " terminal."
 msgstr " terminal."
 
-#: rule.c:560
+#: rule.c:564
 #, c-format
 msgid "BUG: num_pattern_rules is wrong!  %u != %u"
 msgstr "BUG: num_pattern_rules salah! %u != %u"
@@ -2006,7 +2003,7 @@ msgstr ""
 "# Tidak terdapat nilai variabel pola-spesifik"
 
 #: variable.c:1736
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "\n"
 "# %u pattern-specific variable values"
@@ -2056,9 +2053,9 @@ msgid "BUILTIN RM %s\n"
 msgstr "BAWAAN RM %s\n"
 
 #: vmsjobs.c:471
-#, fuzzy, c-format
+#, c-format
 msgid "Unknown builtin command '%s'\n"
-msgstr "Menggunakan perintah baku untuk '%s'.\n"
+msgstr "Perintah bawaan '%s' tidak diketahui\n"
 
 #: vmsjobs.c:493
 #, c-format
@@ -2145,96 +2142,8 @@ msgstr ""
 #~ msgid "Recipe has too many lines (%ud)"
 #~ msgstr "Recipe has too many lines (%ud)"
 
-#, fuzzy
-#~ msgid "Note: prerequisite breakpoint already set at target %s."
-#~ msgstr "Persyaratan untuk '%s' lebih tua dari pada target '%s'.\n"
-
-#, fuzzy
-#~ msgid "Note: command breakpoint already set at target %s."
-#~ msgstr "Persyaratan untuk '%s' lebih tua dari pada target '%s'.\n"
-
-#, fuzzy
-#~ msgid "Note: target end breakpont set at target %s."
-#~ msgstr "Tidak perlu membuat lagi target '%s'"
-
-#, fuzzy
-#~ msgid "You need to supply a variable name."
-#~ msgstr "nama variabel kosong"
-
-#, fuzzy
-#~ msgid "Argument required (new working directory).\n"
-#~ msgstr "%s: Memasuki direktori '%s'\n"
-
-#, fuzzy
-#~ msgid "Working directory %s.\n"
-#~ msgstr "%s: Memasuki direktori '%s'\n"
-
-#, fuzzy
-#~ msgid "Set the working directory to DIR."
-#~ msgstr "%s: Memasuki direktori '%s'\n"
-
-#, fuzzy
-#~ msgid "Running %s\n"
-#~ msgstr "Pruning file '%s'.\n"
-
-#, fuzzy
-#~ msgid "cannot get target file location\n"
-#~ msgstr "%s: Memasuki direktori '%s'\n"
-
-#, fuzzy
-#~ msgid "Running commands for target %s\n"
-#~ msgstr "Menggunakan perintah baku untuk '%s'.\n"
-
-#, fuzzy
-#~ msgid "Running commands\n"
-#~ msgstr "Perintah bawaan '%s' tidak diketahui\n"
-
-#, fuzzy
-#~ msgid "Starting directory `%s'\n"
-#~ msgstr "%s: Memasuki direktori '%s'\n"
-
-#, fuzzy
-#~ msgid "Rule %s not found.\n"
-#~ msgstr "Makefile '%s' tidak ditemukan"
-
-#, fuzzy
-#~ msgid "cannot get current directory %s\n"
-#~ msgstr "%s: Memasuki direktori '%s'\n"
-
-#, fuzzy
-#~ msgid "Target \"%s\" doesn't have commands associated with it.\n"
-#~ msgstr "target '%s' tidak cocok dengan pola target"
-
-#, fuzzy
-#~ msgid "Target \"%s\" doesn't appear to be a target name.\n"
-#~ msgstr "target '%s' tidak cocok dengan pola target"
-
-#, fuzzy
-#~ msgid "You need to supply a variable name.\n"
-#~ msgstr "nama variabel kosong"
-
-#, fuzzy
-#~ msgid "Error: %s\n"
-#~ msgstr "error menulis: %s"
-
-#~ msgid "#  Command line target."
-#~ msgstr "#  Baris perintah target."
-
 #~ msgid "#  Builtin rule"
 #~ msgstr "# Tidak ada aturan implisit."
-
-#~ msgid "#  Implicit/static pattern stem: '%s'\n"
-#~ msgstr "#  Pola/implisit atau statis stem: '%s'\n"
-
-#~ msgid "#  Recipe currently running (THIS IS A BUG)."
-#~ msgstr "#  Perintah sedang berjalan (INI MERUPAKAN SEBUAH BUG)."
-
-#~ msgid "#  Dependencies recipe running (THIS IS A BUG)."
-#~ msgstr ""
-#~ "#  Perintah ketergantungan sedang berjalan (INI MERUPAKAN SEBUAH BUG)."
-
-#~ msgid "#  Invalid value in 'command_state' member!"
-#~ msgstr "#  Nilai yang salah dalam anggota 'command_state' !"
 
 #~ msgid "%s: Field '%s' not cached: %s"
 #~ msgstr "%s: Field '%s' not cached: %s"
@@ -2245,40 +2154,23 @@ msgstr ""
 #~ msgid "write: %s: %s"
 #~ msgstr "menulis: %s: %s"
 
-#, fuzzy
-#~ msgid "close: %s: %s"
-#~ msgstr "open: %s: %s"
-
-#, fuzzy
-#~ msgid "read: %s: %s"
-#~ msgstr "menulis: %s: %s"
-
-#, fuzzy
-#~ msgid "file: invalid file operation: %s"
+#~ msgid "Invalid file operation: %s"
 #~ msgstr "Invalid file operation: %s"
 
-#, fuzzy
-#~ msgid "Empty function name"
+#~ msgid "Empty function name\n"
 #~ msgstr "Empty function name\n"
 
-#, fuzzy
-#~ msgid "Invalid function name: %s"
+#~ msgid "Invalid function name: %s\n"
 #~ msgstr "Invalid function name: %s\n"
 
-#, fuzzy
-#~ msgid "Function name too long: %s"
+#~ msgid "Function name too long: %s\n"
 #~ msgstr "Function name too long: %s\n"
 
-#, fuzzy
-#~ msgid "Invalid minimum argument count (%u) for function %s"
+#~ msgid "Invalid minimum argument count (%d) for function %s\n"
 #~ msgstr "Jumlah dari argumen (%d) untuk fungsi %s tidak mencukupi\n"
 
-#, fuzzy
-#~ msgid "Invalid maximum argument count (%u) for function %s"
+#~ msgid "Invalid maximum argument count (%d) for function %s\n"
 #~ msgstr "Jumlah dari argumen (%d) untuk fungsi %s tidak mencukupi\n"
-
-#~ msgid "%s: option '%s' requires an argument\n"
-#~ msgstr "%s: opsi '%s' membutuhkan sebuah argumen\n"
 
 #~ msgid "guile: Expanding '%s'\n"
 #~ msgstr "guile: Expanding '%s'\n"
@@ -2292,14 +2184,26 @@ msgstr ""
 #~ msgid " (ignored)"
 #~ msgstr " (diabaikan)"
 
-#~ msgid "%s[%s] Error %d%s"
-#~ msgstr "%s[%s] Error %d%s"
+#~ msgid "<builtin>"
+#~ msgstr "<bawaan>"
+
+#~ msgid "%s: recipe for target '%s' failed"
+#~ msgstr "%s: recipe for target '%s' failed"
+
+#~ msgid "%s[%s] Error 0x%x%s"
+#~ msgstr "%s[%s] Error 0x%x%s"
+
+#~ msgid "%s[%s] %s%s%s"
+#~ msgstr "%s[%s] %s%s%s"
 
 #~ msgid "Cleaning up temp batch file %s failed (%d)\n"
 #~ msgstr "Membersihkan berkas batch sementara %s failed (%d)\n"
 
-#~ msgid "<builtin>"
-#~ msgstr "<bawaan>"
+#~ msgid "release jobserver semaphore: (Error %ld: %s)"
+#~ msgstr "release jobserver semaphore: (Error %ld: %s)"
+
+#~ msgid "semaphore or child process wait: (Error %ld: %s)"
+#~ msgstr "semaphore or child process wait: (Error %ld: %s)"
 
 #~ msgid "%s: target '%s' does not exist"
 #~ msgstr "%s: archive '%s' tidak ada"
@@ -2313,14 +2217,6 @@ msgstr ""
 
 #~ msgid "Could not restore stderr\n"
 #~ msgstr "Tidak dapat mengembalikan stderr\n"
-
-#, fuzzy
-#~ msgid "%s: %s: Command not found\n"
-#~ msgstr "%s: Perintah tidak ada"
-
-#, fuzzy
-#~ msgid "%s[%u]: %s: Command not found\n"
-#~ msgstr "%s: Perintah tidak ada"
 
 #~ msgid ""
 #~ "Batch file contents:\n"
@@ -2359,50 +2255,28 @@ msgstr ""
 #~ "                              Synchronize output of parallel jobs by "
 #~ "TYPE.\n"
 
-#, fuzzy
-#~ msgid ""
-#~ "  -P, --profile               Print profiling information for each "
-#~ "target.\n"
-#~ msgstr ""
-#~ "  --trace                          Menampilkan banyak informasi debug.\n"
-
-#~ msgid "  --trace                     Print tracing information.\n"
-#~ msgstr ""
-#~ "  --trace                          Menampilkan banyak informasi debug.\n"
-
-#~ msgid "unknown debug level specification '%s'"
-#~ msgstr "spesifikasi tingkat debug tidak diketahui '%s'"
-
 #~ msgid "unknown output-sync type '%s'"
 #~ msgstr "unknown output-sync type '%s'"
 
-#, fuzzy
-#~ msgid "write error: stdout"
-#~ msgstr "error menulis: %s"
+#~ msgid "internal error: multiple --sync-mutex options"
+#~ msgstr "internal error: opsi --sync-mutex lebih dari satu"
 
-#, fuzzy
-#~ msgid "%s: directory '%s'\n"
-#~ msgstr "%s: Meninggalkan direktori '%s'\n"
+#~ msgid ""
+#~ "internal error: unable to open jobserver semaphore '%s': (Error %ld: %s)"
+#~ msgstr ""
+#~ "internal error: unable to open jobserver semaphore '%s': (Error %ld: %s)"
 
-#, fuzzy
-#~ msgid "%s[%u]: unknown directory\n"
-#~ msgstr "%s[%u]: Meninggalkan sebuah direktori yang tidak diketahui\n"
+#~ msgid "Jobserver client (semaphore %s)\n"
+#~ msgstr "Jobserver client (semaphore %s)\n"
 
-#, fuzzy
-#~ msgid "%s[%u]: directory '%s'\n"
-#~ msgstr "%s[%u]: Meninggalkan direktori '%s'\n"
+#~ msgid "Jobserver slots limited to %d\n"
+#~ msgstr "Jobserver slots limited to %d\n"
 
-#, fuzzy
-#~ msgid "duping jobs pipe"
-#~ msgstr "membuat pipa pekerjaan"
+#~ msgid "creating jobserver semaphore: (Error %ld: %s)"
+#~ msgstr "creating jobserver semaphore: (Error %ld: %s)"
 
-#, fuzzy
-#~ msgid "jobserver pipeline"
-#~ msgstr "inisiasi pipa server pekerja"
-
-#, fuzzy
-#~ msgid "pselect jobs pipe"
-#~ msgstr "membaca pipa pekerjaan"
+#~ msgid "Report bugs to <bug-make@gnu.org>\n"
+#~ msgstr "Laporkan bugs kepada <bug-make@gnu.org>\n"
 
 #~ msgid "Skipping UTF-8 BOM in makefile '%s'\n"
 #~ msgstr "Skipping UTF-8 BOM in makefile '%s'\n"
@@ -2412,10 +2286,6 @@ msgstr ""
 
 #~ msgid "%s: failed to load"
 #~ msgstr "%s: failed to load"
-
-#, fuzzy
-#~ msgid "*** mixed implicit and normal rules: deprecated syntax"
-#~ msgstr "aturan implisit dan aturan normal tercampur"
 
 #~ msgid ""
 #~ "\n"
@@ -2454,51 +2324,6 @@ msgstr ""
 #~ msgstr ""
 #~ "# berkas statistik hash-table:\n"
 #~ "# "
-
-#~ msgid "'override' directive"
-#~ msgstr "'override' direktif"
-
-#~ msgid " (from '%s', line %lu)"
-#~ msgstr " (dari '%s', baris %lu)"
-
-#~ msgid "Jobserver slots limited to %d\n"
-#~ msgstr "Jobserver slots limited to %d\n"
-
-#~ msgid "creating jobserver semaphore: (Error %ld: %s)"
-#~ msgstr "creating jobserver semaphore: (Error %ld: %s)"
-
-#~ msgid ""
-#~ "internal error: unable to open jobserver semaphore '%s': (Error %ld: %s)"
-#~ msgstr ""
-#~ "internal error: unable to open jobserver semaphore '%s': (Error %ld: %s)"
-
-#~ msgid "Jobserver client (semaphore %s)\n"
-#~ msgstr "Jobserver client (semaphore %s)\n"
-
-#~ msgid "release jobserver semaphore: (Error %ld: %s)"
-#~ msgstr "release jobserver semaphore: (Error %ld: %s)"
-
-#~ msgid "semaphore or child process wait: (Error %ld: %s)"
-#~ msgstr "semaphore or child process wait: (Error %ld: %s)"
-
-#~ msgid "%s: recipe for target '%s' failed"
-#~ msgstr "%s: recipe for target '%s' failed"
-
-#~ msgid "%s[%s] Error 0x%x%s"
-#~ msgstr "%s[%s] Error 0x%x%s"
-
-#, fuzzy
-#~ msgid "[%s] Error %d%s"
-#~ msgstr "%s[%s] Error %d%s"
-
-#~ msgid "%s[%s] %s%s%s"
-#~ msgstr "%s[%s] %s%s%s"
-
-#~ msgid "internal error: multiple --sync-mutex options"
-#~ msgstr "internal error: opsi --sync-mutex lebih dari satu"
-
-#~ msgid "Report bugs to <bug-make@gnu.org>\n"
-#~ msgstr "Laporkan bugs kepada <bug-make@gnu.org>\n"
 
 #~ msgid "process_easy() failed failed to launch process (e=%ld)\n"
 #~ msgstr "process_easy() gagal untuk menjalankan proses (e=%ld)\n"
