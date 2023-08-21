@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@v3.5.0
-    - run: sudo apt-get install autopoint libreadline-dev wget texinfo dejagnu
+    - run: sudo apt-get install autopoint libreadline-dev wget texinfo dejagnu intltool
     - run: env | uniq | sort | uniq
     - run: autoreconf -fvi -Wall -Wno-obsolete && ./configure && make update && (cd doc && make stamp-vti) && make
     - run: make check
