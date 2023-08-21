@@ -1,0 +1,22 @@
+name: cooljeanius/remake
+on:
+  push:
+    branches:
+    - "**/*"
+  pull_request:
+concurrency:
+#   # This item has no matching transformer
+#   maximum_number_of_builds: 0
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v3.5.0
+    - run: sudo apt-get install autopoint libreadline-dev wget texinfo dejagnu
+    - run: env | uniq | sort | uniq
+    - run: autoreconf -fvi -Wall -Wno-obsolete && ./configure && make update && (cd doc && make stamp-vti) && make
+    - run: make check
+      if: "${{ success() }}"
+    - run: cat /usr/include/errno.h
+      if: "${{ failure() }}"
