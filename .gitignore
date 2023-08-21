@@ -54,3 +54,4 @@ config*.lineno
 *.tmp
 *.layout
 *.dSYM
+.env.local
