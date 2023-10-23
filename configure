@@ -13847,8 +13847,6 @@ if test "${make_cv_sys_gnu_glob}" = no; then
   GLOBLIB=glob/libglob.a
 fi
 
-
-
 # Tell automake about this, so it can build the right .c files.
  if test "${make_cv_sys_gnu_glob}" = no; then
   USE_LOCAL_GLOB_TRUE=
@@ -13940,39 +13938,40 @@ case "${make_badcust}" in
   yes) echo ""
        echo "WARNING: --with-customs used but no customs.h could be found;"
        echo "         disabling Customs support."
-       echo ;;
+       echo "" ;;
 esac
 
 case "${with_customs}" in
   ""|n|no|y|ye|yes) ;;
   *) if test -f "${with_customs}/lib/libcustoms.a"; then
-       :
+       echo "${with_customs}/lib/libcustoms.a found."
+       stat "${with_customs}/lib/libcustoms.a"
      else
-       echo
+       echo ""
        echo "WARNING: '${with_customs}/lib' does not appear to contain the"
        echo "         Customs library. You must build and install Customs"
        echo "         before compiling GNU make."
-       echo
+       echo ""
      fi ;;
 esac
 
 case "${has_wait_nohang}" in
-  no) echo
+  no) echo ""
       echo "WARNING: Your system has neither waitpid() nor wait3()."
       echo "         Without one of these, signal handling is unreliable."
       echo "         You should be aware that running GNU make with -j"
       echo "         could result in erratic behavior."
-      echo ;;
+      echo "" ;;
 esac
 
 case "${make_cv_job_server}/${user_job_server}" in
-  no/yes) echo
-	  echo "WARNING: Make job server requires a POSIX-ish system that"
-	  echo "         supports the pipe(), sigaction(), and either"
+  no/yes) echo ""
+          echo "WARNING: Make job server requires a POSIX-ish system that"
+          echo "         supports the pipe(), sigaction(), and either"
           echo "         waitpid() or wait3() funcs. Your system does not"
-	  echo "         appear to provide one or more of those."
-	  echo "         Disabling job server support."
-          echo ;;
+          echo "         appear to provide one or more of those."
+          echo "         Disabling job server support."
+          echo "" ;;
 esac
 
 

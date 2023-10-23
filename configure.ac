@@ -70,7 +70,7 @@ AC_CHECK_PROG([RSPEC],[rspec],[rspec],[none])dnl
 
 # Enable gettext, in "external" mode.
 
-AM_GNU_GETTEXT_VERSION([0.21.1])
+AM_GNU_GETTEXT_VERSION([0.21])
 AM_GNU_GETTEXT([external])dnl
 
 # This test must come as early as possible after the compiler configuration
@@ -572,8 +572,8 @@ if test "${make_cv_sys_gnu_glob}" = no; then
   GLOBINC='-I$(srcdir)/glob'
   GLOBLIB=glob/libglob.a
 fi
-AC_SUBST([GLOBINC])
-AC_SUBST([GLOBLIB])
+AC_SUBST([GLOBINC])dnl
+AC_SUBST([GLOBLIB])dnl
 
 # Tell automake about this, so it can build the right .c files.
 AM_CONDITIONAL([USE_LOCAL_GLOB],[test "${make_cv_sys_gnu_glob}" = no])dnl
@@ -620,44 +620,46 @@ case "${make_badcust}" in
   yes) echo ""
        echo "WARNING: --with-customs used but no customs.h could be found;"
        echo "         disabling Customs support."
-       echo ;;
+       echo "" ;;
 esac
 
 case "${with_customs}" in
   ""|n|no|y|ye|yes) ;;
   *) if test -f "${with_customs}/lib/libcustoms.a"; then
-       :
+       echo "${with_customs}/lib/libcustoms.a found."
+       stat "${with_customs}/lib/libcustoms.a"
      else
-       echo
+       echo ""
        echo "WARNING: '${with_customs}/lib' does not appear to contain the"
        echo "         Customs library. You must build and install Customs"
        echo "         before compiling GNU make."
-       echo
+       echo ""
      fi ;;
 esac
 
 case "${has_wait_nohang}" in
-  no) echo
+  no) echo ""
       echo "WARNING: Your system has neither waitpid() nor wait3()."
       echo "         Without one of these, signal handling is unreliable."
       echo "         You should be aware that running GNU make with -j"
       echo "         could result in erratic behavior."
-      echo ;;
+      echo "" ;;
 esac
 
 case "${make_cv_job_server}/${user_job_server}" in
-  no/yes) echo
-	  echo "WARNING: Make job server requires a POSIX-ish system that"
-	  echo "         supports the pipe(), sigaction(), and either"
+  no/yes) echo ""
+          echo "WARNING: Make job server requires a POSIX-ish system that"
+          echo "         supports the pipe(), sigaction(), and either"
           echo "         waitpid() or wait3() funcs. Your system does not"
-	  echo "         appear to provide one or more of those."
-	  echo "         Disabling job server support."
-          echo ;;
+          echo "         appear to provide one or more of those."
+          echo "         Disabling job server support."
+          echo "" ;;
 esac
 
 
 # Specify what files are to be created.
-AC_CONFIG_FILES([Makefile glob/Makefile po/Makefile.in config/Makefile doc/Makefile w32/Makefile])dnl
+AC_CONFIG_FILES([Makefile glob/Makefile po/Makefile.in config/Makefile \
+                 doc/Makefile w32/Makefile])dnl
 
 # OK, do it!
 
