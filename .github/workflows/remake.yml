@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - name: checkout
-      uses: actions/checkout@v4.1.0
+      uses: actions/checkout@v4.1.1
     - run: sudo apt-get install autopoint libreadline-dev wget texinfo dejagnu intltool
     - run: env | uniq | sort | uniq
     - run: autoreconf -fvi -Wall -Wno-obsolete && ./configure && make update && (cd doc && make stamp-vti) && make
