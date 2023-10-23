@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@v4.1.1
-    - run: sudo apt-get install autopoint libreadline-dev wget texinfo dejagnu intltool gettext-doc libasprintf-dev libgettextpo-dev
+    - run: sudo apt-get install autopoint libreadline-dev wget texinfo dejagnu intltool gettext-doc libasprintf-dev libgettextpo-dev ruby ruby-rspec
     - run: env | uniq | sort | uniq
     - run: autopoint --version || gettext --version
     - run: autoreconf -fvi -Wall -Wno-obsolete && ./configure && make update && (cd doc && make stamp-vti)
