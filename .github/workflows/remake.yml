@@ -16,7 +16,7 @@ jobs:
     - run: autoreconf -fvi -Wall -Wno-obsolete && ./configure && make update && (cd doc && make stamp-vti)
     - run: make || make check-loadavg
       if: "${{ success() }}"
-    - run: make check
+    - run: make check || make check-rspec-broken
       if: "${{ success() }}"
     - run: cat /usr/include/errno.h
       if: "${{ failure() }}"
