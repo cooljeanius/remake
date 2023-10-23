@@ -36,7 +36,7 @@ AC_USE_SYSTEM_EXTENSIONS
 AC_SEARCH_LIBS([strerror],[cposix]) dnl# used to be AC\_ISC\_POSIX
 
 # Automake setup
-AM_INIT_AUTOMAKE([1.9 dist-bzip2 check-news gnu dejagnu subdir-objects])
+AM_INIT_AUTOMAKE([1.9 dist-bzip2 check-news gnu dejagnu info-in-builddir subdir-objects])
 AM_MAINTAINER_MODE
 AM_MISSING_PROG([GIT2CL],[git2cl],[${missing_dir}])
 if test -z "${datarootdir}"; then
@@ -70,7 +70,7 @@ AC_CHECK_PROG([RSPEC],[rspec],[rspec],[none])dnl
 
 # Enable gettext, in "external" mode.
 
-AM_GNU_GETTEXT_VERSION([0.19.8.1])
+AM_GNU_GETTEXT_VERSION([0.21.1])
 AM_GNU_GETTEXT([external])dnl
 
 # This test must come as early as possible after the compiler configuration
@@ -94,6 +94,23 @@ AC_CHECK_HEADERS([builtins.h ctype.h errno.h features.h fcntl.h fnmatch.h \
                   sys/param.h sys/resource.h sys/socket.h \
                   sys/time.h sys/timeb.h time.h types.h \
                   unixio.h unixlib.h wchar.h wctype.h windows.h])dnl
+
+if test "x${ac_cv_header_inttypes_h}" = "x"; then
+  test -z "${ac_cv_header_inttypes_h}"
+  AC_CHECK_HEADERS([inttypes.h])
+fi
+if test "x${ac_cv_header_stdint_h}" = "x"; then
+  test -z "${ac_cv_header_stdint_h}"
+  AC_CHECK_HEADERS([stdint.h])
+fi
+if test "x${ac_cv_header_strings_h}" = "x"; then
+  test -z "${ac_cv_header_strings_h}"
+  AC_CHECK_HEADERS([strings.h])
+fi
+if test "x${ac_cv_header_unistd_h}" = "x"; then
+  test -z "${ac_cv_header_unistd_h}"
+  AC_CHECK_HEADERS([unistd.h])
+fi
 
 # Set a flag if we have an ANSI C compiler
 if test "x${ac_cv_prog_cc_stdc}" != "xno"; then
@@ -213,6 +230,11 @@ AC_CHECK_FUNCS_ONCE([__iswctype __btowc])dnl
 AC_CHECK_DECLS([bsd_signal],[],[],[[#include <signal.h>]])dnl
 
 AC_FUNC_SETVBUF_REVERSED
+
+if test "x${ac_cv_func_setlocale}" = "x"; then
+  test -z "${ac_cv_func_setlocale}"
+  AC_CHECK_FUNCS([setlocale])
+fi
 
 # Rumor has it that strcasecmp lives in -lresolv on some odd systems.
 # It does NOT hurt much to use our own if we cannot find it so I do NOT

@@ -4,14 +4,14 @@
 # This file is distributed under the same license as the make package.
 # Clytie Siddall <clytie@riverland.net.au>, 2006-2010.
 # Nguyễn Thái Ngọc Duy <pclouds@gmail.com>, 2012.
-# Trần Ngọc Quân <vnwildman@gmail.com>, 2012-2014, 2016.
+# Trần Ngọc Quân <vnwildman@gmail.com>, 2012-2014, 2016, 2020.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: make 4.2.1\n"
+"Project-Id-Version: make 4.2.93\n"
 "Report-Msgid-Bugs-To: bug-make@gnu.org\n"
-"POT-Creation-Date: 2018-02-12 19:14-0500\n"
-"PO-Revision-Date: 2016-06-12 07:06+0700\n"
+"POT-Creation-Date: 2023-10-23 03:33-0400\n"
+"PO-Revision-Date: 2020-01-04 15:04+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <translation-team-vi@lists.sourceforge.net>\n"
 "Language: vi\n"
@@ -21,11 +21,12 @@ msgstr ""
 "X-Bugs: Report translation errors to the Language-Team address.\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Language-Team-Website: <http://translationproject.org/team/vi.html>\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Poedit 2.2.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #: ar.c:51
 #, fuzzy, c-format
+#| msgid "attempt to use unsupported feature: '%s'"
 msgid "attempt to use unsupported feature: `%s'"
 msgstr "đã dùng tính năng chưa được hỗ trợ: “%s”"
 
@@ -35,21 +36,25 @@ msgstr "“touch” thành viên kho không có trên VMS"
 
 #: ar.c:155
 #, fuzzy, c-format
+#| msgid "touch: Archive '%s' does not exist"
 msgid "touch: Archive `%s' does not exist"
 msgstr "touch: Kho “%s” không tồn tại"
 
 #: ar.c:158
 #, fuzzy, c-format
+#| msgid "touch: '%s' is not a valid archive"
 msgid "touch: `%s' is not a valid archive"
 msgstr "touch: “%s” không phải là kho hợp lệ"
 
 #: ar.c:165
 #, fuzzy, c-format
+#| msgid "touch: Member '%s' does not exist in '%s'"
 msgid "touch: Member `%s' does not exist in `%s'"
 msgstr "touch: Thành viên “%s” không tồn tại trong “%s”"
 
 #: ar.c:172
 #, fuzzy, c-format
+#| msgid "touch: Bad return code from ar_member_touch on '%s'"
 msgid "touch: Bad return code from ar_member_touch on `%s'"
 msgstr "touch: Gặp mã trả lại sai từ ar_member_touch trên “%s”"
 
@@ -66,11 +71,13 @@ msgstr "lbr$ini_control() bị lỗi với trạng thái = %d"
 
 #: arscan.c:187
 #, fuzzy, c-format
+#| msgid "unable to open library '%s' to lookup member status %d"
 msgid "unable to open library `%s' to lookup member `%s'"
 msgstr "không thể mở thư viện “%s” để tra tìm thành viên “%d”"
 
 #: arscan.c:850
 #, fuzzy, c-format
+#| msgid "Member '%s'%s: %ld bytes at %ld (%ld).\n"
 msgid "Member `%s'%s: %ld bytes at %ld (%ld).\n"
 msgstr "Thành viên “%s”%s: %ld byte tại %ld (%ld).\n"
 
@@ -94,26 +101,31 @@ msgstr "*** Ngắt.\n"
 
 #: commands.c:738
 #, fuzzy, c-format
+#| msgid "*** [%s] Archive member '%s' may be bogus; not deleted"
 msgid "*** [%s] Archive member `%s' may be bogus; not deleted"
 msgstr "*** [%s] Thành phần kho “%s” có thể là giả; chưa bị xóa bỏ"
 
 #: commands.c:741
 #, fuzzy, c-format
+#| msgid "*** Archive member '%s' may be bogus; not deleted"
 msgid "*** Archive member `%s' may be bogus; not deleted"
 msgstr "*** Thành viên kho “%s” có thể là giả; chưa bị xóa bỏ"
 
 #: commands.c:758
 #, fuzzy, c-format
+#| msgid "*** [%s] Deleting file '%s'"
 msgid "*** [%s] Deleting file `%s'"
 msgstr "*** [%s] Đang xóa tập tin “%s”"
 
 #: commands.c:760
 #, fuzzy, c-format
+#| msgid "*** Deleting file '%s'"
 msgid "*** Deleting file `%s'"
 msgstr "*** Đang xóa tập tin “%s”"
 
 #: commands.c:805
 #, fuzzy
+#| msgid "#  recipe to execute"
 msgid "#  commands to execute"
 msgstr "#  công thức cần thực hiện"
 
@@ -123,11 +135,13 @@ msgstr " (dựng-sẵn):"
 
 #: commands.c:810
 #, fuzzy, c-format
+#| msgid " (from '%s', line %lu):\n"
 msgid " (from `%s', line %lu):\n"
 msgstr " (từ “%s”, dòng %lu):\n"
 
 #: debug.c:90
 #, fuzzy, c-format
+#| msgid "unknown debug level specification '%s'"
 msgid "unknown debug level specification `%s'"
 msgstr "không hiểu đặc tả cấp gỡ rối “%s”"
 
@@ -146,6 +160,7 @@ msgstr "# %s: không thể lấy thống kê.\n"
 
 #: dir.c:1013
 #, fuzzy, c-format
+#| msgid "# %s (key %s, mtime %I64u): could not be opened.\n"
 msgid "# %s (key %s, mtime %d): could not be opened.\n"
 msgstr "# %s (khóa %s, mtime %I64u): không thể mở.\n"
 
@@ -161,6 +176,7 @@ msgstr "# %s (thiết bị %ld, nút thông tin %ld): không thể mở.\n"
 
 #: dir.c:1049
 #, fuzzy, c-format
+#| msgid "# %s (key %s, mtime %I64u): "
 msgid "# %s (key %s, mtime %d): "
 msgstr "# %s (khóa %s, mtime %I64u): "
 
@@ -201,11 +217,13 @@ msgstr " việc không thể làm được trong %lu thư mục.\n"
 
 #: error.c:200
 #, fuzzy
+#| msgid "Unknown error %d"
 msgid "Unknown system error"
 msgstr "Lỗi chưa biết %d"
 
 #: expand.c:128
 #, fuzzy, c-format
+#| msgid "Recursive variable '%s' references itself (eventually)"
 msgid "Recursive variable `%s' references itself (eventually)"
 msgstr "Biến đệ quy “%s” (cuối cùng) lại tham chiếu đến chính nó"
 
@@ -215,37 +233,44 @@ msgstr "tham chiếu biến chưa chấm dứt"
 
 #: file.c:281
 #, fuzzy, c-format
+#| msgid "Recipe was specified for file '%s' at %s:%lu,"
 msgid "Recipe was specified for file `%s' at %s:%lu,"
 msgstr "Công thức được chỉ định cho tập tin “%s” tại %s:%lu,"
 
 #: file.c:286
 #, fuzzy, c-format
+#| msgid "Recipe for file '%s' was found by implicit rule search,"
 msgid "Recipe for file `%s' was found by implicit rule search,"
 msgstr "Tìm thấy công thức cho tập tin “%s” nhờ quy tắc tìm kiếm ngầm,"
 
 #: file.c:289
 #, fuzzy, c-format
+#| msgid "but '%s' is now considered the same file as '%s'."
 msgid "but `%s' is now considered the same file as `%s'."
 msgstr "nhưng “%s” bây giờ được cũng được xem là cùng tập tin “%s”."
 
 #: file.c:292
 #, fuzzy, c-format
+#| msgid "Recipe for '%s' will be ignored in favor of the one for '%s'."
 msgid "Recipe for `%s' will be ignored in favor of the one for `%s'."
 msgstr ""
 "Công thức cho “%s” sẽ bị bỏ qua trong sự chấp thuận của một cái cho “%s”."
 
 #: file.c:312
 #, fuzzy, c-format
+#| msgid "can't rename single-colon '%s' to double-colon '%s'"
 msgid "can't rename single-colon `%s' to double-colon `%s'"
 msgstr "không thể đổi tên “%s” hai chấm đơn thành “%s” hai chấm đôi"
 
 #: file.c:317
 #, fuzzy, c-format
+#| msgid "can't rename double-colon '%s' to single-colon '%s'"
 msgid "can't rename double-colon `%s' to single-colon `%s'"
 msgstr "không thể đổi tên “%s” hai chấm đôi thành “%s” hai chấm đơn"
 
 #: file.c:406
 #, fuzzy, c-format
+#| msgid "*** Deleting intermediate file '%s'"
 msgid "*** Deleting intermediate file `%s'"
 msgstr "*** Đang xóa tập tin trung gian “%s”"
 
@@ -276,6 +301,7 @@ msgstr "#  Đích giả (điều kiện tiên quyết của .PHONY)."
 
 #: file.c:947
 #, fuzzy
+#| msgid "#  Command line target."
 msgid "#  Command-line target."
 msgstr "#  Đích dòng lệnh."
 
@@ -293,6 +319,7 @@ msgstr "#  Chưa hoàn tất tìm quy tắc ngầm."
 
 #: file.c:954
 #, fuzzy, c-format
+#| msgid "#  Implicit/static pattern stem: '%s'\n"
 msgid "#  Implicit/static pattern stem: `%s'\n"
 msgstr "#  Cuống mẫu ngầm/tĩnh: “%s”\n"
 
@@ -331,16 +358,19 @@ msgstr "#  Tập tin chưa được cập nhật."
 
 #: file.c:990
 #, fuzzy
+#| msgid "#  Recipe currently running (THIS IS A BUG)."
 msgid "#  Commands currently running (THIS IS A BUG)."
 msgstr "#  Công thức đang chạy (ĐÂY LÀ MỘT LỖI)."
 
 #: file.c:993
 #, fuzzy
+#| msgid "#  Dependencies recipe running (THIS IS A BUG)."
 msgid "#  Dependencies commands running (THIS IS A BUG)."
 msgstr "#  Công thức phụ thuộc đang chạy (ĐÂY LÀ MỘT LỖI)."
 
 #: file.c:996
 #, fuzzy
+#| msgid "#  Command line target."
 msgid "#  Commands not yet started."
 msgstr "#  Đích dòng lệnh."
 
@@ -358,11 +388,13 @@ msgstr "#  Gặp lỗi khi cập nhật."
 
 #: file.c:1014
 #, fuzzy
+#| msgid "#  Invalid value in 'update_status' member!"
 msgid "#  Invalid value in `update_status' member!"
 msgstr "#  Gặp giá trị sai trong thành phần “update_status”!"
 
 #: file.c:1021
 #, fuzzy
+#| msgid "#  Invalid value in 'command_state' member!"
 msgid "#  Invalid value in `command_state' member!"
 msgstr "#  Gặp giá trị sai trong thành viên “command_state”!"
 
@@ -386,31 +418,37 @@ msgstr ""
 
 #: function.c:760
 #, fuzzy
+#| msgid "non-numeric first argument to 'word' function"
 msgid "non-numeric first argument to `word' function"
 msgstr "đối số thứ nhất không phải dạng số cho hàm “word”"
 
 #: function.c:765
 #, fuzzy
+#| msgid "first argument to 'word' function must be greater than 0"
 msgid "first argument to `word' function must be greater than 0"
 msgstr "đối số thứ nhất cho hàm “word” phải lớn hơn 0"
 
 #: function.c:785
 #, fuzzy
+#| msgid "non-numeric first argument to 'wordlist' function"
 msgid "non-numeric first argument to `wordlist' function"
 msgstr "đối số thứ nhất không phải số cho hàm “wordlist”"
 
 #: function.c:787
 #, fuzzy
+#| msgid "non-numeric second argument to 'wordlist' function"
 msgid "non-numeric second argument to `wordlist' function"
 msgstr "đối số thứ hai không phải số cho hàm “wordlist”"
 
 #: function.c:1475
 #, fuzzy, c-format
+#| msgid "windows32_openpipe: DuplicateHandle(In) failed (e=%ld)\n"
 msgid "windows32_openpipe(): DuplicateHandle(In) failed (e=%ld)\n"
 msgstr "windows32_openpipe: DuplicateHandle(In) gặp lỗi (e=%ld)\n"
 
 #: function.c:1486
 #, fuzzy, c-format
+#| msgid "windows32_openpipe: DuplicateHandle(Err) failed (e=%ld)\n"
 msgid "windows32_open_pipe(): DuplicateHandle(Err) failed (e=%ld)\n"
 msgstr "windows32_openpipe: DuplicateHandle(Err) gặp lỗi (e=%ld)\n"
 
@@ -430,46 +468,55 @@ msgstr "Dọn dẹp tập tin bó tạm %s\n"
 
 #: function.c:2168
 #, fuzzy, c-format
+#| msgid "insufficient number of arguments (%d) to function '%s'"
 msgid "insufficient number of arguments (%d) to function `%s'"
 msgstr "không đủ số đối số (%d) cho hàm “%s”"
 
 #: function.c:2180
 #, fuzzy, c-format
+#| msgid "unimplemented on this platform: function '%s'"
 msgid "unimplemented on this platform: function `%s'"
 msgstr "chưa được viết mã thi hành trên hệ thống này: hàm “%s”"
 
 #: function.c:2230
 #, fuzzy, c-format
+#| msgid "unterminated call to function '%s': missing '%c'"
 msgid "unterminated call to function `%s': missing `%c'"
 msgstr "cuộc gọi chưa được chấm dứt cho hàm “%s”: thiếu “%c”"
 
 #: getopt.c:668
 #, fuzzy, c-format
+#| msgid "%s: option '%s' is ambiguous\n"
 msgid "%s: option `%s' is ambiguous\n"
 msgstr "%s: tùy chọn “%s” chưa rõ ràng\n"
 
 #: getopt.c:692
 #, fuzzy, c-format
+#| msgid "%s: option '--%s' doesn't allow an argument\n"
 msgid "%s: option `--%s' does not allow an argument\n"
 msgstr "%s: tùy chọn “--%s” không nhận đối số\n"
 
 #: getopt.c:697
 #, fuzzy, c-format
+#| msgid "%s: option '%c%s' doesn't allow an argument\n"
 msgid "%s: option `%c%s' does not allow an argument\n"
 msgstr "%s: tùy chọn “%c%s” không nhận đối số\n"
 
 #: getopt.c:715 getopt.c:890
 #, fuzzy, c-format
+#| msgid "%s: option '%s' requires an argument\n"
 msgid "%s: option `%s' requires an argument\n"
 msgstr "%s: tùy chọn “%s” cần một đối số\n"
 
 #: getopt.c:746
 #, fuzzy, c-format
+#| msgid "%s: unrecognized option '--%s'\n"
 msgid "%s: unrecognized option `--%s'\n"
 msgstr "%s: không nhận ra tùy chọn “--%s”\n"
 
 #: getopt.c:750
 #, fuzzy, c-format
+#| msgid "%s: unrecognized option '%c%s'\n"
 msgid "%s: unrecognized option `%c%s'\n"
 msgstr "%s: không nhận ra tùy chọn “%c%s”\n"
 
@@ -490,11 +537,13 @@ msgstr "%s: tùy chọn cần một đối số -- %c\n"
 
 #: getopt.c:856
 #, fuzzy, c-format
+#| msgid "%s: option '-W %s' is ambiguous\n"
 msgid "%s: option `-W %s' is ambiguous\n"
 msgstr "%s: tùy chọn “-W %s” chưa rõ ràng\n"
 
 #: getopt.c:874
 #, fuzzy, c-format
+#| msgid "%s: option '-W %s' doesn't allow an argument\n"
 msgid "%s: option `-W %s' does not allow an argument\n"
 msgstr "%s: tùy chọn “-W %s” không nhận một đối số\n"
 
@@ -504,27 +553,32 @@ msgid "can't allocate %lu bytes for hash table: memory exhausted"
 msgstr "không thể cấp phát %lu byte cho bảng băm: hết bộ nhớ"
 
 #: hash.c:280
-#, c-format
+#, fuzzy, c-format
+#| msgid "Load=%lu/%lu=%.0f%%, "
 msgid "Load=%ld/%ld=%.0f%%, "
-msgstr "Tải =%ld/%ld=%.0f%%, "
+msgstr "Tải =%lu/%lu=%.0f%%, "
 
 #: hash.c:282
-#, c-format
+#, fuzzy, c-format
+#| msgid "Rehash=%u, "
 msgid "Rehash=%d, "
-msgstr "Băm lại=%d, "
+msgstr "Băm lại=%u, "
 
 #: hash.c:283
-#, c-format
+#, fuzzy, c-format
+#| msgid "Collisions=%lu/%lu=%.0f%%"
 msgid "Collisions=%ld/%ld=%.0f%%"
-msgstr "Xung đột  =%ld/%ld=%.0f%%"
+msgstr "Xung đột =%lu/%lu=%.0f%%"
 
 #: implicit.c:41
 #, fuzzy, c-format
+#| msgid "Looking for an implicit rule for '%s'.\n"
 msgid "Looking for an implicit rule for `%s'.\n"
 msgstr "Tìm quy tắc ngầm cho “%s”.\n"
 
 #: implicit.c:57
 #, fuzzy, c-format
+#| msgid "Looking for archive-member implicit rule for '%s'.\n"
 msgid "Looking for archive-member implicit rule for `%s'.\n"
 msgstr "Tìm quy tắc ngầm về thành phần kho cho “%s”.\n"
 
@@ -534,36 +588,43 @@ msgstr "Tránh quy tắc ngầm đệ quy.\n"
 
 #: implicit.c:492
 #, fuzzy, c-format
+#| msgid "Trying pattern rule with stem '%.*s'.\n"
 msgid "Trying pattern rule with stem `%.*s'.\n"
 msgstr "Thử quy tắc mẫu với cuống “%.*s”.\n"
 
 #: implicit.c:675
 #, fuzzy, c-format
+#| msgid "Rejecting impossible rule prerequisite '%s'.\n"
 msgid "Rejecting impossible rule prerequisite `%s'.\n"
 msgstr "Từ chối điều kiện tiên quyết không thể thỏa “%s”.\n"
 
 #: implicit.c:676
 #, fuzzy, c-format
+#| msgid "Rejecting impossible implicit prerequisite '%s'.\n"
 msgid "Rejecting impossible implicit prerequisite `%s'.\n"
 msgstr "Từ chối điều kiện tiên quyết ngầm không thể “%s”.\n"
 
 #: implicit.c:689
 #, fuzzy, c-format
+#| msgid "Trying rule prerequisite '%s'.\n"
 msgid "Trying rule prerequisite `%s'.\n"
 msgstr "Thử điều kiện tiên quyết quy tắc “%s”.\n"
 
 #: implicit.c:690
 #, fuzzy, c-format
+#| msgid "Trying implicit prerequisite '%s'.\n"
 msgid "Trying implicit prerequisite `%s'.\n"
 msgstr "Thử điều kiện tiên quyết ngầm “%s”.\n"
 
 #: implicit.c:729
 #, fuzzy, c-format
+#| msgid "Found prerequisite '%s' as VPATH '%s'\n"
 msgid "Found prerequisite `%s' as VPATH `%s'\n"
 msgstr "Tìm thấy điều kiện tiên quyết “%s” làm VPATH “%s”\n"
 
 #: implicit.c:743
 #, fuzzy, c-format
+#| msgid "Looking for a rule with intermediate file '%s'.\n"
 msgid "Looking for a rule with intermediate file `%s'.\n"
 msgstr "Tìm quy tắc có tập tin trung gian “%s”.\n"
 
@@ -578,16 +639,19 @@ msgstr "*** [%s] Lỗi 0x%x (bỏ qua)"
 
 #: job.c:457
 #, fuzzy, c-format
+#| msgid "*** [%s] Error 0x%x (ignored)"
 msgid "*** [%s] Error 0x%x"
 msgstr "*** [%s] Lỗi 0x%x (bỏ qua)"
 
 #: job.c:461
 #, fuzzy, c-format
+#| msgid "*** [%s] Error 0x%x (ignored)"
 msgid "[%s] Error %d (ignored)"
 msgstr "*** [%s] Lỗi 0x%x (bỏ qua)"
 
 #: job.c:462
 #, fuzzy, c-format
+#| msgid "*** [%s] Error 0x%x (ignored)"
 msgid "*** [%s] Error %d"
 msgstr "*** [%s] Lỗi 0x%x (bỏ qua)"
 
@@ -708,6 +772,7 @@ msgstr "đặt điều con đã bắt là PID %s, vẫn còn đợi PID %s\n"
 
 #: job.c:2153
 #, fuzzy, c-format
+#| msgid "%s: %s: Command not found\n"
 msgid "%s: Command not found"
 msgstr "%s: %s: Không tìm thấy lệnh\n"
 
@@ -722,6 +787,7 @@ msgstr "spawnvpe: cạn không gian dành cho biến môi trường"
 
 #: job.c:2446
 #, fuzzy, c-format
+#| msgid "$SHELL changed (was '%s', now '%s')\n"
 msgid "$SHELL changed (was `%s', now `%s')\n"
 msgstr "$SHELL thay đổi (trước là “%s”, giờ là “%s”)\n"
 
@@ -783,10 +849,13 @@ msgstr ""
 "                              Biến môi trường đè tập tin makefile.\n"
 
 #: main.c:401
+#, fuzzy
+#| msgid ""
+#| "  -E STRING, --eval=STRING    Evaluate STRING as a makefile statement.\n"
 msgid ""
 "  --eval=STRING               Evaluate STRING as a makefile statement.\n"
 msgstr ""
-"  --eval=CHUỖI                Định lượng CHUỖI như một lệnh makefile.\n"
+"  -E STRING, --eval=CHUỖI      Định lượng CHUỖI như một lệnh makefile.\n"
 
 #: main.c:403
 msgid ""
@@ -843,6 +912,7 @@ msgstr ""
 
 #: main.c:422
 #, fuzzy
+#| msgid "  -i, --ignore-errors         Ignore errors from recipes.\n"
 msgid ""
 "  --no-extended-errors         Do not give additional error reporting.\n"
 msgstr "  -i, --ignore-errors         Bỏ qua lỗi từ công thức.\n"
@@ -898,6 +968,7 @@ msgstr ""
 
 #: main.c:443
 #, fuzzy
+#| msgid "  --trace                     Print tracing information.\n"
 msgid "  --targets                   Give list of explicitly-named targets.\n"
 msgstr "  --trace                     Hiển thị thông tin dấu vết.\n"
 
@@ -950,6 +1021,7 @@ msgstr ""
 
 #: main.c:470
 #, fuzzy
+#| msgid "  -d                          Print lots of debugging information.\n"
 msgid "  -x                          Same as --trace=\"normal\"\n"
 msgstr "  -d                          In rất nhiều thông tin gỡ rối.\n"
 
@@ -966,6 +1038,7 @@ msgstr ""
 
 #: main.c:478
 #, fuzzy
+#| msgid "  -d                          Print lots of debugging information.\n"
 msgid ""
 "\n"
 "  -X                           Same as \"--debugger=preaction\"\n"
@@ -1055,6 +1128,7 @@ msgstr "lỗi nội bộ: có nhiều tùy chọn --jobserver-fds"
 
 #: main.c:1908
 #, fuzzy, c-format
+#| msgid "internal error: invalid --jobserver-auth string '%s'"
 msgid "internal error: invalid --jobserver-fds string `%s'"
 msgstr "lỗi nội bộ: gặp chuỗi --jobserver-auth “%s” không hợp lệ"
 
@@ -1064,8 +1138,11 @@ msgid "Jobserver client (fds %d,%d)\n"
 msgstr "Ứng dụng khách jobserver (fds %d,%d)\n"
 
 #: main.c:1921
+#, fuzzy
+#| msgid "warning: -j%d forced in submake: resetting jobserver mode."
 msgid "warning: -jN forced in submake: disabling jobserver mode."
-msgstr "cảnh báo: -jN bị ép buộc trong make con: tắt chế độ jobserver."
+msgstr ""
+"cảnh báo: -j%d bị ép buộc trong make con: đang đặt lại chế độ jobserver."
 
 #: main.c:1931
 msgid "dup jobserver"
@@ -1073,6 +1150,8 @@ msgstr "dup jobserver"
 
 #: main.c:1934
 #, fuzzy
+#| msgid ""
+#| "warning: jobserver unavailable: using -j1.  Add '+' to parent make rule."
 msgid ""
 "warning: jobserver unavailable: using -j1.  Add `+' to parent make rule."
 msgstr ""
@@ -1097,23 +1176,27 @@ msgstr "Cập nhật makefile…\n"
 
 #: main.c:2098
 #, fuzzy, c-format
+#| msgid "Makefile '%s' might loop; not remaking it.\n"
 msgid "Makefile `%s' might loop; not remaking it.\n"
 msgstr "Makefile “%s” bị lặp; không tạo lại nó.\n"
 
 #: main.c:2177
 #, fuzzy, c-format
+#| msgid "Failed to remake makefile '%s'."
 msgid "Failed to remake makefile `%s'."
 msgstr "Gặp lỗi khi làm lại makefile “%s”."
 
 #: main.c:2194
 #, fuzzy, c-format
+#| msgid "Included makefile '%s' was not found."
 msgid "Included makefile `%s' was not found."
 msgstr "Không tìm thấy makefile bao gồm “%s”."
 
 #: main.c:2199
 #, fuzzy, c-format
+#| msgid "Makefile '%s' was not found"
 msgid "Makefile `%s' was not found"
-msgstr "Không tìm thấy makefile “%s”."
+msgstr "Không tìm thấy makefile “%s”"
 
 #: main.c:2267
 msgid "Couldn't change back to original directory."
@@ -1179,11 +1262,13 @@ msgstr ""
 
 #: main.c:2753
 #, fuzzy, c-format
+#| msgid "the '%s%s' option requires a non-empty string argument"
 msgid "the `%s%s' option requires a non-empty string argument"
 msgstr "tùy chọn “%s%s” cần một đối số là chuỗi khác rỗng"
 
 #: main.c:2808
 #, fuzzy, c-format
+#| msgid "the '-%c' option requires a positive integer argument"
 msgid "the `-%c' option requires a positive integral argument"
 msgstr "tùy chọn “-%c” cần một đối số số nguyên dương"
 
@@ -1240,11 +1325,13 @@ msgstr "%s: Rời khỏi thư mục lạ\n"
 
 #: main.c:3440
 #, fuzzy, c-format
+#| msgid "%s: Entering directory '%s'\n"
 msgid "%s: Entering directory `%s'\n"
 msgstr "%s: Vào thư mục “%s”\n"
 
 #: main.c:3443
 #, fuzzy, c-format
+#| msgid "%s: Leaving directory '%s'\n"
 msgid "%s: Leaving directory `%s'\n"
 msgstr "%s: Rời thư mục “%s”\n"
 
@@ -1260,11 +1347,13 @@ msgstr "%s[%u]: Rời khỏi thư mục lạ\n"
 
 #: main.c:3455
 #, fuzzy, c-format
+#| msgid "%s[%u]: Entering directory '%s'\n"
 msgid "%s[%u]: Entering directory `%s'\n"
 msgstr "%s[%u]: Vào thư mục “%s”\n"
 
 #: main.c:3458
 #, fuzzy, c-format
+#| msgid "%s[%u]: Leaving directory '%s'\n"
 msgid "%s[%u]: Leaving directory `%s'\n"
 msgstr "%s[%u]: Rời khỏi thư mục “%s”\n"
 
@@ -1306,6 +1395,7 @@ msgstr "Truy cập con"
 
 #: misc.c:848
 #, fuzzy, c-format
+#| msgid "write error"
 msgid "write error: %s"
 msgstr "lỗi ghi"
 
@@ -1349,6 +1439,7 @@ msgstr "Đang đọc makefile…\n"
 
 #: read.c:345
 #, fuzzy, c-format
+#| msgid "Reading makefile '%s'"
 msgid "Reading makefile `%s'"
 msgstr "Đang đọc makefile “%s”"
 
@@ -1386,11 +1477,13 @@ msgstr "thiếu quy tắc trước công thức"
 
 #: read.c:1075
 #, fuzzy, c-format
+#| msgid "missing separator"
 msgid "missing separator%s"
 msgstr "thiếu dấu phân cách"
 
 #: read.c:1077
 #, fuzzy
+#| msgid "missing separator (did you mean TAB instead of 8 spaces?)"
 msgid " (did you mean TAB instead of 8 spaces?)"
 msgstr ""
 "thiếu dấu phân cách (bạn đã định dùng TAB thay vì 8 khoảng trắng phải không?)"
@@ -1405,11 +1498,13 @@ msgstr "nhiều mẫu đích"
 
 #: read.c:1217
 #, fuzzy, c-format
+#| msgid "target pattern contains no '%%'"
 msgid "target pattern contains no `%%'"
 msgstr "mẫu đích không chứa “%%”"
 
 #: read.c:1341
 #, fuzzy
+#| msgid "missing 'endif'"
 msgid "missing `endif'"
 msgstr "thiếu chỉ thị “endif”"
 
@@ -1419,31 +1514,37 @@ msgstr "tên biến rỗng"
 
 #: read.c:1425
 #, fuzzy
+#| msgid "extraneous text after 'define' directive"
 msgid "extraneous text after `define' directive"
 msgstr "gặp các ký tự thừa đằng sau chỉ thị “define”"
 
 #: read.c:1450
 #, fuzzy
+#| msgid "missing 'endef', unterminated 'define'"
 msgid "missing `endef', unterminated `define'"
 msgstr "thiếu “endef”, chỉ thị “define” chưa hoàn thiện"
 
 #: read.c:1478
 #, fuzzy
+#| msgid "extraneous text after 'endef' directive"
 msgid "extraneous text after `endef' directive"
 msgstr "gặp các ký tự thừa đằng sau chỉ thị “endef”"
 
 #: read.c:1548
 #, fuzzy, c-format
+#| msgid "extraneous text after '%s' directive"
 msgid "Extraneous text after `%s' directive"
 msgstr "gặp các ký tự thừa đằng sau chỉ thị “%s”"
 
 #: read.c:1557 read.c:1571
 #, fuzzy, c-format
+#| msgid "extraneous '%s'"
 msgid "extraneous `%s'"
 msgstr "gặp “%s” thừa"
 
 #: read.c:1576
 #, fuzzy
+#| msgid "only one 'else' per conditional"
 msgid "only one `else' per conditional"
 msgstr "chỉ cho phép một “else” cho mỗi biểu thức điều kiện"
 
@@ -1465,26 +1566,31 @@ msgstr "trộn quy tắc ngầm và thường"
 
 #: read.c:2038
 #, fuzzy, c-format
+#| msgid "target '%s' doesn't match the target pattern"
 msgid "target `%s' doesn't match the target pattern"
 msgstr "đích “%s” không tương ứng với mẫu đích"
 
 #: read.c:2054 read.c:2099
 #, fuzzy, c-format
+#| msgid "target file '%s' has both : and :: entries"
 msgid "target file `%s' has both : and :: entries"
-msgstr "tập tin đích “%s” có cả hai mục nhập : và ::"
+msgstr "tập tin đích “%s” có cả hai hạng mục : và ::"
 
 #: read.c:2060
 #, fuzzy, c-format
+#| msgid "target '%s' given more than once in the same rule"
 msgid "target `%s' given more than once in the same rule."
 msgstr "đích “%s” có nhiều hơn một trong cùng một quy tắc"
 
 #: read.c:2069
 #, fuzzy, c-format
+#| msgid "warning: overriding recipe for target '%s'"
 msgid "warning: overriding recipe for target `%s'"
 msgstr "cảnh báo: đè công thức cho đích “%s”"
 
 #: read.c:2072
 #, fuzzy, c-format
+#| msgid "warning: ignoring old recipe for target '%s'"
 msgid "warning: ignoring old recipe for target `%s'"
 msgstr "cảnh báo: bỏ qua công thức cũ cho đích “%s”"
 
@@ -1494,61 +1600,75 @@ msgstr "cảnh báo: thấy ký tự NUL; bỏ qua phần còn lại của dòng
 
 #: remake.c:242
 #, fuzzy, c-format
+#| msgid "Nothing to be done for '%s'."
 msgid "Nothing to be done for `%s'."
 msgstr "Không cần làm gì cho “%s”."
 
 #: remake.c:243
 #, fuzzy, c-format
+#| msgid "'%s' is up to date."
 msgid "`%s' is up to date."
 msgstr "“%s” đã cập nhật rồi."
 
 #: remake.c:319
 #, fuzzy, c-format
+#| msgid "Pruning file '%s'.\n"
 msgid "Pruning file `%s'.\n"
 msgstr "Xén bớt tập tin “%s”.\n"
 
 #: remake.c:372
 #, fuzzy, c-format
+#| msgid "%sNo rule to make target '%s'%s"
 msgid "%sNo rule to make target `%s'%s"
 msgstr "%sKhông có quy tắc để tạo đích “%s”%s"
 
 #: remake.c:374
 #, fuzzy, c-format
+#| msgid "%sNo rule to make target '%s', needed by '%s'%s"
 msgid "%sNo rule to make target `%s', needed by `%s'%s"
 msgstr "%sKhông có quy tắc để tạo đích “%s”, cần bởi “%s”%s"
 
 #: remake.c:427
 #, fuzzy, c-format
+#| msgid "Considering target file '%s'.\n"
 msgid "Considering target file `%s'.\n"
 msgstr "Coi tập tin đích “%s”.\n"
 
 #: remake.c:442
 #, fuzzy, c-format
+#| msgid "Recently tried and failed to update file '%s'.\n"
 msgid "Recently tried and failed to update file `%s'.\n"
 msgstr "Vừa thử và thất bại khi cập nhật “%s”.\n"
 
 #: remake.c:454
 #, fuzzy, c-format
+#| msgid "File '%s' was considered already.\n"
 msgid "File `%s' was considered already.\n"
 msgstr "Coi tập tin “%s” là đã sẵn có rồi.\n"
 
 #: remake.c:465
 #, fuzzy, c-format
+#| msgid "Still updating file '%s'.\n"
 msgid "Still updating file `%s'.\n"
 msgstr "Vẫn đang cập nhật tập tin “%s”.\n"
 
 #: remake.c:469
 #, fuzzy, c-format
+#| msgid "Finished updating file '%s'.\n"
 msgid "Finished updating file `%s'.\n"
 msgstr "Hoàn tất cập nhật tập tin “%s”.\n"
 
 #: remake.c:499
 #, fuzzy, c-format
+#| msgid "File '%s' does not exist.\n"
 msgid "File `%s' does not exist.\n"
 msgstr "Tập tin “%s” không tồn tại.\n"
 
 #: remake.c:511
 #, fuzzy, c-format
+#| msgid ""
+#| "*** Warning: .LOW_RESOLUTION_TIME file '%s' has a high resolution time "
+#| "stamp"
 msgid ""
 "*** Warning: .LOW_RESOLUTION_TIME file `%s' has a high resolution time stamp"
 msgstr ""
@@ -1557,16 +1677,19 @@ msgstr ""
 
 #: remake.c:524 remake.c:1056
 #, fuzzy, c-format
+#| msgid "Found an implicit rule for '%s'.\n"
 msgid "Found an implicit rule for `%s'.\n"
 msgstr "Tìm thấy quy tắc ngầm cho “%s”.\n"
 
 #: remake.c:526 remake.c:1058
 #, fuzzy, c-format
+#| msgid "No implicit rule found for '%s'.\n"
 msgid "No implicit rule found for `%s'.\n"
 msgstr "Không tìm thấy quy tắc ngầm cho “%s”.\n"
 
 #: remake.c:532
 #, fuzzy, c-format
+#| msgid "Using default recipe for '%s'.\n"
 msgid "Using default recipe for `%s'.\n"
 msgstr "Dùng công thức mặc định cho “%s”.\n"
 
@@ -1577,117 +1700,140 @@ msgstr "Bỏ phụ thuộc vòng tròn %s <- %s."
 
 #: remake.c:682
 #, fuzzy, c-format
+#| msgid "Finished prerequisites of target file '%s'.\n"
 msgid "Finished prerequisites of target file `%s'.\n"
 msgstr "Hoàn tất điều kiện tiên quyết của tập tin đích “%s”.\n"
 
 #: remake.c:691
 #, fuzzy, c-format
+#| msgid "The prerequisites of '%s' are being made.\n"
 msgid "The prerequisites of `%s' are being made.\n"
 msgstr "Đang tạo điều kiện tiên quyết của “%s”.\n"
 
 #: remake.c:705
 #, fuzzy, c-format
+#| msgid "Giving up on target file '%s'.\n"
 msgid "Giving up on target file `%s'.\n"
 msgstr "Chịu thua tập tin đích “%s”.\n"
 
 #: remake.c:710
 #, fuzzy, c-format
+#| msgid "Target '%s' not remade because of errors."
 msgid "Target `%s' not remade because of errors."
 msgstr "Đích “%s” không được tạo lại do lỗi."
 
 #: remake.c:763
 #, fuzzy, c-format
+#| msgid "Prerequisite '%s' is order-only for target '%s'.\n"
 msgid "Prerequisite `%s' is order-only for target `%s'.\n"
 msgstr "Điều kiện tiên quyết “%s” là order-only (chỉ thứ tự) cho đích “%s”.\n"
 
 #: remake.c:768
 #, fuzzy, c-format
+#| msgid "Prerequisite '%s' of target '%s' does not exist.\n"
 msgid "Prerequisite `%s' of target `%s' does not exist.\n"
 msgstr "Điều kiện tiên quyết “%s” của đích “%s” không tồn tại.\n"
 
 #: remake.c:773
 #, fuzzy, c-format
+#| msgid "Prerequisite '%s' is newer than target '%s'.\n"
 msgid "Prerequisite `%s' is newer than target `%s'.\n"
 msgstr "Điều kiện tiên quyết “%s” là mới hơn đích “%s” .\n"
 
 #: remake.c:776
 #, fuzzy, c-format
+#| msgid "Prerequisite '%s' is older than target '%s'.\n"
 msgid "Prerequisite `%s' is older than target `%s'.\n"
 msgstr "Điều kiện tiên quyết “%s” cũ hơn đích “%s” .\n"
 
 #: remake.c:791
 #, fuzzy, c-format
+#| msgid "Target '%s' is double-colon and has no prerequisites.\n"
 msgid "Target `%s' is double-colon and has no prerequisites.\n"
 msgstr "Đích “%s” là hai chấm đôi và không có điều kiện tiên quyết.\n"
 
 #: remake.c:798
 #, fuzzy, c-format
+#| msgid "No recipe for '%s' and no prerequisites actually changed.\n"
 msgid "No recipe for `%s' and no prerequisites actually changed.\n"
 msgstr ""
 "Không có công thức cho “%s” và chưa thay đổi điều kiện tiên quyết nào.\n"
 
 #: remake.c:803
 #, fuzzy, c-format
+#| msgid "Making '%s' due to always-make flag.\n"
 msgid "Making `%s' due to always-make flag.\n"
 msgstr "Tạo “%s” do cờ “always-make”.\n"
 
 #: remake.c:811
 #, fuzzy, c-format
+#| msgid "No need to remake target '%s'"
 msgid "No need to remake target `%s'"
 msgstr "Không cần tạo lại đích “%s”."
 
 #: remake.c:813
 #, fuzzy, c-format
+#| msgid "; using VPATH name '%s'"
 msgid "; using VPATH name `%s'"
 msgstr "; dùng tên VPATH “%s”"
 
 #: remake.c:834
 #, fuzzy, c-format
+#| msgid "Must remake target '%s'.\n"
 msgid "Must remake target `%s'.\n"
 msgstr "Phải tạo lại đích “%s”.\n"
 
 #: remake.c:840
 #, fuzzy, c-format
+#| msgid "  Ignoring VPATH name '%s'.\n"
 msgid "  Ignoring VPATH name `%s'.\n"
 msgstr "  Bỏ qua tên VPATH “%s”.\n"
 
 #: remake.c:849
 #, fuzzy, c-format
+#| msgid "Recipe of '%s' is being run.\n"
 msgid "Recipe of `%s' is being run.\n"
 msgstr "Đang chạy công thức của “%s”.\n"
 
 #: remake.c:859
 #, fuzzy, c-format
+#| msgid "Failed to remake target file '%s'.\n"
 msgid "Failed to remake target file `%s'.\n"
 msgstr "Gặp lỗi khi tạo lại được tập tin đích “%s”.\n"
 
 #: remake.c:862
 #, fuzzy, c-format
+#| msgid "Successfully remade target file '%s'.\n"
 msgid "Successfully remade target file `%s'.\n"
 msgstr "Tạo lại thành công tập tin đích “%s”.\n"
 
 #: remake.c:865
 #, fuzzy, c-format
+#| msgid "Target file '%s' needs to be remade under -q.\n"
 msgid "Target file `%s' needs remade under -q.\n"
 msgstr "Tập tin đích “%s” cần được tạo lại dưới tùy chọn “-q”.\n"
 
 #: remake.c:1064
 #, fuzzy, c-format
+#| msgid "Using default commands for '%s'.\n"
 msgid "Using default commands for `%s'.\n"
 msgstr "Dùng lệnh mặc định cho “%s”.\n"
 
 #: remake.c:1397
 #, fuzzy, c-format
+#| msgid "Warning: File '%s' has modification time in the future"
 msgid "Warning: File `%s' has modification time in the future"
 msgstr "Cảnh báo: Tập tin “%s” có giờ sửa đổi ở thì tương lai."
 
 #: remake.c:1410
 #, fuzzy, c-format
+#| msgid "Warning: File '%s' has modification time %s s in the future"
 msgid "Warning: File `%s' has modification time %s s in the future"
-msgstr "Cảnh báo: Tập tin “%s” có giờ sửa đổi %s giây trong thì tương lai."
+msgstr "Cảnh báo: Tập tin “%s” có giờ sửa đổi %s giây trong thì tương lai"
 
 #: remake.c:1610
 #, fuzzy, c-format
+#| msgid ".LIBPATTERNS element '%s' is not a pattern"
 msgid ".LIBPATTERNS element `%s' is not a pattern"
 msgstr "Phần tử .LIBPATTERNS “%s” không phải là một mẫu"
 
@@ -1713,13 +1859,16 @@ msgstr ""
 "# Không có quy tắc ngầm."
 
 #: rule.c:547
-#, c-format
+#, fuzzy, c-format
+#| msgid ""
+#| "\n"
+#| "# No implicit rules."
 msgid ""
 "\n"
 "# %u implicit rules, %u"
 msgstr ""
 "\n"
-"# %u quy tắc ngầm, %u"
+"# Không có quy tắc ngầm."
 
 #: rule.c:556
 msgid " terminal."
@@ -1890,6 +2039,9 @@ msgstr "Không có bộ đồng xử lý số thực dấu chấm động"
 
 #: strcache.c:235
 #, fuzzy, c-format
+#| msgid ""
+#| "\n"
+#| "%s strcache performance: lookups = %lu / hit rate = %lu%%\n"
 msgid ""
 "\n"
 "%s # of strings in strcache: %d / lookups = %lu / hits = %lu\n"
@@ -1904,6 +2056,8 @@ msgstr "%s # vùng đệm strcache: %d (* %d B/buffer = %d B)\n"
 
 #: strcache.c:239
 #, fuzzy, c-format
+#| msgid ""
+#| "%s other free: total = %lu B / max = %lu B / min = %lu B / avg = %hu B\n"
 msgid "%s strcache used: total = %d (%d) / max = %d / min = %d / avg = %d\n"
 msgstr ""
 "%s trống khác:  tổng = %lu B / tđa = %lu B / t.thiểu = %lu B / t.bình = %hu "
@@ -1911,6 +2065,8 @@ msgstr ""
 
 #: strcache.c:241
 #, fuzzy, c-format
+#| msgid ""
+#| "%s other free: total = %lu B / max = %lu B / min = %lu B / avg = %hu B\n"
 msgid "%s strcache free: total = %d (%d) / max = %d / min = %d / avg = %d\n"
 msgstr ""
 "%s trống khác:  tổng = %lu B / tđa = %lu B / t.thiểu = %lu B / t.bình = %hu "
@@ -1948,6 +2104,7 @@ msgstr "dòng lệnh"
 
 #: variable.c:67 variable.c:1595
 #, fuzzy
+#| msgid "'override' directive"
 msgid "`override' directive"
 msgstr "chỉ thị “override”"
 
@@ -1965,11 +2122,13 @@ msgstr ""
 
 #: variable.c:1609 variable.c:1659
 #, fuzzy, c-format
+#| msgid " (from '%s', line %lu)"
 msgid " (from `%s', line %lu)"
 msgstr " (từ “%s”, dòng %lu)"
 
 #: variable.c:1704
 #, fuzzy
+#| msgid "# variable set hash-table stats:\n"
 msgid "variable set hash-table stats:\n"
 msgstr "# thống kê bảng băm biến được đặt:\n"
 
@@ -1995,7 +2154,7 @@ msgid ""
 "# No pattern-specific variable values."
 msgstr ""
 "\n"
-"# Không có giá trị biến đặc tả cho mẫu"
+"# Không có giá trị biến đặc tả cho mẫu."
 
 #: variable.c:1736
 #, c-format
@@ -2008,6 +2167,7 @@ msgstr ""
 
 #: variable.h:287
 #, fuzzy, c-format
+#| msgid "warning: undefined variable '%.*s'"
 msgid "warning: undefined variable `%.*s'"
 msgstr "cảnh báo: biến “%.*s” chưa được định nghĩa"
 
@@ -2023,6 +2183,7 @@ msgstr "Cảnh báo: Chuyển hướng trống rỗng\n"
 
 #: vmsjobs.c:184
 #, fuzzy, c-format
+#| msgid "internal error: '%s' command_state"
 msgid "internal error: `%s' command_state"
 msgstr "lỗi nội bộ: command_state “%s”"
 
@@ -2101,11 +2262,15 @@ msgstr ""
 
 #: vpath.c:603
 #, fuzzy
+#| msgid "# No 'vpath' search paths."
 msgid "# No `vpath' search paths."
 msgstr "# Không có đường dẫn tìm kiếm “vpath”."
 
 #: vpath.c:605
 #, fuzzy, c-format
+#| msgid ""
+#| "\n"
+#| "# %u 'vpath' search paths.\n"
 msgid ""
 "\n"
 "# %u `vpath' search paths.\n"
@@ -2115,6 +2280,9 @@ msgstr ""
 
 #: vpath.c:608
 #, fuzzy
+#| msgid ""
+#| "\n"
+#| "# No general ('VPATH' variable) search path."
 msgid ""
 "\n"
 "# No general (`VPATH' variable) search path."
@@ -2124,6 +2292,10 @@ msgstr ""
 
 #: vpath.c:614
 #, fuzzy
+#| msgid ""
+#| "\n"
+#| "# General ('VPATH' variable) search path:\n"
+#| "# "
 msgid ""
 "\n"
 "# General (`VPATH' variable) search path:\n"
@@ -2133,61 +2305,78 @@ msgstr ""
 "# Đường dẫn tìm kiếm chung (biến “VPATH”):\n"
 "# "
 
+#, c-format
 #~ msgid "Recipe has too many lines (%ud)"
 #~ msgstr "Công thức có quá nhiều dòng (%ud)"
 
 #~ msgid "#  Builtin rule"
 #~ msgstr "#  Quy tắc dựng sẵn"
 
+#, c-format
 #~ msgid "%s: Field '%s' not cached: %s"
 #~ msgstr "%s: Trường “%s” chưa được nhớ đệm: %s"
 
+#, c-format
 #~ msgid "file: missing filename"
 #~ msgstr "file: thiết tên tập tin"
 
 # Variable: do not translate/ biến: đừng dịch
+#, c-format
 #~ msgid "open: %s: %s"
 #~ msgstr "mở: %s: %s"
 
+#, c-format
 #~ msgid "write: %s: %s"
 #~ msgstr "ghi: %s: %s"
 
 # Variable: do not translate/ biến: đừng dịch
+#, c-format
 #~ msgid "close: %s: %s"
 #~ msgstr "đóng: %s: %s"
 
+#, c-format
 #~ msgid "file: too many arguments"
 #~ msgstr "file: quá ít đối số"
 
+#, c-format
 #~ msgid "read: %s: %s"
 #~ msgstr "read: %s: %s"
 
+#, c-format
 #~ msgid "file: invalid file operation: %s"
-#~ msgstr "Tập tin: Thao tác tập tin không hợp lệ: %s"
+#~ msgstr "tập tin: Thao tác tập tin không hợp lệ: %s"
 
+#, c-format
 #~ msgid "Empty function name"
 #~ msgstr "Tên hàm trống rỗng"
 
+#, c-format
 #~ msgid "Invalid function name: %s"
 #~ msgstr "Tên hàm không hợp lệ: %s"
 
+#, c-format
 #~ msgid "Function name too long: %s"
 #~ msgstr "Tên hàm quá dài: %s"
 
+#, c-format
 #~ msgid "Invalid minimum argument count (%u) for function %s"
 #~ msgstr "Số lượng đối số tối thiểu (%u) là không hợp lệ cho hàm “%s”"
 
+#, c-format
 #~ msgid "Invalid maximum argument count (%u) for function %s"
 #~ msgstr "Số lượng đối số tối đa (%u) là không hợp lệ cho hàm “%s”"
 
+#, c-format
 #~ msgid "guile: Expanding '%s'\n"
 #~ msgstr "guile: Đang khai triển “%s”\n"
 
+#, c-format
 #~ msgid "guile: Evaluating '%s'\n"
 #~ msgstr "guile: Đang định giá “%s”\n"
 
-#~ msgid "Stem too long: '%.*s'.\n"
-#~ msgstr "Stem quá dài: “%.*s”.\n"
+#, c-format
+#~ msgid "Stem too long: '%s%.*s'.\n"
+#~ msgstr "Stem quá dài: “%s%.*s”.\n"
 
 #~ msgid " (ignored)"
 #~ msgstr " (bỏ qua)"
@@ -2195,29 +2384,33 @@ msgstr ""
 #~ msgid "<builtin>"
 #~ msgstr "<dựng-sẵn>"
 
+#, c-format
 #~ msgid "%s[%s: %s] Error %d%s"
 #~ msgstr "%s[%s: %s] Lỗi %d%s"
 
+#, c-format
 #~ msgid "Cleaning up temp batch file %s failed (%d)\n"
 #~ msgstr "Dọn dẹp tập tin bó tạm %s gặp lỗi (%d)\n"
 
+#, c-format
 #~ msgid "%s: target '%s' does not exist"
 #~ msgstr "%s: đích “%s” không tồn tại"
 
+#, c-format
 #~ msgid "%s: update target '%s' due to: %s"
 #~ msgstr "%s: cập nhật đích “%s”, cần bởi: %s"
 
+#, c-format
 #~ msgid "no more file handles: could not duplicate stderr\n"
 #~ msgstr ""
 #~ "không thể xử lý thêm tập tin nào nữa: không thể nhân đôi đầu ra lỗi "
 #~ "chuẩn\n"
 
+#, c-format
 #~ msgid "Could not restore stderr\n"
 #~ msgstr "Không thể phục hồi đầu ra lỗi tiêu chuẩn\n"
 
-#~ msgid "%s[%u]: %s: Command not found\n"
-#~ msgstr "%s[%u]: %s: Không tìm thấy lệnh\n"
-
+#, c-format
 #~ msgid ""
 #~ "Batch file contents:\n"
 #~ "\t@echo off\n"
@@ -2225,27 +2418,29 @@ msgstr ""
 #~ "Nội dung tập tin bó lệnh:\n"
 #~ "\t@echo off\n"
 
-#~ msgid "-O[TYPE] (--output-sync[=TYPE]) is not configured for this build."
-#~ msgstr ""
-#~ "-O[KIỂU] (--output-sync[=KIỂU]) chưa được cấu hình cho lần dịch này."
-
+#, c-format
 #~ msgid "Failed to open global symbol table: %s"
 #~ msgstr "Gặp lỗi khi mở bảng ký hiệu toàn cục: %s"
 
+#, c-format
 #~ msgid "Loaded object %s is not declared to be GPL compatible"
 #~ msgstr "Đối tượng %s đã được tải không được công bố là tương thích GPL"
 
+#, c-format
 #~ msgid "Failed to load symbol %s from %s: %s"
 #~ msgstr "Gặp lỗi khi tải ký hiệu %s từ %s: %s"
 
+#, c-format
 #~ msgid "Empty symbol name for load: %s"
 #~ msgstr "Tên ký hiệu là trống rỗng cho việc tải: %s"
 
+#, c-format
 #~ msgid "Loading symbol %s from %s\n"
 #~ msgstr "Đang tải ký hiệu %s từ %s\n"
 
+#, c-format
 #~ msgid "The 'load' operation is not supported on this platform."
-#~ msgstr "không hỗ trợ thao tác “load” trên hệ thống này."
+#~ msgstr "Không hỗ trợ thao tác “load” trên hệ thống này."
 
 #~ msgid ""
 #~ "  -O[TYPE], --output-sync[=TYPE]\n"
@@ -2256,16 +2451,34 @@ msgstr ""
 #~ "                              Đồng bộ hóa kết xuất công việc song song "
 #~ "theo KIỂU.\n"
 
+#~ msgid ""
+#~ "  --no-silent                 Echo recipes (disable --silent mode).\n"
+#~ msgstr ""
+#~ "  --no-silent                 In ra công thức (tắt chế độ --silent).\n"
+
+#, c-format
 #~ msgid "unknown output-sync type '%s'"
 #~ msgstr "không hiểu kiểu output-sync “%s”"
 
+#, c-format
+#~ msgid "warning: -j%d forced in makefile: resetting jobserver mode."
+#~ msgstr ""
+#~ "cảnh báo: -j%d bị ép buộc trong make con: đang đặt lại chế độ jobserver."
+
+#, c-format
 #~ msgid "Report bugs to <bug-make@gnu.org>\n"
 #~ msgstr ""
 #~ "Hãy thông báo lỗi cho <bug-make@gnu.org>\n"
 #~ "Hãy thông báo lỗi dịch cho <http://translationproject.org/team/vi.html>.\n"
 
+#, c-format
 #~ msgid "write error: stdout"
 #~ msgstr "lỗi ghi: đầu ra tiêu chuẩn"
+
+#, c-format
+#~ msgid "-O[TYPE] (--output-sync[=TYPE]) is not configured for this build."
+#~ msgstr ""
+#~ "-O[KIỂU] (--output-sync[=KIỂU]) chưa được cấu hình cho lần dịch này."
 
 #~ msgid "duping jobs pipe"
 #~ msgstr "nhân bản ống dẫn công việc"
@@ -2273,21 +2486,46 @@ msgstr ""
 #~ msgid "jobserver pipeline"
 #~ msgstr "đường ống “jobserver”"
 
+#, c-format
+#~ msgid "job server shut down"
+#~ msgstr "tắt máy phục vụ công việc"
+
 #~ msgid "pselect jobs pipe"
 #~ msgstr "pselect (chọn tiến trình?) ống dẫn công việc"
 
+#, c-format
 #~ msgid "Skipping UTF-8 BOM in makefile '%s'\n"
 #~ msgstr "Bỏ qua “UTF-8 BOM” trong makefile “%s”\n"
 
+#, c-format
 #~ msgid "Skipping UTF-8 BOM in makefile buffer\n"
 #~ msgstr "Bỏ qua “UTF-8 BOM” trong bộ đệm của tập tin makefile\n"
 
+#, c-format
 #~ msgid "%s: failed to load"
 #~ msgstr "%s: gặp lỗi khi tải"
 
+#, c-format
+#~ msgid "grouped targets must provide a recipe"
+#~ msgstr "các đích đã nhóm phải cung cấp một công thức"
+
+#, c-format
 #~ msgid "*** mixed implicit and normal rules: deprecated syntax"
 #~ msgstr "*** trộn quy tắc ngầm và thường: cú pháp này đã lạc hậu"
 
+#, c-format
+#~ msgid "warning: overriding group membership for target '%s'"
+#~ msgstr "cảnh báo: đè thành viên nhóm cho đích “%s”"
+
+#, c-format
+#~ msgid ""
+#~ "\n"
+#~ "# %u implicit rules, %u (%.1f%%) terminal."
+#~ msgstr ""
+#~ "\n"
+#~ "# %u quy tắc ngầm, %u (%.1f%%) đầu cuối."
+
+#, c-format
 #~ msgid ""
 #~ "\n"
 #~ "%s No strcache buffers\n"
@@ -2295,6 +2533,7 @@ msgstr ""
 #~ "\n"
 #~ "%s Không có bộ đệm strcache\n"
 
+#, c-format
 #~ msgid ""
 #~ "\n"
 #~ "%s strcache buffers: %lu (%lu) / strings = %lu / storage = %lu B / avg = "
@@ -2304,12 +2543,14 @@ msgstr ""
 #~ "%s bộ đệm strcache:  %lu (%lu) / chuỗi   = %lu / lưu     = %lu B / t.bình "
 #~ "= %lu B\n"
 
+#, c-format
 #~ msgid ""
-#~ "%s current buf: size = %hu B / used = %hu B / count = %hu / avg = %hu B\n"
+#~ "%s current buf: size = %hu B / used = %hu B / count = %hu / avg = %u B\n"
 #~ msgstr ""
 #~ "%s đệm hiện tại: kcỡ = %hu B / đã dùng = %hu B / slượng = %hu / tbình = "
-#~ "%hu B\n"
+#~ "%u B\n"
 
+#, c-format
 #~ msgid "%s other used: total = %lu B / count = %lu / avg = %lu B\n"
 #~ msgstr "%s được dùng khác: tổng = %lu B / s.lượng = %lu / t.bình = %lu B\n"
 
@@ -2320,29 +2561,39 @@ msgstr ""
 #~ "# thống kê bảng băm tập tin:\n"
 #~ "# "
 
+#, c-format
 #~ msgid "DCL: %s\n"
 #~ msgstr "DCL: %s\n"
 
+#, c-format
 #~ msgid "Jobserver slots limited to %d\n"
 #~ msgstr "Khe jobserver bị giới hạn thành %d\n"
 
+#, c-format
 #~ msgid "creating jobserver semaphore: (Error %ld: %s)"
 #~ msgstr "đang tạo tín hiệu jobserver: (Lỗi %ld: %s)"
 
+#, c-format
 #~ msgid ""
 #~ "internal error: unable to open jobserver semaphore '%s': (Error %ld: %s)"
 #~ msgstr ""
 #~ "lỗi nội tại: không thể mở cờ hiệu máy phục vụ công việc “%s”: (Lỗi %ld: "
 #~ "%s)"
 
+#, c-format
 #~ msgid "Jobserver client (semaphore %s)\n"
 #~ msgstr "Ứng dụng khách jobserver (cờ hiệu %s)\n"
 
+#, c-format
 #~ msgid "release jobserver semaphore: (Error %ld: %s)"
 #~ msgstr "giải phóng tín hiệu jobserver: (Lỗi %ld: %s)"
 
+#, c-format
 #~ msgid "semaphore or child process wait: (Error %ld: %s)"
 #~ msgstr "chờ tín hiệu hay tiến trình con: (Lỗi %ld: %s)"
+
+#~ msgid "%s[%u]: %s: Command not found\n"
+#~ msgstr "%s[%u]: %s: Không tìm thấy lệnh\n"
 
 #~ msgid "%s: recipe for target '%s' failed"
 #~ msgstr "%s: công thức cho đích “%s” gặp lỗi"
@@ -2369,8 +2620,8 @@ msgstr ""
 
 #~ msgid "process_easy() failed failed to launch process (e=%ld)\n"
 #~ msgstr ""
-#~ "Việc process_easy() (tiến trình dễ) bị lỗi khi cố khởi chạy tiến trình (e="
-#~ "%ld)\n"
+#~ "Việc process_easy() (tiến trình dễ) bị lỗi khi cố khởi chạy tiến trình "
+#~ "(e=%ld)\n"
 
 #~ msgid ""
 #~ "%sThis is free software; see the source for copying conditions.\n"

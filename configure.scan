@@ -1,9 +1,9 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 
-AC_PREREQ([2.69])
+AC_PREREQ([2.71])
 AC_INIT([FULL-PACKAGE-NAME], [VERSION], [BUG-REPORT-ADDRESS])
-AC_CONFIG_SRCDIR([alloca.c])
+AC_CONFIG_SRCDIR([main.h])
 AC_CONFIG_HEADERS([config.h])
 
 # Checks for programs.
@@ -12,12 +12,12 @@ AC_PROG_LN_S
 AC_PROG_MAKE_SET
 
 # Checks for libraries.
-# FIXME: Replace `main' with a function in `-lw32':
+# FIXME: Replace 'main' with a function in '-lw32':
 AC_CHECK_LIB([w32], [main])
 
 # Checks for header files.
 AC_FUNC_ALLOCA
-AC_CHECK_HEADERS([fcntl.h inttypes.h libintl.h limits.h locale.h mach/mach.h malloc.h memory.h netdb.h nlist.h stddef.h stdint.h stdlib.h string.h strings.h sys/file.h sys/param.h sys/socket.h sys/time.h sys/timeb.h unistd.h wchar.h wctype.h])
+AC_CHECK_HEADERS([fcntl.h inttypes.h libintl.h mach/mach.h malloc.h netdb.h nlist.h stdint.h strings.h sys/file.h sys/param.h sys/socket.h sys/time.h sys/timeb.h unistd.h])
 
 # Checks for typedefs, structures, and compiler characteristics.
 AC_CHECK_HEADER_STDBOOL

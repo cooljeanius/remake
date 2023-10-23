@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: make 3.81\n"
 "Report-Msgid-Bugs-To: bug-make@gnu.org\n"
-"POT-Creation-Date: 2018-02-12 19:14-0500\n"
+"POT-Creation-Date: 2023-10-23 03:33-0400\n"
 "PO-Revision-Date: 2006-04-23 08:45+0300\n"
 "Last-Translator: Nilgün Belma Bugüner <nilgun@buguner.name.tr>\n"
 "Language-Team: Turkish <gnu-tr-u12a@lists.sourceforge.net>\n"
@@ -49,11 +49,13 @@ msgstr "Dokunulup geçildi: `%s' deki ar_member_touch'dan dönen kod hatalı"
 
 #: arscan.c:69
 #, fuzzy, c-format
+#| msgid "lbr$set_module failed to extract module info, status = %d"
 msgid "lbr$set_module() failed to extract module info, status = %d"
 msgstr "lbr$set_module modül bilgisini çıkarırken başarısız oldu, durum = %d"
 
 #: arscan.c:175
 #, fuzzy, c-format
+#| msgid "lbr$ini_control failed with status = %d"
 msgid "lbr$ini_control() failed with status = %d"
 msgstr "lbr$ini_control durum =%d ile başarısız oldu"
 
@@ -193,6 +195,7 @@ msgstr " %lu dizinde olanaksızlıklar.\n"
 
 #: error.c:200
 #, fuzzy
+#| msgid "Unknown error %d"
 msgid "Unknown system error"
 msgstr "Bilinmeyen hata %d"
 
@@ -207,11 +210,13 @@ msgstr "sonlandırılmamış değişken bağıntısı"
 
 #: file.c:281
 #, fuzzy, c-format
+#| msgid "Commands were specified for file `%s' at %s:%lu,"
 msgid "Recipe was specified for file `%s' at %s:%lu,"
 msgstr "`%s' dosyası için komutlar %s:%lu de belirtildi,"
 
 #: file.c:286
 #, fuzzy, c-format
+#| msgid "Commands for file `%s' were found by implicit rule search,"
 msgid "Recipe for file `%s' was found by implicit rule search,"
 msgstr "`%s' dosyası için komutlar örtük kural aramasında bulundu,"
 
@@ -222,6 +227,7 @@ msgstr "fakat `%s' şimdi `%s' dosyası ile aynı dosya olarak düşünülmeli."
 
 #: file.c:292
 #, fuzzy, c-format
+#| msgid "Commands for `%s' will be ignored in favor of those for `%s'."
 msgid "Recipe for `%s' will be ignored in favor of the one for `%s'."
 msgstr "`%s' dosyası için komutlar `%s' lehine yoksayılmış olacak."
 
@@ -332,6 +338,7 @@ msgstr ""
 
 #: file.c:996
 #, fuzzy
+#| msgid "#  Command-line target."
 msgid "#  Commands not yet started."
 msgstr "#  Komut-satırı hedefi."
 
@@ -391,11 +398,13 @@ msgstr "`wordlist' işlevinde sayısal olmayan ikinci argüman"
 
 #: function.c:1475
 #, fuzzy, c-format
+#| msgid "create_child_process: DuplicateHandle(In) failed (e=%ld)\n"
 msgid "windows32_openpipe(): DuplicateHandle(In) failed (e=%ld)\n"
 msgstr "create_child_process: DuplicateHandle(In) başarısız (e=%ld)\n"
 
 #: function.c:1486
 #, fuzzy, c-format
+#| msgid "create_child_process: DuplicateHandle(Err) failed (e=%ld)\n"
 msgid "windows32_open_pipe(): DuplicateHandle(Err) failed (e=%ld)\n"
 msgstr "create_child_process: DuplicateHandle(Err) başarısız (e=%ld)\n"
 
@@ -406,6 +415,7 @@ msgstr "CreatePipe() başarısız (e=%ld)\n"
 
 #: function.c:1496
 #, fuzzy
+#| msgid "windows32_openpipe (): process_init_fd() failed\n"
 msgid "windows32_openpipe(): process_init_fd() failed\n"
 msgstr "windows32_openpipe (): process_init_fd() başarısız\n"
 
@@ -436,11 +446,13 @@ msgstr "%s: `%s' seçeneği belirsiz\n"
 
 #: getopt.c:692
 #, fuzzy, c-format
+#| msgid "%s: option `--%s' doesn't allow an argument\n"
 msgid "%s: option `--%s' does not allow an argument\n"
 msgstr "%s: `--%s' seçeneği argümansız kullanılır\n"
 
 #: getopt.c:697
 #, fuzzy, c-format
+#| msgid "%s: option `%c%s' doesn't allow an argument\n"
 msgid "%s: option `%c%s' does not allow an argument\n"
 msgstr "%s: seçenek `%c%s' argümansız kullanılır\n"
 
@@ -481,11 +493,13 @@ msgstr "%s: `-W %s' seçeneği belirsiz\n"
 
 #: getopt.c:874
 #, fuzzy, c-format
+#| msgid "%s: option `-W %s' doesn't allow an argument\n"
 msgid "%s: option `-W %s' does not allow an argument\n"
 msgstr "%s: `-W %s' seçeneği argümansız kullanılır\n"
 
 #: hash.c:49
 #, fuzzy, c-format
+#| msgid "can't allocate %ld bytes for hash table: memory exhausted"
 msgid "can't allocate %lu bytes for hash table: memory exhausted"
 msgstr "hash tablosu için %ld bayt ayrılamıyor: bellek tükendi"
 
@@ -587,6 +601,7 @@ msgstr "*** Bitmemiş işler için bekliyor...."
 
 #: job.c:594
 #, fuzzy, c-format
+#| msgid "Live child 0x%08lx (%s) PID %ld %s\n"
 msgid "Live child %p (%s) PID %s %s\n"
 msgstr "Ast dosya işini sürdürüyor: 0x%08lx (%s) PID %ld %s\n"
 
@@ -596,11 +611,13 @@ msgstr " (karşıdan)"
 
 #: job.c:773
 #, fuzzy, c-format
+#| msgid "Reaping losing child 0x%08lx PID %ld %s\n"
 msgid "Reaping losing child %p PID %s %s\n"
 msgstr "Kaybeden ast dosya sağlanıyor: 0x%08lx PID %ld %s\n"
 
 #: job.c:774
 #, fuzzy, c-format
+#| msgid "Reaping winning child 0x%08lx PID %ld %s\n"
 msgid "Reaping winning child %p PID %s %s\n"
 msgstr "Kazanan ast dosya sağlanıyor: 0x%08lx PID %ld %s\n"
 
@@ -611,6 +628,7 @@ msgstr "Geçici komut-listesi dosyası %s temizleniyor\n"
 
 #: job.c:886
 #, fuzzy, c-format
+#| msgid "Removing child 0x%08lx PID %ld%s from chain.\n"
 msgid "Removing child %p PID %s%s from chain.\n"
 msgstr "Ast 0x%08lx PID %ld%s zincirden kaldırılıyor\n"
 
@@ -620,6 +638,7 @@ msgstr "iş-sunucusu yazıyor"
 
 #: job.c:968
 #, fuzzy, c-format
+#| msgid "Released token for child 0x%08lx (%s).\n"
 msgid "Released token for child %p (%s).\n"
 msgstr "Ast 0x%08lx (%s) için simge (token) kullanıma sunuldu.\n"
 
@@ -639,11 +658,13 @@ msgstr ""
 
 #: job.c:1593
 #, fuzzy, c-format
+#| msgid "Putting child 0x%08lx (%s) PID %ld%s on the chain.\n"
 msgid "Putting child %p (%s) PID %s%s on the chain.\n"
 msgstr "Ast 0x%08lx (%s) PID %ld%s zincire konuluyor.\n"
 
 #: job.c:1751
 #, fuzzy, c-format
+#| msgid "Obtained token for child 0x%08lx (%s).\n"
 msgid "Obtained token for child %p (%s).\n"
 msgstr "Ast 0x%08lx (%s) için simge (token) sağlandı.\n"
 
@@ -658,6 +679,7 @@ msgstr ""
 
 #: job.c:1785
 #, fuzzy, c-format
+#| msgid "No need to remake target `%s'"
 msgid "Invoking builtin recipe to update target `%s'.\n"
 msgstr "Hedef `%s' nin yeniden derlenmesine gerek yok"
 
@@ -687,6 +709,7 @@ msgstr "Standart çıktı eski haline getirilemedi\n"
 
 #: job.c:2112
 #, fuzzy, c-format
+#| msgid "make reaped child pid %ld, still waiting for pid %ld\n"
 msgid "make reaped child pid %s, still waiting for pid %s\n"
 msgstr "make %ld pid'li ast süreci kaldırdı ama hala pid %ld için bekliyor\n"
 
@@ -781,6 +804,7 @@ msgstr "  -h, --help                  Bu iletiyi basar ve çıkar.\n"
 
 #: main.c:408
 #, fuzzy
+#| msgid "  -i, --ignore-errors         Ignore errors from commands.\n"
 msgid "  -i, --ignore-errors         Ignore errors from recipes.\n"
 msgstr "  -i, --ignore-errors         Komutların ürettiği hataları yoksayar.\n"
 
@@ -831,6 +855,10 @@ msgstr ""
 
 #: main.c:424
 #, fuzzy
+#| msgid ""
+#| "  -n, --just-print, --dry-run, --recon\n"
+#| "                              Don't actually run any commands; just print "
+#| "them.\n"
 msgid ""
 "  -n, --just-print, --dry-run, --recon\n"
 "                              Don't actually run any recipe; just print "
@@ -855,6 +883,9 @@ msgstr "  -p, --print-data-base       make'in içsel veritabanını basar.\n"
 
 #: main.c:432
 #, fuzzy
+#| msgid ""
+#| "  -q, --question              Run no commands; exit status says if up to "
+#| "date.\n"
 msgid ""
 "  -q, --question              Run no recipe; exit status says if up to "
 "date.\n"
@@ -873,6 +904,7 @@ msgstr ""
 
 #: main.c:438
 #, fuzzy
+#| msgid "  -s, --silent, --quiet       Don't echo commands.\n"
 msgid "  -s, --silent, --quiet       Don't echo recipes.\n"
 msgstr "  -s, --silent, --quiet     Komutlar işlenirken gösterilmez.\n"
 
@@ -941,6 +973,7 @@ msgstr ""
 
 #: main.c:470
 #, fuzzy
+#| msgid "  -d                          Print lots of debugging information.\n"
 msgid "  -x                          Same as --trace=\"normal\"\n"
 msgstr "  -b, -m                      Bir sürü hata ayıklama bilgisi basar.\n"
 
@@ -957,6 +990,7 @@ msgstr ""
 
 #: main.c:478
 #, fuzzy
+#| msgid "  -d                          Print lots of debugging information.\n"
 msgid ""
 "\n"
 "  -X                           Same as \"--debugger=preaction\"\n"
@@ -972,11 +1006,18 @@ msgstr "dosyaismi olarak boş dizge geçersiz"
 
 #: main.c:809
 #, fuzzy, c-format
+#| msgid "%s: Interrupt/Exception caught (code = 0x%lx, addr = 0x%lx)\n"
 msgid "%s: Interrupt/Exception caught (code = 0x%lx, addr = 0x%p)\n"
 msgstr "%s: Kesinti/Olağandışı durum saptandı (kod = 0x%lx, adres = 0x%lx)\n"
 
 #: main.c:816
 #, fuzzy, c-format
+#| msgid ""
+#| "\n"
+#| "Unhandled exception filter called from program %s\n"
+#| "ExceptionCode = %lx\n"
+#| "ExceptionFlags = %lx\n"
+#| "ExceptionAddress = %lx\n"
 msgid ""
 "\n"
 "Unhandled exception filter called from program %s\n"
@@ -992,21 +1033,25 @@ msgstr ""
 
 #: main.c:824
 #, fuzzy, c-format
+#| msgid "Access violation: write operation at address %lx\n"
 msgid "Access violation: write operation at address 0x%p\n"
 msgstr "Erişim uyumsuzluğu: %lx adresinde yazma işlemi\n"
 
 #: main.c:825
 #, fuzzy, c-format
+#| msgid "Access violation: read operation at address %lx\n"
 msgid "Access violation: read operation at address 0x%p\n"
 msgstr "Erişim uyumsuzluğu: %lx adresinde okuma işlemi\n"
 
 #: main.c:900 main.c:911
 #, fuzzy, c-format
+#| msgid "find_and_set_shell setting default_shell = %s\n"
 msgid "find_and_set_shell() setting default_shell = %s\n"
 msgstr "find_and_set_shell default_shell = %s olarak belirliyor\n"
 
 #: main.c:953
 #, fuzzy, c-format
+#| msgid "find_and_set_shell path search set default_shell = %s\n"
 msgid "find_and_set_shell() path search set default_shell = %s\n"
 msgstr ""
 "find_and_set_shell yol aramasını default_shell = %s olarak belirliyor\n"
@@ -1169,6 +1214,7 @@ msgstr ""
 
 #: main.c:2753
 #, fuzzy, c-format
+#| msgid "the `-%c' option requires a non-empty string argument"
 msgid "the `%s%s' option requires a non-empty string argument"
 msgstr "`-%c' seçeneği bir boş olmayan dizge argüman gerektirir"
 
@@ -1179,6 +1225,9 @@ msgstr "`-%c' seçeneği bir pozitif tümleyici bağımsız değişkenle kullan�
 
 #: main.c:3245
 #, fuzzy, c-format
+#| msgid ""
+#| "\n"
+#| "%sThis program built for %s\n"
 msgid "%sBuilt for %s\n"
 msgstr ""
 "\n"
@@ -1186,6 +1235,9 @@ msgstr ""
 
 #: main.c:3247
 #, fuzzy, c-format
+#| msgid ""
+#| "\n"
+#| "%sThis program built for %s (%s)\n"
 msgid "%sBuilt for %s (%s)\n"
 msgstr ""
 "\n"
@@ -1323,6 +1375,7 @@ msgstr ""
 
 #: print.c:545
 #, fuzzy, c-format
+#| msgid "#  Command-line target."
 msgid "Command-line invocation:"
 msgstr "#  Komut-satırı hedefi."
 
@@ -1366,11 +1419,13 @@ msgstr "şartlı ifade de yazılış hatası"
 
 #: read.c:939
 #, fuzzy
+#| msgid "commands commence before first target"
 msgid "recipe commences before first target"
 msgstr "komutlar ilk hedeften önce başlıyor"
 
 #: read.c:988
 #, fuzzy
+#| msgid "missing rule before commands"
 msgid "missing rule before recipe"
 msgstr "komutlardan önceki kural kayıp"
 
@@ -1406,6 +1461,7 @@ msgstr "boş değişken ismi"
 
 #: read.c:1425
 #, fuzzy
+#| msgid "Extraneous text after `endef' directive"
 msgid "extraneous text after `define' directive"
 msgstr "`endef' yönergesinden sonraki metin yersiz"
 
@@ -1415,6 +1471,7 @@ msgstr "`endef' kayıp, `define' sonlandırılmamış"
 
 #: read.c:1478
 #, fuzzy
+#| msgid "Extraneous text after `endef' directive"
 msgid "extraneous text after `endef' directive"
 msgstr "`endef' yönergesinden sonraki metin yersiz"
 
@@ -1438,6 +1495,7 @@ msgstr "Hedefe özgü değişken tanımı bozuk"
 
 #: read.c:1917
 #, fuzzy
+#| msgid "prerequisites cannot be defined in command scripts"
 msgid "prerequisites cannot be defined in recipes"
 msgstr "öngereksinimler komut betiklerinde tanımlanamaz"
 
@@ -1466,11 +1524,13 @@ msgstr "hedef `%s' aynı kuralda birden fazla belirtilmiş."
 
 #: read.c:2069
 #, fuzzy, c-format
+#| msgid "warning: overriding commands for target `%s'"
 msgid "warning: overriding recipe for target `%s'"
 msgstr "uyarı: hedef `%s' için komutlar geçersiz kılınıyor"
 
 #: read.c:2072
 #, fuzzy, c-format
+#| msgid "warning: ignoring old commands for target `%s'"
 msgid "warning: ignoring old recipe for target `%s'"
 msgstr "uyarı: hedef `%s' için eski komutlar yoksayılıyor"
 
@@ -1555,6 +1615,7 @@ msgstr "`%s' için bir örtük kural yok.\n"
 
 #: remake.c:532
 #, fuzzy, c-format
+#| msgid "Using default commands for `%s'.\n"
 msgid "Using default recipe for `%s'.\n"
 msgstr "`%s' için öntanımlı komutlar kullanılıyor.\n"
 
@@ -1610,6 +1671,7 @@ msgstr "Hedef `%s' çift-sütunlu ve önceden gereklilikler gerektirmiyor.\n"
 
 #: remake.c:798
 #, fuzzy, c-format
+#| msgid "No commands for `%s' and no prerequisites actually changed.\n"
 msgid "No recipe for `%s' and no prerequisites actually changed.\n"
 msgstr "`%s' için komutlar ve  önceden gerekliliklerde bir değişiklik yok.\n"
 
@@ -1640,6 +1702,7 @@ msgstr " VPATH ismi `%s' yoksayılıyor.\n"
 
 #: remake.c:849
 #, fuzzy, c-format
+#| msgid "Commands of `%s' are being run.\n"
 msgid "Recipe of `%s' is being run.\n"
 msgstr "`%s' nin komutları çalışmaya devam ediyor.\n"
 
@@ -1670,6 +1733,7 @@ msgstr "Uyarı: `%s' dosyası gelecekteki bir değişiklik tarihini içeriyor"
 
 #: remake.c:1410
 #, fuzzy, c-format
+#| msgid "Warning: File `%s' has modification time %.2g s in the future"
 msgid "Warning: File `%s' has modification time %s s in the future"
 msgstr "Uyarı: `%s' dosyasının  değişiklik tarihi %.2g s kadar gelecekte"
 
@@ -1714,6 +1778,7 @@ msgstr " terminal."
 
 #: rule.c:564
 #, fuzzy, c-format
+#| msgid "BUG: num_pattern_rules wrong!  %u != %u"
 msgid "BUG: num_pattern_rules is wrong!  %u != %u"
 msgstr "YAZILIM HATASI: num_pattern_rules yanlış!  %u != %u"
 
@@ -1875,6 +1940,9 @@ msgstr "Aritmetik işlemci kullanılabilir değil"
 
 #: strcache.c:235
 #, fuzzy, c-format
+#| msgid ""
+#| "\n"
+#| "%s # of strings in strcache: %d\n"
 msgid ""
 "\n"
 "%s # of strings in strcache: %d / lookups = %lu / hits = %lu\n"
@@ -1884,21 +1952,28 @@ msgstr ""
 
 #: strcache.c:237
 #, fuzzy, c-format
+#| msgid "%s # of strcache buffers: %d\n"
 msgid "%s # of strcache buffers: %d (* %d B/buffer = %d B)\n"
 msgstr "%s dizge belleği tamponlarının sayısı: %d\n"
 
 #: strcache.c:239
 #, fuzzy, c-format
+#| msgid "%s strcache size: total = %d / max = %d / min = %d / avg = %d\n"
 msgid "%s strcache used: total = %d (%d) / max = %d / min = %d / avg = %d\n"
 msgstr "%s dizge belleği boyu: toplam = %d / max = %d / min = %d / ort = %d\n"
 
 #: strcache.c:241
 #, fuzzy, c-format
+#| msgid "%s strcache free: total = %d / max = %d / min = %d / avg = %d\n"
 msgid "%s strcache free: total = %d (%d) / max = %d / min = %d / avg = %d\n"
 msgstr "%s dizge belleği boş: toplam = %d / max = %d / min = %d / ort = %d\n"
 
 #: strcache.c:244
 #, fuzzy
+#| msgid ""
+#| "\n"
+#| "# files hash-table stats:\n"
+#| "# "
 msgid ""
 "\n"
 "# strcache hash-table stats:\n"
@@ -1951,6 +2026,7 @@ msgstr " (`%s'den, satır %lu)"
 
 #: variable.c:1704
 #, fuzzy
+#| msgid "# variable set hash-table stats:\n"
 msgid "variable set hash-table stats:\n"
 msgstr "# değişken kümesi hash tablosunun durumu:\n"
 
@@ -1994,6 +2070,7 @@ msgstr "uyarı: `%.*s' değişkeni atanmamış"
 
 #: vmsfunctions.c:92
 #, fuzzy, c-format
+#| msgid "sys$search failed with %d\n"
 msgid "sys$search() failed with %d\n"
 msgstr "sys$search %d ile başarısız\n"
 
@@ -2051,6 +2128,7 @@ msgstr "%s e yönlendirilmiş hata\n"
 
 #: vmsjobs.c:523
 #, fuzzy, c-format
+#| msgid "Redirected output to %s\n"
 msgid "Append output to %s\n"
 msgstr "%s e yönlendirilmiş çıktı\n"
 
@@ -2113,14 +2191,17 @@ msgstr ""
 "# Genel (`VPATH' çevre değişkeni) arama yolu:\n"
 "# "
 
+#, c-format
 #~ msgid "process_easy() failed failed to launch process (e=%ld)\n"
 #~ msgstr "Süreci başlatmada process_easy() başarısız oldu (e=%ld)\n"
 
+#, c-format
 #~ msgid "Report bugs to <bug-make@gnu.org>\n"
 #~ msgstr ""
 #~ "Yazılım hatalarını <bug-make@gnu.org> adresine,\n"
 #~ "çeviri hatalarını <gnu-tr@belgeler.org> adresine bildiriniz.\n"
 
+#, c-format
 #~ msgid ""
 #~ "%sThis is free software; see the source for copying conditions.\n"
 #~ "%sThere is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A\n"
@@ -2141,6 +2222,7 @@ msgstr ""
 #~ msgid "invalid `override' directive"
 #~ msgstr "`override' yönergesi geçersiz"
 
+#, c-format
 #~ msgid "-warning, CTRL-Y will leave sub-process(es) around.\n"
 #~ msgstr "-uyarı, CTRL-Y etraftaki alt-süreç(ler)i bıraktıracak.\n"
 

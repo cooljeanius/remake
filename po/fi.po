@@ -1,14 +1,14 @@
 # Finnish messages for make.
 # Copyright (C) 2005 Free Software Foundation, Inc.
 # This file is distributed under the same license as the make package.
-# Lauri Nurmi <lanurmi@iki.fi>, 2005.
+# Lauri Nurmi <lanurmi@iki.fi>, 2005, 2021.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: make 4.2\n"
+"Project-Id-Version: make 4.2.93\n"
 "Report-Msgid-Bugs-To: bug-make@gnu.org\n"
-"POT-Creation-Date: 2018-02-12 19:14-0500\n"
-"PO-Revision-Date: 2016-05-26 20:40+0300\n"
+"POT-Creation-Date: 2023-10-23 03:33-0400\n"
+"PO-Revision-Date: 2021-05-26 23:12+0300\n"
 "Last-Translator: Lauri Nurmi <lanurmi@iki.fi>\n"
 "Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
 "Language: fi\n"
@@ -16,11 +16,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 2.4.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ar.c:51
 #, fuzzy, c-format
+#| msgid "attempt to use unsupported feature: '%s'"
 msgid "attempt to use unsupported feature: `%s'"
 msgstr "yritettiin käyttää ominaisuutta, jolle ei ole tukea: ”%s”"
 
@@ -30,21 +31,25 @@ msgstr "arkistojäsenten kosketus ei ole mahdollista VMS:ssä"
 
 #: ar.c:155
 #, fuzzy, c-format
+#| msgid "touch: Archive '%s' does not exist"
 msgid "touch: Archive `%s' does not exist"
 msgstr "touch: Arkistoa ”%s” ei ole olemassa"
 
 #: ar.c:158
 #, fuzzy, c-format
+#| msgid "touch: '%s' is not a valid archive"
 msgid "touch: `%s' is not a valid archive"
 msgstr "touch: ”%s” ei ole kelvollinen arkisto"
 
 #: ar.c:165
 #, fuzzy, c-format
+#| msgid "touch: Member '%s' does not exist in '%s'"
 msgid "touch: Member `%s' does not exist in `%s'"
 msgstr "touch: Arkistossa ”%1$s” ei ole jäsentä ”%2$s”"
 
 #: ar.c:172
 #, fuzzy, c-format
+#| msgid "touch: Bad return code from ar_member_touch on '%s'"
 msgid "touch: Bad return code from ar_member_touch on `%s'"
 msgstr "touch: ar_member_touch antoi virheellisen paluuarvon kohteesta ”%s”"
 
@@ -65,6 +70,7 @@ msgstr "kirjastoa ”%s” ei voi avata jäsenen ”%s” etsimiseksi"
 
 #: arscan.c:850
 #, fuzzy, c-format
+#| msgid "Member '%s'%s: %ld bytes at %ld (%ld).\n"
 msgid "Member `%s'%s: %ld bytes at %ld (%ld).\n"
 msgstr "Jäsen ”%s”%s: %ld tavua kohdassa %ld (%ld).\n"
 
@@ -88,21 +94,25 @@ msgstr "*** Katkaisu.\n"
 
 #: commands.c:738
 #, fuzzy, c-format
+#| msgid "*** [%s] Archive member '%s' may be bogus; not deleted"
 msgid "*** [%s] Archive member `%s' may be bogus; not deleted"
 msgstr "*** [%s] Arkistojäsen ”%s” voi olla viallinen – ei poisteta"
 
 #: commands.c:741
 #, fuzzy, c-format
+#| msgid "*** Archive member '%s' may be bogus; not deleted"
 msgid "*** Archive member `%s' may be bogus; not deleted"
 msgstr "*** Arkistojäsen ”%s” voi olla viallinen – ei poisteta"
 
 #: commands.c:758
 #, fuzzy, c-format
+#| msgid "*** [%s] Deleting file '%s'"
 msgid "*** [%s] Deleting file `%s'"
 msgstr "*** [%s] Poistetaan tiedosto ”%s”"
 
 #: commands.c:760
 #, fuzzy, c-format
+#| msgid "*** Deleting file '%s'"
 msgid "*** Deleting file `%s'"
 msgstr "*** Poistetaan tiedosto ”%s”"
 
@@ -117,11 +127,13 @@ msgstr " (sisäänrakennettu):"
 
 #: commands.c:810
 #, fuzzy, c-format
+#| msgid " (from '%s', line %lu):\n"
 msgid " (from `%s', line %lu):\n"
 msgstr " (tiedosto ”%s”, rivi %lu):\n"
 
 #: debug.c:90
 #, fuzzy, c-format
+#| msgid "unknown debug level specification '%s'"
 msgid "unknown debug level specification `%s'"
 msgstr "tuntematon vianetsintätason määritys ”%s”"
 
@@ -140,6 +152,7 @@ msgstr "# %s: tilaa ei voitu lukea.\n"
 
 #: dir.c:1013
 #, fuzzy, c-format
+#| msgid "# %s (key %s, mtime %d): could not be opened.\n"
 msgid "# %s (key %s, mtime %d): could not be opened.\n"
 msgstr "# %s (avain %s, maika %d): ei voitu avata.\n"
 
@@ -155,6 +168,7 @@ msgstr "# %s (laite %ld, i-solmu %ld): ei voitu avata.\n"
 
 #: dir.c:1049
 #, fuzzy, c-format
+#| msgid "# %s (key %s, mtime %d): "
 msgid "# %s (key %s, mtime %d): "
 msgstr "# %s (avain %s, maika %d: "
 
@@ -196,11 +210,13 @@ msgstr " mahdottomuutta %lu hakemistossa.\n"
 
 #: error.c:200
 #, fuzzy
+#| msgid "Unknown error %d"
 msgid "Unknown system error"
 msgstr "Tuntematon virhe %d"
 
 #: expand.c:128
 #, fuzzy, c-format
+#| msgid "Recursive variable '%s' references itself (eventually)"
 msgid "Recursive variable `%s' references itself (eventually)"
 msgstr "Rekursiivinen muuttuja ”%s” viittaa (lopulta) itseensä"
 
@@ -210,8 +226,9 @@ msgstr "päättämätön muuttujaviittaus"
 
 #: file.c:281
 #, fuzzy, c-format
+#| msgid "Recipe was specified for file '%s' at %s:%lu,"
 msgid "Recipe was specified for file `%s' at %s:%lu,"
-msgstr "Tiedostolle ”%s” määriteltiin komentoja paikassa %s:%lu,"
+msgstr "Tiedostolle ”%s” määriteltiin resepti paikassa %s:%lu,"
 
 #: file.c:286
 #, fuzzy, c-format
@@ -220,6 +237,7 @@ msgstr "Tiedostolle ”%s” löytyi komentoja oletussääntöhaussa,"
 
 #: file.c:289
 #, fuzzy, c-format
+#| msgid "but '%s' is now considered the same file as '%s'."
 msgid "but `%s' is now considered the same file as `%s'."
 msgstr "mutta ”%s”:n katsotaan nyt olevan sama tiedosto kuin ”%s”."
 
@@ -242,6 +260,7 @@ msgstr ""
 
 #: file.c:406
 #, fuzzy, c-format
+#| msgid "*** Deleting intermediate file '%s'"
 msgid "*** Deleting intermediate file `%s'"
 msgstr "*** Poistetaan aputiedosto ”%s”"
 
@@ -272,6 +291,7 @@ msgstr "#  Valekohde (ennakkoehto .PHONY:lle)."
 
 #: file.c:947
 #, fuzzy
+#| msgid "#  Command line target."
 msgid "#  Command-line target."
 msgstr "#  Komentorivikohde."
 
@@ -337,6 +357,7 @@ msgstr "#  Ajossa olevat riippuvuuskomennot (TÄMÄ ON OHJELMISTOVIKA)."
 
 #: file.c:996
 #, fuzzy
+#| msgid "#  Command line target."
 msgid "#  Commands not yet started."
 msgstr "#  Komentorivikohde."
 
@@ -381,33 +402,39 @@ msgstr ""
 
 #: function.c:760
 #, fuzzy
+#| msgid "non-numeric first argument to 'word' function"
 msgid "non-numeric first argument to `word' function"
 msgstr "ei-numeerinen ensimmäinen argumentti ”word”-funktiolle"
 
 #: function.c:765
 #, fuzzy
+#| msgid "first argument to 'word' function must be greater than 0"
 msgid "first argument to `word' function must be greater than 0"
 msgstr "”word”-funktion ensimmäisen argumentin on oltava suurempi kuin 0"
 
 #: function.c:785
 #, fuzzy
+#| msgid "non-numeric first argument to 'wordlist' function"
 msgid "non-numeric first argument to `wordlist' function"
 msgstr "ei-numeerinen ensimmäinen argumentti ”wordlist”-funktiolle"
 
 #: function.c:787
 #, fuzzy
+#| msgid "non-numeric second argument to 'wordlist' function"
 msgid "non-numeric second argument to `wordlist' function"
 msgstr "ei-numeerinen toinen argumentti ”wordlist”-funktiolle"
 
 #: function.c:1475
 #, fuzzy, c-format
+#| msgid "windows32_openpipe: DuplicateHandle(In) failed (e=%ld)\n"
 msgid "windows32_openpipe(): DuplicateHandle(In) failed (e=%ld)\n"
-msgstr "create_child_process: DuplicateHandle(In) epäonnistui (v=%d)\n"
+msgstr "windows32_openpipe: DuplicateHandle(In) epäonnistui (v=%ld)\n"
 
 #: function.c:1486
 #, fuzzy, c-format
+#| msgid "windows32_openpipe: DuplicateHandle(Err) failed (e=%ld)\n"
 msgid "windows32_open_pipe(): DuplicateHandle(Err) failed (e=%ld)\n"
-msgstr "create_child_process: DuplicateHandle(Err) epäonnistui (v=%d)\n"
+msgstr "windows32_openpipe: DuplicateHandle(Err) epäonnistui (v=%ld)\n"
 
 #: function.c:1491
 #, c-format
@@ -415,9 +442,8 @@ msgid "CreatePipe() failed (e=%ld)\n"
 msgstr "CreatePipe() epäonnistui (v=%ld)\n"
 
 #: function.c:1496
-#, fuzzy
 msgid "windows32_openpipe(): process_init_fd() failed\n"
-msgstr "windows32_openpipe (): process_init_fd() epäonnistui\n"
+msgstr "windows32_openpipe(): process_init_fd() epäonnistui\n"
 
 #: function.c:1745
 #, c-format
@@ -426,46 +452,55 @@ msgstr "Siivotaan väliaikainen komentotiedosto %s\n"
 
 #: function.c:2168
 #, fuzzy, c-format
+#| msgid "insufficient number of arguments (%d) to function '%s'"
 msgid "insufficient number of arguments (%d) to function `%s'"
 msgstr "liian vähän (%d) argumentteja funktiolle ”%s”"
 
 #: function.c:2180
 #, fuzzy, c-format
+#| msgid "unimplemented on this platform: function '%s'"
 msgid "unimplemented on this platform: function `%s'"
 msgstr "ei toteutettu tällä alustalla: funktio ”%s”"
 
 #: function.c:2230
 #, fuzzy, c-format
+#| msgid "unterminated call to function '%s': missing '%c'"
 msgid "unterminated call to function `%s': missing `%c'"
 msgstr "päättämätön kutsu funktioon ”%s”: puuttuva ”%c”"
 
 #: getopt.c:668
 #, fuzzy, c-format
+#| msgid "%s: option '%s' is ambiguous\n"
 msgid "%s: option `%s' is ambiguous\n"
 msgstr "%s: valitsin ”%s” on moniselitteinen\n"
 
 #: getopt.c:692
 #, fuzzy, c-format
+#| msgid "%s: option '--%s' doesn't allow an argument\n"
 msgid "%s: option `--%s' does not allow an argument\n"
 msgstr "%s: valitsin ”--%s” ei salli argumenttia\n"
 
 #: getopt.c:697
 #, fuzzy, c-format
+#| msgid "%s: option '%c%s' doesn't allow an argument\n"
 msgid "%s: option `%c%s' does not allow an argument\n"
 msgstr "%s: valitsin ”%c%s” ei salli argumenttia\n"
 
 #: getopt.c:715 getopt.c:890
 #, fuzzy, c-format
+#| msgid "%s: option '%s' requires an argument\n"
 msgid "%s: option `%s' requires an argument\n"
 msgstr "%s: valitsin ”%s” vaatii argumentin\n"
 
 #: getopt.c:746
 #, fuzzy, c-format
+#| msgid "%s: unrecognized option '--%s'\n"
 msgid "%s: unrecognized option `--%s'\n"
 msgstr "%s: tunnistamaton valitsin ”--%s”\n"
 
 #: getopt.c:750
 #, fuzzy, c-format
+#| msgid "%s: unrecognized option '%c%s'\n"
 msgid "%s: unrecognized option `%c%s'\n"
 msgstr "%s: tunnistamaton valitsin ”%c%s”\n"
 
@@ -486,11 +521,13 @@ msgstr "%s: valitsin vaatii argumentin -- %c\n"
 
 #: getopt.c:856
 #, fuzzy, c-format
+#| msgid "%s: option '-W %s' is ambiguous\n"
 msgid "%s: option `-W %s' is ambiguous\n"
 msgstr "%s: valitsin ”-W %s” on moniselitteinen\n"
 
 #: getopt.c:874
 #, fuzzy, c-format
+#| msgid "%s: option '-W %s' doesn't allow an argument\n"
 msgid "%s: option `-W %s' does not allow an argument\n"
 msgstr "%s: valitsin ”-W %s” ei salli argumenttia\n"
 
@@ -500,27 +537,32 @@ msgid "can't allocate %lu bytes for hash table: memory exhausted"
 msgstr "ei voida varata %ld tavua hajautustaululle: muisti lopussa"
 
 #: hash.c:280
-#, c-format
+#, fuzzy, c-format
+#| msgid "Load=%lu/%lu=%.0f%%, "
 msgid "Load=%ld/%ld=%.0f%%, "
-msgstr "Kuormitus=%ld/%ld=%.0f%%, "
+msgstr "Kuormitus=%lu/%lu=%.0f %%, "
 
 #: hash.c:282
-#, c-format
+#, fuzzy, c-format
+#| msgid "Rehash=%d, "
 msgid "Rehash=%d, "
 msgstr "Uudelleenhajautus=%d, "
 
 #: hash.c:283
-#, c-format
+#, fuzzy, c-format
+#| msgid "Collisions=%lu/%lu=%.0f%%"
 msgid "Collisions=%ld/%ld=%.0f%%"
-msgstr "Törmäykset=%ld/%ld=%.0f%%"
+msgstr "Törmäykset=%lu/%lu=%.0f %%"
 
 #: implicit.c:41
 #, fuzzy, c-format
+#| msgid "Looking for an implicit rule for '%s'.\n"
 msgid "Looking for an implicit rule for `%s'.\n"
 msgstr "Etsitään oletussääntöä kohteelle ”%s”.\n"
 
 #: implicit.c:57
 #, fuzzy, c-format
+#| msgid "Looking for archive-member implicit rule for '%s'.\n"
 msgid "Looking for archive-member implicit rule for `%s'.\n"
 msgstr "Etsitään arkistojäsenen oletussääntöä kohteelle ”%s”.\n"
 
@@ -530,36 +572,43 @@ msgstr "Vältetään oletussääntörekursio.\n"
 
 #: implicit.c:492
 #, fuzzy, c-format
+#| msgid "Trying pattern rule with stem '%.*s'.\n"
 msgid "Trying pattern rule with stem `%.*s'.\n"
 msgstr "Kokeillaan hahmosääntöä rungolla ”%.*s”.\n"
 
 #: implicit.c:675
 #, fuzzy, c-format
+#| msgid "Rejecting impossible rule prerequisite '%s'.\n"
 msgid "Rejecting impossible rule prerequisite `%s'.\n"
 msgstr "Hylätään mahdoton säännön ennakkoehto ”%s”.\n"
 
 #: implicit.c:676
 #, fuzzy, c-format
+#| msgid "Rejecting impossible implicit prerequisite '%s'.\n"
 msgid "Rejecting impossible implicit prerequisite `%s'.\n"
 msgstr "Hylätään mahdoton oletusennakkoehto ”%s”.\n"
 
 #: implicit.c:689
 #, fuzzy, c-format
+#| msgid "Trying rule prerequisite '%s'.\n"
 msgid "Trying rule prerequisite `%s'.\n"
 msgstr "Yritetään käyttää säännön ennakkoehtoa ”%s”.\n"
 
 #: implicit.c:690
 #, fuzzy, c-format
+#| msgid "Trying implicit prerequisite '%s'.\n"
 msgid "Trying implicit prerequisite `%s'.\n"
 msgstr "Yritetään käyttää oletusennakkoehtoa ”%s”.\n"
 
 #: implicit.c:729
 #, fuzzy, c-format
+#| msgid "Found prerequisite '%s' as VPATH '%s'\n"
 msgid "Found prerequisite `%s' as VPATH `%s'\n"
 msgstr "Löydettiin ennakkoehto ”%s”, joka on VPATH ”%s”\n"
 
 #: implicit.c:743
 #, fuzzy, c-format
+#| msgid "Looking for a rule with intermediate file '%s'.\n"
 msgid "Looking for a rule with intermediate file `%s'.\n"
 msgstr "Etsitään sääntöä aputiedostolla ”%s”.\n"
 
@@ -574,16 +623,19 @@ msgstr "*** [%s] Virhe 0x%x (ei huomioida)"
 
 #: job.c:457
 #, fuzzy, c-format
+#| msgid "*** [%s] Error 0x%x (ignored)"
 msgid "*** [%s] Error 0x%x"
 msgstr "*** [%s] Virhe 0x%x (ei huomioida)"
 
 #: job.c:461
 #, fuzzy, c-format
+#| msgid "*** [%s] Error 0x%x (ignored)"
 msgid "[%s] Error %d (ignored)"
 msgstr "*** [%s] Virhe 0x%x (ei huomioida)"
 
 #: job.c:462
 #, fuzzy, c-format
+#| msgid "*** [%s] Error 0x%x (ignored)"
 msgid "*** [%s] Error %d"
 msgstr "*** [%s] Virhe 0x%x (ei huomioida)"
 
@@ -704,6 +756,7 @@ msgstr ""
 
 #: job.c:2153
 #, fuzzy, c-format
+#| msgid "%s: %s: Command not found\n"
 msgid "%s: Command not found"
 msgstr "%s: %s: Komentoa ei löytynyt\n"
 
@@ -718,6 +771,7 @@ msgstr "spawnvpe: ympäristötila saattaa olla lopussa"
 
 #: job.c:2446
 #, fuzzy, c-format
+#| msgid "$SHELL changed (was '%s', now '%s')\n"
 msgid "$SHELL changed (was `%s', now `%s')\n"
 msgstr "$SHELL muuttunut (oli ”%s”, nyt ”%s”)\n"
 
@@ -780,9 +834,10 @@ msgstr ""
 "tiedostot.\n"
 
 #: main.c:401
+#, fuzzy
 msgid ""
 "  --eval=STRING               Evaluate STRING as a makefile statement.\n"
-msgstr ""
+msgstr "  -E MJONO, --eval=MJONO      Lavenna MJONO makefile-lausekkeena.\n"
 
 #: main.c:403
 msgid ""
@@ -797,11 +852,9 @@ msgid "  -h, --help                  Print this message and exit.\n"
 msgstr "  -h, --help                  Näytä tämä viesti ja poistu.\n"
 
 #: main.c:408
-#, fuzzy
 msgid "  -i, --ignore-errors         Ignore errors from recipes.\n"
 msgstr ""
-"  -i, --ignore-errors         Älä huomioi suoritettujen komentojen "
-"virheitä.\n"
+"  -i, --ignore-errors         Älä huomioi suoritettujen reseptien virheitä.\n"
 
 #: main.c:410
 msgid ""
@@ -847,11 +900,11 @@ msgstr ""
 
 #: main.c:422
 #, fuzzy
+#| msgid "  -i, --ignore-errors         Ignore errors from recipes.\n"
 msgid ""
 "  --no-extended-errors         Do not give additional error reporting.\n"
 msgstr ""
-"  -i, --ignore-errors         Älä huomioi suoritettujen komentojen "
-"virheitä.\n"
+"  -i, --ignore-errors         Älä huomioi suoritettujen reseptien virheitä.\n"
 
 #: main.c:424
 #, fuzzy
@@ -878,12 +931,11 @@ msgid "  -p, --print-data-base       Print make's internal database.\n"
 msgstr "  -p, --print-data-base       Näytä make:in sisäinen tietokanta.\n"
 
 #: main.c:432
-#, fuzzy
 msgid ""
 "  -q, --question              Run no recipe; exit status says if up to "
 "date.\n"
 msgstr ""
-"  -q, --question              Älä aja komentoja; paluuarvo kertoo ajan-\n"
+"  -q, --question              Älä aja reseptiä; paluuarvo kertoo ajan-\n"
 "                                tasaisuuden.\n"
 
 #: main.c:434
@@ -911,8 +963,9 @@ msgstr ""
 
 #: main.c:443
 #, fuzzy
+#| msgid "  --trace                     Print tracing information.\n"
 msgid "  --targets                   Give list of explicitly-named targets.\n"
-msgstr "  -d                          Näytä runsaasti vianetsintätietoja.\n"
+msgstr "  --trace                     Näytä jäljitystietoja.\n"
 
 #: main.c:445
 msgid ""
@@ -967,6 +1020,7 @@ msgstr ""
 
 #: main.c:470
 #, fuzzy
+#| msgid "  -d                          Print lots of debugging information.\n"
 msgid "  -x                          Same as --trace=\"normal\"\n"
 msgstr "  -d                          Näytä runsaasti vianetsintätietoja.\n"
 
@@ -983,6 +1037,7 @@ msgstr ""
 
 #: main.c:478
 #, fuzzy
+#| msgid "  -d                          Print lots of debugging information.\n"
 msgid ""
 "\n"
 "  -X                           Same as \"--debugger=preaction\"\n"
@@ -1081,6 +1136,8 @@ msgid "Jobserver client (fds %d,%d)\n"
 msgstr ""
 
 #: main.c:1921
+#, fuzzy
+#| msgid "warning: -jN forced in submake: disabling jobserver mode."
 msgid "warning: -jN forced in submake: disabling jobserver mode."
 msgstr "varoitus: -jN pakotettu ali-make:ssa: poistetaan työpalvelin käytöstä."
 
@@ -1114,6 +1171,7 @@ msgstr "Päivitetään makefile-tiedostoja....\n"
 
 #: main.c:2098
 #, fuzzy, c-format
+#| msgid "Makefile '%s' might loop; not remaking it.\n"
 msgid "Makefile `%s' might loop; not remaking it.\n"
 msgstr ""
 "Ei uudelleentuoteta makefile-tiedostoa ”%s” – vältetään mahdollinen ikuinen "
@@ -1121,16 +1179,19 @@ msgstr ""
 
 #: main.c:2177
 #, fuzzy, c-format
+#| msgid "Failed to remake makefile '%s'."
 msgid "Failed to remake makefile `%s'."
 msgstr "Makefile-tiedoston ”%s” uudelleentuottaminen epäonnistui."
 
 #: main.c:2194
 #, fuzzy, c-format
+#| msgid "Included makefile '%s' was not found."
 msgid "Included makefile `%s' was not found."
 msgstr "Sisällytettyä makefile-tiedostoa ”%s” ei löytynyt."
 
 #: main.c:2199
 #, fuzzy, c-format
+#| msgid "Makefile '%s' was not found"
 msgid "Makefile `%s' was not found"
 msgstr "Makefile-tiedostoa ”%s” ei löytynyt"
 
@@ -1166,8 +1227,7 @@ msgstr ""
 #: main.c:2497
 msgid "warning:  Clock skew detected.  Your build may be incomplete."
 msgstr ""
-"varoitus: Havaittu väärä kellonaika. Käännösversio saattaa olla "
-"epätäydellinen."
+"varoitus: Havaittu väärä kellonaika. Koonnos saattaa olla epätäydellinen."
 
 #: main.c:2661
 #, c-format
@@ -1199,11 +1259,13 @@ msgstr ""
 
 #: main.c:2753
 #, fuzzy, c-format
+#| msgid "the '%s%s' option requires a non-empty string argument"
 msgid "the `%s%s' option requires a non-empty string argument"
 msgstr "valitsin ”%s%s” vaatii ei-tyhjän merkkijonoargumentin"
 
 #: main.c:2808
 #, fuzzy, c-format
+#| msgid "the '-%c' option requires a positive integer argument"
 msgid "the `-%c' option requires a positive integral argument"
 msgstr "valitsin ”-%c” vaatii positiivisen kokonaislukuargumentin"
 
@@ -1256,11 +1318,13 @@ msgstr "%s: Poistutaan tuntemattomasta hakemistosta\n"
 
 #: main.c:3440
 #, fuzzy, c-format
+#| msgid "%s: Entering directory '%s'\n"
 msgid "%s: Entering directory `%s'\n"
 msgstr "%s: Siirrytään hakemistoon ”%s”\n"
 
 #: main.c:3443
 #, fuzzy, c-format
+#| msgid "%s: Leaving directory '%s'\n"
 msgid "%s: Leaving directory `%s'\n"
 msgstr "%s: Poistutaan hakemistosta ”%s”\n"
 
@@ -1276,11 +1340,13 @@ msgstr "%s[%u]: Poistutaan tuntemattomasta hakemistosta\n"
 
 #: main.c:3455
 #, fuzzy, c-format
+#| msgid "%s[%u]: Entering directory '%s'\n"
 msgid "%s[%u]: Entering directory `%s'\n"
 msgstr "%s[%u]: Siirrytään hakemistoon ”%s”\n"
 
 #: main.c:3458
 #, fuzzy, c-format
+#| msgid "%s[%u]: Leaving directory '%s'\n"
 msgid "%s[%u]: Leaving directory `%s'\n"
 msgstr "%s[%u]: Poistutaan hakemistosta ”%s”\n"
 
@@ -1321,6 +1387,7 @@ msgstr "Lapsiprosessin käyttöoikeudet"
 
 #: misc.c:848
 #, fuzzy, c-format
+#| msgid "write error"
 msgid "write error: %s"
 msgstr "kirjoitusvirhe"
 
@@ -1363,6 +1430,7 @@ msgstr "Luetaan makefile-tiedostoja...\n"
 
 #: read.c:345
 #, fuzzy, c-format
+#| msgid "Reading makefile '%s'"
 msgid "Reading makefile `%s'"
 msgstr "Luetaan makefile-tiedosto ”%s”"
 
@@ -1402,13 +1470,15 @@ msgstr "puuttuva sääntö ennen komentoja"
 
 #: read.c:1075
 #, fuzzy, c-format
+#| msgid "missing separator"
 msgid "missing separator%s"
 msgstr "puuttuva erotin"
 
 #: read.c:1077
 #, fuzzy
+#| msgid "missing separator (did you mean TAB instead of 8 spaces?)"
 msgid " (did you mean TAB instead of 8 spaces?)"
-msgstr " (ehkä tarkoitit sarkainta eikä kahdeksaa välilyöntiä?)"
+msgstr "puuttuva erotin (tarkoititko sarkainta eikä kahdeksaa välilyöntiä?)"
 
 #: read.c:1211
 msgid "missing target pattern"
@@ -1420,11 +1490,13 @@ msgstr "useita kohdehahmoja"
 
 #: read.c:1217
 #, fuzzy, c-format
+#| msgid "target pattern contains no '%%'"
 msgid "target pattern contains no `%%'"
 msgstr "kohdehahmo ei sisällä ”%%”-merkkiä"
 
 #: read.c:1341
 #, fuzzy
+#| msgid "missing 'endif'"
 msgid "missing `endif'"
 msgstr "puuttuva ”endif”"
 
@@ -1434,31 +1506,37 @@ msgstr "tyhjä muuttujan nimi"
 
 #: read.c:1425
 #, fuzzy
+#| msgid "extraneous text after 'define' directive"
 msgid "extraneous text after `define' directive"
 msgstr "ylimääräistä tekstiä ”endef”-toimintaohjeen jälkeen"
 
 #: read.c:1450
 #, fuzzy
+#| msgid "missing 'endef', unterminated 'define'"
 msgid "missing `endef', unterminated `define'"
 msgstr "puuttuva ”endef”, päättämätön ”define”"
 
 #: read.c:1478
 #, fuzzy
+#| msgid "extraneous text after 'endef' directive"
 msgid "extraneous text after `endef' directive"
 msgstr "ylimääräistä tekstiä ”endef”-toimintaohjeen jälkeen"
 
 #: read.c:1548
 #, fuzzy, c-format
+#| msgid "extraneous text after '%s' directive"
 msgid "Extraneous text after `%s' directive"
 msgstr "ylimääräistä tekstiä ”%s”-toimintaohjeen jälkeen"
 
 #: read.c:1557 read.c:1571
 #, fuzzy, c-format
+#| msgid "extraneous '%s'"
 msgid "extraneous `%s'"
 msgstr "ylimääräinen ”%s”"
 
 #: read.c:1576
 #, fuzzy
+#| msgid "only one 'else' per conditional"
 msgid "only one `else' per conditional"
 msgstr "vain yksi ”else” ehtolausetta kohden"
 
@@ -1482,16 +1560,19 @@ msgstr ""
 
 #: read.c:2038
 #, fuzzy, c-format
+#| msgid "target '%s' doesn't match the target pattern"
 msgid "target `%s' doesn't match the target pattern"
 msgstr "kohde ”%s” ei täsmää kohdehahmon kanssa"
 
 #: read.c:2054 read.c:2099
 #, fuzzy, c-format
+#| msgid "target file '%s' has both : and :: entries"
 msgid "target file `%s' has both : and :: entries"
 msgstr "kohdetiedostolla ”%s” on sekä :- että ::-merkinnät"
 
 #: read.c:2060
 #, fuzzy, c-format
+#| msgid "target '%s' given more than once in the same rule"
 msgid "target `%s' given more than once in the same rule."
 msgstr "kohde ”%s” annettu yli yhden kerran samassa säännössä"
 
@@ -1511,16 +1592,19 @@ msgstr "varoitus: havaittu NUL-merkki, rivin loppuosaa ei huomioida"
 
 #: remake.c:242
 #, fuzzy, c-format
+#| msgid "Nothing to be done for '%s'."
 msgid "Nothing to be done for `%s'."
 msgstr "Kohteelle ”%s” ei tarvitse tehdä mitään."
 
 #: remake.c:243
 #, fuzzy, c-format
+#| msgid "'%s' is up to date."
 msgid "`%s' is up to date."
 msgstr "”%s” on ajan tasalla."
 
 #: remake.c:319
 #, fuzzy, c-format
+#| msgid "Pruning file '%s'.\n"
 msgid "Pruning file `%s'.\n"
 msgstr "Karsitaan tiedosto ”%s”.\n"
 
@@ -1537,36 +1621,45 @@ msgstr ""
 
 #: remake.c:427
 #, fuzzy, c-format
+#| msgid "Considering target file '%s'.\n"
 msgid "Considering target file `%s'.\n"
 msgstr "Tarkastellaan kohdetiedostoa ”%s”.\n"
 
 #: remake.c:442
 #, fuzzy, c-format
+#| msgid "Recently tried and failed to update file '%s'.\n"
 msgid "Recently tried and failed to update file `%s'.\n"
 msgstr "Tiedoston ”%s” päivitysyritys epäonnistui äskettäin.\n"
 
 #: remake.c:454
 #, fuzzy, c-format
+#| msgid "File '%s' was considered already.\n"
 msgid "File `%s' was considered already.\n"
 msgstr "Tiedostoa ”%s” on jo tarkasteltu.\n"
 
 #: remake.c:465
 #, fuzzy, c-format
+#| msgid "Still updating file '%s'.\n"
 msgid "Still updating file `%s'.\n"
 msgstr "Päivitetään edelleen tiedostoa ”%s”.\n"
 
 #: remake.c:469
 #, fuzzy, c-format
+#| msgid "Finished updating file '%s'.\n"
 msgid "Finished updating file `%s'.\n"
 msgstr "Tiedoston ”%s” päivitys valmistui.\n"
 
 #: remake.c:499
 #, fuzzy, c-format
+#| msgid "File '%s' does not exist.\n"
 msgid "File `%s' does not exist.\n"
 msgstr "Tiedosto ”%s” ei ole olemassa.\n"
 
 #: remake.c:511
 #, fuzzy, c-format
+#| msgid ""
+#| "*** Warning: .LOW_RESOLUTION_TIME file '%s' has a high resolution time "
+#| "stamp"
 msgid ""
 "*** Warning: .LOW_RESOLUTION_TIME file `%s' has a high resolution time stamp"
 msgstr ""
@@ -1575,11 +1668,13 @@ msgstr ""
 
 #: remake.c:524 remake.c:1056
 #, fuzzy, c-format
+#| msgid "Found an implicit rule for '%s'.\n"
 msgid "Found an implicit rule for `%s'.\n"
 msgstr "Kohteelle ”%s” löytyi oletussääntö.\n"
 
 #: remake.c:526 remake.c:1058
 #, fuzzy, c-format
+#| msgid "No implicit rule found for '%s'.\n"
 msgid "No implicit rule found for `%s'.\n"
 msgstr "Kohteelle ”%s” ei löytynyt oletussääntöä.\n"
 
@@ -1595,21 +1690,25 @@ msgstr "Kehäriippuvuus %s <- %s hylätty."
 
 #: remake.c:682
 #, fuzzy, c-format
+#| msgid "Finished prerequisites of target file '%s'.\n"
 msgid "Finished prerequisites of target file `%s'.\n"
 msgstr "Kohdetiedoston ”%s” ennakkoehdot täytetty.\n"
 
 #: remake.c:691
 #, fuzzy, c-format
+#| msgid "The prerequisites of '%s' are being made.\n"
 msgid "The prerequisites of `%s' are being made.\n"
 msgstr "Kohteen ”%s” ennakkoehtoja täytetään.\n"
 
 #: remake.c:705
 #, fuzzy, c-format
+#| msgid "Giving up on target file '%s'.\n"
 msgid "Giving up on target file `%s'.\n"
 msgstr "Luovutaan kohdetiedostosta ”%s”.\n"
 
 #: remake.c:710
 #, fuzzy, c-format
+#| msgid "Target '%s' not remade because of errors."
 msgid "Target `%s' not remade because of errors."
 msgstr "Kohdetta ”%s” ei tuotettu uudelleen virheiden vuoksi."
 
@@ -1620,16 +1719,19 @@ msgstr "Ennakkoehto ”%s” on vanhempi kuin kohde ”%s”.\n"
 
 #: remake.c:768
 #, fuzzy, c-format
+#| msgid "Prerequisite '%s' of target '%s' does not exist.\n"
 msgid "Prerequisite `%s' of target `%s' does not exist.\n"
 msgstr "Kohteen ”%2$s” ennakkoehto ”%1$s” ei ole olemassa.\n"
 
 #: remake.c:773
 #, fuzzy, c-format
+#| msgid "Prerequisite '%s' is newer than target '%s'.\n"
 msgid "Prerequisite `%s' is newer than target `%s'.\n"
 msgstr "Ennakkoehto ”%s” on uudempi kuin kohde ”%s”.\n"
 
 #: remake.c:776
 #, fuzzy, c-format
+#| msgid "Prerequisite '%s' is older than target '%s'.\n"
 msgid "Prerequisite `%s' is older than target `%s'.\n"
 msgstr "Ennakkoehto ”%s” on vanhempi kuin kohde ”%s”.\n"
 
@@ -1645,26 +1747,31 @@ msgstr ""
 
 #: remake.c:803
 #, fuzzy, c-format
+#| msgid "Making '%s' due to always-make flag.\n"
 msgid "Making `%s' due to always-make flag.\n"
 msgstr "Tuotetaan ”%s”, koska always-make-lippu on käytössä.\n"
 
 #: remake.c:811
 #, fuzzy, c-format
+#| msgid "No need to remake target '%s'"
 msgid "No need to remake target `%s'"
 msgstr "Ei tarvetta uudelleentuottaa kohdetta ”%s”"
 
 #: remake.c:813
 #, fuzzy, c-format
+#| msgid "; using VPATH name '%s'"
 msgid "; using VPATH name `%s'"
 msgstr "; käytetään VPATH-nimeä ”%s”"
 
 #: remake.c:834
 #, fuzzy, c-format
+#| msgid "Must remake target '%s'.\n"
 msgid "Must remake target `%s'.\n"
 msgstr "Kohde ”%s” on tuotettava uudelleen.\n"
 
 #: remake.c:840
 #, fuzzy, c-format
+#| msgid "  Ignoring VPATH name '%s'.\n"
 msgid "  Ignoring VPATH name `%s'.\n"
 msgstr "  Ei huomioida VPATH-nimeä ”%s”.\n"
 
@@ -1675,11 +1782,13 @@ msgstr ""
 
 #: remake.c:859
 #, fuzzy, c-format
+#| msgid "Failed to remake target file '%s'.\n"
 msgid "Failed to remake target file `%s'.\n"
 msgstr "Kohdetiedoston ”%s” uudelleentuottaminen epäonnistui.\n"
 
 #: remake.c:862
 #, fuzzy, c-format
+#| msgid "Successfully remade target file '%s'.\n"
 msgid "Successfully remade target file `%s'.\n"
 msgstr "Kohdetiedosto ”%s” uudelleentuotettiin onnistuneesti.\n"
 
@@ -1690,21 +1799,25 @@ msgstr ""
 
 #: remake.c:1064
 #, fuzzy, c-format
+#| msgid "Using default commands for '%s'.\n"
 msgid "Using default commands for `%s'.\n"
 msgstr "Käytetään oletuskomentoja kohteelle ”%s”.\n"
 
 #: remake.c:1397
 #, fuzzy, c-format
+#| msgid "Warning: File '%s' has modification time in the future"
 msgid "Warning: File `%s' has modification time in the future"
 msgstr "Varoitus: Tiedoston ”%s” muutosaika on tulevaisuudessa"
 
 #: remake.c:1410
 #, fuzzy, c-format
+#| msgid "Warning: File '%s' has modification time %s s in the future"
 msgid "Warning: File `%s' has modification time %s s in the future"
 msgstr "Varoitus: Tiedoston ”%s” muutosaika on %s sekuntia tulevaisuudessa"
 
 #: remake.c:1610
 #, fuzzy, c-format
+#| msgid ".LIBPATTERNS element '%s' is not a pattern"
 msgid ".LIBPATTERNS element `%s' is not a pattern"
 msgstr ".LIBPATTERNS-elementti ”%s” ei ole hahmo"
 
@@ -1730,17 +1843,22 @@ msgstr ""
 "# Ei oletussääntöjä."
 
 #: rule.c:547
-#, c-format
+#, fuzzy, c-format
+#| msgid ""
+#| "\n"
+#| "# No implicit rules."
 msgid ""
 "\n"
 "# %u implicit rules, %u"
 msgstr ""
 "\n"
-"# %u oletussääntöä, %u"
+"# Ei oletussääntöjä."
 
 #: rule.c:556
+#, fuzzy
+#| msgid "Terminated"
 msgid " terminal."
-msgstr ""
+msgstr "Päätetty"
 
 #: rule.c:564
 #, c-format
@@ -1927,6 +2045,10 @@ msgstr ""
 
 #: strcache.c:244
 #, fuzzy
+#| msgid ""
+#| "\n"
+#| "# files hash-table stats:\n"
+#| "# "
 msgid ""
 "\n"
 "# strcache hash-table stats:\n"
@@ -1958,6 +2080,7 @@ msgstr "komentorivi"
 
 #: variable.c:67 variable.c:1595
 #, fuzzy
+#| msgid "'override' directive"
 msgid "`override' directive"
 msgstr "”override”-toimintaohje"
 
@@ -1975,11 +2098,13 @@ msgstr ""
 
 #: variable.c:1609 variable.c:1659
 #, fuzzy, c-format
+#| msgid " (from '%s', line %lu)"
 msgid " (from `%s', line %lu)"
 msgstr " (tiedosto ”%s”, rivi %lu)"
 
 #: variable.c:1704
 #, fuzzy
+#| msgid "# variable set hash-table stats:\n"
 msgid "variable set hash-table stats:\n"
 msgstr "# muuttujajoukon hajautustaulutilastot:\n"
 
@@ -2018,13 +2143,14 @@ msgstr ""
 
 #: variable.h:287
 #, fuzzy, c-format
+#| msgid "warning: undefined variable '%.*s'"
 msgid "warning: undefined variable `%.*s'"
 msgstr "varoitus: määrittelemätön muuttuja ”%.*s”"
 
 #: vmsfunctions.c:92
-#, fuzzy, c-format
+#, c-format
 msgid "sys$search() failed with %d\n"
-msgstr "sys$search epäonnistui, arvo %d\n"
+msgstr "sys$search epäonnistui arvolla %d\n"
 
 #: vmsjobs.c:71
 #, c-format
@@ -2033,6 +2159,7 @@ msgstr "Varoitus: Tyhjä uudelleenohjaus\n"
 
 #: vmsjobs.c:184
 #, fuzzy, c-format
+#| msgid "internal error: '%s' command_state"
 msgid "internal error: `%s' command_state"
 msgstr "sisäinen virhe: ”%s” command_state"
 
@@ -2112,11 +2239,15 @@ msgstr ""
 
 #: vpath.c:603
 #, fuzzy
+#| msgid "# No 'vpath' search paths."
 msgid "# No `vpath' search paths."
 msgstr "# Ei ”vpath”-hakupolkuja."
 
 #: vpath.c:605
 #, fuzzy, c-format
+#| msgid ""
+#| "\n"
+#| "# %u 'vpath' search paths.\n"
 msgid ""
 "\n"
 "# %u `vpath' search paths.\n"
@@ -2126,6 +2257,9 @@ msgstr ""
 
 #: vpath.c:608
 #, fuzzy
+#| msgid ""
+#| "\n"
+#| "# No general ('VPATH' variable) search path."
 msgid ""
 "\n"
 "# No general (`VPATH' variable) search path."
@@ -2135,6 +2269,10 @@ msgstr ""
 
 #: vpath.c:614
 #, fuzzy
+#| msgid ""
+#| "\n"
+#| "# General ('VPATH' variable) search path:\n"
+#| "# "
 msgid ""
 "\n"
 "# General (`VPATH' variable) search path:\n"
@@ -2144,55 +2282,78 @@ msgstr ""
 "# Yleinen (”VPATH”-muuttuja) hakupolku:\n"
 "# "
 
+#, c-format
+#~ msgid "Recipe has too many lines (%ud)"
+#~ msgstr "Reseptissä on liikaa rivejä (%ud)"
+
 #~ msgid "#  Builtin rule"
 #~ msgstr "#  Sisäänrakennettu sääntö"
 
+#, c-format
+#~ msgid "%s: Field '%s' not cached: %s"
+#~ msgstr "%s: Kenttää ”%s” ei välimuistitettu: %s"
+
+#, c-format
 #~ msgid "file: missing filename"
 #~ msgstr "tiedosto: tiedostonimi puuttuu"
 
+#, c-format
 #~ msgid "open: %s: %s"
 #~ msgstr "open: %s: %s"
 
+#, c-format
 #~ msgid "write: %s: %s"
 #~ msgstr "write: %s: %s"
 
+#, c-format
 #~ msgid "close: %s: %s"
 #~ msgstr "close: %s: %s"
 
+#, c-format
 #~ msgid "file: too many arguments"
 #~ msgstr "tiedosto: liian monta argumenttia"
 
+#, c-format
 #~ msgid "read: %s: %s"
 #~ msgstr "read: %s: %s"
 
-#, fuzzy
-#~| msgid "Invalid file operation: %s"
+#, c-format
 #~ msgid "file: invalid file operation: %s"
-#~ msgstr "Virheellinen tiedostotoiminto: %s"
+#~ msgstr "tiedosto: virheellinen tiedostotoiminto: %s"
 
+#, c-format
 #~ msgid "Empty function name"
 #~ msgstr "Tyhjä funktionimi"
 
+#, c-format
 #~ msgid "Invalid function name: %s"
 #~ msgstr "Virheellinen funktionimi: %s"
 
+#, c-format
 #~ msgid "Function name too long: %s"
 #~ msgstr "Funktionimi on liian pitkä: %s"
 
-#, fuzzy
+#, fuzzy, c-format
 #~| msgid "Invalid minimum argument count (%d) for function %s"
 #~ msgid "Invalid minimum argument count (%u) for function %s"
 #~ msgstr "Virheellinen vähimmäisargumenttimäärä (%d) funktiolle %s"
 
-#, fuzzy
+#, fuzzy, c-format
 #~| msgid "Invalid maximum argument count (%d) for function %s"
 #~ msgid "Invalid maximum argument count (%u) for function %s"
 #~ msgstr "Virheellinen enimmäisargumenttimäärä (%d) funktiolle %s"
 
+#, c-format
 #~ msgid "guile: Expanding '%s'\n"
 #~ msgstr "guile: Lavennetaan ”%s”\n"
 
-#~ msgid "Stem too long: '%.*s'.\n"
+#, c-format
+#~ msgid "guile: Evaluating '%s'\n"
+#~ msgstr "guile: Lavennetaan ”%s”\n"
+
+#, fuzzy, c-format
+#~| msgid "Stem too long: '%.*s'.\n"
+#~ msgid "Stem too long: '%s%.*s'.\n"
 #~ msgstr "Liian pitkä runko: ”%.*s”.\n"
 
 #~ msgid " (ignored)"
@@ -2201,33 +2362,35 @@ msgstr ""
 #~ msgid "<builtin>"
 #~ msgstr "<sisäänrakennettu>"
 
+#, c-format
 #~ msgid "%s[%s: %s] Error %d%s"
 #~ msgstr "%s[%s: %s] Virhe %d%s"
 
-#, fuzzy
+#, fuzzy, c-format
 #~ msgid "Cleaning up temp batch file %s failed (%d)\n"
 #~ msgstr "Siivotaan väliaikainen komentotiedosto %s\n"
 
+#, c-format
 #~ msgid "%s: target '%s' does not exist"
 #~ msgstr "%s: kohde ”%s” ei ole olemassa"
 
-#, fuzzy
+#, fuzzy, c-format
 #~ msgid "%s: update target '%s' due to: %s"
 #~ msgstr ""
-#~ "%1$s”%3$s”-kohteen tarvitseman kohteen ”%2$s” tuottamiseen ei ole sääntöä"
-#~ "%4$s"
+#~ "%1$s”%3$s”-kohteen tarvitseman kohteen ”%2$s” tuottamiseen ei ole "
+#~ "sääntöä%4$s"
 
+#, c-format
 #~ msgid "no more file handles: could not duplicate stderr\n"
 #~ msgstr ""
 #~ "tiedostokahvoja ei ole enempää: vakiovirhetulosteen kahdentaminen ei "
 #~ "onnistunut\n"
 
+#, c-format
 #~ msgid "Could not restore stderr\n"
 #~ msgstr "Vakiovirhetulostetta ei voitu palauttaa\n"
 
-#~ msgid "%s[%u]: %s: Command not found\n"
-#~ msgstr "%s[%u]: %s: Komentoa ei löytynyt\n"
-
+#, c-format
 #~ msgid ""
 #~ "Batch file contents:\n"
 #~ "\t@echo off\n"
@@ -2235,14 +2398,33 @@ msgstr ""
 #~ "Komentojonotiedoston sisältö:\n"
 #~ "\t@echo off\n"
 
-#, fuzzy
+#, c-format
+#~ msgid "Loaded object %s is not declared to be GPL compatible"
+#~ msgstr "Ladattua objektia %s ei ole esitelty GPL-yhteensopivaksi"
+
+#, fuzzy, c-format
 #~ msgid "The 'load' operation is not supported on this platform."
 #~ msgstr "Rinnakkaiset työt (-j) eivät ole tuettuja tällä alustalla."
 
+#, fuzzy
+#~ msgid ""
+#~ "  --no-silent                 Echo recipes (disable --silent mode).\n"
+#~ msgstr ""
+#~ "  -q, --question              Älä aja komentoja; paluuarvo kertoo ajan-\n"
+#~ "                                tasaisuuden.\n"
+
+#, fuzzy, c-format
+#~| msgid "warning: -jN forced in submake: disabling jobserver mode."
+#~ msgid "warning: -j%d forced in makefile: resetting jobserver mode."
+#~ msgstr ""
+#~ "varoitus: -jN pakotettu ali-make:ssa: poistetaan työpalvelin käytöstä."
+
+#, c-format
 #~ msgid "Report bugs to <bug-make@gnu.org>\n"
 #~ msgstr ""
 #~ "Ilmoita ohjelmistovioista (englanniksi) osoitteeseen <bug-make@gnu.org>.\n"
 
+#, c-format
 #~ msgid "write error: stdout"
 #~ msgstr "kirjoitusvirhe: vakiotuloste"
 
@@ -2261,11 +2443,29 @@ msgstr ""
 #~ msgid "pselect jobs pipe"
 #~ msgstr "työputken luku"
 
+#, c-format
 #~ msgid "Skipping UTF-8 BOM in makefile '%s'\n"
 #~ msgstr "Ohitetaan UTF-8-BOM makefile-tiedostossa ”%s”\n"
 
+#, c-format
 #~ msgid "Skipping UTF-8 BOM in makefile buffer\n"
 #~ msgstr "Ohitetaan UTF-8-BOM makefile-puskurissa\n"
+
+#, c-format
+#~ msgid "%s: failed to load"
+#~ msgstr "%s: lataaminen epäonnistui"
+
+#, fuzzy, c-format
+#~ msgid "warning: overriding group membership for target '%s'"
+#~ msgstr "varoitus: syrjäytetään kohteen ”%s” komennot"
+
+#, c-format
+#~ msgid ""
+#~ "\n"
+#~ "# %u implicit rules, %u (%.1f%%) terminal."
+#~ msgstr ""
+#~ "\n"
+#~ "# %u oletussääntöä, %u (%.1f %%) päättyvää."
 
 #~ msgid ""
 #~ "# hash-table stats:\n"
@@ -2274,8 +2474,12 @@ msgstr ""
 #~ "# tilasto tiedostojen hajautustaulusta:\n"
 #~ "# "
 
+#, c-format
 #~ msgid "DCL: %s\n"
 #~ msgstr "DCL: %s\n"
+
+#~ msgid "%s[%u]: %s: Command not found\n"
+#~ msgstr "%s[%u]: %s: Komentoa ei löytynyt\n"
 
 #~ msgid "%s[%s] Error 0x%x%s"
 #~ msgstr "%s[%s] Virhe 0x%x%s"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: make-3.81\n"
 "Report-Msgid-Bugs-To: bug-make@gnu.org\n"
-"POT-Creation-Date: 2018-02-12 19:14-0500\n"
+"POT-Creation-Date: 2023-10-23 03:33-0400\n"
 "PO-Revision-Date: 2008-05-17 21:42+0300\n"
 "Last-Translator: Gintautas Miliauskas <gintas@akl.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -17,8 +17,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"(n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ar.c:51
 #, c-format
@@ -195,6 +195,7 @@ msgstr " negalimybės %lu aplankuose.\n"
 
 #: error.c:200
 #, fuzzy
+#| msgid "Unknown error %d"
 msgid "Unknown system error"
 msgstr "Nežinoma klaida %d"
 
@@ -209,11 +210,13 @@ msgstr "neterminuota nuoroda į kintamąjį"
 
 #: file.c:281
 #, fuzzy, c-format
+#| msgid "Commands were specified for file `%s' at %s:%lu,"
 msgid "Recipe was specified for file `%s' at %s:%lu,"
 msgstr "Komandos nurodytos failui „%s“ %s:%lu,"
 
 #: file.c:286
 #, fuzzy, c-format
+#| msgid "Commands for file `%s' were found by implicit rule search,"
 msgid "Recipe for file `%s' was found by implicit rule search,"
 msgstr "Komandos failui „%s“ rastos pagal neišreikštinę taisyklių paiešką"
 
@@ -224,6 +227,7 @@ msgstr "bet „%s“ dabar laikomas tuo pačiu failu kaip „%s“."
 
 #: file.c:292
 #, fuzzy, c-format
+#| msgid "Commands for `%s' will be ignored in favor of those for `%s'."
 msgid "Recipe for `%s' will be ignored in favor of the one for `%s'."
 msgstr "Komandos „%s“ bus ignoruojamos „%s“ komandų naudai."
 
@@ -334,6 +338,7 @@ msgstr "#  Vykdomos priklausomybių komandos (TAI KLAIDA)."
 
 #: file.c:996
 #, fuzzy
+#| msgid "#  Command-line target."
 msgid "#  Commands not yet started."
 msgstr "#  Komandinės eilutės tikslas"
 
@@ -437,11 +442,13 @@ msgstr "%s: parametras `%s' dviprasmis\n"
 
 #: getopt.c:692
 #, fuzzy, c-format
+#| msgid "%s: option `--%s' doesn't allow an argument\n"
 msgid "%s: option `--%s' does not allow an argument\n"
 msgstr "%s: argumentas „--%s“ neleidžia parametro\n"
 
 #: getopt.c:697
 #, fuzzy, c-format
+#| msgid "%s: option `%c%s' doesn't allow an argument\n"
 msgid "%s: option `%c%s' does not allow an argument\n"
 msgstr "%s: argumentas „%c%s“ neleidžia parametro\n"
 
@@ -482,6 +489,7 @@ msgstr "%s: parametras „-W %s“ dviprasmis\n"
 
 #: getopt.c:874
 #, fuzzy, c-format
+#| msgid "%s: option `-W %s' doesn't allow an argument\n"
 msgid "%s: option `-W %s' does not allow an argument\n"
 msgstr "%s: parametras „-W %s“ neleidžia argumento\n"
 
@@ -658,6 +666,7 @@ msgstr ""
 
 #: job.c:1785
 #, fuzzy, c-format
+#| msgid "No need to remake target `%s'"
 msgid "Invoking builtin recipe to update target `%s'.\n"
 msgstr "Nereikia atnaujinti taikinio „%s“"
 
@@ -1124,6 +1133,7 @@ msgstr ""
 
 #: main.c:2753
 #, fuzzy, c-format
+#| msgid "the `-%c' option requires a non-empty string argument"
 msgid "the `%s%s' option requires a non-empty string argument"
 msgstr "parametrui „-%c“ reikia netuščio argumento"
 
@@ -1134,6 +1144,9 @@ msgstr "parametrui „-%c“ reikia teigiamo sveiko argumento"
 
 #: main.c:3245
 #, fuzzy, c-format
+#| msgid ""
+#| "\n"
+#| "%sThis program built for %s\n"
 msgid "%sBuilt for %s\n"
 msgstr ""
 "\n"
@@ -1141,6 +1154,9 @@ msgstr ""
 
 #: main.c:3247
 #, fuzzy, c-format
+#| msgid ""
+#| "\n"
+#| "%sThis program built for %s (%s)\n"
 msgid "%sBuilt for %s (%s)\n"
 msgstr ""
 "\n"
@@ -1274,6 +1290,7 @@ msgstr ""
 
 #: print.c:545
 #, fuzzy, c-format
+#| msgid "#  Command-line target."
 msgid "Command-line invocation:"
 msgstr "#  Komandinės eilutės tikslas"
 
@@ -1317,11 +1334,13 @@ msgstr "netaisyklinga sąlygos sintaksė"
 
 #: read.c:939
 #, fuzzy
+#| msgid "commands commence before first target"
 msgid "recipe commences before first target"
 msgstr "komandos prasideda prieš pirmąjį tikslą"
 
 #: read.c:988
 #, fuzzy
+#| msgid "missing rule before commands"
 msgid "missing rule before recipe"
 msgstr "trūksta taisyklės prieš komandas"
 
@@ -1357,6 +1376,7 @@ msgstr "tuščias kintamojo pavadinimas"
 
 #: read.c:1425
 #, fuzzy
+#| msgid "Extraneous text after `endef' directive"
 msgid "extraneous text after `define' directive"
 msgstr "Perteklinis tekstas po „endef“ direktyvos"
 
@@ -1366,6 +1386,7 @@ msgstr "trūksta „endef“, nebaigtas „define“"
 
 #: read.c:1478
 #, fuzzy
+#| msgid "Extraneous text after `endef' directive"
 msgid "extraneous text after `endef' directive"
 msgstr "Perteklinis tekstas po „endef“ direktyvos"
 
@@ -1501,6 +1522,7 @@ msgstr "Nerasta neišreikštinių taisyklių tikslui „%s“.\n"
 
 #: remake.c:532
 #, fuzzy, c-format
+#| msgid "Nothing to be done for `%s'."
 msgid "Using default recipe for `%s'.\n"
 msgstr "Nėra ką daryti su „%s“."
 
@@ -1586,6 +1608,7 @@ msgstr ""
 
 #: remake.c:849
 #, fuzzy, c-format
+#| msgid "Commands of `%s' are being run.\n"
 msgid "Recipe of `%s' is being run.\n"
 msgstr "Vykdomos „%s“ komandos.\n"
 
@@ -1848,6 +1871,10 @@ msgstr ""
 
 #: strcache.c:244
 #, fuzzy
+#| msgid ""
+#| "\n"
+#| "# files hash-table stats:\n"
+#| "# "
 msgid ""
 "\n"
 "# strcache hash-table stats:\n"
@@ -1901,6 +1928,10 @@ msgstr ""
 
 #: variable.c:1704
 #, fuzzy
+#| msgid ""
+#| "\n"
+#| "# files hash-table stats:\n"
+#| "# "
 msgid "variable set hash-table stats:\n"
 msgstr ""
 "\n"
@@ -2047,6 +2078,7 @@ msgid ""
 "# "
 msgstr ""
 
+#, c-format
 #~ msgid "Report bugs to <bug-make@gnu.org>\n"
 #~ msgstr "Praneškite apie klaidas adresu <bug-make@gnu.org>\n"
 

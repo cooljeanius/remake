@@ -12,7 +12,9 @@ jobs:
       uses: actions/checkout@v4.1.1
     - run: sudo apt-get install autopoint libreadline-dev wget texinfo dejagnu intltool
     - run: env | uniq | sort | uniq
-    - run: autoreconf -fvi -Wall -Wno-obsolete && ./configure && make update && (cd doc && make stamp-vti) && make
+    - run: autoreconf -fvi -Wall -Wno-obsolete && ./configure && make update && (cd doc && make stamp-vti)
+    - run: make || make check-loadavg
+      if: "${{ success() }}"
     - run: make check
       if: "${{ success() }}"
     - run: cat /usr/include/errno.h

@@ -204,11 +204,11 @@ dist-hook:
 check-local: check-regression check-loadavg
 	@banner=" Regression PASSED: GNU Make $(VERSION) ($(MAKE_HOST)) built with $(CC) "; \
 	dashes=`echo "$$banner" | sed s/./=/g`; \
-	echo; \
+	echo ""; \
 	echo "$$dashes"; \
 	echo "$$banner"; \
 	echo "$$dashes"; \
-	echo
+	echo ""
 
 .PHONY: check-loadavg check-regression
 
@@ -222,7 +222,8 @@ check-loadavg: loadavg$(EXEEXT)
 # FIXME: does NOT work.
 ##: Run remake-specific tests using Ruby rspec
 check-rspec-broken: 
-	$(SHELL) -c 'ruby tests/spec/run-tests.rb'
+	$(SHELL) -c 'ruby tests/spec/run-tests.rb' || \
+	(echo "failed" && $(SHELL) -c 'ruby -c tests/spec/run-tests.rb')
 .PHONY: check-rspec-broken
 
 # The loadavg function is invoked during "make check" to test getloadavg.

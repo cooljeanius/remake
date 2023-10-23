@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: make 3.79.1\n"
 "Report-Msgid-Bugs-To: bug-make@gnu.org\n"
-"POT-Creation-Date: 2018-02-12 19:14-0500\n"
+"POT-Creation-Date: 2023-10-23 03:33-0400\n"
 "PO-Revision-Date: 2002-03-30 21:33+0300\n"
 "Last-Translator: Eli Zaretskii <eliz@gnu.org>\n"
 "Language-Team: Hebrew <eliz@gnu.org>\n"
@@ -47,11 +47,13 @@ msgstr "`%s' רובע ןיקת-אל דוק הריזחה ar_member_touch :touch"
 
 #: arscan.c:69
 #, fuzzy, c-format
+#| msgid "lbr$set_module failed to extract module info, status = %d"
 msgid "lbr$set_module() failed to extract module info, status = %d"
 msgstr "%d סוטטס ,lib$rset_module י\"ע לודומ לע עדימ תפילשב ןולשכ"
 
 #: arscan.c:175
 #, fuzzy, c-format
+#| msgid "lbr$ini_control failed with status = %d"
 msgid "lbr$ini_control() failed with status = %d"
 msgstr "%d סוטטס םע לשכנ lbr$ini_control"
 
@@ -190,11 +192,13 @@ msgstr " so far."
 
 #: dir.c:1093
 #, fuzzy, c-format
+#| msgid " impossibilities in %u directories.\n"
 msgid " impossibilities in %lu directories.\n"
 msgstr " impossibilities in %u directories.\n"
 
 #: error.c:200
 #, fuzzy
+#| msgid "Unknown error %d"
 msgid "Unknown system error"
 msgstr "Unknown error %d"
 
@@ -209,11 +213,13 @@ msgstr "הכלהכ תמייתסמ הניא הנתשמל היינפה"
 
 #: file.c:281
 #, fuzzy, c-format
+#| msgid "Commands were specified for file `%s' at %s:%lu,"
 msgid "Recipe was specified for file `%s' at %s:%lu,"
 msgstr ",`%s' ץבוק רובע תודוקפ ונתינ %s ץבוקב %lu הרושב"
 
 #: file.c:286
 #, fuzzy, c-format
+#| msgid "Commands for file `%s' were found by implicit rule search,"
 msgid "Recipe for file `%s' was found by implicit rule search,"
 msgstr ",םישרופמ-יתלב םיללכב שופיח י\"ע ואצמנ `%s' ץבוק רובע תודוקפ"
 
@@ -224,6 +230,7 @@ msgstr ".ץבוק ותואל התע םיבשחנ `%s' ןהו `%s' ןה םלואו"
 
 #: file.c:292
 #, fuzzy, c-format
+#| msgid "Commands for `%s' will be ignored in favor of those for `%s'."
 msgid "Recipe for `%s' will be ignored in favor of the one for `%s'."
 msgstr ".`%s' רובע ולא לע תופידע `%s' רובע תודוקפ"
 
@@ -244,6 +251,7 @@ msgstr "*** `%s' םייניב ץבוק קחומ ***"
 
 #: file.c:410
 #, fuzzy
+#| msgid "*** Deleting intermediate file `%s'"
 msgid "Removing intermediate files...\n"
 msgstr "*** `%s' םייניב ץבוק קחומ ***"
 
@@ -275,6 +283,7 @@ msgstr "#  Command-line target."
 
 #: file.c:949
 #, fuzzy
+#| msgid "#  A default or MAKEFILES makefile."
 msgid "#  A default, MAKEFILES, or -include/sinclude makefile."
 msgstr "#  A default or MAKEFILES makefile."
 
@@ -334,6 +343,7 @@ msgstr "#  Dependencies commands running (THIS IS A BUG)."
 
 #: file.c:996
 #, fuzzy
+#| msgid "#  Command-line target."
 msgid "#  Commands not yet started."
 msgstr "#  Command-line target."
 
@@ -390,21 +400,25 @@ msgstr "רפסמ וניא `wordlist' תייצקנופל ינש טנמוגרא"
 
 #: function.c:1475
 #, fuzzy, c-format
+#| msgid "create_child_process: DuplicateHandle(In) failed (e=%d)\n"
 msgid "windows32_openpipe(): DuplicateHandle(In) failed (e=%ld)\n"
 msgstr "create_child_process: DuplicateHandle(In) failed (e=%d)\n"
 
 #: function.c:1486
 #, fuzzy, c-format
+#| msgid "create_child_process: DuplicateHandle(Err) failed (e=%d)\n"
 msgid "windows32_open_pipe(): DuplicateHandle(Err) failed (e=%ld)\n"
 msgstr "create_child_process: DuplicateHandle(Err) failed (e=%d)\n"
 
 #: function.c:1491
 #, fuzzy, c-format
+#| msgid "CreatePipe() failed (e=%d)\n"
 msgid "CreatePipe() failed (e=%ld)\n"
 msgstr "CreatePipe() failed (e=%d)\n"
 
 #: function.c:1496
 #, fuzzy
+#| msgid "windows32_openpipe (): process_init_fd() failed\n"
 msgid "windows32_openpipe(): process_init_fd() failed\n"
 msgstr "windows32_openpipe (): process_init_fd() failed\n"
 
@@ -415,11 +429,13 @@ msgstr "`%s' ינמז batch ץבוק קלסמ\n"
 
 #: function.c:2168
 #, fuzzy, c-format
+#| msgid "Insufficient number of arguments (%d) to function `%s'"
 msgid "insufficient number of arguments (%d) to function `%s'"
 msgstr "קפסמ וניאש (%d) םיטנמוגרא רפסמ םע הארקנ `%s' היצקנופ"
 
 #: function.c:2180
 #, fuzzy, c-format
+#| msgid "Unimplemented on this platform: function `%s'"
 msgid "unimplemented on this platform: function `%s'"
 msgstr "וז תכרעמב תשמוממ הניא `%s' היצקנופ"
 
@@ -435,11 +451,13 @@ msgstr "%s תינכת רובע יעמשמ-דח וניא `%s' ןייפאמ\n"
 
 #: getopt.c:692
 #, fuzzy, c-format
+#| msgid "%s: option `--%s' doesn't allow an argument\n"
 msgid "%s: option `--%s' does not allow an argument\n"
 msgstr "%s תינכת רובע טנמוגרא לבקמ וניא `--%s' ןייפאמ\n"
 
 #: getopt.c:697
 #, fuzzy, c-format
+#| msgid "%s: option `%c%s' doesn't allow an argument\n"
 msgid "%s: option `%c%s' does not allow an argument\n"
 msgstr "%s תינכת רובע טנמוגרא לבקמ וניא `%c%s' ןייפאמ\n"
 
@@ -480,6 +498,7 @@ msgstr "%s תינכת רובע יעמשמ-דח וניא `-W %s' ןייפאמ\n"
 
 #: getopt.c:874
 #, fuzzy, c-format
+#| msgid "%s: option `-W %s' doesn't allow an argument\n"
 msgid "%s: option `-W %s' does not allow an argument\n"
 msgstr "%s תינכת רובע טנמוגרא לבקמ וניא `-W %s' ןייפאמ\n"
 
@@ -554,6 +573,7 @@ msgstr ".`%s' ינמז ץבוק םע ללכ שפחמ\n"
 
 #: job.c:341
 #, fuzzy
+#| msgid "fwrite (temporary file)"
 msgid "Cannot create a temporary file\n"
 msgstr "fwrite (temporary file)"
 
@@ -587,6 +607,7 @@ msgstr "*** ...ומייתסנ םרטש תודובעל ןיתממ"
 
 #: job.c:594
 #, fuzzy, c-format
+#| msgid "Live child 0x%08lx (%s) PID %ld %s\n"
 msgid "Live child %p (%s) PID %s %s\n"
 msgstr "הצר 0x%08lx (%s) PID=%ld %s תב-תינכת\n"
 
@@ -596,11 +617,13 @@ msgstr "(תקחורמ)"
 
 #: job.c:773
 #, fuzzy, c-format
+#| msgid "Reaping losing child 0x%08lx PID %ld %s\n"
 msgid "Reaping losing child %p PID %s %s\n"
 msgstr "הלשכנש 0x%08lx PID=%ld %s תב-תינכת ףסוא\n"
 
 #: job.c:774
 #, fuzzy, c-format
+#| msgid "Reaping winning child 0x%08lx PID %ld %s\n"
 msgid "Reaping winning child %p PID %s %s\n"
 msgstr "החילצהש 0x%08lx PID=%ld %s תב-תינכת ףסוא\n"
 
@@ -611,6 +634,7 @@ msgstr "`%s' ינמז batch ץבוק קלסמ\n"
 
 #: job.c:886
 #, fuzzy, c-format
+#| msgid "Removing child 0x%08lx PID %ld %s from chain.\n"
 msgid "Removing child %p PID %s%s from chain.\n"
 msgstr ".תודובע תרשרשמ 0x%08lx PID=%ld %s תב-תינכת קיחרמ\n"
 
@@ -622,11 +646,13 @@ msgstr "write jobserver"
 
 #: job.c:968
 #, fuzzy, c-format
+#| msgid "Released token for child 0x%08lx (%s).\n"
 msgid "Released token for child %p (%s).\n"
 msgstr ".ררחוש 0x%08lx (%s) תב-תינכת רובע ןומיסאה\n"
 
 #: job.c:1521 job.c:2079
 #, fuzzy, c-format
+#| msgid "process_easy() failed failed to launch process (e=%d)\n"
 msgid "process_easy() failed to launch process (e=%ld)\n"
 msgstr "(e=%d) תינכת-תת רוגישב לשכנ process_easy()\n"
 
@@ -641,11 +667,13 @@ msgstr ""
 
 #: job.c:1593
 #, fuzzy, c-format
+#| msgid "Putting child 0x%08lx (%s) PID %ld%s on the chain.\n"
 msgid "Putting child %p (%s) PID %s%s on the chain.\n"
 msgstr ".תודובע תרשרשל 0x%08lx (%s) PID=%ld %s תב-תינכת ףרצמ\n"
 
 #: job.c:1751
 #, fuzzy, c-format
+#| msgid "Obtained token for child 0x%08lx (%s).\n"
 msgid "Obtained token for child %p (%s).\n"
 msgstr ".0x%08lx (%s) תב-תינכת רובע ןומיסא לבקתה\n"
 
@@ -660,6 +688,7 @@ msgstr ""
 
 #: job.c:1785
 #, fuzzy, c-format
+#| msgid "No need to remake target `%s'"
 msgid "Invoking builtin recipe to update target `%s'.\n"
 msgstr "`%s' הרטמ שדחמ תונבל ךרוצ ןיא"
 
@@ -689,6 +718,7 @@ msgstr ""
 
 #: job.c:2112
 #, fuzzy, c-format
+#| msgid "make reaped child pid %d, still waiting for pid %d\n"
 msgid "make reaped child pid %s, still waiting for pid %s\n"
 msgstr "הפסאנ pid %d תב-תינכת ,pid %d-ל הכחמ ןיידע\n"
 
@@ -708,6 +738,7 @@ msgstr ""
 
 #: job.c:2446
 #, fuzzy, c-format
+#| msgid "$SHELL changed (was `%s', now `%s')"
 msgid "$SHELL changed (was `%s', now `%s')\n"
 msgstr "(`%s' היה םדוק ,`%s' וישכע) הנתשה $SHELL לש וכרע"
 
@@ -735,6 +766,7 @@ msgstr "                                             :םינייפאמ\n"
 
 #: main.c:387
 #, fuzzy
+#| msgid "Ignored for compatibility"
 msgid "  -b, -m                      Ignored for compatibility.\n"
 msgstr "תומיאת ןעמל טמשומ"
 
@@ -750,11 +782,13 @@ msgstr ""
 
 #: main.c:394
 #, fuzzy
+#| msgid "Print lots of debugging information"
 msgid "  -d                          Print lots of debugging information.\n"
 msgstr "תואיגש יופינ תבוטל עדימ לש עפש גצה"
 
 #: main.c:396
 #, fuzzy
+#| msgid "Print various types of debugging information"
 msgid ""
 "  --debug[=FLAGS]             Print various types of debugging information.\n"
 msgstr "תואיגש יופינ תבוטל עדימ לש םינוש םיגוס גצה"
@@ -778,6 +812,7 @@ msgstr ""
 
 #: main.c:406
 #, fuzzy
+#| msgid "Print this message and exit"
 msgid "  -h, --help                  Print this message and exit.\n"
 msgstr "תינכתהמ אצו הז הרזע ךסמ גצה"
 
@@ -793,6 +828,7 @@ msgstr ""
 
 #: main.c:413
 #, fuzzy
+#| msgid "Allow N jobs at once; infinite jobs with no arg"
 msgid ""
 "  -j [N], --jobs[=N]          Allow N jobs at once; infinite jobs with no "
 "arg.\n"
@@ -800,6 +836,7 @@ msgstr "הלבגמ ןיא טנמוגרא אלל ;תינמז-וב תודובע N-מ רתוי אל"
 
 #: main.c:415
 #, fuzzy
+#| msgid "Keep going when some targets can't be made"
 msgid ""
 "  -k, --keep-going            Keep going when some targets can't be made.\n"
 msgstr "הינבל תונתינ ןניא תורטמהמ המכ םא וליפא ךשמה"
@@ -838,11 +875,13 @@ msgstr ""
 
 #: main.c:430
 #, fuzzy
+#| msgid "Print make's internal database"
 msgid "  -p, --print-data-base       Print make's internal database.\n"
 msgstr "Make לש ימינפ םינותנ סיסב גצה"
 
 #: main.c:432
 #, fuzzy
+#| msgid "Run no commands; exit status says if up to date"
 msgid ""
 "  -q, --question              Run no recipe; exit status says if up to "
 "date.\n"
@@ -850,11 +889,13 @@ msgstr "תנכדועמ הרטמ םאב רמוא האיצי דוק ;תודוקפ ץירת לא"
 
 #: main.c:434
 #, fuzzy
+#| msgid "Disable the built-in implicit rules"
 msgid "  -r, --no-builtin-rules      Disable the built-in implicit rules.\n"
 msgstr "םישרופמ-יתלב םינבומ םיללכ לרטנ"
 
 #: main.c:436
 #, fuzzy
+#| msgid "Disable the built-in variable settings"
 msgid "  -R, --no-builtin-variables  Disable the built-in variable settings.\n"
 msgstr "םינתשמ לש תונבומ תורדגה לרטנ"
 
@@ -880,22 +921,26 @@ msgstr ""
 
 #: main.c:453
 #, fuzzy
+#| msgid "Touch targets instead of remaking them"
 msgid "  -t, --touch                 Touch targets instead of remaking them.\n"
 msgstr "ןתונבל םוקמב תורטמ לש ןמז תמיתח ןכדע"
 
 #: main.c:455
 #, fuzzy
+#| msgid "Print the version number of make and exit"
 msgid ""
 "  -v, --version               Print the version number of make and exit.\n"
 msgstr "תינכתהמ אצו Make לש אסריג רפסמ גצה"
 
 #: main.c:457
 #, fuzzy
+#| msgid "Print the current directory"
 msgid "  -w, --print-directory       Print the current directory.\n"
 msgstr "תיחכונ היקית םש גצה"
 
 #: main.c:459
 #, fuzzy
+#| msgid "Turn off -w, even if it was turned on implicitly"
 msgid ""
 "  --no-print-directory        Turn off -w, even if it was turned on "
 "implicitly.\n"
@@ -909,6 +954,7 @@ msgstr ""
 
 #: main.c:464
 #, fuzzy
+#| msgid "Warn when an undefined variable is referenced"
 msgid ""
 "  --warn-undefined-variables  Warn when an undefined variable is "
 "referenced.\n"
@@ -952,11 +998,18 @@ msgstr "ץבוק םשכ תלבקתמ הניא הקיר תזורחמ"
 
 #: main.c:809
 #, fuzzy, c-format
+#| msgid "%s: Interrupt/Exception caught (code = 0x%x, addr = 0x%x)\n"
 msgid "%s: Interrupt/Exception caught (code = 0x%lx, addr = 0x%p)\n"
 msgstr "%s תינכתב (code = 0x%x, addr = 0x%x) הגירח וא הקיספ\n"
 
 #: main.c:816
 #, fuzzy, c-format
+#| msgid ""
+#| "\n"
+#| "Unhandled exception filter called from program %s\n"
+#| "ExceptionCode = %x\n"
+#| "ExceptionFlags = %x\n"
+#| "ExceptionAddress = %x\n"
 msgid ""
 "\n"
 "Unhandled exception filter called from program %s\n"
@@ -972,21 +1025,25 @@ msgstr ""
 
 #: main.c:824
 #, fuzzy, c-format
+#| msgid "Access violation: write operation at address %x\n"
 msgid "Access violation: write operation at address 0x%p\n"
 msgstr "%x תבותכל הביתכ :ןורכזל השיג תלקת\n"
 
 #: main.c:825
 #, fuzzy, c-format
+#| msgid "Access violation: read operation at address %x\n"
 msgid "Access violation: read operation at address 0x%p\n"
 msgstr "%x תבותכמ האירק :ןורכזל השיג תלקת\n"
 
 #: main.c:900 main.c:911
 #, fuzzy, c-format
+#| msgid "find_and_set_shell setting default_shell = %s\n"
 msgid "find_and_set_shell() setting default_shell = %s\n"
 msgstr "find_and_set_shell setting default_shell = %s\n"
 
 #: main.c:953
 #, fuzzy, c-format
+#| msgid "find_and_set_shell path search set default_shell = %s\n"
 msgid "find_and_set_shell() path search set default_shell = %s\n"
 msgstr "find_and_set_shell path search set default_shell = %s\n"
 
@@ -1092,6 +1149,7 @@ msgstr ".תירוקמה היקיתל רוזחל ןתינ אל"
 
 #: main.c:2283
 #, fuzzy, c-format
+#| msgid "Re-executing:"
 msgid "Re-executing[%u]:"
 msgstr "Re-executing:"
 
@@ -1145,6 +1203,7 @@ msgstr ""
 
 #: main.c:2753
 #, fuzzy, c-format
+#| msgid "the `-%c' option requires a positive integral argument"
 msgid "the `%s%s' option requires a non-empty string argument"
 msgstr "יבויחו םלש טנמוגרא בייחמ `-%c' ןייפאמ"
 
@@ -1192,41 +1251,49 @@ msgstr ""
 
 #: main.c:3435
 #, fuzzy, c-format
+#| msgid "an unknown directory"
 msgid "%s: Entering an unknown directory\n"
 msgstr "an unknown directory"
 
 #: main.c:3437
 #, fuzzy, c-format
+#| msgid "an unknown directory"
 msgid "%s: Leaving an unknown directory\n"
 msgstr "an unknown directory"
 
 #: main.c:3440
 #, fuzzy, c-format
+#| msgid "directory `%s'\n"
 msgid "%s: Entering directory `%s'\n"
 msgstr "directory `%s'\n"
 
 #: main.c:3443
 #, fuzzy, c-format
+#| msgid "directory `%s'\n"
 msgid "%s: Leaving directory `%s'\n"
 msgstr "directory `%s'\n"
 
 #: main.c:3448
 #, fuzzy, c-format
+#| msgid "an unknown directory"
 msgid "%s[%u]: Entering an unknown directory\n"
 msgstr "an unknown directory"
 
 #: main.c:3451
 #, fuzzy, c-format
+#| msgid "an unknown directory"
 msgid "%s[%u]: Leaving an unknown directory\n"
 msgstr "an unknown directory"
 
 #: main.c:3455
 #, fuzzy, c-format
+#| msgid "directory `%s'\n"
 msgid "%s[%u]: Entering directory `%s'\n"
 msgstr "directory `%s'\n"
 
 #: main.c:3458
 #, fuzzy, c-format
+#| msgid "directory `%s'\n"
 msgid "%s[%u]: Leaving directory `%s'\n"
 msgstr "directory `%s'\n"
 
@@ -1246,11 +1313,13 @@ msgstr "ילאוטריוה ןורכזה רמגנ"
 
 #: misc.c:602 print.c:326
 #, fuzzy, c-format
+#| msgid "%s access: user %lu (real %lu), group %lu (real %lu)\n"
 msgid "%s: user %lu (real %lu), group %lu (real %lu)\n"
 msgstr "%s access: user %lu (real %lu), group %lu (real %lu)\n"
 
 #: misc.c:623
 #, fuzzy
+#| msgid "Initialized"
 msgid "Initialized access"
 msgstr "Initialized"
 
@@ -1268,6 +1337,7 @@ msgstr ""
 
 #: misc.c:848
 #, fuzzy, c-format
+#| msgid "Redirected error to %s\n"
 msgid "write error: %s"
 msgstr "%s-ל תואיגש תיינפה\n"
 
@@ -1275,6 +1345,7 @@ msgstr "%s-ל תואיגש תיינפה\n"
 #  since they will be followed by an error message in English.
 #: misc.c:850
 #, fuzzy
+#| msgid "write jobserver"
 msgid "write error"
 msgstr "write jobserver"
 
@@ -1299,6 +1370,7 @@ msgstr ""
 
 #: print.c:545
 #, fuzzy, c-format
+#| msgid "#  Command-line target."
 msgid "Command-line invocation:"
 msgstr "#  Command-line target."
 
@@ -1342,11 +1414,13 @@ msgstr "יאנת לש יוגש ריבחת"
 
 #: read.c:939
 #, fuzzy
+#| msgid "commands commence before first target"
 msgid "recipe commences before first target"
 msgstr "הנושאר הרטמ ינפל תוליחתמ תודוקפ"
 
 #: read.c:988
 #, fuzzy
+#| msgid "missing rule before commands"
 msgid "missing rule before recipe"
 msgstr "ןהינפל ללכ אלל תודוקפ"
 
@@ -1382,6 +1456,7 @@ msgstr "קיר הנתשמ םש"
 
 #: read.c:1425
 #, fuzzy
+#| msgid "Extraneous text after `endef' directive"
 msgid "extraneous text after `define' directive"
 msgstr "`endef' תארוה ירחא רתוימ טסקט"
 
@@ -1391,6 +1466,7 @@ msgstr "םויס אלל `define' תארוה ,רסח `endef'"
 
 #: read.c:1478
 #, fuzzy
+#| msgid "Extraneous text after `endef' directive"
 msgid "extraneous text after `endef' directive"
 msgstr "`endef' תארוה ירחא רתוימ טסקט"
 
@@ -1410,6 +1486,7 @@ msgstr "יאנת לכל דיחי `else' קר רתומ"
 
 #: read.c:1855
 #, fuzzy
+#| msgid "Malformed per-target variable definition"
 msgid "Malformed target-specific variable definition"
 msgstr "הרטמל יפיצפס הנתשמ לש היוגש הרדגה"
 
@@ -1442,11 +1519,13 @@ msgstr ".ללכ ותואב תחא םעפמ רתוי העיפומ `%s' הרטמ"
 
 #: read.c:2069
 #, fuzzy, c-format
+#| msgid "warning: overriding commands for target `%s'"
 msgid "warning: overriding recipe for target `%s'"
 msgstr "`%s' הרטמ רובע תודוקפ סרוד :תוריהז"
 
 #: read.c:2072
 #, fuzzy, c-format
+#| msgid "warning: ignoring old commands for target `%s'"
 msgid "warning: ignoring old recipe for target `%s'"
 msgstr "`%s' הרטמ רובע תומדוק תודוקפמ םלעתמ :תוריהז"
 
@@ -1527,6 +1606,7 @@ msgstr ".`%s' רובע םישרופמ-יתלב םיללכ ואצמנ אל\n"
 
 #: remake.c:532
 #, fuzzy, c-format
+#| msgid "Using default commands for `%s'.\n"
 msgid "Using default recipe for `%s'.\n"
 msgstr ".`%s' רובע לדחמ תרירב תודוקפב שמתשמ\n"
 
@@ -1557,6 +1637,7 @@ msgstr ".תואיגש בקע שדחמ התנבנ אל `%s' הרטמ"
 
 #: remake.c:763
 #, fuzzy, c-format
+#| msgid "Prerequisite `%s' is older than target `%s'.\n"
 msgid "Prerequisite `%s' is order-only for target `%s'.\n"
 msgstr ".`%s' םדקה תשירדמ השדח `%s' הרטמ\n"
 
@@ -1582,6 +1663,7 @@ msgstr ".םדק תושירד אללו םילופכ םייתודוקנ םע הניה `%s' הרטמ\n"
 
 #: remake.c:798
 #, fuzzy, c-format
+#| msgid "No commands for `%s' and no prerequisites actually changed.\n"
 msgid "No recipe for `%s' and no prerequisites actually changed.\n"
 msgstr ".השעמל התנתשה אל םדק תשירד ףאו `%s' רובע תודוקפ ןיא\n"
 
@@ -1612,6 +1694,7 @@ msgstr "  .`%s' VPATH םשמ םלעתמ\n"
 
 #: remake.c:849
 #, fuzzy, c-format
+#| msgid "Commands of `%s' are being run.\n"
 msgid "Recipe of `%s' is being run.\n"
 msgstr ".`%s' רובע תודוקפ ץירמ\n"
 
@@ -1637,11 +1720,13 @@ msgstr ".`%s' רובע לדחמ תרירב תודוקפב שמתשמ\n"
 
 #: remake.c:1397
 #, fuzzy, c-format
+#| msgid "*** Warning: File `%s' has modification time in the future (%s > %s)"
 msgid "Warning: File `%s' has modification time in the future"
 msgstr "*** `%s' ץבוק רובע (%s > %s) דיתעב וניה ןורחא יוניש ןמז :הרהזא ***"
 
 #: remake.c:1410
 #, fuzzy, c-format
+#| msgid "*** Warning: File `%s' has modification time in the future (%s > %s)"
 msgid "Warning: File `%s' has modification time %s s in the future"
 msgstr "*** `%s' ץבוק רובע (%s > %s) דיתעב וניה ןורחא יוניש ןמז :הרהזא ***"
 
@@ -1657,6 +1742,9 @@ msgstr "%s אציימ וניא Customs\n"
 
 #: rule.c:525
 #, fuzzy
+#| msgid ""
+#| "\n"
+#| "# No implicit rules."
 msgid ""
 "\n"
 "# Implicit Rules"
@@ -1687,6 +1775,7 @@ msgstr " terminal."
 
 #: rule.c:564
 #, fuzzy, c-format
+#| msgid "BUG: num_pattern_rules wrong!  %u != %u"
 msgid "BUG: num_pattern_rules is wrong!  %u != %u"
 msgstr "BUG: num_pattern_rules wrong!  %u != %u"
 
@@ -1915,6 +2004,7 @@ msgstr ""
 
 #: variable.c:1609 variable.c:1659
 #, fuzzy, c-format
+#| msgid " (from `%s', line %lu):\n"
 msgid " (from `%s', line %lu)"
 msgstr " (from `%s', line %lu):\n"
 
@@ -1932,6 +2022,9 @@ msgstr ""
 
 #: variable.c:1720
 #, fuzzy
+#| msgid ""
+#| "\n"
+#| "# Pattern-specific variable values"
 msgid ""
 "\n"
 "# Pattern-specific Variable Values"
@@ -1963,6 +2056,7 @@ msgstr "`%.*s' רדגומ-יתלב הנתשמ :תוריהז"
 
 #: vmsfunctions.c:92
 #, fuzzy, c-format
+#| msgid "sys$search failed with %d\n"
 msgid "sys$search() failed with %d\n"
 msgstr "%d םע לשכנ sys$search\n"
 
@@ -2018,6 +2112,7 @@ msgstr "%s-ל תואיגש תיינפה\n"
 
 #: vmsjobs.c:523
 #, fuzzy, c-format
+#| msgid "Redirected output to %s\n"
 msgid "Append output to %s\n"
 msgstr "%s-ל טלפ תיינפה\n"
 
@@ -2087,6 +2182,7 @@ msgstr ""
 #~ "\n"
 #~ "# No files."
 
+#, c-format
 #~ msgid ""
 #~ "\n"
 #~ "# %u files in %u hash buckets.\n"
@@ -2094,12 +2190,14 @@ msgstr ""
 #~ "\n"
 #~ "# %u files in %u hash buckets.\n"
 
+#, c-format
 #~ msgid "# average %.3f files per bucket, max %u files in one bucket.\n"
 #~ msgstr "# average %.3f files per bucket, max %u files in one bucket.\n"
 
 #~ msgid "Syntax error, still inside '\"'\n"
 #~ msgstr "'\"' ךותב ןיידע ,ריבחת תאיגש\n"
 
+#, c-format
 #~ msgid "Got a SIGCHLD; %u unreaped children.\n"
 #~ msgstr ".ופסאנ םרטש תב-תוינכת %u ;SIGCHLD לבקתה\n"
 
@@ -2164,6 +2262,7 @@ msgstr ""
 #~ "\n"
 #~ ".<bug-make@gnu.org>-ל הלקת יחוויד חולשל אנ\n"
 
+#, c-format
 #~ msgid ""
 #~ ", by Richard Stallman and Roland McGrath.\n"
 #~ "%sBuilt for %s\n"
@@ -2202,20 +2301,25 @@ msgstr ""
 #~ msgid "invalid `override' directive"
 #~ msgstr "היוגש `override' תארוה"
 
+#, c-format
 #~ msgid "no file name for `%sinclude'"
 #~ msgstr "ץבוק םש אלל `%sinclude' תארוה"
 
+#, c-format
 #~ msgid "target `%s' leaves prerequisite pattern empty"
 #~ msgstr "הקיר םדקה תשירד תינבת תא הריאשמ `%s' הרטמ"
 
 #~ msgid "# No variables."
 #~ msgstr "# No variables."
 
+#, c-format
 #~ msgid "# %u variables in %u hash buckets.\n"
 #~ msgstr "# %u variables in %u hash buckets.\n"
 
+#, c-format
 #~ msgid "# average of %.1f variables per bucket, max %u in one bucket.\n"
 #~ msgstr "# average of %.1f variables per bucket, max %u in one bucket.\n"
 
+#, c-format
 #~ msgid "# average of %d.%d variables per bucket, max %u in one bucket.\n"
 #~ msgstr "# average of %d.%d variables per bucket, max %u in one bucket.\n"

@@ -1,7 +1,8 @@
 # Czech translation of make.
 # Copyright (C) 2010 Free Software Foundation, Inc.
 # This file is distributed under the same license as the make package.
-# Petr Pisar <petr.pisar@atlas.cz>, 2011, 2013, 2014, 2016.
+# Petr Pisar <petr.pisar@atlas.cz>, 2011, 2013, 2014, 2016, 2019, 2020.
+# Petr Pisar <petr.pisar@atlas.cz>, 2022, 2023.
 #
 # directive → klíčové slovo (nepřekládat jako příkaz kvůli záměně)
 # hash → haš (zapisovat česky)
@@ -25,125 +26,131 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: make 4.2.1\n"
+"Project-Id-Version: make 4.4.0.90\n"
 "Report-Msgid-Bugs-To: bug-make@gnu.org\n"
-"POT-Creation-Date: 2016-06-10 19:03-0400\n"
-"PO-Revision-Date: 2016-06-11 18:43+02:00\n"
+"POT-Creation-Date: 2023-01-14 14:08-0500\n"
+"PO-Revision-Date: 2023-01-15 22:49+01:00\n"
 "Last-Translator: Petr Pisar <petr.pisar@atlas.cz>\n"
 "Language-Team: Czech <translation-team-cs@lists.sourceforge.net>\n"
 "Language: cs\n"
-"X-Bugs: Report translation errors to the Language-Team address.\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Bugs: Report translation errors to the Language-Team address.\n"
 
-#: ar.c:46
+#: src/ar.c:47
 #, c-format
 msgid "attempt to use unsupported feature: '%s'"
 msgstr "pokus použít nepodporovanou vlastnost: „%s“"
 
-#: ar.c:123
+#: src/ar.c:127
+#, c-format
 msgid "touch archive member is not available on VMS"
 msgstr "nastavení času změny prvku archivu není na VMS dostupné"
 
-#: ar.c:147
+#: src/ar.c:151
 #, c-format
 msgid "touch: Archive '%s' does not exist"
 msgstr "touch: Archiv „%s“ neexistuje"
 
-#: ar.c:150
+#: src/ar.c:154
 #, c-format
 msgid "touch: '%s' is not a valid archive"
 msgstr "touch: „%s“ není platným archivem"
 
-#: ar.c:157
+#: src/ar.c:161
 #, c-format
 msgid "touch: Member '%s' does not exist in '%s'"
 msgstr "touch: Prvek „%s“ v „%s“ neexistuje"
 
-#: ar.c:164
+#: src/ar.c:168
 #, c-format
 msgid "touch: Bad return code from ar_member_touch on '%s'"
 msgstr "touch: Chybný návratový kód z funkce ar_member_touch volané nad „%s“"
 
-#: arscan.c:130
+#: src/arscan.c:130
 #, c-format
 msgid "lbr$set_module() failed to extract module info, status = %d"
 msgstr "funkce lbr$set_module() nedokázala vytáhnout údaje o modulu, status = %d"
 
-#: arscan.c:236
+#: src/arscan.c:236
 #, c-format
 msgid "lbr$ini_control() failed with status = %d"
 msgstr "funkce lbr$ini_control() selhala se stavem = %d"
 
-#: arscan.c:261
+#: src/arscan.c:261
 #, c-format
 msgid "unable to open library '%s' to lookup member status %d"
 msgstr "není možné otevřít knihovnu „%s“ potřebnou k najití stav prvku %d"
 
+#: src/arscan.c:402 src/arscan.c:406
+#, c-format
+msgid "Invalid %s for archive %s member %s"
+msgstr "Neplatný %1$s pro prvek %3$s archivu %2$s"
+
 # TODO: Pluralize
-#: arscan.c:965
+#: src/arscan.c:995
 #, c-format
 msgid "Member '%s'%s: %ld bytes at %ld (%ld).\n"
 msgstr "Prvek „%s“%s: %'ld bajtů at %ld (%ld).\n"
 
-#: arscan.c:966
+#: src/arscan.c:996
 msgid " (name might be truncated)"
 msgstr " (název může být zkrácen)"
 
-#: arscan.c:968
+#: src/arscan.c:999
 #, c-format
 msgid "  Date %s"
 msgstr "  Datum %s"
 
-#: arscan.c:969
+#: src/arscan.c:1000
 #, c-format
 msgid "  uid = %d, gid = %d, mode = 0%o.\n"
 msgstr "  UID = %d, GID = %d, práva = 0%o\n"
 
-#: commands.c:402
+#: src/commands.c:379
 #, c-format
-msgid "Recipe has too many lines (%ud)"
-msgstr "Návod má příliš mnoho řádků (%ud)"
+msgid "Recipe has too many lines (limit %hu)"
+msgstr "Návod má příliš mnoho řádků (omezení %hu)"
 
-#: commands.c:503
+#: src/commands.c:501
 msgid "*** Break.\n"
 msgstr "*** Přerušeno.\n"
 
-#: commands.c:627
+#: src/commands.c:629
 #, c-format
 msgid "*** [%s] Archive member '%s' may be bogus; not deleted"
 msgstr "*** [%s] Prvek archivu „%s“ je možná chybný, nesmazáno"
 
-#: commands.c:631
+#: src/commands.c:633
 #, c-format
 msgid "*** Archive member '%s' may be bogus; not deleted"
 msgstr "*** Prvek archivu „%s“ ne možná chybný, nesmazáno"
 
-#: commands.c:645
+#: src/commands.c:647
 #, c-format
 msgid "*** [%s] Deleting file '%s'"
 msgstr "*** [%s] Maže se soubor „%s“"
 
-#: commands.c:647
+#: src/commands.c:649
 #, c-format
 msgid "*** Deleting file '%s'"
 msgstr "*** Maže se soubor „%s“"
 
-#: commands.c:683
+#: src/commands.c:685
 msgid "#  recipe to execute"
 msgstr "#  spustitelný návod"
 
-#: commands.c:686
+#: src/commands.c:688
 msgid " (built-in):"
 msgstr " (vestavěný):"
 
-#: commands.c:688
+#: src/commands.c:690
 #, c-format
 msgid " (from '%s', line %lu):\n"
 msgstr " (z „%s“, řádek %lu):\n"
 
-#: dir.c:1069
+#: src/dir.c:1108
 msgid ""
 "\n"
 "# Directories\n"
@@ -151,219 +158,251 @@ msgstr ""
 "\n"
 "# Adresáře\n"
 
-#: dir.c:1081
+#: src/dir.c:1120
 #, c-format
 msgid "# %s: could not be stat'd.\n"
 msgstr "# %s: nebylo možné nad ním zavolat stat().\n"
 
-#: dir.c:1085
-msgid "# %s (key %s, mtime %I64u): could not be opened.\n"
-msgstr "# %s (klíč %s, čas změny obsahu %I64u): nebylo možné otevřít.\n"
+#: src/dir.c:1123
+#, c-format
+msgid "# %s (key %s, mtime %s): could not be opened.\n"
+msgstr "# %s (klíč %s, čas změny obsahu %s): nebylo možné otevřít.\n"
 
-#: dir.c:1090
+#: src/dir.c:1127
 #, c-format
 msgid "# %s (device %d, inode [%d,%d,%d]): could not be opened.\n"
 msgstr "# %s (zařízení %d, iuzel [%d,%d,%d]): nebylo možné otevřít.\n"
 
-#: dir.c:1095
+#: src/dir.c:1132
 #, c-format
 msgid "# %s (device %ld, inode %ld): could not be opened.\n"
 msgstr "# %s (zařízení %ld, iuzel %ld): nebylo možné otevřít.\n"
 
-#: dir.c:1122
-msgid "# %s (key %s, mtime %I64u): "
-msgstr "# %s (klíč %s, čas změny obsahu %I64u): "
+#: src/dir.c:1156
+#, c-format
+msgid "# %s (key %s, mtime %s): "
+msgstr "# %s (klíč %s, čas změny obsahu %s): "
 
-#: dir.c:1127
+#: src/dir.c:1160
 #, c-format
 msgid "# %s (device %d, inode [%d,%d,%d]): "
 msgstr "# %s (zařízení %d, iuzel [%d,%d,%d]): "
 
-#: dir.c:1132
+#: src/dir.c:1165
 #, c-format
 msgid "# %s (device %ld, inode %ld): "
 msgstr "# %s (zařízení %ld, iuzel %ld): "
 
-#: dir.c:1138 dir.c:1159
+#: src/dir.c:1169 src/dir.c:1190
 msgid "No"
 msgstr "Žádný"
 
 # TODO: Pluralize
-#: dir.c:1141 dir.c:1162
+#: src/dir.c:1172 src/dir.c:1193
 msgid " files, "
 msgstr " souborů, "
 
-#: dir.c:1143 dir.c:1164
+#: src/dir.c:1174 src/dir.c:1195
 msgid "no"
 msgstr "žádný "
 
 # TODO: Pluralize
-#: dir.c:1146
+#: src/dir.c:1177
 msgid " impossibilities"
 msgstr " nemožností "
 
-#: dir.c:1150
+#: src/dir.c:1181
 msgid " so far."
 msgstr " zatím."
 
 # TODO: Pluralize
-#: dir.c:1167
+#: src/dir.c:1198
 #, c-format
 msgid " impossibilities in %lu directories.\n"
 msgstr " nemožností v %lu adresářích.\n"
 
-#: expand.c:125
+#: src/expand.c:113
+#, c-format
+msgid "%s:%lu: not recursively expanding %s to export to shell function\n"
+msgstr "%s:%lu: %s se do shellové funkce rekurzivně neexpanduje\n"
+
+#: src/expand.c:149
 #, c-format
 msgid "Recursive variable '%s' references itself (eventually)"
 msgstr "Rekurzivní proměnná „%s“ odkazuje na sebe (nakonec)"
 
-#: expand.c:271
+#: src/expand.c:295
+#, c-format
 msgid "unterminated variable reference"
 msgstr "neukončený odkaz na proměnnou"
 
-#: file.c:278
+#: src/file.c:269
 #, c-format
 msgid "Recipe was specified for file '%s' at %s:%lu,"
 msgstr "Návod byl určen pro soubor „%s“ v %s:%lu,"
 
-#: file.c:283
+#: src/file.c:274
 #, c-format
 msgid "Recipe for file '%s' was found by implicit rule search,"
 msgstr "Návod pro soubor „%s“ byl nalezen hledáním implicitních pravidel,"
 
-#: file.c:287
+#: src/file.c:278
 #, c-format
 msgid "but '%s' is now considered the same file as '%s'."
 msgstr "ale „%s“ se nyní považuje za soubor totožný s „%s“."
 
-#: file.c:290
+#: src/file.c:281
 #, c-format
 msgid "Recipe for '%s' will be ignored in favor of the one for '%s'."
 msgstr "Návod pro „%s“ bude ignorován ve prospěch návodu pro „%s“."
 
-#: file.c:310
+#: src/file.c:301
 #, c-format
 msgid "can't rename single-colon '%s' to double-colon '%s'"
 msgstr "„%s“ s jednoduchou dvojtečkou nelze přejmenovat na „%s“ s dvojitou dvojtečkou"
 
-#: file.c:316
+#: src/file.c:307
 #, c-format
 msgid "can't rename double-colon '%s' to single-colon '%s'"
 msgstr "„%s“ s dvojitou dvojtečkou nelze přejmenovat na „%s“ s jednoduchou dvojtečkou"
 
-#: file.c:408
+#: src/file.c:404
 #, c-format
 msgid "*** Deleting intermediate file '%s'"
 msgstr "Maže se mezilehlý soubor „%s“ "
 
-#: file.c:412
+#: src/file.c:408
+#, c-format
 msgid "Removing intermediate files...\n"
 msgstr "Odstraňují se mezilehlé soubory…\n"
 
-#: file.c:818
+#: src/file.c:822
+#, c-format
+msgid "%s cannot be both .NOTINTERMEDIATE and .INTERMEDIATE"
+msgstr "%s nemůže být zároveň .NOTINTERMEDIATE a .INTERMEDIATE"
+
+#: src/file.c:837
+#, c-format
+msgid "%s cannot be both .NOTINTERMEDIATE and .SECONDARY"
+msgstr "%s nemůže být zároveň .NOTINTERMEDIATE a .SECONDARY"
+
+#: src/file.c:847
+#, c-format
+msgid ".NOTINTERMEDIATE and .SECONDARY are mutually exclusive"
+msgstr ".NOTINTERMEDIATE a .SECONDARY se vzájemně vylučují"
+
+#: src/file.c:939
 msgid "Current time"
 msgstr "Aktuální čas"
 
-#: file.c:822
+#: src/file.c:943
 #, c-format
 msgid "%s: Timestamp out of range; substituting %s"
 msgstr "%s: Časový údaj mimo rozsah, nahrazuje se %s"
 
-#: file.c:962
+#: src/file.c:1086
 msgid "# Not a target:"
 msgstr "# Není cílem:"
 
-#: file.c:967
+#: src/file.c:1091
 msgid "#  Precious file (prerequisite of .PRECIOUS)."
 msgstr "#  Cenný soubor (prerekvizita k .PRECIOUS)."
 
-#: file.c:969
+#: src/file.c:1093
 msgid "#  Phony target (prerequisite of .PHONY)."
 msgstr "#  Falešný cíl (prerekvizita k .PHONY)."
 
-#: file.c:971
+#: src/file.c:1095
 msgid "#  Command line target."
 msgstr "#  Cíl příkazové řádky."
 
-#: file.c:973
+#: src/file.c:1097
 msgid "#  A default, MAKEFILES, or -include/sinclude makefile."
 msgstr "#  Default, MAKEFILES nebo -include/sinclude makefile."
 
-#: file.c:975
+#: src/file.c:1099
 msgid "#  Builtin rule"
 msgstr "#  Vestavěné pravidlo"
 
-#: file.c:977
+#: src/file.c:1101
 msgid "#  Implicit rule search has been done."
 msgstr "#  Hledalo se za pomoci implicitních pravidel."
 
-#: file.c:978
+#: src/file.c:1102
 msgid "#  Implicit rule search has not been done."
 msgstr "#  Nehledalo se za pomoci implicitních pravidel."
 
-#: file.c:980
+#: src/file.c:1104
 #, c-format
 msgid "#  Implicit/static pattern stem: '%s'\n"
 msgstr "#  Kořen implicitního/statického vzoru: „%s“\n"
 
-#: file.c:982
+#: src/file.c:1106
 msgid "#  File is an intermediate prerequisite."
 msgstr "#  Soubor je mezilehlá prerekvizita."
 
-#: file.c:986
+#: src/file.c:1108
+msgid "#  File is a prerequisite of .NOTINTERMEDIATE."
+msgstr "#  Soubor je prerekvizita k .NOTINTERMEDIATE."
+
+#: src/file.c:1110
+msgid "#  File is secondary (prerequisite of .SECONDARY)."
+msgstr "#  Souboru je druhotný (prerekvizita k .SECONDARY)."
+
+#: src/file.c:1114
 msgid "#  Also makes:"
 msgstr "#  Rovněž vyrábí:"
 
-#: file.c:992
+#: src/file.c:1120
 msgid "#  Modification time never checked."
 msgstr "#  Čas změny obsahu se nikdy nekontroluje."
 
-#: file.c:994
+#: src/file.c:1122
 msgid "#  File does not exist."
 msgstr "#  Soubor neexistuje."
 
-#: file.c:996
+#: src/file.c:1124
 msgid "#  File is very old."
 msgstr "#  Soubor je velmi starý."
 
-#: file.c:1001
+#: src/file.c:1129
 #, c-format
 msgid "#  Last modified %s\n"
 msgstr "#  Obsah naposledy změněn v %s\n"
 
-#: file.c:1004
+#: src/file.c:1132
 msgid "#  File has been updated."
 msgstr "#  Soubor byl aktualizován."
 
-#: file.c:1004
+#: src/file.c:1132
 msgid "#  File has not been updated."
 msgstr "#  Soubor nebyl aktualizován."
 
-#: file.c:1008
+#: src/file.c:1136
 msgid "#  Recipe currently running (THIS IS A BUG)."
 msgstr "#  Návod se právě vykonává (TOTO JE CHYBA)."
 
-#: file.c:1011
+#: src/file.c:1139
 msgid "#  Dependencies recipe running (THIS IS A BUG)."
 msgstr "#  Návod pro závislosti se právě vykonává (TOTO JE CHYBA)."
 
-#: file.c:1020
+#: src/file.c:1148
 msgid "#  Successfully updated."
 msgstr "#  Úspěšně aktualizováno."
 
-#: file.c:1024
+#: src/file.c:1152
 msgid "#  Needs to be updated (-q is set)."
 msgstr "#  Je třeba aktualizovat (-q je nastaveno)."
 
-#: file.c:1027
+#: src/file.c:1155
 msgid "#  Failed to be updated."
 msgstr "#  Aktualizace selhala."
 
-#: file.c:1032
+#: src/file.c:1160
 msgid "#  Invalid value in 'command_state' member!"
 msgstr "#  Neplatná hodnota v členu „command_state“!"
 
-#: file.c:1051
+#: src/file.c:1179
 msgid ""
 "\n"
 "# Files"
@@ -371,7 +410,7 @@ msgstr ""
 "\n"
 "# Soubory"
 
-#: file.c:1055
+#: src/file.c:1183
 msgid ""
 "\n"
 "# files hash-table stats:\n"
@@ -381,335 +420,426 @@ msgstr ""
 "# Statistika hašovací tabulky souborů:\n"
 "# "
 
-#: file.c:1065
+#: src/file.c:1193
 #, c-format
 msgid "%s: Field '%s' not cached: %s"
 msgstr "%s: Položka „%s“ není v keši: %s"
 
-#: function.c:790
-msgid "non-numeric first argument to 'word' function"
-msgstr "nečíselný první argument funkce „word“"
+#: src/function.c:779 src/function.c:1284
+#, c-format
+msgid "%s: empty value"
+msgstr "%s: prázdná hodnota"
 
-#: function.c:795
+#: src/function.c:784
+#, c-format
+msgid "%s: '%s' out of range"
+msgstr "%s: „%s“ mimo rozsah"
+
+#: src/function.c:800
+msgid "invalid first argument to 'word' function"
+msgstr "neplatný první argument funkce „word“"
+
+#: src/function.c:803
+#, c-format
 msgid "first argument to 'word' function must be greater than 0"
 msgstr "první argument funkce „word“ musí být vetší než 0"
 
-#: function.c:815
-msgid "non-numeric first argument to 'wordlist' function"
-msgstr "nečíselný první argument funkce „wordlist“"
+#: src/function.c:821
+msgid "invalid first argument to 'wordlist' function"
+msgstr "neplatný první argument funkce „wordlist“"
 
-#: function.c:817
-msgid "non-numeric second argument to 'wordlist' function"
-msgstr "nečíselný druhý argument funkce „wordlist“"
+#: src/function.c:822
+msgid "invalid second argument to 'wordlist' function"
+msgstr "neplatný druhý argument funkce „wordlist“"
 
-#: function.c:1525
+#: src/function.c:1328
+msgid "non-numeric first argument to 'intcmp' function"
+msgstr "nečíselný první argument funkce „intcmp“"
+
+#: src/function.c:1329
+msgid "non-numeric second argument to 'intcmp' function"
+msgstr "nečíselný druhý argument funkce „intcmp“"
+
+#: src/function.c:1684
 #, c-format
-msgid "windows32_openpipe: DuplicateHandle(In) failed (e=%ld)\n"
-msgstr "windows32_openpipe: DuplicateHandle(vstup) selhalo (chyba=%ld)\n"
+msgid "windows32_openpipe: DuplicateHandle(In) failed (e=%lu)\n"
+msgstr "windows32_openpipe: volání DuplicateHandle(vstup) selhalo (chyba=%lu)\n"
 
-#: function.c:1549
+#: src/function.c:1708
 #, c-format
-msgid "windows32_openpipe: DuplicateHandle(Err) failed (e=%ld)\n"
-msgstr "windows32_openpipe: DuplicateHandle(chybový výstup) selhalo (chyba=%ld)\n"
+msgid "windows32_openpipe: DuplicateHandle(Err) failed (e=%lu)\n"
+msgstr "windows32_openpipe: volání DuplicateHandle(chybový výstup) selhalo (chyba=%lu)\n"
 
-#: function.c:1556
+#: src/function.c:1715
 #, c-format
-msgid "CreatePipe() failed (e=%ld)\n"
-msgstr "CreatePipe() selhalo (chyba=%ld)\n"
+msgid "CreatePipe() failed (e=%lu)\n"
+msgstr "volání CreatePipe() selhalo (chyba=%lu)\n"
 
-#: function.c:1564
+#: src/function.c:1723
+#, c-format
 msgid "windows32_openpipe(): process_init_fd() failed\n"
-msgstr "windows32_openpipe(): process_init_fd() selhalo\n"
+msgstr "windows32_openpipe(): funkce process_init_fd() selhala\n"
 
-#: function.c:1858
+#: src/function.c:1983
 #, c-format
 msgid "Cleaning up temporary batch file %s\n"
 msgstr "Dočasný dávkový soubor %s se uklízí\n"
 
-#: function.c:2215 function.c:2240
+#: src/function.c:2348 src/function.c:2388
+#, c-format
 msgid "file: missing filename"
 msgstr "soubor: chybí název souboru"
 
-#: function.c:2219 function.c:2250
+#: src/function.c:2358 src/function.c:2408
 #, c-format
 msgid "open: %s: %s"
 msgstr "otevření: %s: %s"
 
-#: function.c:2227
+#: src/function.c:2371
 #, c-format
 msgid "write: %s: %s"
 msgstr "zápis: %s: %s"
 
-#: function.c:2230 function.c:2267
+#: src/function.c:2374 src/function.c:2427
 #, c-format
 msgid "close: %s: %s"
 msgstr "zavření: %s: %s"
 
-#: function.c:2243
+#: src/function.c:2391
+#, c-format
 msgid "file: too many arguments"
 msgstr "soubor: příliš mnoho argumentů"
 
-#: function.c:2262
+#: src/function.c:2404
+#, c-format
+msgid "file: Failed to open '%s': %s\n"
+msgstr "soubor: „%s“ se nepodařilo otevřít: %s\n"
+
+#: src/function.c:2422
 #, c-format
 msgid "read: %s: %s"
 msgstr "čtení: %s: %s"
 
-#: function.c:2275
+#: src/function.c:2434
 #, c-format
 msgid "file: invalid file operation: %s"
 msgstr "soubor: neplatná operace na souboru: %s"
 
-#: function.c:2390
+#: src/function.c:2552
 #, c-format
-msgid "insufficient number of arguments (%d) to function '%s'"
-msgstr "nedostatečný počet argumentů (%d) funkce „%s“"
+msgid "insufficient number of arguments (%u) to function '%s'"
+msgstr "nedostatečný počet argumentů (%u) funkce „%s“"
 
-#: function.c:2402
+#: src/function.c:2564
 #, c-format
 msgid "unimplemented on this platform: function '%s'"
 msgstr "na této platformě neimplementováno: funkce „%s“"
 
-#: function.c:2466
+#: src/function.c:2633
 #, c-format
 msgid "unterminated call to function '%s': missing '%c'"
 msgstr "neukončené volání funkce „%s“: chybí „%c“"
 
-#: function.c:2650
+#: src/function.c:2816
+#, c-format
 msgid "Empty function name"
 msgstr "Prázdný název funkce"
 
-#: function.c:2652
+#: src/function.c:2818
 #, c-format
 msgid "Invalid function name: %s"
 msgstr "Neplatný název funkce: %s"
 
-#: function.c:2654
+#: src/function.c:2820
 #, c-format
 msgid "Function name too long: %s"
 msgstr "Název funkce je příliš dlouhý: %s"
 
-#: function.c:2657
+#: src/function.c:2823
 #, c-format
 msgid "Invalid minimum argument count (%u) for function %s"
 msgstr "Neplatný minimální počet argumentů (%u) funkce %s"
 
-#: function.c:2660
+#: src/function.c:2826
 #, c-format
 msgid "Invalid maximum argument count (%u) for function %s"
 msgstr "Neplatný maximální počet argumentů (%u) funkce %s"
 
-#: getopt.c:659
+#: src/getopt.c:663
 #, c-format
 msgid "%s: option '%s' is ambiguous\n"
 msgstr "%s: přepínač „%s“ není jednoznačný\n"
 
-#: getopt.c:683
+#: src/getopt.c:688
 #, c-format
 msgid "%s: option '--%s' doesn't allow an argument\n"
 msgstr "%s: přepínače „--%s“ nepřipouští argument\n"
 
-#: getopt.c:688
+#: src/getopt.c:693
 #, c-format
 msgid "%s: option '%c%s' doesn't allow an argument\n"
 msgstr "%s: přepínač „%c%s“ nepřipouští argument\n"
 
-#: getopt.c:705 getopt.c:878
+#: src/getopt.c:710 src/getopt.c:883
 #, c-format
 msgid "%s: option '%s' requires an argument\n"
 msgstr "%s: přepínač „%s“ vyžaduje argument\n"
 
-#: getopt.c:734
+#: src/getopt.c:739
 #, c-format
 msgid "%s: unrecognized option '--%s'\n"
 msgstr "%s: nerozpoznaný přepínač „--%s“\n"
 
-#: getopt.c:738
+#: src/getopt.c:743
 #, c-format
 msgid "%s: unrecognized option '%c%s'\n"
 msgstr "%s: nerozpoznaný přepínač „%c%s“\n"
 
-#: getopt.c:764
+#: src/getopt.c:769
 #, c-format
 msgid "%s: illegal option -- %c\n"
 msgstr "%s: zakázaný přepínač – %c\n"
 
-#: getopt.c:767
+#: src/getopt.c:772
 #, c-format
 msgid "%s: invalid option -- %c\n"
 msgstr "%s: neplatný přepínač – %c\n"
 
-#: getopt.c:797 getopt.c:927
+#: src/getopt.c:802 src/getopt.c:932
 #, c-format
 msgid "%s: option requires an argument -- %c\n"
 msgstr "%s: přepínač vyžaduje argument – %c\n"
 
-#: getopt.c:844
+#: src/getopt.c:849
 #, c-format
 msgid "%s: option '-W %s' is ambiguous\n"
 msgstr "%s: přepínač „-W %s“ není jednoznačný\n"
 
-#: getopt.c:862
+#: src/getopt.c:867
 #, c-format
 msgid "%s: option '-W %s' doesn't allow an argument\n"
 msgstr "%s: přepínač „-W %s“ nepřipouští argument\n"
 
-#: guile.c:58
+#: src/guile.c:58
 #, c-format
 msgid "guile: Expanding '%s'\n"
 msgstr "guile: Expanduje se „%s“\n"
 
-#: guile.c:74
+#: src/guile.c:74
 #, c-format
 msgid "guile: Evaluating '%s'\n"
 msgstr "guile: Vyhodnocuje se „%s“\n"
 
 # TODO: Pluralize
-#: hash.c:49
+#: src/hash.c:50
 #, c-format
 msgid "can't allocate %lu bytes for hash table: memory exhausted"
 msgstr "nelze alokovat %lu bajtů na hašovací tabulku: paměť vyčerpána"
 
-#: hash.c:280
+#: src/hash.c:280
 #, c-format
-msgid "Load=%ld/%ld=%.0f%%, "
-msgstr "Zátěž = %ld/%ld = %.0f %%, "
+msgid "Load=%lu/%lu=%.0f%%, "
+msgstr "Zátěž = %lu/%lu = %.0f %%, "
 
-#: hash.c:282
+#: src/hash.c:282
 #, c-format
-msgid "Rehash=%d, "
-msgstr "Přehašováno = %d, "
+msgid "Rehash=%u, "
+msgstr "Přehašováno = %u, "
 
-#: hash.c:283
+#: src/hash.c:283
 #, c-format
-msgid "Collisions=%ld/%ld=%.0f%%"
-msgstr "Kolizí = %ld/%ld = %.0f %%"
+msgid "Collisions=%lu/%lu=%.0f%%"
+msgstr "Kolizí = %lu/%lu = %.0f %%"
 
-#: implicit.c:38
+#: src/implicit.c:41
 #, c-format
 msgid "Looking for an implicit rule for '%s'.\n"
 msgstr "Hledá se implicitní pravidlo pro „%s“.\n"
 
-#: implicit.c:54
+#: src/implicit.c:57
 #, c-format
 msgid "Looking for archive-member implicit rule for '%s'.\n"
 msgstr "Hledá se implicitní pravidlo prvku archivu pro „%s“.\n"
 
-#: implicit.c:311
-msgid "Avoiding implicit rule recursion.\n"
-msgstr "Zabraňuje se rekurzi implicitního pravidla.\n"
-
-#: implicit.c:486
+#: src/implicit.c:61
 #, c-format
-msgid "Stem too long: '%.*s'.\n"
-msgstr "Kořen je příliš dlouhý „%.*s“.\n"
+msgid "No archive-member implicit rule found for '%s'.\n"
+msgstr "Žádné implicitní pravidlo prvku archivu pro „%s“ nebylo nalezeno.\n"
 
-#: implicit.c:491
+#: src/implicit.c:326
 #, c-format
-msgid "Trying pattern rule with stem '%.*s'.\n"
-msgstr "Zkouší se pravidlo vzoru s kořenem „%.*s“.\n"
+msgid "Avoiding implicit rule recursion for rule '%s'.\n"
+msgstr "Zabraňuje se rekurzi implicitního pravidla pro pravidlo „%s“.\n"
 
-#: implicit.c:697
+#: src/implicit.c:451
 #, c-format
-msgid "Rejecting impossible rule prerequisite '%s'.\n"
-msgstr "Zamítá se nemožná prerekvizita pravidla „%s“.\n"
+msgid "Trying harder.\n"
+msgstr "Zkouší se důkladněji.\n"
 
-#: implicit.c:698
+#: src/implicit.c:501
 #, c-format
-msgid "Rejecting impossible implicit prerequisite '%s'.\n"
-msgstr "Zamítá se nemožná implicitní prerekvizita „%s“.\n"
+msgid "Trying pattern rule '%s' with stem '%.*s'.\n"
+msgstr "Zkouší se pravidlo vzoru „%s“ s kořenem „%.*s“.\n"
 
-#: implicit.c:711
+#: src/implicit.c:506
+#, c-format
+msgid "Stem too long: '%s%.*s'.\n"
+msgstr "Kořen je příliš dlouhý: „%s%.*s“.\n"
+
+#: src/implicit.c:768
+#, c-format
+msgid "Rejecting rule '%s' due to impossible rule prerequisite '%s'.\n"
+msgstr "Zamítá se pravidlo „%s“ kvůli nemožné prerekvizitě pravidla „%s“.\n"
+
+#: src/implicit.c:770
+#, c-format
+msgid "Rejecting rule '%s' due to impossible implicit prerequisite '%s'.\n"
+msgstr "Zamítá se pravidlo „%s“ kvůli nemožné implicitní prerekvizitě „%s“.\n"
+
+#: src/implicit.c:787
 #, c-format
 msgid "Trying rule prerequisite '%s'.\n"
 msgstr "Zkouší se prerekvizita pravidla „%s“.\n"
 
-#: implicit.c:712
+#: src/implicit.c:788
 #, c-format
 msgid "Trying implicit prerequisite '%s'.\n"
 msgstr "Zkouší se implicitní prerekvizita „%s“.\n"
 
-#: implicit.c:751
+#: src/implicit.c:827
 #, c-format
-msgid "Found prerequisite '%s' as VPATH '%s'\n"
-msgstr "Nalezena prerekvizita „%s“ jako VPATH „%s“\n"
+msgid "'%s' ought to exist.\n"
+msgstr "„%s“ by mělo existovat.\n"
 
-#: implicit.c:765
+#: src/implicit.c:834
+#, c-format
+msgid "Found '%s'.\n"
+msgstr "Nalezeno „%s“.\n"
+
+#: src/implicit.c:842
+#, c-format
+msgid "Using compatibility rule '%s' due to '%s'.\n"
+msgstr "Použije se pravidlo kompatibility „%s“ kvůli „%s“.\n"
+
+#: src/implicit.c:856
+#, c-format
+msgid "Prerequisite '%s' of rule '%s' does not qualify as ought to exist.\n"
+msgstr "Prerekvizita „%s“ pravidla „%s“ neznamená, že by měla existovat.\n"
+
+#: src/implicit.c:870
+#, c-format
+msgid "Found prerequisite '%s' as VPATH '%s'.\n"
+msgstr "Nalezena prerekvizita „%s“ jako VPATH „%s“.\n"
+
+#: src/implicit.c:885
+#, c-format
+msgid "Looking for a rule with explicit file '%s'.\n"
+msgstr "Hledá se pravidlo s explicitním souborem „%s“.\n"
+
+#: src/implicit.c:886
 #, c-format
 msgid "Looking for a rule with intermediate file '%s'.\n"
 msgstr "Hledá se pravidlo s mezilehlým souborem „%s“.\n"
 
-#: job.c:363
-msgid "Cannot create a temporary file\n"
-msgstr "Dočasný soubor nelze vytvořit\n"
+#: src/implicit.c:927
+#, c-format
+msgid "Rejecting rule '%s' due to impossible prerequisite '%s'.\n"
+msgstr "Zamítá se pravidlo „%s“ kvůli nemožné prerekvizitě „%s“.\n"
 
-#: job.c:485
+#: src/implicit.c:931
+#, c-format
+msgid "Not found '%s'.\n"
+msgstr "„%s“ nebylo nenalezeno.\n"
+
+#: src/implicit.c:1144
+#, c-format
+msgid "Found implicit rule '%s' for '%s'.\n"
+msgstr "Nalezeno implicitní pravidlo „%s“ pro „%s“.\n"
+
+#: src/implicit.c:1151
+#, c-format
+msgid "Searching for a compatibility rule for '%s'.\n"
+msgstr "Hledá se pravidlo kompatibility pro „%s“.\n"
+
+#: src/implicit.c:1157
+#, c-format
+msgid "No implicit rule found for '%s'.\n"
+msgstr "Pro „%s“ nenalezeno žádné implicitní pravidlo.\n"
+
+#: src/job.c:377
+msgid "Cannot create a temporary file"
+msgstr "Dočasný soubor nelze vytvořit"
+
+#: src/job.c:549
 msgid " (core dumped)"
 msgstr " (obraz paměti uložen)"
 
-#: job.c:490
+#: src/job.c:554
 msgid " (ignored)"
 msgstr " (ignorováno)"
 
-#: job.c:494 job.c:1828
+#: src/job.c:558 src/job.c:1896
 msgid "<builtin>"
 msgstr "<vestavěný>"
 
-#: job.c:510
+#: src/job.c:584
 #, c-format
-msgid "%s[%s: %s] Error %d%s"
-msgstr "%s[%s: %s] Chyba %d%s"
+msgid "%s[%s: %s] Error %d%s%s"
+msgstr "%s[%s: %s] Chyba %d%s%s"
 
-#: job.c:599
+#: src/job.c:674
+#, c-format
 msgid "*** Waiting for unfinished jobs...."
 msgstr "*** Čeká se na nedokončené úlohy…"
 
-#: job.c:629
+#: src/job.c:716
 #, c-format
 msgid "Live child %p (%s) PID %s %s\n"
 msgstr "Živý potomek %p (%s) PID %s %s\n"
 
 # Continuation of Live child
-#: job.c:631 job.c:833 job.c:952 job.c:1583
+#: src/job.c:718 src/job.c:913 src/job.c:1081 src/job.c:1649
+#, c-format
 msgid " (remote)"
 msgstr " (vzdálený)"
 
-#: job.c:831
-#, c-format
-msgid "Reaping losing child %p PID %s %s\n"
-msgstr "Uklízí se prohrávající potomek %p PID %s %s\n"
-
-#: job.c:832
+#: src/job.c:911
 #, c-format
 msgid "Reaping winning child %p PID %s %s\n"
 msgstr "Uklízí se vyhrávající potomek %p PID %s %s\n"
 
-#: job.c:839
+#: src/job.c:912
+#, c-format
+msgid "Reaping losing child %p PID %s %s\n"
+msgstr "Uklízí se prohrávající potomek %p PID %s %s\n"
+
+#: src/job.c:963
 #, c-format
 msgid "Cleaning up temp batch file %s\n"
 msgstr "Uklízí se dočasný dávkový soubor %s\n"
 
-#: job.c:845
+#: src/job.c:969
 #, c-format
 msgid "Cleaning up temp batch file %s failed (%d)\n"
 msgstr "Úklid dočasného dávkového souboru %s selhal (%d)\n"
 
-#: job.c:951
+#: src/job.c:1080
 #, c-format
 msgid "Removing child %p PID %s%s from chain.\n"
 msgstr "Z řetězce se odstraňuje potomek %p PID %s%s.\n"
 
-#: job.c:1006
+#: src/job.c:1143
 #, c-format
 msgid "Released token for child %p (%s).\n"
 msgstr "Uvolněn token pro potomka %p (%s).\n"
 
-#: job.c:1508 job.c:2201
+#: src/job.c:1580 src/job.c:2533
 #, c-format
 msgid "process_easy() failed to launch process (e=%ld)\n"
 msgstr "process_easy() nedokázala spustit proces (chyba=%ld)\n"
 
 # FIXME: Pluralize
-#: job.c:1512 job.c:2205
+#: src/job.c:1584 src/job.c:2537
 #, c-format
 msgid ""
 "\n"
@@ -718,93 +848,97 @@ msgstr ""
 "\n"
 "Napočítáno %d argumentů v selhaném spuštění\n"
 
-#: job.c:1581
+#: src/job.c:1647
 #, c-format
 msgid "Putting child %p (%s) PID %s%s on the chain.\n"
 msgstr "Do řetězce se přidává potomek %p (%s) PID %s%s.\n"
 
-#: job.c:1811
+#: src/job.c:1880
 #, c-format
 msgid "Obtained token for child %p (%s).\n"
 msgstr "Získán token pro potomka %p (%s).\n"
 
-#: job.c:1838
+#: src/job.c:1905
 #, c-format
-msgid "%s: target '%s' does not exist"
-msgstr "%s: cíl „%s“ neexistuje"
+msgid "%s: update target '%s' due to: target is .PHONY"
+msgstr "%s: aktualizovat cíl „%s“ kvůli: cíl je .PHONY"
 
-#: job.c:1841
+#: src/job.c:1909
+#, c-format
+msgid "%s: update target '%s' due to: target does not exist"
+msgstr "%s: aktualizovat cíl „%s“ kvůli: cíl neexistuje"
+
+#: src/job.c:1916 src/job.c:1944
 #, c-format
 msgid "%s: update target '%s' due to: %s"
 msgstr "%s: aktualizovat cíl „%s“ potřebný pro %s"
 
-#: job.c:1956
+#: src/job.c:1932
+#, c-format
+msgid "%s: update target '%s' due to: unknown reasons"
+msgstr "%s: aktualizovat cíl „%s“ kvůli: důvody nejsou známy"
+
+#: src/job.c:2140
+#, c-format
 msgid "cannot enforce load limits on this operating system"
 msgstr "na tomto operačním systému nelze vynutit omezení zátěže"
 
-#: job.c:1958
+#: src/job.c:2142
 msgid "cannot enforce load limit: "
 msgstr "omezení zátěže nelze vynutit: "
 
-#: job.c:2048
-msgid "no more file handles: could not duplicate stdin\n"
-msgstr "nedostatek deskriptorů souboru: standardní vstup nelze zduplikovat\n"
+#: src/job.c:2231
+#, c-format
+msgid "no more file handles: could not duplicate stdin"
+msgstr "nedostatek deskriptorů souboru: standardní vstup nelze zduplikovat"
 
-#: job.c:2060
-msgid "no more file handles: could not duplicate stdout\n"
-msgstr "nedostatek deskriptorů souboru: standardní výstup nelze zduplikovat\n"
+#: src/job.c:2243
+#, c-format
+msgid "no more file handles: could not duplicate stdout"
+msgstr "nedostatek deskriptorů souboru: standardní výstup nelze zduplikovat"
 
-#: job.c:2074
-msgid "no more file handles: could not duplicate stderr\n"
-msgstr "nedostatek deskriptorů souboru: chybový výstup nelze zduplikovat\n"
+#: src/job.c:2257
+#, c-format
+msgid "no more file handles: could not duplicate stderr"
+msgstr "nedostatek deskriptorů souboru: chybový výstup nelze zduplikovat"
 
-#: job.c:2089
-msgid "Could not restore stdin\n"
-msgstr "Standardní vstup nelze obnovit\n"
+#: src/job.c:2272
+#, c-format
+msgid "Could not restore stdin"
+msgstr "Standardní vstup nelze obnovit"
 
-#: job.c:2097
-msgid "Could not restore stdout\n"
-msgstr "Standardní výstup nelze obnovit\n"
+#: src/job.c:2280
+#, c-format
+msgid "Could not restore stdout"
+msgstr "Standardní výstup nelze obnovit"
 
-#: job.c:2105
-msgid "Could not restore stderr\n"
-msgstr "Chybový výstup nelze obnovit\n"
+#: src/job.c:2288
+#, c-format
+msgid "Could not restore stderr"
+msgstr "Chybový výstup nelze obnovit"
 
-#: job.c:2234
+#: src/job.c:2566
 #, c-format
 msgid "make reaped child pid %s, still waiting for pid %s\n"
 msgstr "make uklidil potomka s PID %s, stále se čeká na PID %s\n"
 
-#: job.c:2275
+#: src/job.c:2674
 #, c-format
-msgid "%s: %s: Command not found\n"
-msgstr "%s: %s: Příkaz nenalezen\n"
-
-#: job.c:2277
-#, c-format
-msgid "%s[%u]: %s: Command not found\n"
-msgstr "%s[%u]: %s: Příkaz nenalezen\n"
-
-#: job.c:2337
-#, c-format
-msgid "%s: Shell program not found"
-msgstr "%s: Program shellu nenalezen"
-
-#: job.c:2346
 msgid "spawnvpe: environment space might be exhausted"
 msgstr "spawnvpe: možná byl vyčerpán prostor pro prostředí"
 
-#: job.c:2584
+#: src/job.c:2913
 #, c-format
 msgid "$SHELL changed (was '%s', now '%s')\n"
 msgstr "Proměnná $SHELL se změnila (byla „%s“, nyní je „%s“)\n"
 
-#: job.c:3022 job.c:3207
+#: src/job.c:3356 src/job.c:3560
 #, c-format
 msgid "Creating temporary batch file %s\n"
 msgstr "Vytváří se dočasný dávkový soubor %s\n"
 
-#: job.c:3030
+#: src/job.c:3364
+#, c-format
 msgid ""
 "Batch file contents:\n"
 "\t@echo off\n"
@@ -812,7 +946,7 @@ msgstr ""
 "Obsah dávkového souboru:\n"
 "\t@echo off\n"
 
-#: job.c:3219
+#: src/job.c:3572
 #, c-format
 msgid ""
 "Batch file contents:%s\n"
@@ -821,57 +955,64 @@ msgstr ""
 "Obsah dávkového souboru:%s\n"
 "\t%s\n"
 
-#: job.c:3327
+#: src/job.c:3680
 #, c-format
 msgid "%s (line %d) Bad shell context (!unixy && !batch_mode_shell)\n"
 msgstr "%s (řádek %d) Chybný kontext shellu (!unixy && !batch_mode_shell)\n"
 
-#: job.h:43
-msgid "-O[TYPE] (--output-sync[=TYPE]) is not configured for this build."
-msgstr "Přepínač -O[DRUH] (--output-sync[=DRUH]) není v tomto sestavení zahrnut."
-
-#: load.c:60
+#: src/load.c:60
 #, c-format
 msgid "Failed to open global symbol table: %s"
 msgstr "Nepodařilo se otevřít tabulku globálních symbolů: %s"
 
-#: load.c:97
+#: src/load.c:93
+#, c-format
+msgid "Loaded shared object %s\n"
+msgstr "Sdílený objekt %s zaveden\n"
+
+#: src/load.c:99
 #, c-format
 msgid "Loaded object %s is not declared to be GPL compatible"
 msgstr "Zavedený objekt %s není veden jako slučitelný s GPL"
 
-#: load.c:104
+#: src/load.c:106
 #, c-format
 msgid "Failed to load symbol %s from %s: %s"
 msgstr "Symbol %s z %s se nepodařilo zavést: %s"
 
-#: load.c:149
+#: src/load.c:151
 #, c-format
 msgid "Empty symbol name for load: %s"
 msgstr "Pokus zavést prázdný název symbolu: %s"
 
-#: load.c:204
+#: src/load.c:206
 #, c-format
 msgid "Loading symbol %s from %s\n"
 msgstr "Zavádí se symbol %s z %s\n"
 
-#: load.c:256
-msgid "The 'load' operation is not supported on this platform."
-msgstr "Na této platformě není operace zavedení (load) podporována."
+#: src/load.c:232
+#, c-format
+msgid "Unloading shared object %s\n"
+msgstr "Uvolňuje se sdílený objekt %s\n"
 
-#: main.c:338
+#: src/load.c:251
+#, c-format
+msgid "The 'load' operation is not supported on this platform"
+msgstr "Na této platformě není operace zavedení (load) podporována"
+
+#: src/main.c:319
 msgid "Options:\n"
 msgstr "Přepínače:\n"
 
-#: main.c:339
+#: src/main.c:320
 msgid "  -b, -m                      Ignored for compatibility.\n"
 msgstr "  -b, -m                      Ignoruje se kvůli kompatibilitě.\n"
 
-#: main.c:341
+#: src/main.c:322
 msgid "  -B, --always-make           Unconditionally make all targets.\n"
 msgstr "  -B, --always-make           Bezpodmínečně vyrobí všechny cíle.\n"
 
-#: main.c:343
+#: src/main.c:324
 msgid ""
 "  -C DIRECTORY, --directory=DIRECTORY\n"
 "                              Change to DIRECTORY before doing anything.\n"
@@ -879,15 +1020,15 @@ msgstr ""
 "  -C ADRESÁŘ, --directory=ADRESÁŘ\n"
 "                              Před děláním čehokoliv se přepne do ADRESÁŘE.\n"
 
-#: main.c:346
+#: src/main.c:327
 msgid "  -d                          Print lots of debugging information.\n"
 msgstr "  -d                          Vypisuje mnoho ladicích údajů.\n"
 
-#: main.c:348
+#: src/main.c:329
 msgid "  --debug[=FLAGS]             Print various types of debugging information.\n"
 msgstr "  --debug[=PŘÍZNAKY]          Vypisuje ladicí údaje rozličných druhů.\n"
 
-#: main.c:350
+#: src/main.c:331
 msgid ""
 "  -e, --environment-overrides\n"
 "                              Environment variables override makefiles.\n"
@@ -895,11 +1036,11 @@ msgstr ""
 "  -e, --environment-overrides\n"
 "                              Proměnné prostředí přebijí ty z makefilu.\n"
 
-#: main.c:353
-msgid "  --eval=STRING               Evaluate STRING as a makefile statement.\n"
-msgstr "  --eval=ŘETĚZEC              Vyhodnotí ŘETĚZEC jako kód makefilu.\n"
+#: src/main.c:334
+msgid "  -E STRING, --eval=STRING    Evaluate STRING as a makefile statement.\n"
+msgstr "  -E ŘETĚZEC, --eval=ŘETĚZEC  Vyhodnotí ŘETĚZEC jako kód makefilu.\n"
 
-#: main.c:355
+#: src/main.c:336
 msgid ""
 "  -f FILE, --file=FILE, --makefile=FILE\n"
 "                              Read FILE as a makefile.\n"
@@ -907,15 +1048,15 @@ msgstr ""
 "  -f SOUBOR, --file=SOUBOR, --makefile=SOUBOR\n"
 "                              Načte SOUBOR coby makefile.\n"
 
-#: main.c:358
+#: src/main.c:339
 msgid "  -h, --help                  Print this message and exit.\n"
 msgstr "  -h, --help                  Vypíše tuto zprávu a skončí.\n"
 
-#: main.c:360
+#: src/main.c:341
 msgid "  -i, --ignore-errors         Ignore errors from recipes.\n"
 msgstr "  -i, --ignore-errors         Ignoruje chyby z návodů.\n"
 
-#: main.c:362
+#: src/main.c:343
 msgid ""
 "  -I DIRECTORY, --include-dir=DIRECTORY\n"
 "                              Search DIRECTORY for included makefiles.\n"
@@ -923,17 +1064,21 @@ msgstr ""
 "  -I ADRESÁŘ, --include-dir=ADRESÁŘ\n"
 "                              Vložené makefily hledá v ADRESÁŘI.\n"
 
-#: main.c:365
+#: src/main.c:346
 msgid "  -j [N], --jobs[=N]          Allow N jobs at once; infinite jobs with no arg.\n"
 msgstr ""
 "  -j [N], --jobs[=N]          Dovolí nejvíce N úloh najednou;\n"
 "                              nekonečno úloh bez argumentu.\n"
 
-#: main.c:367
+#: src/main.c:348
+msgid "  --jobserver-style=STYLE     Select the style of jobserver to use.\n"
+msgstr "  --jobserver-style=DRUH      Vybere druh správce úloh.\n"
+
+#: src/main.c:350
 msgid "  -k, --keep-going            Keep going when some targets can't be made.\n"
 msgstr "  -k, --keep-going            Pokračuje, když některé cíle nelze vyrobit.\n"
 
-#: main.c:369
+#: src/main.c:352
 msgid ""
 "  -l [N], --load-average[=N], --max-load[=N]\n"
 "                              Don't start multiple jobs unless load is below N.\n"
@@ -942,13 +1087,13 @@ msgstr ""
 "                              Nespouští souběžné úlohy, dokud zátěž\n"
 "                              neklesne pod N.\n"
 
-#: main.c:372
+#: src/main.c:355
 msgid "  -L, --check-symlink-times   Use the latest mtime between symlinks and target.\n"
 msgstr ""
 "  -L, --check-symlink-times   Použije nejnovější čas změny obsahu z časů\n"
 "                              symbolických odkazů a cíle.\n"
 
-#: main.c:374
+#: src/main.c:357
 msgid ""
 "  -n, --just-print, --dry-run, --recon\n"
 "                              Don't actually run any recipe; just print them.\n"
@@ -957,7 +1102,7 @@ msgstr ""
 "                              Ve skutečnosti nevykoná žádný návod, pouze\n"
 "                              jej vypíše.\n"
 
-#: main.c:377
+#: src/main.c:360
 msgid ""
 "  -o FILE, --old-file=FILE, --assume-old=FILE\n"
 "                              Consider FILE to be very old and don't remake it.\n"
@@ -966,7 +1111,7 @@ msgstr ""
 "                              Považuje SOUBOR za velmi starý a znovu jej\n"
 "                              nevyrobí.\n"
 
-#: main.c:380
+#: src/main.c:363
 msgid ""
 "  -O[TYPE], --output-sync[=TYPE]\n"
 "                              Synchronize output of parallel jobs by TYPE.\n"
@@ -974,29 +1119,43 @@ msgstr ""
 "  -O[DRUH], --output-sync[=DRUH]\n"
 "                              Synchronizuje výstup souběžných úloh podle DRUHU.\n"
 
-#: main.c:383
+#: src/main.c:366
 msgid "  -p, --print-data-base       Print make's internal database.\n"
 msgstr "  -p, --print-data-base       Vypíše vnitřní databázi programu make.\n"
 
-#: main.c:385
+#: src/main.c:368
 msgid "  -q, --question              Run no recipe; exit status says if up to date.\n"
 msgstr ""
 "  -q, --question              Nespustí žádný návod. Návratový kód řekne,\n"
 "                              jestli je aktuální.\n"
 
-#: main.c:387
+#: src/main.c:370
 msgid "  -r, --no-builtin-rules      Disable the built-in implicit rules.\n"
 msgstr "  -r, --no-builtin-rules      Vypne vestavěná implicitní pravidla.\n"
 
-#: main.c:389
+#: src/main.c:372
 msgid "  -R, --no-builtin-variables  Disable the built-in variable settings.\n"
 msgstr "  -R, --no-builtin-variables  Vypne vestavěné nastavení proměnných.\n"
 
-#: main.c:391
+#: src/main.c:374
+msgid ""
+"  --shuffle[={SEED|random|reverse|none}]\n"
+"                              Perform shuffle of prerequisites and goals.\n"
+msgstr ""
+"  --shuffle[={IV|random|reverse|none}]\n"
+"                              Zamíchá prerekvizitami a cíli. IV je\n"
+"                              inicializační vektor, „random“ náhodně,\n"
+"                              „reverse“ pozpátku, „none“ nemíchat.\n"
+
+#: src/main.c:377
 msgid "  -s, --silent, --quiet       Don't echo recipes.\n"
 msgstr "  -s, --silent, --quiet       Neopisuje návod.\n"
 
-#: main.c:393
+#: src/main.c:379
+msgid "  --no-silent                 Echo recipes (disable --silent mode).\n"
+msgstr "  --no-silent                 Opisuje návod (vypne režim --silent).\n"
+
+#: src/main.c:381
 msgid ""
 "  -S, --no-keep-going, --stop\n"
 "                              Turns off -k.\n"
@@ -1004,27 +1163,27 @@ msgstr ""
 "  -S, --no-keep-going, --stop\n"
 "                              Vypne -k.\n"
 
-#: main.c:396
+#: src/main.c:384
 msgid "  -t, --touch                 Touch targets instead of remaking them.\n"
 msgstr "  -t, --touch                 Namísto výroby cílů jim změní čas.\n"
 
-#: main.c:398
+#: src/main.c:386
 msgid "  --trace                     Print tracing information.\n"
 msgstr "  --trace                     Vypisuje trasovací údaje.\n"
 
-#: main.c:400
+#: src/main.c:388
 msgid "  -v, --version               Print the version number of make and exit.\n"
 msgstr "  -v, --version               Vypíše číslo verze programu make a skončí.\n"
 
-#: main.c:402
+#: src/main.c:390
 msgid "  -w, --print-directory       Print the current directory.\n"
 msgstr "  -w, --print-directory       Vypisuje aktuální adresář.\n"
 
-#: main.c:404
+#: src/main.c:392
 msgid "  --no-print-directory        Turn off -w, even if it was turned on implicitly.\n"
 msgstr "  --no-print-directory        Vypne -w, i kdyby byl zapnut implicitně.\n"
 
-#: main.c:406
+#: src/main.c:394
 msgid ""
 "  -W FILE, --what-if=FILE, --new-file=FILE, --assume-new=FILE\n"
 "                              Consider FILE to be infinitely new.\n"
@@ -1032,32 +1191,68 @@ msgstr ""
 "  -W SOUBOR, --what-if=SOUBOR, --new-file=SOUBOR, --assume-new=SOUBOR\n"
 "                              Považuje SOUBOR za nekonečně nový.\n"
 
-#: main.c:409
+#: src/main.c:397
 msgid "  --warn-undefined-variables  Warn when an undefined variable is referenced.\n"
 msgstr ""
 "  --warn-undefined-variables  Upozorní, kdykoliv je odkazováno na\n"
 "                              nedefinovanou proměnnou.\n"
 
-#: main.c:683
+#: src/main.c:735 src/main.c:737
+#, c-format
+msgid "write error: stdout"
+msgstr "chyba zápisu: standardní výstup"
+
+#: src/main.c:749
+#, c-format
 msgid "empty string invalid as file name"
 msgstr "prázdný řetězec není platný název souboru"
 
-#: main.c:766
+#: src/main.c:841
 #, c-format
 msgid "unknown debug level specification '%s'"
 msgstr "zadána neznámá úroveň ladění „%s“"
 
-#: main.c:806
+#: src/main.c:881
 #, c-format
 msgid "unknown output-sync type '%s'"
 msgstr "neznámý druh synchronizace výstupu „%s“"
 
-#: main.c:861
+#: src/main.c:905
+#, c-format
+msgid "Usage: %s [options] [target] ...\n"
+msgstr "Použití: %s [PŘEPÍNAČE] [CÍLE]…\n"
+
+#: src/main.c:911
+#, c-format
+msgid ""
+"\n"
+"This program built for %s\n"
+msgstr ""
+"\n"
+"Tento program byl sestaven pro %s\n"
+
+#: src/main.c:913
+#, c-format
+msgid ""
+"\n"
+"This program built for %s (%s)\n"
+msgstr ""
+"\n"
+"Tento program byl sestaven pro %s (%s)\n"
+
+#: src/main.c:916
+#, c-format
+msgid "Report bugs to <bug-make@gnu.org>\n"
+msgstr ""
+"Chyby v programu hlaste anglicky na <bug-make@gnu.org>. Nedostatky\n"
+"v překladu hlaste česky na <translation-team-cs@lists.sourceforge.net>.\n"
+
+#: src/main.c:947
 #, c-format
 msgid "%s: Interrupt/Exception caught (code = 0x%lx, addr = 0x%p)\n"
 msgstr "%s: Zachyceno přerušení/výjimka (kód = 0x%lx, adresa = 0x%p)\n"
 
-#: main.c:868
+#: src/main.c:954
 #, c-format
 msgid ""
 "\n"
@@ -1072,188 +1267,193 @@ msgstr ""
 "Příznaky výjimky = %lx\n"
 "Adresa výjimky = 0x%p\n"
 
-#: main.c:876
+#: src/main.c:962
 #, c-format
 msgid "Access violation: write operation at address 0x%p\n"
 msgstr "Porušení přístupu: operace zápisu na adrese 0x%p\n"
 
-#: main.c:877
+#: src/main.c:963
 #, c-format
 msgid "Access violation: read operation at address 0x%p\n"
 msgstr "Porušení přístupu: operace čtení na adrese 0x%p\n"
 
-#: main.c:953 main.c:968
+#: src/main.c:1035 src/main.c:1049
 #, c-format
 msgid "find_and_set_shell() setting default_shell = %s\n"
 msgstr "find_and_set_shell() nastavuje default_shell = %s\n"
 
-#: main.c:1021
+#: src/main.c:1105
 #, c-format
 msgid "find_and_set_shell() path search set default_shell = %s\n"
 msgstr "find_and_set_shell() při prohledávání cesty nastavila default_shell = %s\n"
 
-#: main.c:1538
-#, c-format
-msgid "%s is suspending for 30 seconds..."
-msgstr "%s se uspí na 30 sekund…"
+#: src/main.c:1158
+msgid "unlink (temporary file): "
+msgstr "unlink (dočasný soubor): "
 
-#: main.c:1540
+#: src/main.c:1848
 #, c-format
-msgid "done sleep(30). Continuing.\n"
-msgstr "sleep(30) dokončeno. Pokračuje se.\n"
-
-#: main.c:1627
 msgid "warning: jobserver unavailable: using -j1.  Add '+' to parent make rule."
 msgstr "pozor: správce úloh není dostupný: použije se -j1. Do nadřízeného pravidla maku přidejte „+“."
 
-#: main.c:1635
-msgid "warning: -jN forced in submake: disabling jobserver mode."
-msgstr "pozor: -jN vnuceno podřízenému maku: režim správce úloh se vypíná."
+#: src/main.c:1856
+#, c-format
+msgid "warning: -j%d forced in submake: resetting jobserver mode."
+msgstr "pozor: -j%d vnuceno podřízenému programu make: režim správce úloh se restuje."
 
-#: main.c:1805
-msgid "Makefile from standard input specified twice."
-msgstr "Makefile na standardním vstupu uveden dvakrát."
+#: src/main.c:1945
+#, c-format
+msgid "Makefile from standard input specified twice"
+msgstr "Makefile na standardním vstupu uveden dvakrát"
 
-#: main.c:1843 vmsjobs.c:1252
-msgid "fopen (temporary file)"
-msgstr "fopen (dočasný soubor)"
+#: src/main.c:1950
+#, c-format
+msgid "cannot store makefile from stdin to a temporary file"
+msgstr "Makefile ze standardního vstupu nelze uložit do dočasného souboru"
 
-#: main.c:1849
-msgid "fwrite (temporary file)"
-msgstr "fwrite (dočasný soubor)"
+#: src/main.c:1958
+#, c-format
+msgid "fwrite: temporary file %s: %s"
+msgstr "fwrite: dočasný soubor %s: %s"
 
-#: main.c:2048
+#: src/main.c:2113
+#, c-format
+msgid "warning: -j%d forced in makefile: resetting jobserver mode."
+msgstr "pozor: -j%d vnuceno v souboru makefile: režim správce úloh se resetuje."
+
+#: src/main.c:2209
+#, c-format
 msgid "Parallel jobs (-j) are not supported on this platform."
 msgstr "Na této platformě nejsou paralelní úlohy (-j) podporovány."
 
-#: main.c:2049
+#: src/main.c:2210
+#, c-format
 msgid "Resetting to single job (-j1) mode."
 msgstr "Návrat k jednoúlohovému režimu (-j1)."
 
-#: main.c:2088
+#: src/main.c:2266
+#, c-format
+msgid "Using jobserver controller %s\n"
+msgstr "Jako řadič správce úloh se používá %s\n"
+
+#: src/main.c:2268
+#, c-format
+msgid "Using output-sync mutex %s\n"
+msgstr "Jako mutex pro synchronizaci výstupu se používá %s\n"
+
+#: src/main.c:2273
+#, c-format
 msgid "Symbolic links not supported: disabling -L."
 msgstr "Symbolické odkazy nejsou podporovány: vypíná se -L."
 
-#: main.c:2170
+#: src/main.c:2345
+#, c-format
+msgid "Enabled shuffle mode: %s\n"
+msgstr "Zapnut způsob míchání: %s\n"
+
+#: src/main.c:2357
+#, c-format
 msgid "Updating makefiles....\n"
 msgstr "Soubory makefile se aktualizují…\n"
 
-#: main.c:2195
+#: src/main.c:2415
 #, c-format
 msgid "Makefile '%s' might loop; not remaking it.\n"
 msgstr "Makefile „%s“ může cyklit, nebude znovu vyroben.\n"
 
-#: main.c:2279
+#: src/main.c:2461 src/main.c:2517 src/output.c:523
+#, c-format
+msgid "%s: %s"
+msgstr "%s: %s"
+
+#: src/main.c:2494 src/read.c:964
+#, c-format
+msgid "%s: failed to load"
+msgstr "%s: zavedení selhalo"
+
+#: src/main.c:2546
 #, c-format
 msgid "Failed to remake makefile '%s'."
 msgstr "Výroba nového makefilu „%s“ selhala."
 
-#: main.c:2299
+#: src/main.c:2566
 #, c-format
 msgid "Included makefile '%s' was not found."
 msgstr "Vložený makefile „%s“ nebyl nalezen."
 
-#: main.c:2304
+#: src/main.c:2570
 #, c-format
 msgid "Makefile '%s' was not found"
 msgstr "Makefile „%s“ nebyl nalezen"
 
-#: main.c:2372
-msgid "Couldn't change back to original directory."
-msgstr "Nebylo možné se vrátit do původního adresáře."
+#: src/main.c:2718
+#, c-format
+msgid "Couldn't change back to original directory"
+msgstr "Nebylo možné se vrátit do původního adresáře"
 
-#: main.c:2380
+#: src/main.c:2726
 #, c-format
 msgid "Re-executing[%u]:"
 msgstr "Znovu se spouští [%u]:"
 
-#: main.c:2492
-msgid "unlink (temporary file): "
-msgstr "unlink (dočasný soubor): "
-
-#: main.c:2525
+#: src/main.c:2881
+#, c-format
 msgid ".DEFAULT_GOAL contains more than one target"
 msgstr ".DEFAULT_GOAL obsahuje více než jeden cíl"
 
-#: main.c:2548
-msgid "No targets specified and no makefile found"
-msgstr "Nezadány žádné cíle a žádné makefily nenalezeny"
-
-#: main.c:2550
+#: src/main.c:2905
+#, c-format
 msgid "No targets"
 msgstr "Žádné cíle"
 
-#: main.c:2555
+#: src/main.c:2907
+#, c-format
+msgid "No targets specified and no makefile found"
+msgstr "Nezadány žádné cíle a žádné makefily nenalezeny"
+
+#: src/main.c:2916
+#, c-format
 msgid "Updating goal targets....\n"
 msgstr "Aktualizují se cíle…\n"
 
-#: main.c:2579
+#: src/main.c:2940
+#, c-format
 msgid "warning:  Clock skew detected.  Your build may be incomplete."
 msgstr "pozor: Zjištěn posun hodin. Vaše sestavení možná nebude úplné."
 
-#: main.c:2773
-#, c-format
-msgid "Usage: %s [options] [target] ...\n"
-msgstr "Použití: %s [PŘEPÍNAČE] [CÍLE]…\n"
-
-#: main.c:2779
-#, c-format
-msgid ""
-"\n"
-"This program built for %s\n"
-msgstr ""
-"\n"
-"Tento program byl sestaven pro %s\n"
-
-#: main.c:2781
-#, c-format
-msgid ""
-"\n"
-"This program built for %s (%s)\n"
-msgstr ""
-"\n"
-"Tento program byl sestaven pro %s (%s)\n"
-
-#: main.c:2784
-#, c-format
-msgid "Report bugs to <bug-make@gnu.org>\n"
-msgstr ""
-"Chyby v programu hlaste anglicky na <bug-make@gnu.org>. Nedostatky\n"
-"v překladu hlaste česky na <translation-team-cs@lists.sourceforge.net>.\n"
-
-#: main.c:2870
+#: src/main.c:3223
 #, c-format
 msgid "the '%s%s' option requires a non-empty string argument"
 msgstr "přepínače „%s%s“ vyžaduje neprázdný řetězcový argument"
 
-#: main.c:2934
+#: src/main.c:3316
 #, c-format
 msgid "the '-%c' option requires a positive integer argument"
 msgstr "přepínač „-%c“ vyžaduje kladný celočíselný argument"
 
-#: main.c:3332
+#: src/main.c:3722
 #, c-format
 msgid "%sBuilt for %s\n"
 msgstr "%sSestaveno pro %s\n"
 
-#: main.c:3334
+#: src/main.c:3724
 #, c-format
 msgid "%sBuilt for %s (%s)\n"
 msgstr "%s Sestaveno pro %s (%s)\n"
 
-#: main.c:3345
+#: src/main.c:3735
 #, c-format
 msgid ""
-"%sLicense GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+"%sLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>\n"
 "%sThis is free software: you are free to change and redistribute it.\n"
 "%sThere is NO WARRANTY, to the extent permitted by law.\n"
 msgstr ""
-"%sLicence GPLv3+: GNU GPL verze 3 nebo novější <http://gnu.org/licenses/gpl.html>\n"
+"%sLicence GPLv3+: GNU GPL verze 3 nebo novější <https://gnu.org/licenses/gpl.html>\n"
 "%sToto je svobodné programové vybavení: máte právo jej měnit a dále šířit.\n"
 "%sNesposkytuje se ŽÁDNÁ ZÁRUKA, jak jen zákon dovoluje.\n"
 
 # FIXME: i18n %s (time)
-#: main.c:3366
+#: src/main.c:3752
 #, c-format
 msgid ""
 "\n"
@@ -1263,7 +1463,7 @@ msgstr ""
 "# Databáze maku vypsána v %s"
 
 # FIXME: i18n %s (time)
-#: main.c:3376
+#: src/main.c:3762
 #, c-format
 msgid ""
 "\n"
@@ -1272,491 +1472,571 @@ msgstr ""
 "\n"
 "# Konec databáze maku v %s\n"
 
-#: misc.c:202
+#: src/misc.c:601
 #, c-format
-msgid "Unknown error %d"
-msgstr "Neznámá chyba %d"
+msgid "%s value %s: %s"
+msgstr "%s hodnota %s: %s"
 
-#: misc.c:508
+#: src/misc.c:604
 #, c-format
-msgid "%s: user %lu (real %lu), group %lu (real %lu)\n"
-msgstr "%s: uživatel %lu (reálný %lu), skupina %lu (reálná %lu)\n"
+msgid "%s value %s: not a directory"
+msgstr "%s hodnota %s: není adresářem"
 
-#: misc.c:529
-msgid "Initialized access"
-msgstr "Přístup zahájen"
+#: src/misc.c:612
+#, c-format
+msgid "using default temporary directory '%s'"
+msgstr "použije se výchozí dočasný adresář „%s“"
 
-#: misc.c:608
-msgid "User access"
-msgstr "Přístup uživatelem"
+#: src/misc.c:654
+#, c-format
+msgid "cannot generate temp path from %s: %s"
+msgstr "nelze vytvořit dočasnou cestu z %s: %s"
 
-#: misc.c:656
-msgid "Make access"
-msgstr "Přístup makem"
+#: src/misc.c:662
+#, c-format
+msgid "cannot generate temp name: %s"
+msgstr "dočasný název nelze vytvořit: %s"
 
-#: misc.c:690
-msgid "Child access"
-msgstr "Přístup potomkem"
+#: src/misc.c:712
+#, c-format
+msgid "cannot create temporary file %s: %s"
+msgstr "dočasný soubor %s nezle vytvořit: %s"
 
-#: output.c:104
+#: src/misc.c:725
+#, c-format
+msgid "cannot unlink temporary file %s: %s"
+msgstr "dočasný soubor %s nelze odstranit: %s"
+
+#: src/misc.c:755
+#, c-format
+msgid "fdopen: temporary file %s: %s"
+msgstr "fdopen: dočasný soubor %s: %s"
+
+#: src/misc.c:772
+#, c-format
+msgid "fopen: temporary file %s: %s"
+msgstr "fopen: dočasný soubor %s: %s"
+
+#: src/output.c:95
 #, c-format
 msgid "%s: Entering an unknown directory\n"
 msgstr "%s: Vstupuje se do neznámého adresáře\n"
 
-#: output.c:106
+#: src/output.c:97
 #, c-format
 msgid "%s: Leaving an unknown directory\n"
 msgstr "%s Opouští se neznámý adresář\n"
 
-#: output.c:109
+#: src/output.c:100
 #, c-format
 msgid "%s: Entering directory '%s'\n"
 msgstr "%s: Vstupuje se do adresáře „%s“\n"
 
-#: output.c:111
+#: src/output.c:102
 #, c-format
 msgid "%s: Leaving directory '%s'\n"
 msgstr "%s: Opouští se adresář „%s“\n"
 
-#: output.c:115
+#: src/output.c:106
 #, c-format
 msgid "%s[%u]: Entering an unknown directory\n"
 msgstr "%s[%u]: Vstupuje se do neznámého adresáře\n"
 
-#: output.c:117
+#: src/output.c:108
 #, c-format
 msgid "%s[%u]: Leaving an unknown directory\n"
 msgstr "%s[%u]: Opouští se neznámý adresář\n"
 
-#: output.c:120
+#: src/output.c:111
 #, c-format
 msgid "%s[%u]: Entering directory '%s'\n"
 msgstr "%s[%u]: Vstupuje se do adresáře „%s“\n"
 
-#: output.c:122
+#: src/output.c:113
 #, c-format
 msgid "%s[%u]: Leaving directory '%s'\n"
 msgstr "%s[%u]: Opouští se adresář „%s“\n"
 
-#: output.c:495 output.c:497
-msgid "write error: stdout"
-msgstr "chyba zápisu: standardní výstup"
+#: src/output.c:252
+#, c-format
+msgid "cannot open output-sync lock file, suppressing output-sync."
+msgstr "soubor se zámkem synchronizace výstupu nelze otevřít, vypíná se synchronizace výstupu."
 
-#: output.c:677
+#: src/output.c:283
+#, c-format
+msgid "warning: Cannot acquire output lock, disabling output sync."
+msgstr "pozor: Zámek výstupu nelze získat, vypíná se synchronizace výstupu."
+
+#: src/output.c:479
 msgid ".  Stop.\n"
 msgstr ". Konec.\n"
 
-#: output.c:711
+#: src/output.c:514
 #, c-format
 msgid "%s%s: %s"
 msgstr "%s%s: %s"
 
-#: output.c:720
+#: src/posixos.c:177 src/posixos.c:182 src/posixos.c:241 src/posixos.c:249
 #, c-format
-msgid "%s: %s"
-msgstr "%s: %s"
+msgid "cannot open jobserver %s: %s"
+msgstr "správce úloh %s nelze otevřít: %s"
 
-#: posixos.c:69
+#: src/posixos.c:193 src/w32/w32os.c:219
+#, c-format
+msgid "unknown jobserver auth style '%s'"
+msgstr "neznámý druh autentizace správce úloh „%s“"
+
+#: src/posixos.c:197
 msgid "creating jobs pipe"
 msgstr "vytváření roury úloh"
 
-#: posixos.c:72 posixos.c:227
+#: src/posixos.c:208 src/posixos.c:446
 msgid "duping jobs pipe"
 msgstr "duplikace roury úloh"
 
-#: posixos.c:78
+#: src/posixos.c:214
 msgid "init jobserver pipe"
 msgstr "inicializace roury správce úloh"
 
-#: posixos.c:90
+#: src/posixos.c:273
 #, c-format
-msgid "internal error: invalid --jobserver-auth string '%s'"
-msgstr "vnitřní chyba: neplatný řetězec --jobserver-auth „%s“"
+msgid "invalid --jobserver-auth string '%s'"
+msgstr "neplatný řetězec --jobserver-auth „%s“"
 
-#: posixos.c:93
-#, c-format
-msgid "Jobserver client (fds %d,%d)\n"
-msgstr "Klient správce úloh (deskriptory %d,%d)\n"
-
-#: posixos.c:109
-msgid "jobserver pipeline"
-msgstr "kolona správce úloh"
-
-#: posixos.c:154
+#: src/posixos.c:375
 msgid "write jobserver"
 msgstr "zápis správce úloh"
 
-#: posixos.c:268
+#: src/posixos.c:495
+#, c-format
+msgid "job server shut down"
+msgstr "správce úloh vypnut"
+
+#: src/posixos.c:498
 msgid "pselect jobs pipe"
 msgstr "volání pselect nad rourou úloh"
 
-#: posixos.c:279 posixos.c:391
+#: src/posixos.c:514 src/posixos.c:628
 msgid "read jobs pipe"
 msgstr "čtení z roury úloh"
 
-#: read.c:178
+#: src/posixos.c:684
+#, c-format
+msgid "invalid --sync-mutex string '%s'"
+msgstr "neplatný řetězec --sync-mutex „%s“"
+
+#: src/posixos.c:693
+#, c-format
+msgid "cannot open output sync mutex %s: %s"
+msgstr "mutex %s pro synchronizaci výstupu nelze otevřít: %s"
+
+#: src/posixos.c:867
+#, c-format
+msgid "Cannot open '%s' with O_TMPFILE: %s.\n"
+msgstr "„%s“ nelze otevřít s O_TMPFILE: %s.\n"
+
+#: src/read.c:184
+#, c-format
 msgid "Reading makefiles...\n"
 msgstr "Čtou se makefily…\n"
 
-#: read.c:329
+#: src/read.c:322
 #, c-format
 msgid "Reading makefile '%s'"
 msgstr "Čte se makefile „%s“"
 
-#: read.c:331
+#: src/read.c:324
 #, c-format
 msgid " (no default goal)"
 msgstr " (žádný výchozí cíl)"
 
-#: read.c:333
+#: src/read.c:326
 #, c-format
 msgid " (search path)"
 msgstr " (vyhledávací cesta)"
 
-#: read.c:335
+#: src/read.c:328
 #, c-format
 msgid " (don't care)"
 msgstr " (nestarat se)"
 
-#: read.c:337
+#: src/read.c:330
 #, c-format
 msgid " (no ~ expansion)"
 msgstr " (žádný expanze ~)"
 
-#: read.c:651
+#: src/read.c:657
 #, c-format
 msgid "Skipping UTF-8 BOM in makefile '%s'\n"
 msgstr "Přeskakuje se UTF-8 BOM v makefilu „%s“\n"
 
-#: read.c:654
+#: src/read.c:660
 #, c-format
 msgid "Skipping UTF-8 BOM in makefile buffer\n"
 msgstr "Přeskakuje se UTF-8 BOM v paměti makefilu\n"
 
-#: read.c:783
+#: src/read.c:789
+#, c-format
 msgid "invalid syntax in conditional"
 msgstr "neplatná syntaxe podmínky"
 
-#: read.c:959
+#: src/read.c:996
 #, c-format
-msgid "%s: failed to load"
-msgstr "%s: zavedení selhalo"
-
-#: read.c:985
 msgid "recipe commences before first target"
 msgstr "návod zahájen před prvním cílem"
 
-#: read.c:1034
+#: src/read.c:1047
+#, c-format
 msgid "missing rule before recipe"
 msgstr "před návodem chybí pravidlo"
 
-#: read.c:1124
+#: src/read.c:1147
+#, c-format
 msgid "missing separator (did you mean TAB instead of 8 spaces?)"
 msgstr "chybí oddělovač (mysleli jste tabulátor místo 8 mezer?)"
 
-#: read.c:1126
+#: src/read.c:1156
+#, c-format
+msgid "missing separator (ifeq/ifneq must be followed by whitespace)"
+msgstr "chybí oddělovač (ifeq/ifneq musí následovat bílé místo)"
+
+#: src/read.c:1159
+#, c-format
 msgid "missing separator"
 msgstr "chybí oddělovač"
 
-#: read.c:1262
+#: src/read.c:1303
+#, c-format
 msgid "missing target pattern"
 msgstr "chybí vzor cíle"
 
-#: read.c:1264
+#: src/read.c:1305
+#, c-format
 msgid "multiple target patterns"
 msgstr "více vzorů cíle"
 
-#: read.c:1268
+#: src/read.c:1309
 #, c-format
 msgid "target pattern contains no '%%'"
 msgstr "vzor cíle neobsahuje „%%“"
 
-#: read.c:1390
+#: src/read.c:1352
+#, c-format
 msgid "missing 'endif'"
 msgstr "chybí „endif“"
 
-#: read.c:1428 read.c:1473 variable.c:1576
+#: src/read.c:1391 src/read.c:1436 src/variable.c:1753
+#, c-format
 msgid "empty variable name"
 msgstr "prázdný název proměnné"
 
-#: read.c:1463
+#: src/read.c:1426
+#, c-format
 msgid "extraneous text after 'define' directive"
 msgstr "nadbytečný text po klíčovém slovu „define“"
 
-#: read.c:1488
+#: src/read.c:1451
+#, c-format
 msgid "missing 'endef', unterminated 'define'"
 msgstr "chybí „endef“, neukončený „define“"
 
-#: read.c:1516
+#: src/read.c:1479
+#, c-format
 msgid "extraneous text after 'endef' directive"
 msgstr "nadbytečný text po klíčovém slovu „endef“"
 
-#: read.c:1588
+#: src/read.c:1551
 #, c-format
 msgid "extraneous text after '%s' directive"
 msgstr "nadbytečný text po klíčovém slovu „%s“"
 
-#: read.c:1589
+#: src/read.c:1552
 #, c-format
 msgid "extraneous '%s'"
 msgstr "nadbytečný „%s“"
 
-#: read.c:1617
+#: src/read.c:1580
+#, c-format
 msgid "only one 'else' per conditional"
 msgstr "pouze jeden „else“ na podmínku"
 
-#: read.c:1892
+#: src/read.c:1856
+#, c-format
 msgid "Malformed target-specific variable definition"
 msgstr "Chybě utvořená definice proměnné specifické pro cíl"
 
-#: read.c:1950
+#: src/read.c:1998
+#, c-format
+msgid ".WAIT should not have prerequisites"
+msgstr ".WAIT by nemělo mít prerekvizity"
+
+#: src/read.c:2004
+#, c-format
+msgid ".WAIT should not have commands"
+msgstr ".WAIT by nemělo mýt příkazy"
+
+#: src/read.c:2042
+#, c-format
 msgid "prerequisites cannot be defined in recipes"
 msgstr "prerekvizitu nelze definovat v návodu"
 
-#: read.c:2009
+#: src/read.c:2060
+#, c-format
+msgid "grouped targets must provide a recipe"
+msgstr "seskupené cíle musí poskytovat návod"
+
+#: src/read.c:2103
+#, c-format
 msgid "mixed implicit and static pattern rules"
 msgstr "smíšené implicitní a statická pravidla vzorů"
 
-#: read.c:2032
+#: src/read.c:2126
+#, c-format
 msgid "mixed implicit and normal rules"
 msgstr "smíšené implicitní a normální pravidla"
 
-#: read.c:2085
+#: src/read.c:2158
 #, c-format
 msgid "target '%s' doesn't match the target pattern"
 msgstr "cíl „%s“ neodpovídá vzoru cíle"
 
-#: read.c:2100 read.c:2146
+#: src/read.c:2173 src/read.c:2224
 #, c-format
 msgid "target file '%s' has both : and :: entries"
 msgstr "cílový soubor „%s“ obsahuje jak :, tak i ::"
 
-#: read.c:2106
+#: src/read.c:2179
 #, c-format
 msgid "target '%s' given more than once in the same rule"
 msgstr "cíl „%s“ zadán více než jednou ve stejném pravidle"
 
-#: read.c:2116
+#: src/read.c:2189
 #, c-format
 msgid "warning: overriding recipe for target '%s'"
 msgstr "pozor: návod pro cíl „%s“ bude přebit"
 
-#: read.c:2119
+#: src/read.c:2192
 #, c-format
 msgid "warning: ignoring old recipe for target '%s'"
 msgstr "pozor: starý návod pro cíl „%s“ bude ignorován"
 
-#: read.c:2223
+#: src/read.c:2311
+#, c-format
 msgid "*** mixed implicit and normal rules: deprecated syntax"
 msgstr "*** smíšená implicitní a normální pravidla: zastaralá skladba"
 
-#: read.c:2542
+#: src/read.c:2328
+#, c-format
+msgid "warning: overriding group membership for target '%s'"
+msgstr "pozor: členství ve skupině pro cíl „%s“ bude přebito"
+
+#: src/read.c:2686
+#, c-format
 msgid "warning: NUL character seen; rest of line ignored"
 msgstr "pozor: zaznamenán znak NUL, zbytek řádku bude ignorován"
 
-#: remake.c:226
+#: src/remake.c:97
+#, c-format
+msgid "warning: pattern recipe did not update peer target '%s'."
+msgstr "pozor: návod se vzorem neaktualizoval cíl protějšku „%s“."
+
+#: src/remake.c:254
 #, c-format
 msgid "Nothing to be done for '%s'."
 msgstr "Pro „%s“ nebude nic uděláno."
 
-#: remake.c:227
+#: src/remake.c:255
 #, c-format
 msgid "'%s' is up to date."
 msgstr "„%s“ je aktuální."
 
-#: remake.c:323
+#: src/remake.c:350
 #, c-format
 msgid "Pruning file '%s'.\n"
 msgstr "Uklízí se soubor „%s“.\n"
 
-#: remake.c:406
+#: src/remake.c:416
 #, c-format
 msgid "%sNo rule to make target '%s', needed by '%s'%s"
 msgstr "%sŽádné pravidlo jak vyrobit cíl „%s“ potřebný pro „%s“%s"
 
-#: remake.c:416
+#: src/remake.c:426
 #, c-format
 msgid "%sNo rule to make target '%s'%s"
 msgstr "%sŽádné pravidlo jak vyrobit cíl „%s“%s"
 
-#: remake.c:442
+#: src/remake.c:452
 #, c-format
 msgid "Considering target file '%s'.\n"
 msgstr "Zvažuje se cílový soubor „%s“.\n"
 
-#: remake.c:449
+#: src/remake.c:459
 #, c-format
 msgid "Recently tried and failed to update file '%s'.\n"
 msgstr "Nedávná aktualizace souboru „%s“ selhala.\n"
 
-#: remake.c:461
+#: src/remake.c:471
 #, c-format
 msgid "File '%s' was considered already.\n"
 msgstr "Soubor „%s“ již byl uvážen.\n"
 
-#: remake.c:471
+#: src/remake.c:481
 #, c-format
 msgid "Still updating file '%s'.\n"
 msgstr "Stále se aktualizuje soubor „%s“.\n"
 
-#: remake.c:474
+#: src/remake.c:484
 #, c-format
 msgid "Finished updating file '%s'.\n"
 msgstr "Aktualizace soubor „%s“ dokončena.\n"
 
-#: remake.c:503
+#: src/remake.c:513
 #, c-format
 msgid "File '%s' does not exist.\n"
 msgstr "Soubor „%s“ neexistuje.\n"
 
-#: remake.c:511
+#: src/remake.c:520
 #, c-format
 msgid "*** Warning: .LOW_RESOLUTION_TIME file '%s' has a high resolution time stamp"
 msgstr "*** Pozor: Soubor .LOW_RESOLUTION_TIME „%s“ má časový údaj ve vysokém rozlišení"
 
-#: remake.c:524 remake.c:1056
+#: src/remake.c:538
 #, c-format
-msgid "Found an implicit rule for '%s'.\n"
-msgstr "Nalezeno implicitní pravidlo pro „%s“.\n"
+msgid "Grouped target peer '%s' of file '%s' does not exist.\n"
+msgstr "Protějšek seskupeného cíle „%s“ souboru „%s“ neexistuje.\n"
 
-#: remake.c:526 remake.c:1058
-#, c-format
-msgid "No implicit rule found for '%s'.\n"
-msgstr "Pro „%s“ nenalezeno žádné implicitní pravidlo.\n"
-
-#: remake.c:532
+#: src/remake.c:558
 #, c-format
 msgid "Using default recipe for '%s'.\n"
 msgstr "Pro „%s“ se použije výchozí návod.\n"
 
-#: remake.c:566 remake.c:1105
+#: src/remake.c:603 src/remake.c:1166
 #, c-format
 msgid "Circular %s <- %s dependency dropped."
 msgstr "Kruhová závislost „%s ← %s zahozena."
 
-#: remake.c:691
+#: src/remake.c:737
 #, c-format
 msgid "Finished prerequisites of target file '%s'.\n"
 msgstr "Prerekvizity cílového souboru „%s“ dokončeny.\n"
 
-#: remake.c:697
+#: src/remake.c:743
 #, c-format
 msgid "The prerequisites of '%s' are being made.\n"
 msgstr "Prerekvizity „%s“ se vyrábějí.\n"
 
-#: remake.c:711
+#: src/remake.c:757
 #, c-format
 msgid "Giving up on target file '%s'.\n"
 msgstr "Výroba cílového souboru „%s“ vzdána.\n"
 
-#: remake.c:716
+#: src/remake.c:762
 #, c-format
 msgid "Target '%s' not remade because of errors."
 msgstr "Cíl „%s“ nebyl kvůli chybám znovu vyroben."
 
-#: remake.c:768
+#: src/remake.c:814
 #, c-format
 msgid "Prerequisite '%s' is order-only for target '%s'.\n"
 msgstr "Prerekvizita „%s“ pro cíl „%s“ je jen o pořadí.\n"
 
-#: remake.c:773
+#: src/remake.c:819
 #, c-format
 msgid "Prerequisite '%s' of target '%s' does not exist.\n"
 msgstr "Prerekvizita „%s“ cíle „%s“ neexistuje.\n"
 
-#: remake.c:778
+#: src/remake.c:824
 #, c-format
 msgid "Prerequisite '%s' is newer than target '%s'.\n"
 msgstr "Prerekvizita „%s“ je novější než cíl „%s“.\n"
 
-#: remake.c:781
+#: src/remake.c:827
 #, c-format
 msgid "Prerequisite '%s' is older than target '%s'.\n"
 msgstr "Prerekvizita „%s“ je starší než cíl „%s“.\n"
 
-#: remake.c:799
+#: src/remake.c:845
 #, c-format
 msgid "Target '%s' is double-colon and has no prerequisites.\n"
 msgstr "Cíl „%s“ je dvojdvoutečkový a nemá žádnou prerekvizitu.\n"
 
-#: remake.c:806
+#: src/remake.c:852
 #, c-format
 msgid "No recipe for '%s' and no prerequisites actually changed.\n"
 msgstr "Pro „%s“ neexistuje návod a žádná prerekvizita se vskutku nezměnila.\n"
 
 # Always-make flag is make option -B
-#: remake.c:811
+#: src/remake.c:857
 #, c-format
 msgid "Making '%s' due to always-make flag.\n"
 msgstr "Vyrábí se „%s“ kvůli přepínači --always-make.\n"
 
-#: remake.c:819
+#: src/remake.c:865
 #, c-format
 msgid "No need to remake target '%s'"
 msgstr "Cíl „%s“ není třeba znovu vyrábět"
 
-#: remake.c:821
+#: src/remake.c:867
 #, c-format
 msgid "; using VPATH name '%s'"
 msgstr "; použije se název „%s“ z VPATH"
 
-#: remake.c:841
+#: src/remake.c:892
 #, c-format
 msgid "Must remake target '%s'.\n"
 msgstr "Cíl „%s“ je třeba znovu vyrobit.\n"
 
-#: remake.c:847
+#: src/remake.c:898
 #, c-format
 msgid "  Ignoring VPATH name '%s'.\n"
 msgstr "  Ignoruje se název „%s“ z VPATH.\n"
 
-#: remake.c:856
+#: src/remake.c:907
 #, c-format
 msgid "Recipe of '%s' is being run.\n"
 msgstr "Právě se vykonává návod pro „%s“.\n"
 
-#: remake.c:863
+#: src/remake.c:914
 #, c-format
 msgid "Failed to remake target file '%s'.\n"
 msgstr "Cílový soubor „%s“ nebylo možné znovu vyrobit.\n"
 
-#: remake.c:866
+#: src/remake.c:917
 #, c-format
 msgid "Successfully remade target file '%s'.\n"
 msgstr "Cílový soubor „%s“ byl úspěšně znovu vyroben.\n"
 
-#: remake.c:869
+#: src/remake.c:920
 #, c-format
 msgid "Target file '%s' needs to be remade under -q.\n"
 msgstr "Cílový soubor „%s“ je třeba znovu vyrobit za použití -q.\n"
 
-#: remake.c:1064
+#: src/remake.c:1119
 #, c-format
 msgid "Using default commands for '%s'.\n"
 msgstr "Pro „%s„ se použijí se výchozí příkazy.\n"
 
-#: remake.c:1430
-#, c-format
-msgid "Warning: File '%s' has modification time in the future"
-msgstr "Pozor: Soubor „%s“ má čas změny obsahu v budoucnu"
-
-#: remake.c:1444
+#: src/remake.c:1502
 #, c-format
 msgid "Warning: File '%s' has modification time %s s in the future"
 msgstr "Pozor: Soubor „%s“ má čas změny obsahu %s s směrem do budoucnosti"
 
-#: remake.c:1647
+#: src/remake.c:1750
 #, c-format
 msgid ".LIBPATTERNS element '%s' is not a pattern"
 msgstr "Prvek .LIBPATTERNS „%s“ není vzorem"
 
 # `Customs' is literal (a library name). See README.customs.
-#: remote-cstms.c:122
+#: src/remote-cstms.c:118
 #, c-format
 msgid "Customs won't export: %s\n"
 msgstr "Customs nebude exportovat: %s\n"
 
-#: rule.c:496
+#: src/rule.c:357
+msgid "warning: ignoring prerequisites on suffix rule definition"
+msgstr "pozor: prerekvizity se ignorují v definici pravidla s příponami"
+
+#: src/rule.c:592
 msgid ""
 "\n"
 "# Implicit Rules"
@@ -1764,7 +2044,7 @@ msgstr ""
 "\n"
 "# Implicitní pravidla"
 
-#: rule.c:511
+#: src/rule.c:607
 msgid ""
 "\n"
 "# No implicit rules."
@@ -1772,186 +2052,187 @@ msgstr ""
 "\n"
 "# Žádná implicitní pravidla."
 
-# FIXME: Pluralize by first %u
-#: rule.c:514
+# FIXME: Pluralize
+#: src/rule.c:610
 #, c-format
 msgid ""
 "\n"
-"# %u implicit rules, %u"
+"# %u implicit rules, %u (%.1f%%) terminal."
 msgstr ""
 "\n"
-"# Implicitních pravidel: %u, %u"
+"# %u implicitních pravidel, %u (%.1f %%) koncových"
 
-#: rule.c:523
-msgid " terminal."
-msgstr " terminál."
-
-#: rule.c:531
+#: src/rule.c:619
 #, c-format
 msgid "BUG: num_pattern_rules is wrong!  %u != %u"
 msgstr "CHYBA: num_pattern_rules je chybný! %u != %u"
 
-#: signame.c:84
+#: src/shuffle.c:93
+#, c-format
+msgid "invalid shuffle mode: %s: '%s'"
+msgstr "neplatný způsob míchání %s: „%s“"
+
+#: src/signame.c:84
 msgid "unknown signal"
 msgstr "neznámý signál"
 
 # Keep signal names in sync with GNU libc translations.
-#: signame.c:92
+#: src/signame.c:92
 msgid "Hangup"
 msgstr "Odpojen terminál (SIGHUP)"
 
-#: signame.c:95
+#: src/signame.c:95
 msgid "Interrupt"
 msgstr "Přerušení (SIGINT)"
 
-#: signame.c:98
+#: src/signame.c:98
 msgid "Quit"
 msgstr "Konec (SIGQUIT)"
 
-#: signame.c:101
+#: src/signame.c:101
 msgid "Illegal Instruction"
 msgstr "Nedovolená instrukce (SIGILL)"
 
-#: signame.c:104
+#: src/signame.c:104
 msgid "Trace/breakpoint trap"
 msgstr "Trasovací/ladící past (SIGTRAP)"
 
-#: signame.c:109
+#: src/signame.c:109
 msgid "Aborted"
 msgstr "Neúspěšně ukončen (SIGABRT)"
 
-#: signame.c:112
+#: src/signame.c:112
 msgid "IOT trap"
 msgstr "IOT past (SIGIOT)"
 
-#: signame.c:115
+#: src/signame.c:115
 msgid "EMT trap"
 msgstr "EMT past (SIGEMT)"
 
-#: signame.c:118
+#: src/signame.c:118
 msgid "Floating point exception"
 msgstr "Výjimka práce s pohyblivou řádovou čárkou (SIGFPE)"
 
-#: signame.c:121
+#: src/signame.c:121
 msgid "Killed"
 msgstr "Zabit (SIGKILL)"
 
-#: signame.c:124
+#: src/signame.c:124
 msgid "Bus error"
 msgstr "Chyba na sběrnici (neplatná adresa) (SIGBUS)"
 
-#: signame.c:127
+#: src/signame.c:127
 msgid "Segmentation fault"
 msgstr "Neoprávněný přístup do paměti (SIGSEGV)"
 
-#: signame.c:130
+#: src/signame.c:130
 msgid "Bad system call"
 msgstr "Chybné volání systému (SIGSYS)"
 
-#: signame.c:133
+#: src/signame.c:133
 msgid "Broken pipe"
 msgstr "Roura přerušena (SIGPIPE)"
 
-#: signame.c:136
+#: src/signame.c:136
 msgid "Alarm clock"
 msgstr "Budík (SIGALRM)"
 
-#: signame.c:139
+#: src/signame.c:139
 msgid "Terminated"
 msgstr "Ukončen (SIGTERM)"
 
-#: signame.c:142
+#: src/signame.c:142
 msgid "User defined signal 1"
 msgstr "Uživatelem definovaný signál 1 (SIGUSR1)"
 
-#: signame.c:145
+#: src/signame.c:145
 msgid "User defined signal 2"
 msgstr "Uživatelem definovaný signál 2 (SIGUSR2)"
 
-#: signame.c:150 signame.c:153
+#: src/signame.c:150 src/signame.c:153
 msgid "Child exited"
 msgstr "Potomek skončil (SIGCHLD)"
 
-#: signame.c:156
+#: src/signame.c:156
 msgid "Power failure"
 msgstr "Výpadek napájení (SIGPWR)"
 
-#: signame.c:159
+#: src/signame.c:159
 msgid "Stopped"
 msgstr "Pozastaven (SIGTSTP)"
 
-#: signame.c:162
+#: src/signame.c:162
 msgid "Stopped (tty input)"
 msgstr "Pozastaven (vstup TTY) (SIGTTIN)"
 
-#: signame.c:165
+#: src/signame.c:165
 msgid "Stopped (tty output)"
 msgstr "Pozastaven (výstup TTY) (SIGTTOU)"
 
-#: signame.c:168
+#: src/signame.c:168
 msgid "Stopped (signal)"
 msgstr "Pozastaven (SIGSTOP)"
 
-#: signame.c:171
+#: src/signame.c:171
 msgid "CPU time limit exceeded"
 msgstr "Překročen časový limit pro procesor (SIGXCPU)"
 
-#: signame.c:174
+#: src/signame.c:174
 msgid "File size limit exceeded"
 msgstr "Překročen limit délky souboru (SIGXFS2)"
 
-#: signame.c:177
+#: src/signame.c:177
 msgid "Virtual timer expired"
 msgstr "Virtuální časovač vypršel (SIGVTALRM)"
 
-#: signame.c:180
+#: src/signame.c:180
 msgid "Profiling timer expired"
 msgstr "Profilovací časovač vypršel (SIGPROF)"
 
-#: signame.c:186
+#: src/signame.c:186
 msgid "Window changed"
 msgstr "Okno se změnilo (SIGWINCH)"
 
-#: signame.c:189
+#: src/signame.c:189
 msgid "Continued"
 msgstr "Je pokračováno (SIGCONT)"
 
-#: signame.c:192
+#: src/signame.c:192
 msgid "Urgent I/O condition"
 msgstr "Naléhavá I/O situace (SIGURG)"
 
-#: signame.c:199 signame.c:208
+#: src/signame.c:199 src/signame.c:208
 msgid "I/O possible"
 msgstr "Vstup/Výstup možný (SIGIO)"
 
 # SIGWIND exists on Darwin
-#: signame.c:202
+#: src/signame.c:202
 msgid "SIGWIND"
 msgstr "Okno se změnilo (SIGWIND)"
 
 # SIGPHONE exists on Unix PC (3B1)
-#: signame.c:205
+#: src/signame.c:205
 msgid "SIGPHONE"
 msgstr "Změna stavu linky (SIGPHONE)"
 
-#: signame.c:211
+#: src/signame.c:211
 msgid "Resource lost"
 msgstr "Prostředek byl ztracen (SIGLOST)"
 
 # SIGDANGER exists on AIX
-#: signame.c:214
+#: src/signame.c:214
 msgid "Danger signal"
 msgstr "Nebezpečí nedostatku paměti (SIGDANGER)"
 
-#: signame.c:217
+#: src/signame.c:217
 msgid "Information request"
 msgstr "Žádost o informaci (SIGINFO)"
 
-#: signame.c:220
+#: src/signame.c:220
 msgid "Floating point co-processor not available"
 msgstr "Koprocesor pro práci s pohyblivou řádkou není dostupný (SIGNOFP)"
 
-#: strcache.c:274
+#: src/strcache.c:274
 #, c-format
 msgid ""
 "\n"
@@ -1960,7 +2241,7 @@ msgstr ""
 "\n"
 "%s Žádná keš řetězců\n"
 
-#: strcache.c:304
+#: src/strcache.c:304
 #, c-format
 msgid ""
 "\n"
@@ -1969,22 +2250,22 @@ msgstr ""
 "\n"
 "%s užito z keše řetězců: %lu (%lu) / řetězců = %lu / úložiště = %lu B / prům.  = %lu B\n"
 
-#: strcache.c:308
+#: src/strcache.c:308
 #, c-format
-msgid "%s current buf: size = %hu B / used = %hu B / count = %hu / avg = %hu B\n"
-msgstr "%s současná keš: velikost = %hu B / užito = %hu B / počet = %hu / prům. = %hu B\n"
+msgid "%s current buf: size = %hu B / used = %hu B / count = %hu / avg = %u B\n"
+msgstr "%s současná keš: velikost = %hu B / užito = %hu B / počet = %hu / prům. = %u B\n"
 
-#: strcache.c:319
+#: src/strcache.c:319
 #, c-format
 msgid "%s other used: total = %lu B / count = %lu / avg = %lu B\n"
 msgstr "%s užito dalších: celkem = %lu B / počet = %lu / prům. = %lu B\n"
 
-#: strcache.c:322
+#: src/strcache.c:322
 #, c-format
 msgid "%s other free: total = %lu B / max = %lu B / min = %lu B / avg = %hu B\n"
 msgstr "%s volno dalších: celkem = %lu B / max. = %lu B / min. = %lu B / prům.  = %hu B\n"
 
-#: strcache.c:326
+#: src/strcache.c:326
 #, c-format
 msgid ""
 "\n"
@@ -1993,7 +2274,7 @@ msgstr ""
 "\n"
 "%s vytížení keše řetězců: dotazů = %lu / poměr nálezů = %lu %%\n"
 
-#: strcache.c:328
+#: src/strcache.c:328
 msgid ""
 "# hash-table stats:\n"
 "# "
@@ -2001,44 +2282,49 @@ msgstr ""
 "# Statistika hašovací tabulky:\n"
 "# "
 
-#: variable.c:1629
+#: src/variable.c:1827
+#, c-format
+msgid "warning: undefined variable '%.*s'"
+msgstr "pozor: nedefinovaná proměnná „%.*s“"
+
+#: src/variable.c:1844
 msgid "automatic"
 msgstr "automatická"
 
-#: variable.c:1632
+#: src/variable.c:1847
 msgid "default"
 msgstr "výchozí"
 
-#: variable.c:1635
+#: src/variable.c:1850
 msgid "environment"
 msgstr "prostředí"
 
-#: variable.c:1638
+#: src/variable.c:1853
 msgid "makefile"
 msgstr "makefile"
 
-#: variable.c:1641
+#: src/variable.c:1856
 msgid "environment under -e"
 msgstr "prostředí z přepínače -e"
 
-#: variable.c:1644
+#: src/variable.c:1859
 msgid "command line"
 msgstr "příkazový řádek"
 
-#: variable.c:1647
+#: src/variable.c:1862
 msgid "'override' directive"
 msgstr "klíčové slovo „override“"
 
-#: variable.c:1658
+#: src/variable.c:1872
 #, c-format
 msgid " (from '%s', line %lu)"
 msgstr " (z „%s“, řádek %lu)"
 
-#: variable.c:1721
+#: src/variable.c:1935
 msgid "# variable set hash-table stats:\n"
 msgstr "# statistika hašovací tabulky pro množinu proměnných:\n"
 
-#: variable.c:1732
+#: src/variable.c:1946
 msgid ""
 "\n"
 "# Variables\n"
@@ -2046,7 +2332,7 @@ msgstr ""
 "\n"
 "# Proměnné\n"
 
-#: variable.c:1736
+#: src/variable.c:1950
 msgid ""
 "\n"
 "# Pattern-specific Variable Values"
@@ -2054,7 +2340,7 @@ msgstr ""
 "\n"
 "# Hodnoty proměnných specifických pro vzor"
 
-#: variable.c:1750
+#: src/variable.c:1964
 msgid ""
 "\n"
 "# No pattern-specific variable values."
@@ -2063,7 +2349,7 @@ msgstr ""
 "# Žádné hodnoty proměnných specifických pro vzor."
 
 # FIXME: Pluralize
-#: variable.c:1752
+#: src/variable.c:1966
 #, c-format
 msgid ""
 "\n"
@@ -2072,47 +2358,42 @@ msgstr ""
 "\n"
 "# Hodnot proměnných specifických pro vzor: %u"
 
-#: variable.h:224
-#, c-format
-msgid "warning: undefined variable '%.*s'"
-msgstr "pozor: nedefinovaná proměnná „%.*s“"
-
-#: vmsfunctions.c:91
+#: src/vmsfunctions.c:91
 #, c-format
 msgid "sys$search() failed with %d\n"
 msgstr "volání sys$search() selhalo s %d\n"
 
-#: vmsjobs.c:242
+#: src/vmsjobs.c:244
 #, c-format
 msgid "-warning, you may have to re-enable CTRL-Y handling from DCL.\n"
 msgstr "-pozor, možná byste měli znovu povolit obsluhu CTRL-Y z DCL.\n"
 
-#: vmsjobs.c:679
+#: src/vmsjobs.c:681
 #, c-format
 msgid "BUILTIN CD %s\n"
 msgstr "VESTAVĚNÝ PŘÍKAZ CD %s\n"
 
-#: vmsjobs.c:1228
+#: src/vmsjobs.c:1224
 #, c-format
 msgid "DCL: %s\n"
 msgstr "DCL: %s\n"
 
-#: vmsjobs.c:1288
+#: src/vmsjobs.c:1281
 #, c-format
 msgid "Append output to %s\n"
 msgstr "Výstup připojen k %s\n"
 
-#: vmsjobs.c:1313
+#: src/vmsjobs.c:1306
 #, c-format
 msgid "Append %.*s and cleanup\n"
 msgstr "Připojit %.*s a uklidit\n"
 
-#: vmsjobs.c:1326
+#: src/vmsjobs.c:1319
 #, c-format
 msgid "Executing %s instead\n"
 msgstr "Místo toho se spustí %s\n"
 
-#: vpath.c:603
+#: src/vpath.c:582
 msgid ""
 "\n"
 "# VPATH Search Paths\n"
@@ -2120,12 +2401,12 @@ msgstr ""
 "\n"
 "# Vyhledávací cesty VPATH\n"
 
-#: vpath.c:620
+#: src/vpath.c:599
 msgid "# No 'vpath' search paths."
 msgstr "# Žádné vyhledávací cesty „vpath“."
 
 # FIXME: Pluralize
-#: vpath.c:622
+#: src/vpath.c:601
 #, c-format
 msgid ""
 "\n"
@@ -2134,7 +2415,7 @@ msgstr ""
 "\n"
 "$ Vyhledávacích cest „vpath“: %u\n"
 
-#: vpath.c:625
+#: src/vpath.c:604
 msgid ""
 "\n"
 "# No general ('VPATH' variable) search path."
@@ -2142,7 +2423,7 @@ msgstr ""
 "\n"
 "# Žádná obecná vyhledávací cesta (proměnná „VPATH“)."
 
-#: vpath.c:631
+#: src/vpath.c:610
 msgid ""
 "\n"
 "# General ('VPATH' variable) search path:\n"
@@ -2152,35 +2433,105 @@ msgstr ""
 "# Obecná vyhledávací cesta (proměnná „VPATH“):\n"
 "# "
 
-#: w32/w32os.c:46
+#: src/w32/w32os.c:224
 #, c-format
-msgid "Jobserver slots limited to %d\n"
-msgstr "Místa ve správci úloh jsou omezena na %d\n"
+msgid "jobserver slots limited to %d\n"
+msgstr "místa ve správci úloh jsou omezena na %d\n"
 
-#: w32/w32os.c:62
+#: src/w32/w32os.c:240
 #, c-format
 msgid "creating jobserver semaphore: (Error %ld: %s)"
 msgstr "vytváření semaforu správce úloh: (Chyba %ld: %s)"
 
-#: w32/w32os.c:81
+#: src/w32/w32os.c:259
 #, c-format
-msgid "internal error: unable to open jobserver semaphore '%s': (Error %ld: %s)"
-msgstr "vnitřní chyba: nelze otevřít semafor správce úloh „%s“: (Chyba %ld: %s)"
+msgid "unable to open jobserver semaphore '%s': (Error %ld: %s)"
+msgstr "nelze otevřít semafor správce úloh „%s“: (Chyba %ld: %s)"
 
-#: w32/w32os.c:84
+#: src/w32/w32os.c:264
 #, c-format
 msgid "Jobserver client (semaphore %s)\n"
 msgstr "Klient správce úloh (semafor %s)\n"
 
-#: w32/w32os.c:125
+#: src/w32/w32os.c:312
 #, c-format
 msgid "release jobserver semaphore: (Error %ld: %s)"
 msgstr "uvolnění semaforu správce úloh: (Chyba %ld: %s)"
 
-#: w32/w32os.c:192
+#: src/w32/w32os.c:383
 #, c-format
 msgid "semaphore or child process wait: (Error %ld: %s)"
 msgstr "čekání na semafor nebo potomka: (Chyba %ld: %s)"
+
+#: src/w32/w32os.c:451
+#, c-format
+msgid "cannot parse output sync mutex %s: %s"
+msgstr "mutex pro synchronizaci výstupu %s nelze rozebrat: %s"
+
+#: src/w32/w32os.c:454
+#, c-format
+msgid "invalid output sync mutex: %s"
+msgstr "neplatný mutex pro synchronizaci výstupu: %s"
+
+#~ msgid "target does not exist"
+#~ msgstr "cíl neexistuje"
+
+#~ msgid "Jobserver setup (fifo %s)\n"
+#~ msgstr "Nastavení správce úloh (roura %s)\n"
+
+#~ msgid "Jobserver setup (fds %d,%d)\n"
+#~ msgstr "Nastavení správce úloh (deskriptory %d,%d)\n"
+
+#~ msgid "Jobserver client (fds %d,%d)\n"
+#~ msgstr "Klient správce úloh (deskriptory %d,%d)\n"
+
+#~ msgid "fopen (temporary file)"
+#~ msgstr "fopen (dočasný soubor)"
+
+#~ msgid "%s: user %lu (real %lu), group %lu (real %lu)\n"
+#~ msgstr "%s: uživatel %lu (reálný %lu), skupina %lu (reálná %lu)\n"
+
+#~ msgid "Initialized access"
+#~ msgstr "Přístup zahájen"
+
+#~ msgid "User access"
+#~ msgstr "Přístup uživatelem"
+
+#~ msgid "Make access"
+#~ msgstr "Přístup makem"
+
+#~ msgid "Child access"
+#~ msgstr "Přístup potomkem"
+
+#~ msgid "-O[TYPE] (--output-sync[=TYPE]) is not configured for this build."
+#~ msgstr "Přepínač -O[DRUH] (--output-sync[=DRUH]) není v tomto sestavení zahrnut."
+
+#~ msgid "jobserver pipeline"
+#~ msgstr "kolona správce úloh"
+
+#~ msgid "%s: %s: Command not found\n"
+#~ msgstr "%s: %s: Příkaz nenalezen\n"
+
+#~ msgid "%s[%u]: %s: Command not found\n"
+#~ msgstr "%s[%u]: %s: Příkaz nenalezen\n"
+
+#~ msgid "%s: Shell program not found"
+#~ msgstr "%s: Program shellu nenalezen"
+
+#~ msgid "%s is suspending for 30 seconds..."
+#~ msgstr "%s se uspí na 30 sekund…"
+
+#~ msgid "done sleep(30). Continuing.\n"
+#~ msgstr "sleep(30) dokončeno. Pokračuje se.\n"
+
+#~ msgid "Unknown error %d"
+#~ msgstr "Neznámá chyba %d"
+
+#~ msgid "Warning: File '%s' has modification time in the future"
+#~ msgstr "Pozor: Soubor „%s“ má čas změny obsahu v budoucnu"
+
+#~ msgid " terminal."
+#~ msgstr " terminál."
 
 #~ msgid "%s: recipe for target '%s' failed"
 #~ msgstr "%s: návod pro cíl „%s“ selhal"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: make 3.80\n"
 "Report-Msgid-Bugs-To: bug-make@gnu.org\n"
-"POT-Creation-Date: 2018-02-12 19:14-0500\n"
+"POT-Creation-Date: 2023-10-23 03:33-0400\n"
 "PO-Revision-Date: 2003-10-21 11:50+0300\n"
 "Last-Translator: Ales Nyakhaychyk <nab@mail.by>\n"
 "Language-Team: Belarusian <i18n@mova.org>\n"
@@ -192,6 +192,7 @@ msgstr ""
 
 #: error.c:200
 #, fuzzy
+#| msgid "Unknown error %d"
 msgid "Unknown system error"
 msgstr "Невядомая памылка %d"
 
@@ -328,6 +329,7 @@ msgstr ""
 
 #: file.c:996
 #, fuzzy
+#| msgid "#  commands to execute"
 msgid "#  Commands not yet started."
 msgstr "#  загады для выкананьня"
 
@@ -384,21 +386,25 @@ msgstr ""
 
 #: function.c:1475
 #, fuzzy, c-format
+#| msgid "windows32_openpipe (): process_init_fd() failed\n"
 msgid "windows32_openpipe(): DuplicateHandle(In) failed (e=%ld)\n"
 msgstr "windows32_openpipe (): памылка ў process_init_fd()\n"
 
 #: function.c:1486
 #, fuzzy, c-format
+#| msgid "windows32_openpipe (): process_init_fd() failed\n"
 msgid "windows32_open_pipe(): DuplicateHandle(Err) failed (e=%ld)\n"
 msgstr "windows32_openpipe (): памылка ў process_init_fd()\n"
 
 #: function.c:1491
 #, fuzzy, c-format
+#| msgid "CreatePipe() failed (e=%d)\n"
 msgid "CreatePipe() failed (e=%ld)\n"
 msgstr "памылка ў CreatePipe() (e=%d)\n"
 
 #: function.c:1496
 #, fuzzy
+#| msgid "windows32_openpipe (): process_init_fd() failed\n"
 msgid "windows32_openpipe(): process_init_fd() failed\n"
 msgstr "windows32_openpipe (): памылка ў process_init_fd()\n"
 
@@ -414,6 +420,7 @@ msgstr ""
 
 #: function.c:2180
 #, fuzzy, c-format
+#| msgid "Unimplemented on this platform: function `%s'"
 msgid "unimplemented on this platform: function `%s'"
 msgstr "Ня зроблена для гэтае плятформы: функцыя \"%s\""
 
@@ -429,11 +436,13 @@ msgstr "%s: выбар \"%s\" - неадназначы.\n"
 
 #: getopt.c:692
 #, fuzzy, c-format
+#| msgid "%s: option `--%s' doesn't allow an argument\n"
 msgid "%s: option `--%s' does not allow an argument\n"
 msgstr "%s: выбар \"--%s\" не дазваляе довад.\n"
 
 #: getopt.c:697
 #, fuzzy, c-format
+#| msgid "%s: option `%c%s' doesn't allow an argument\n"
 msgid "%s: option `%c%s' does not allow an argument\n"
 msgstr "%s: выбар \"%c%s\" не дазваляе довад.\n"
 
@@ -474,6 +483,7 @@ msgstr "%s: выбар \"-W %s\" - неадназначын.\n"
 
 #: getopt.c:874
 #, fuzzy, c-format
+#| msgid "%s: option `-W %s' doesn't allow an argument\n"
 msgid "%s: option `-W %s' does not allow an argument\n"
 msgstr "%s: выбар \"-W %s\" не дазваляе довад.\n"
 
@@ -548,6 +558,7 @@ msgstr ""
 
 #: job.c:341
 #, fuzzy
+#| msgid "fwrite (temporary file)"
 msgid "Cannot create a temporary file\n"
 msgstr "fwrite (часовы файл)"
 
@@ -698,6 +709,7 @@ msgstr ""
 
 #: job.c:2446
 #, fuzzy, c-format
+#| msgid "$SHELL changed (was `%s', now `%s')"
 msgid "$SHELL changed (was `%s', now `%s')\n"
 msgstr "$SHELL зьменена (раней \"%s\", зараз \"%s\")"
 
@@ -840,6 +852,7 @@ msgstr ""
 
 #: main.c:438
 #, fuzzy
+#| msgid "  -s, --silent, --quiet       Don't echo commands.\n"
 msgid "  -s, --silent, --quiet       Don't echo recipes.\n"
 msgstr "  -s, --silent, --quiet        Не адлюстроўваць загады.\n"
 
@@ -1119,6 +1132,7 @@ msgstr ""
 
 #: main.c:2753
 #, fuzzy, c-format
+#| msgid "the `-%c' option requires a positive integral argument"
 msgid "the `%s%s' option requires a non-empty string argument"
 msgstr "выбар \"-%c\" патрабуе станоўчы цэлы довад"
 
@@ -1129,6 +1143,9 @@ msgstr "выбар \"-%c\" патрабуе станоўчы цэлы довад
 
 #: main.c:3245
 #, fuzzy, c-format
+#| msgid ""
+#| "\n"
+#| "This program built for %s\n"
 msgid "%sBuilt for %s\n"
 msgstr ""
 "\n"
@@ -1136,6 +1153,9 @@ msgstr ""
 
 #: main.c:3247
 #, fuzzy, c-format
+#| msgid ""
+#| "\n"
+#| "This program built for %s (%s)\n"
 msgid "%sBuilt for %s (%s)\n"
 msgstr ""
 "\n"
@@ -1166,11 +1186,13 @@ msgstr ""
 
 #: main.c:3435
 #, fuzzy, c-format
+#| msgid "%s: Entering an unknown directory"
 msgid "%s: Entering an unknown directory\n"
 msgstr "%s: уваход у невядомую тэчку"
 
 #: main.c:3437
 #, fuzzy, c-format
+#| msgid "%s: Leaving an unknown directory"
 msgid "%s: Leaving an unknown directory\n"
 msgstr "%s: выхад зь невядомае тэчкі"
 
@@ -1186,11 +1208,13 @@ msgstr "%s: выхад з тэчкі \"%s\"\n"
 
 #: main.c:3448
 #, fuzzy, c-format
+#| msgid "%s[%u]: Entering an unknown directory"
 msgid "%s[%u]: Entering an unknown directory\n"
 msgstr "%s[%u]: уваход у невядомую тэчку"
 
 #: main.c:3451
 #, fuzzy, c-format
+#| msgid "%s[%u]: Leaving an unknown directory"
 msgid "%s[%u]: Leaving an unknown directory\n"
 msgstr "%s[%u]: выхад зь невядомае тэчкі"
 
@@ -1246,6 +1270,7 @@ msgstr ""
 
 #: misc.c:850
 #, fuzzy
+#| msgid "Bus error"
 msgid "write error"
 msgstr "Памылка шыны"
 
@@ -1317,6 +1342,7 @@ msgstr ""
 
 #: read.c:988
 #, fuzzy
+#| msgid "missing rule before commands"
 msgid "missing rule before recipe"
 msgstr "прапушчана правіла перад загадамі"
 
@@ -1494,6 +1520,7 @@ msgstr ""
 
 #: remake.c:532
 #, fuzzy, c-format
+#| msgid "Nothing to be done for `%s'."
 msgid "Using default recipe for `%s'.\n"
 msgstr "Нічога ня было зроблена для \"%s\"."
 
@@ -1609,6 +1636,7 @@ msgstr "Увага! Файл \"%s\" мае час зьмяненьня, які �
 
 #: remake.c:1410
 #, fuzzy, c-format
+#| msgid "Warning: File `%s' has modification time %.2g s in the future"
 msgid "Warning: File `%s' has modification time %s s in the future"
 msgstr "Увага! Файл \"%s\" мае час зьмяненьня %.2g с, які шчэ не надышоў."
 
@@ -1969,6 +1997,7 @@ msgstr ""
 
 #: vmsjobs.c:523
 #, fuzzy, c-format
+#| msgid "Redirected output to %s\n"
 msgid "Append output to %s\n"
 msgstr "Перанакіраваны вывад у %s\n"
 
@@ -2028,6 +2057,7 @@ msgstr ""
 #~ msgid "Report bugs to <bug-make@gnu.org>\n"
 #~ msgstr "Паведамляйце пра памылкі на <bug-make@gnu.org>.\n"
 
+#, c-format
 #~ msgid ""
 #~ "%sThis is free software; see the source for copying conditions.\n"
 #~ "%sThere is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A\n"
@@ -2040,6 +2070,7 @@ msgstr ""
 #~ msgid "invalid `override' directive"
 #~ msgstr "нерэчаісная дырэктыва \"override\""
 
+#, c-format
 #~ msgid "no file name for `%sinclude'"
 #~ msgstr "няма назвы файла для \"%sinclude\""
 

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: make 3.82\n"
 "Report-Msgid-Bugs-To: bug-make@gnu.org\n"
-"POT-Creation-Date: 2018-02-12 19:14-0500\n"
+"POT-Creation-Date: 2023-10-23 03:33-0400\n"
 "PO-Revision-Date: 2012-11-12 16:40+0100\n"
 "Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -201,6 +201,7 @@ msgstr " imposíbeis en %lu directorios.\n"
 
 #: error.c:200
 #, fuzzy
+#| msgid "Unknown error %d"
 msgid "Unknown system error"
 msgstr "Erro %d descoñecido"
 
@@ -275,6 +276,7 @@ msgstr "#  Obxectivo falso (prerrequisito de .PHONY)."
 
 #: file.c:947
 #, fuzzy
+#| msgid "#  Command line target."
 msgid "#  Command-line target."
 msgstr "#  Obxectivo da liña de ordes."
 
@@ -338,6 +340,7 @@ msgstr ""
 
 #: file.c:996
 #, fuzzy
+#| msgid "#  Command line target."
 msgid "#  Commands not yet started."
 msgstr "#  Obxectivo da liña de ordes."
 
@@ -442,11 +445,13 @@ msgstr "%s: a opción «%s» é ambigua\n"
 
 #: getopt.c:692
 #, fuzzy, c-format
+#| msgid "%s: option `--%s' doesn't allow an argument\n"
 msgid "%s: option `--%s' does not allow an argument\n"
 msgstr "%s: a opción «--%s» non permite ningún argumento\n"
 
 #: getopt.c:697
 #, fuzzy, c-format
+#| msgid "%s: option `%c%s' doesn't allow an argument\n"
 msgid "%s: option `%c%s' does not allow an argument\n"
 msgstr "%s: a opción «%c%s» non permite ningún argumento\n"
 
@@ -487,6 +492,7 @@ msgstr "%s: a opción «-W %s» é ambigua\n"
 
 #: getopt.c:874
 #, fuzzy, c-format
+#| msgid "%s: option `-W %s' doesn't allow an argument\n"
 msgid "%s: option `-W %s' does not allow an argument\n"
 msgstr "%s: a opción «-W %s» non permite ningún argumento\n"
 
@@ -956,6 +962,7 @@ msgstr ""
 
 #: main.c:470
 #, fuzzy
+#| msgid "  -d                          Print lots of debugging information.\n"
 msgid "  -x                          Same as --trace=\"normal\"\n"
 msgstr ""
 "  -d                          Mostrar moita información de depuración.\n"
@@ -973,6 +980,7 @@ msgstr ""
 
 #: main.c:478
 #, fuzzy
+#| msgid "  -d                          Print lots of debugging information.\n"
 msgid ""
 "\n"
 "  -X                           Same as \"--debugger=preaction\"\n"
@@ -1962,6 +1970,7 @@ msgstr " (desde «%s», liña %lu)"
 
 #: variable.c:1704
 #, fuzzy
+#| msgid "# variable set hash-table stats:\n"
 msgid "variable set hash-table stats:\n"
 msgstr "# estatísticas da táboa hash de conxunto de variábeis:\n"
 
@@ -2122,6 +2131,7 @@ msgstr ""
 "# Ruta de busca xeral (variábel «VPATH»):\n"
 "# "
 
+#, c-format
 #~ msgid "Report bugs to <bug-make@gnu.org>\n"
 #~ msgstr ""
 #~ "Envíe informes de fallo no programa a <bug-make@gnu.org>.\n"
