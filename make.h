@@ -377,7 +377,7 @@ extern int unixy_shell;
 #endif /* HAVE_SYS_RESOURCE_H && HAVE_GETRLIMIT && HAVE_SETRLIMIT && etc. */
 #ifdef SET_STACK_SIZE
 # include <sys/resource.h>
-struct rlimit stack_limit;
+extern struct rlimit stack_limit;
 #endif /* SET_STACK_SIZE */
 
 struct floc
