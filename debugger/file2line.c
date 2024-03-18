@@ -26,6 +26,8 @@ Boston, MA 02111-1307, USA.  */
 #include "../rule.h"
 #include "./file2line.h"
 
+struct hash_table file2lines;
+
 unsigned long
 file2lines_hash_1 (const void *key)
 {
@@ -52,7 +54,7 @@ lookup_file2lines (const char *psz_filename)
   return hash_find_item (&file2lines, &psz_filename);
 }
 
-/* FIXME return a status code when we fail. */
+/* FIXME: return a status code when we fail. */
 file_t *
 target_for_file_and_line (const char *psz_filename, unsigned int lineno,
                           /*out*/ f2l_entry_t *entry_type)

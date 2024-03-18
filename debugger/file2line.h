@@ -19,7 +19,7 @@ the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 Boston, MA 02111-1307, USA.  */
 #ifndef REMAKE_FILE2LINE
 #define REMAKE_FILE2LINE
-struct hash_table file2lines;
+extern struct hash_table file2lines;
 
 typedef enum {
   F2L_TARGET,
