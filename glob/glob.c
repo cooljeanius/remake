@@ -229,6 +229,10 @@ extern char *alloca ();
 
 # define __alloca	alloca
 
+#else
+# if !defined(__alloca) && !defined(HAVE___ALLOCA) && defined(HAVE_ALLOCA)
+#  define __alloca(n) alloca(n)
+# endif /* !__alloca && !HAVE___ALLOCA && HAVE_ALLOCA */
 #endif
 
 #ifndef __GNU_LIBRARY__
@@ -239,6 +243,10 @@ extern char *alloca ();
 # ifndef S_ISDIR
 #  define S_ISDIR(mode) (((mode) & S_IFMT) == S_IFDIR)
 # endif
+#else
+# if !defined(__stat) && !defined(HAVE___STAT) && defined(HAVE_STAT)
+#  define __stat(fname, buf) stat(fname, buf)
+# endif /* !__stat && !HAVE___STAT && HAVE_STAT */
 #endif
 
 #ifdef _LIBC

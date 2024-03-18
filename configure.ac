@@ -201,7 +201,7 @@ pds_AC_DOS_PATHS
 AC_CACHE_CHECK([for standard gettimeofday],[ac_cv_func_gettimeofday],
   [ac_cv_func_gettimeofday=no
    AC_RUN_IFELSE([AC_LANG_SOURCE([[#include <sys/time.h>
-                  int main ()
+                  int main(void)
 	          {
 		    struct timeval t; t.tv_sec = -1; t.tv_usec = -1;
 		    exit (gettimeofday (&t, 0) != 0
@@ -222,7 +222,7 @@ AC_CHECK_FUNCS([alarm atexit bzero clock_gettime dup2 fdopen fileno \
                 setlinebuf setregid setreuid setrlimit setvbuf sigaction \
                 sigsetmask strchr strdup strerror strndup strpbrk \
                 strrchr strsignal strstr strtol])
-AC_CHECK_FUNCS_ONCE([__iswctype __btowc])dnl
+AC_CHECK_FUNCS_ONCE([__alloca __iswctype __btowc __stat])dnl
 
 # We need to check declarations, not just existence, because on Tru64 this
 # function is not declared without special flags, which themselves cause
@@ -255,6 +255,11 @@ AC_FUNC_STRERROR_R
 AC_FUNC_VPRINTF
 AC_FUNC_WAIT3
 AC_FUNC_CLOSEDIR_VOID
+
+if test "x${ac_cv_func_stat}" = "x"; then
+  test -z "${ac_cv_func_stat}" || unset ac_cv_func_stat
+  AC_CHECK_FUNCS([stat])
+fi
 
 AC_FUNC_GETLOADAVG
 
@@ -321,7 +326,8 @@ AC_MSG_RESULT([${make_cv_union_wait}])dnl
 
 
 AC_ARG_WITH([make_name],
-[AS_HELP_STRING([--with-make-name],[name to use as the program name (default remake)])],
+[AS_HELP_STRING([--with-make-name],
+                [name to use as the program name (default remake)])],
 [make_name="${withval}"],[make_name="remake"])
 MAKE_NAME="${make_name}"
 AC_SUBST([MAKE_NAME])
@@ -343,7 +349,8 @@ AC_ARG_WITH([default_shell],
 DEFAULT_SHELL="${default_shell}"
 
 AC_ARG_WITH([shell_trace],
-[AS_HELP_STRING([--with-shell-trace],[option to pass to shell to have it trace commands (default -x)])],
+[AS_HELP_STRING([--with-shell-trace],
+                [option to pass to shell to have it trace commands (default -x)])],
 [shell_trace="${withval}"],[shell_trace="-x"])dnl
 
 ## Set OS-specific default shell.

@@ -493,9 +493,9 @@ int strcache_setbufsize (int size);
 #ifdef  HAVE_VFORK_H
 # include <vfork.h>
 #else
-# ifndef __APPLE__
-#  warning make.h expects <vfork.h> to be included.
-# endif /* !__APPLE__ */
+# if defined(__GNUC__) && !defined(__STRICT_ANSI__) && !defined(__APPLE__)
+#  warning "make.h expects <vfork.h> to be included."
+# endif /* __GNUC__ && !__STRICT_ANSI__ && !__APPLE__ */
 #endif /* HAVE_VFORK_H */
 
 /* We omit these declarations on non-POSIX systems which define _POSIX_VERSION,
