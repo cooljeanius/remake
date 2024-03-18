@@ -145,6 +145,16 @@ AC_TYPE_PID_T
 AC_TYPE_UID_T
 AC_TYPE_UINT8_T
 
+AC_CHECK_MEMBERS([struct rlimit.rlim_cur, struct rlimit.rlim_max],[],[],[
+#if defined(HAVE_SYS_RESOURCE_H)
+# include <sys/resource.h>
+#else
+# if defined(__GNUC__) && !defined(__STRICT_ANSI__)
+#  warning "This conftest expects <sys/resource.h> to be included."
+# endif /* __GNUC__ && !__STRICT_ANSI__ */
+#endif /* HAVE_SYS_RESOURCE_H */
+])dnl
+
 # Find some definition for uintmax_t
 
 AC_CHECK_TYPE([uintmax_t],[],[
