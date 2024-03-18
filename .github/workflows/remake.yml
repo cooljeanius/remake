@@ -14,7 +14,9 @@ jobs:
     - run: env | uniq | sort | uniq
     - run: autopoint --version || gettext --version
     - run: autoreconf -fvi -Wall -Wno-obsolete && ./configure && make update && (cd doc && make stamp-vti)
-    - run: make || make check-loadavg
+    - run: make
+      if: "${{ success() }}"
+    - run: make check-loadavg
       if: "${{ success() }}"
     - run: make check || make check-rspec-broken
       if: "${{ success() }}"
