@@ -16,7 +16,7 @@ jobs:
     - run: autoreconf -fvi -Wall -Wno-obsolete && ./configure && make update && (cd doc && make stamp-vti)
     - run: make
       if: "${{ success() }}"
-    - run: make check-loadavg
+    - run: sync && make check-loadavg && sync
       if: "${{ success() }}"
     - run: make check || make check-rspec-broken
       if: "${{ success() }}"
