@@ -95,10 +95,10 @@ enter_target_lineno (const char *psz_filename, unsigned int lineno,
   }
     
   if (HASH_VACANT(*pp_linenos)) {
-    const unsigned int nlines = p_file->nlines+1;
-    void **new_array = calloc (sizeof(void *), nlines);
-    f2l_entry_t *new_type = calloc (sizeof(f2l_entry_t *), nlines);
-    lineno_array_t *p_new_linenos = calloc (sizeof(lineno_array_t), 1);
+    const unsigned int nlines = (p_file->nlines + 1U);
+    void **new_array = calloc(nlines, sizeof(void *));
+    f2l_entry_t *new_type = calloc(nlines, sizeof(f2l_entry_t *));
+    lineno_array_t *p_new_linenos = calloc(1, sizeof(lineno_array_t));
     *pp_linenos = p_new_linenos;
     (*pp_linenos)->hname = psz_filename;
     (*pp_linenos)->type = new_type;
@@ -144,10 +144,10 @@ enter_rule_lineno (rule_t *r)
   }
     
   if (HASH_VACANT(*pp_linenos)) {
-    const unsigned int nlines = p_file->nlines+1;
-    void **new_array = calloc (sizeof(void *), nlines);
-    f2l_entry_t *new_type = calloc (sizeof(f2l_entry_t *), nlines);
-    lineno_array_t *p_new_linenos = calloc (sizeof(lineno_array_t), 1);
+    const unsigned int nlines = (p_file->nlines + 1U);
+    void **new_array = calloc(nlines, sizeof(void *));
+    f2l_entry_t *new_type = calloc(nlines, sizeof(f2l_entry_t *));
+    lineno_array_t *p_new_linenos = calloc(1, sizeof(lineno_array_t));
     *pp_linenos = p_new_linenos;
     (*pp_linenos)->hname = psz_filename;
     (*pp_linenos)->type = new_type;

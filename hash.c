@@ -17,10 +17,10 @@ this program.  If not, see <http://www.gnu.org/licenses/>.  */
 #include "make.h"
 #include "hash.h"
 
-#define	CALLOC(t, n) ((t *) calloc (sizeof (t), (n)))
-#define MALLOC(t, n) ((t *) xmalloc (sizeof (t) * (n)))
-#define REALLOC(o, t, n) ((t *) xrealloc ((o), sizeof (t) * (n)))
-#define CLONE(o, t, n) ((t *) memcpy (MALLOC (t, (n)), (o), sizeof (t) * (n)))
+#define	CALLOC(t, n) ((t *)calloc((n), sizeof(t)))
+#define MALLOC(t, n) ((t *)xmalloc(sizeof(t) * (n)))
+#define REALLOC(o, t, n) ((t *)xrealloc((o), (sizeof(t) * (n))))
+#define CLONE(o, t, n) ((t *)memcpy(MALLOC(t, (n)), (o), (sizeof(t) * (n))))
 
 static void hash_rehash __P((struct hash_table* ht));
 static unsigned long round_up_2 __P((unsigned long rough));

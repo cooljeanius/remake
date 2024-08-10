@@ -80,7 +80,7 @@ typedef enum   variable_origin   variable_origin_t;
 typedef struct variable_set      variable_set_t;
 typedef struct variable_set_list variable_set_list_t;
 
-#define	CALLOC(t, n) ((t *) calloc (sizeof (t), (n)))
+#define	CALLOC(t, n) ((t *)calloc((n), sizeof(t)))
 
 #endif /*REMAKE_TYPES_H*/
 /* 

@@ -2328,24 +2328,24 @@ find_percent_cached (const char **string)
            Make a copy if we haven't yet done so.  */
         if (! new)
           {
-            slen = strlen (*string);
-            new = alloca (slen + 1);
-            memcpy (new, *string, slen + 1);
-            p = new + (p - *string);
+            slen = strlen(*string);
+            new = alloca(slen + 1); /* FIXME: -Wreturn-local-addr */
+            memcpy(new, *string, slen + 1);
+            p = (new + (p - *string));
             *string = new;
           }
 
         /* At this point *string, p, and new all point into the same string.
            Get a non-const version of p so we can modify new.  */
-        pv = new + (p - *string);
+        pv = (new + (p - *string));
 
         /* The number of backslashes is now -I.
            Copy P over itself to swallow half of them.  */
-        memmove (&pv[i], &pv[i/2], (slen - (pv - new)) - (i/2) + 1);
-        p += i/2;
+        memmove(&pv[i], &pv[i / 2], ((slen - (pv - new)) - (i / 2) + 1));
+        p += (i / 2);
 
         /* If the backslashes quoted each other; the % was unquoted.  */
-        if (i % 2 == 0)
+        if ((i % 2) == 0)
           break;
       }
     }
@@ -2353,12 +2353,12 @@ find_percent_cached (const char **string)
   /* If we had to change STRING, add it to the strcache.  */
   if (new)
     {
-      *string = strcache_add (*string);
-      p = *string + (p - new);
+      *string = strcache_add(*string);
+      p = (*string + (p - new));
     }
 
-  /* If we didn't find a %, return NULL.  Otherwise return a ptr to it.  */
-  return (*p == '\0') ? NULL : p;
+  /* If we failed to find a %, return NULL.  Otherwise return a ptr to it: */
+  return ((*p == '\0') ? NULL : p); /* FIXME: -Wreturn-local-addr */
 }
 
 /* Find the next line of text in an eval buffer, combining continuation lines

@@ -1948,7 +1948,7 @@ abspath (const char *name, char *apath)
     }
   else
     {
-      strncpy (apath, name, root_len);
+      strncpy(apath, name, root_len); /* FIXME: -Wstringop-truncation */
       apath[root_len] = '\0';
       dest = apath + root_len;
       /* Get past the root, since we already copied it.  */

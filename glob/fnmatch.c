@@ -21,7 +21,9 @@ USA.  */
 #if HAVE_CONFIG_H
 # include <config.h>
 #else
-# warning fnmatch.c expects <config.h> to be included.
+# if defined(__GNUC__) && !defined(__STRICT_ANSI__)
+#  warning "fnmatch.c expects <config.h> to be included."
+# endif /* __GNUC__ && !__STRICT_ANSI__ */
 #endif /* HAVE_CONFIG_H */
 
 /* Enable GNU extensions in fnmatch.h.  */
@@ -42,7 +44,9 @@ USA.  */
 #if defined STDC_HEADERS || defined _LIBC || defined HAVE_STDLIB_H
 # include <stdlib.h>
 #else
-# warning fnmatch.c expects <stdlib.h> to be included.
+# if defined(__GNUC__) && !defined(__STRICT_ANSI__)
+#  warning "fnmatch.c expects <stdlib.h> to be included."
+# endif /* __GNUC__ && !__STRICT_ANSI__ */
 #endif /* STDC_HEADERS || _LIBC || HAVE_STRING_H */
 
 /* For platform which support the ISO C amendement 1 functionality we

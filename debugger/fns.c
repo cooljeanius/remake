@@ -1,4 +1,4 @@
-/*
+/* debugger/fns.c -*- C -*-
 Copyright (C) 2004, 2005, 2007, 2008, 2010, 2011
 R. Bernstein <rocky@gnu.org>
 This file is part of GNU Make (remake variant).
@@ -392,10 +392,10 @@ var_to_on_off(int i_bool)
 void
 try_without_dollar(const char *psz_varname)
 {
-  printf("Can't find variable `%s'.\n", psz_varname);
+  printf("Cannot find variable `%s'.\n", psz_varname);
   if (psz_varname && psz_varname[0] == '$') {
     const char *psz_nodollar = &(psz_varname[1]);
-    char *psz_try = calloc(1, strlen(psz_varname));
+    char *psz_try = calloc(1, (strlen(psz_varname) + 1UL));
     if (psz_nodollar && 1 == sscanf(psz_nodollar, "(%s)", psz_try)) {
       /* Remove trailing ')' */
       if ( ')' == psz_try[strlen(psz_try)-1] )
