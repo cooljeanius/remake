@@ -80,8 +80,8 @@ jobs:
           sudo apt-get -qq update
           sudo apt-get -y install ruby-rspec ruby-rspec-core ruby-posix-spawn
           if test ${{ matrix.language }} == 'c-cpp'; then \
-            sudo apt-get -y install curl gdb libelf-dev libdmalloc-dev \
-              libc6-dev-amd64-cross libgcc-s1-amd64-cross gettext gettext-doc \
+            sudo apt-get -qq install curl gdb libelf-dev libdmalloc-dev \
+              libc6-dev-amd64-cross libgcc-s1-amd64-cross gettext \
               autopoint libasprintf-dev libgettextpo-dev; \
           fi
 
