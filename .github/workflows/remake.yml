@@ -18,13 +18,13 @@ jobs:
             dejagnu intltool gettext-doc libasprintf-dev libgettextpo-dev \
             ruby ruby-rspec yamllint libdigest-hmac-perl libgssapi-perl \
             libcrypt-ssleay-perl libsub-name-perl libauthen-ntlm-perl
-      - run: sync && (env | uniq | sort | uniq  | grep -v "\*\*\*" | grep -v "PWD\=")
-      - run: sync && (autopoint --version || gettext --version) && sync
+      - run: sync && (env | uniq | sort | uniq  | grep -v "\*\*\*" | grep -v "PWD\=") && sleep 1
+      - run: sync && (autopoint --version || gettext --version) && sync && sleep 1
       - run: autoreconf -fvi -Wall -Wno-obsolete && ./configure
       - run: sync && make update && (cd doc && make stamp-vti)
       - run: make && yamllint .github/dependabot.yml
         if: "${{ success() }}"
-      - run: sync && make check-loadavg && sync && stat loadavg
+      - run: sync && make check-loadavg && sync && stat loadavg && sync
         if: "${{ success() }}"
       - run: make check || make check-rspec-broken || stat Makefile
         if: "${{ success() }}"

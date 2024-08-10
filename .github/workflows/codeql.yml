@@ -80,9 +80,13 @@ jobs:
           sudo apt-get -qq update
           sudo apt-get -y install ruby-rspec ruby-rspec-core ruby-posix-spawn
           if test ${{ matrix.language }} == 'c-cpp'; then \
+            echo "adding additional dependencies for 'c-cpp' analysis..."; \
             sudo apt-get -qq install curl gdb libelf-dev libdmalloc-dev \
               libc6-dev-amd64-cross libgcc-s1-amd64-cross gettext \
               autopoint libasprintf-dev libgettextpo-dev; \
+            sync && echo "...and done."; \
+          else \
+            sync && echo "skipping 'c-cpp' dependencies (matrix.language is ${{ matrix.language }})..."; \
           fi
 
       # Autobuild attempts to build any compiled languages
