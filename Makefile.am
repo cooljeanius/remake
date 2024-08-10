@@ -232,7 +232,7 @@ check-loadavg: loadavg$(EXEEXT)
 ##: Run remake-specific tests using Ruby rspec
 check-rspec-broken: 
 	$(SHELL) -c 'ruby tests/spec/run-tests.rb' || \
-	(echo "failed" && $(SHELL) -c 'ruby -c tests/spec/run-tests.rb')
+	(echo "failed" >&2 && $(SHELL) -c 'ruby -cwv tests/spec/run-tests.rb')
 .PHONY: check-rspec-broken
 
 # The loadavg function is invoked during "make check" to test getloadavg.
@@ -253,13 +253,16 @@ MAKETESTFLAGS =
 check-regression:
 	@if test -f "$(srcdir)/tests/run_make_tests"; then \
 	  if $(PERL) -v >/dev/null 2>&1; then \
-	    case `cd $(srcdir); pwd` in `pwd`) : ;; \
+	    case `cd $(srcdir); pwd` in \
+	      `pwd`) echo "already in srcdir; skipping symlinks" ;; \
 	      *) test -d tests || mkdir tests; \
 		 rm -f srctests; \
 		 if ln -s "$(srcdir)/tests" srctests; then \
 		   for f in run_make_tests run_make_tests.pl test_driver.pl scripts; do \
 		     rm -f tests/$$f; ln -s ../srctests/$$f tests; \
-		   done; fi ;; \
+		   done; \
+		 elif test -e srctests; then stat srctests; \
+		 else echo "nothing to do for srctests"; fi ;; \
 	    esac; \
 	    echo "cd tests && $(PERL) ./run_make_tests.pl -make ../make$(EXEEXT) $(MAKETESTFLAGS)"; \
 	    cd tests && $(PERL) ./run_make_tests.pl -make ../make$(EXEEXT) $(MAKETESTFLAGS); \

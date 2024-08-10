@@ -308,7 +308,8 @@ am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/config.h.in \
 	$(top_srcdir)/config/config.rpath \
 	$(top_srcdir)/config/config.sub $(top_srcdir)/config/depcomp \
 	$(top_srcdir)/config/install-sh $(top_srcdir)/config/missing \
-	$(top_srcdir)/config/mkinstalldirs ABOUT-NLS AUTHORS COPYING \
+	$(top_srcdir)/config/mkinstalldirs \
+	$(top_srcdir)/config/test_driver.pl ABOUT-NLS AUTHORS COPYING \
 	ChangeLog INSTALL NEWS README README.md alloca.c error.c \
 	error.h getloadavg.c lstat.c malloc.c realloc.c stat.c
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -435,6 +436,7 @@ SED = @SED@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
 STRIP = @STRIP@
+TEST_DRIVER_DOT_PL = @TEST_DRIVER_DOT_PL@
 USE_NLS = @USE_NLS@
 VERSION = @VERSION@
 XGETTEXT = @XGETTEXT@
@@ -1520,20 +1522,23 @@ check-loadavg: loadavg$(EXEEXT)
 # FIXME: does NOT work.
 check-rspec-broken: 
 	$(SHELL) -c 'ruby tests/spec/run-tests.rb' || \
-	(echo "failed" && $(SHELL) -c 'ruby -c tests/spec/run-tests.rb')
+	(echo "failed" >&2 && $(SHELL) -c 'ruby -cwv tests/spec/run-tests.rb')
 .PHONY: check-rspec-broken
 
 #: run regression tests in tests/scripts
 check-regression:
 	@if test -f "$(srcdir)/tests/run_make_tests"; then \
 	  if $(PERL) -v >/dev/null 2>&1; then \
-	    case `cd $(srcdir); pwd` in `pwd`) : ;; \
+	    case `cd $(srcdir); pwd` in \
+	      `pwd`) echo "already in srcdir; skipping symlinks" ;; \
 	      *) test -d tests || mkdir tests; \
 		 rm -f srctests; \
 		 if ln -s "$(srcdir)/tests" srctests; then \
 		   for f in run_make_tests run_make_tests.pl test_driver.pl scripts; do \
 		     rm -f tests/$$f; ln -s ../srctests/$$f tests; \
-		   done; fi ;; \
+		   done; \
+		 elif test -e srctests; then stat srctests; \
+		 else echo "nothing to do for srctests"; fi ;; \
 	    esac; \
 	    echo "cd tests && $(PERL) ./run_make_tests.pl -make ../make$(EXEEXT) $(MAKETESTFLAGS)"; \
 	    cd tests && $(PERL) ./run_make_tests.pl -make ../make$(EXEEXT) $(MAKETESTFLAGS); \

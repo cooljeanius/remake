@@ -82,10 +82,16 @@ char *alloca ();
 # endif /* HAVE_SYS_TIME_H */
 #endif /* TIME_WITH_SYS_TIME */
 
-#ifdef HAVE_ERRNO_H
+#ifndef __has_include
+# define __has_include(foo) 0
+#endif /* !__has_include */
+
+#if defined(HAVE_ERRNO_H) || __has_include(<errno.h>)
 # include <errno.h>
 #else
-# warning make.h expects <errno.h> to be included.
+# if defined(__GNUC__) && !defined(__STRICT_ANSI__)
+#  warning "make.h expects <errno.h> to be included."
+# endif /* __GNUC__ && !__STRICT_ANSI__ */
 #endif /* HAVE_ERRNO_H */
 
 #ifndef errno
@@ -126,15 +132,19 @@ extern int errno;
 # define SA_RESTART 0
 #endif /* !HAVE_SA_RESTART */
 
-#ifdef  HAVE_LIMITS_H
+#if defined(HAVE_LIMITS_H) || __has_include(<limits.h>)
 # include <limits.h>
 #else
-# warning make.h expects <limits.h> to be included.
+# if defined(__GNUC__) && !defined(__STRICT_ANSI__)
+#  warning "make.h expects <limits.h> to be included."
+# endif /* __GNUC__ && !__STRICT_ANSI__ */
 #endif /* HAVE_LIMITS_H */
-#ifdef  HAVE_SYS_PARAM_H
+#if defined(HAVE_SYS_PARAM_H) || __has_include(<sys/param.h>)
 # include <sys/param.h>
 #else
-# warning make.h expects <sys/param.h> to be included.
+# if defined(__GNUC__) && !defined(__STRICT_ANSI__)
+#  warning "make.h expects <sys/param.h> to be included."
+# endif /* __GNUC__ && !__STRICT_ANSI__ */
 #endif /* HAVE_SYS_PARAM_H */
 
 #ifndef PATH_MAX
@@ -231,10 +241,12 @@ unsigned int get_path_max (void);
 # else
 #  include <strings.h>
 # endif /* HAVE_STRING_H */
-# ifdef HAVE_MEMORY_H
+# if defined(HAVE_MEMORY_H) || __has_include(<memory.h>)
 #  include <memory.h>
 # else
-#  warning make.h expects <memory.h> to be included.
+#  if defined(__GNUC__) && !defined(__STRICT_ANSI__)
+#   warning "make.h expects <memory.h> to be included."
+#  endif /* __GNUC__ && !__STRICT_ANSI__ */
 # endif /* HAVE_MEMORY_H */
 # ifdef HAVE_STDLIB_H
 #  include <stdlib.h>
@@ -266,11 +278,11 @@ char *strerror (int errnum);
 #endif  /* !ANSI_STRING.  */
 #undef  ANSI_STRING
 
-#if HAVE_INTTYPES_H
+#if (defined(HAVE_INTTYPES_H) && HAVE_INTTYPES_H) || __has_include(<inttypes.h>)
 # include <inttypes.h>
 #else
 # if defined(__GNUC__) && !defined(__STRICT_ANSI__)
-#  warning make.h expects <inttypes.h> to be included.
+#  warning "make.h expects <inttypes.h> to be included."
 # endif /* __GNUC__ && !__STRICT_ANSI__ */
 #endif /* HAVE_INTTYPES_H */
 #define FILE_TIMESTAMP uintmax_t
@@ -344,13 +356,13 @@ char *strsignal (int signum);
 #endif /* !PATH_SEPARATOR_CHAR */
 
 /* This is needed for getcwd() and chdir(), on some W32 systems.  */
-#if defined(HAVE_DIRECT_H)
+#if defined(HAVE_DIRECT_H) || __has_include(<direct.h>)
 # include <direct.h>
 #else
-# if defined(WINDOWS32) || defined(W32)
-#  warning make.h expects <direct.h> to be included.
-# endif /* WINDOWS32 || W32 */
-#endif
+# if (defined(WINDOWS32) || defined(W32)) && defined(__GNUC__)
+#  warning "make.h expects <direct.h> to be included."
+# endif /* (WINDOWS32 || W32) && __GNUC__ */
+#endif /* HAVE_DIRECT_H */
 
 #ifdef WINDOWS32
 # include <fcntl.h>
@@ -492,7 +504,7 @@ const char *strcache_add_len (const char *str, int len);
 int strcache_setbufsize (int size);
 
 /* where is this header necessary? */
-#ifdef  HAVE_VFORK_H
+#if defined(HAVE_VFORK_H) || __has_include(<vfork.h>)
 # include <vfork.h>
 #else
 # if defined(__GNUC__) && !defined(__STRICT_ANSI__) && !defined(__APPLE__)

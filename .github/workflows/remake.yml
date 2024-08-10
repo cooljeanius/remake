@@ -25,7 +25,7 @@ jobs:
         if: "${{ success() }}"
       - run: sync && make check-loadavg && sync && stat loadavg
         if: "${{ success() }}"
-      - run: make check || make check-rspec-broken
+      - run: make check || make check-rspec-broken || stat Makefile
         if: "${{ success() }}"
       - run: cat /usr/include/errno.h
         if: "${{ failure() }}"

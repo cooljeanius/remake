@@ -38,7 +38,9 @@ AC_SEARCH_LIBS([strerror],[cposix]) dnl# used to be AC\_ISC\_POSIX
 # Automake setup
 AM_INIT_AUTOMAKE([1.9 dist-bzip2 check-news gnu dejagnu info-in-builddir subdir-objects])
 AM_MAINTAINER_MODE
-AM_MISSING_PROG([GIT2CL],[git2cl],[${missing_dir}])
+AC_REQUIRE_AUX_FILE([test_driver.pl])dnl
+AM_MISSING_PROG([GIT2CL],[git2cl],[${missing_dir}])dnl
+AM_MISSING_PROG([TEST_DRIVER_DOT_PL],[test_driver.pl],[${missing_dir}])
 if test -z "${datarootdir}"; then
   export datarootdir=${prefix}/share
   AC_SUBST([datarootdir])

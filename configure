@@ -694,6 +694,7 @@ AR
 LN_S
 CPP
 RANLIB
+TEST_DRIVER_DOT_PL
 GIT2CL
 MAINT
 MAINTAINER_MODE_FALSE
@@ -2727,7 +2728,7 @@ as_fn_append ac_header_c_list " nlist.h nlist_h HAVE_NLIST_H"
 as_fn_append ac_header_c_list " readline/readline.h readline_readline_h HAVE_READLINE_READLINE_H"
 
 # Auxiliary files required by this configure script.
-ac_aux_files="config.rpath ar-lib missing install-sh compile config.guess config.sub"
+ac_aux_files="config.rpath ar-lib test_driver.pl missing install-sh compile config.guess config.sub"
 
 # Locations in which to look for auxiliary files.
 ac_aux_dir_candidates="${srcdir}/config"
@@ -5195,7 +5196,10 @@ fi
 
 
 
+
 GIT2CL=${GIT2CL-"${am_missing_run}git2cl"}
+
+TEST_DRIVER_DOT_PL=${TEST_DRIVER_DOT_PL-"${am_missing_run}test_driver.pl"}
 
 if test -z "${datarootdir}"; then
   export datarootdir=${prefix}/share
