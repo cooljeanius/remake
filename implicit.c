@@ -236,7 +236,7 @@ pattern_search (struct file *file, int archive,
 
   /* Buffer in which we store all the rules that are possibly applicable: */
   struct tryrule *tryrules =
-    xmalloc((size_t)(num_pattern_rules * max_pattern_targets)
+    xmalloc((size_t)num_pattern_rules * (size_t)max_pattern_targets
             * sizeof(struct tryrule));
 
   /* Number of valid elements in TRYRULES.  */
