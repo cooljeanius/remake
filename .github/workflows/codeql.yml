@@ -78,8 +78,12 @@ jobs:
       - name: Dependencies
         run: |
           sudo apt-get -qq update
-          sudo apt-get -y install libc6-dev-amd64-cross libgcc-s1-amd64-cross \
-            libelf-dev ruby-rspec-core gettext ruby-posix-spawn libdmalloc-dev
+          sudo apt-get -y install ruby-rspec ruby-rspec-core ruby-posix-spawn
+          if test ${{ matrix.language }} == 'c-cpp'; then \
+            sudo apt-get -y install curl gdb libelf-dev libdmalloc-dev \
+              libc6-dev-amd64-cross libgcc-s1-amd64-cross gettext gettext-doc \
+              autopoint libasprintf-dev libgettextpo-dev; \
+          fi
 
       # Autobuild attempts to build any compiled languages
       # (C/C++, C#, Go, Java, or Swift).

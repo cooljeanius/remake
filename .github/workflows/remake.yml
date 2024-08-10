@@ -16,7 +16,8 @@ jobs:
           sudo apt-get -qq update
           sudo apt-get -y install autopoint libreadline-dev wget texinfo \
             dejagnu intltool gettext-doc libasprintf-dev libgettextpo-dev \
-            ruby ruby-rspec yamllint
+            ruby ruby-rspec yamllint libdigest-hmac-perl libgssapi-perl \
+            libcrypt-ssleay-perl libsub-name-perl libauthen-ntlm-perl
       - run: sync && (env | uniq | sort | uniq)
       - run: sync && (autopoint --version || gettext --version)
       - run: autoreconf -fvi -Wall -Wno-obsolete && ./configure
