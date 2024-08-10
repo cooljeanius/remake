@@ -17,13 +17,13 @@ jobs:
           sudo apt-get -y install autopoint libreadline-dev wget texinfo \
             dejagnu intltool gettext-doc libasprintf-dev libgettextpo-dev \
             ruby ruby-rspec yamllint
-      - run: env | uniq | sort | uniq
-      - run: autopoint --version || gettext --version
+      - run: sync && (env | uniq | sort | uniq)
+      - run: sync && (autopoint --version || gettext --version)
       - run: autoreconf -fvi -Wall -Wno-obsolete && ./configure
       - run: sync && make update && (cd doc && make stamp-vti)
       - run: make && yamllint .github/dependabot.yml
         if: "${{ success() }}"
-      - run: sync && make check-loadavg && sync
+      - run: sync && make check-loadavg && sync && stat loadavg
         if: "${{ success() }}"
       - run: make check || make check-rspec-broken
         if: "${{ success() }}"

@@ -1,0 +1,6 @@
+configure linguist-generated
+Makefile.in linguist-generated
+*Makefile linguist-language=Makefile
+ChangeLog.1 linguist-language=text
+ChangeLog.2 linguist-language=text
+buildargv.h linguist-language=c
