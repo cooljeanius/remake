@@ -587,7 +587,7 @@ EXTRA_DIST = README build.sh.in $(man_MANS) README.customs SCOPTIONS \
 	README.remake REMAKE.todo Rakefile $(am__append_3)
 
 # This is built during configure, but behind configure's back
-DISTCLEANFILES = build.sh
+DISTCLEANFILES = build.sh *.dSYM autoscan.log *~ config/*~ po/*~
 MOSTLYCLEANFILES = *.orig *.rej @MAKE_NAME@
 
 # --------------- Local INSTALL Section
@@ -1319,7 +1319,7 @@ distclean: distclean-recursive
 	-rm -f debugger/$(DEPDIR)/stack.Po
 	-rm -f Makefile
 distclean-am: clean-am distclean-DEJAGNU distclean-compile \
-	distclean-generic distclean-hdr distclean-tags
+	distclean-generic distclean-hdr distclean-local distclean-tags
 
 dvi: dvi-recursive
 
@@ -1436,13 +1436,13 @@ uninstall-man: uninstall-man1
 	dist dist-all dist-bzip2 dist-gzip dist-hook dist-lzip \
 	dist-shar dist-tarZ dist-xz dist-zip dist-zstd distcheck \
 	distclean distclean-DEJAGNU distclean-compile \
-	distclean-generic distclean-hdr distclean-tags distcleancheck \
-	distdir distuninstallcheck dvi dvi-am html html-am html-local \
-	info info-am install install-am install-binPROGRAMS \
-	install-data install-data-am install-dvi install-dvi-am \
-	install-exec install-exec-am install-exec-local install-html \
-	install-html-am install-info install-info-am install-man \
-	install-man1 install-pdf install-pdf-am install-ps \
+	distclean-generic distclean-hdr distclean-local distclean-tags \
+	distcleancheck distdir distuninstallcheck dvi dvi-am html \
+	html-am html-local info info-am install install-am \
+	install-binPROGRAMS install-data install-data-am install-dvi \
+	install-dvi-am install-exec install-exec-am install-exec-local \
+	install-html install-html-am install-info install-info-am \
+	install-man install-man1 install-pdf install-pdf-am install-ps \
 	install-ps-am install-strip installcheck installcheck-am \
 	installdirs installdirs-am maintainer-clean \
 	maintainer-clean-generic mostlyclean mostlyclean-compile \
@@ -1488,6 +1488,15 @@ dist-hook:
 	 tar chf - $$sub) \
 	| (cd $(distdir); tar xfBp -)
 
+distclean-local:
+	-rm -rfv autom4te.cache || rmdir autom4te.cache
+	-rm -rfv .deps || rmdir .deps
+	-rm -rfv debugger/.deps || rmdir debugger/.deps
+	-rm -rfv glob/.deps || rmdir glob/.deps
+	-rm -rfv w32/.deps || rmdir w32/.deps
+	-rm -rfv w32/subproc/.deps || rmdir w32/subproc/.deps
+	-rm -rfv *.dSYM || rmdir *.dSYM
+
 # --------------- Local CHECK Section
 
 check-local: check-regression check-loadavg
@@ -1532,7 +1541,7 @@ check-regression:
 	    echo "Cannot find a working Perl ($(PERL)); the test suite requires Perl."; \
 	  fi; \
 	 else \
-	  echo "Can't find the GNU Make test suite ($(srcdir)/tests)."; \
+	  echo "Cannot find the GNU Make test suite ($(srcdir)/tests)."; \
 	 fi
 
 %.short:

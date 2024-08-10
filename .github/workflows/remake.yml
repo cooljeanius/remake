@@ -1,24 +1,31 @@
+---
 name: cooljeanius/remake
 on:
   push:
     branches:
-    - "**/*"
+      - "**/*"
   pull_request:
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - name: checkout
-      uses: actions/checkout@v4.1.1
-    - run: sudo apt-get install autopoint libreadline-dev wget texinfo dejagnu intltool gettext-doc libasprintf-dev libgettextpo-dev ruby ruby-rspec
-    - run: env | uniq | sort | uniq
-    - run: autopoint --version || gettext --version
-    - run: autoreconf -fvi -Wall -Wno-obsolete && ./configure && make update && (cd doc && make stamp-vti)
-    - run: make
-      if: "${{ success() }}"
-    - run: sync && make check-loadavg && sync
-      if: "${{ success() }}"
-    - run: make check || make check-rspec-broken
-      if: "${{ success() }}"
-    - run: cat /usr/include/errno.h
-      if: "${{ failure() }}"
+      - name: checkout
+        uses: actions/checkout@v4.1.1
+      - name: Dependencies
+        run: |
+          sudo apt-get -qq update
+          sudo apt-get -y install autopoint libreadline-dev wget texinfo \
+            dejagnu intltool gettext-doc libasprintf-dev libgettextpo-dev \
+            ruby ruby-rspec yamllint
+      - run: env | uniq | sort | uniq
+      - run: autopoint --version || gettext --version
+      - run: autoreconf -fvi -Wall -Wno-obsolete && ./configure
+      - run: sync && make update && (cd doc && make stamp-vti)
+      - run: make && yamllint .github/dependabot.yml
+        if: "${{ success() }}"
+      - run: sync && make check-loadavg && sync
+        if: "${{ success() }}"
+      - run: make check || make check-rspec-broken
+        if: "${{ success() }}"
+      - run: cat /usr/include/errno.h
+        if: "${{ failure() }}"

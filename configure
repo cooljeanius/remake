@@ -6021,7 +6021,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
 
 
 else
-  test ! -z "${CC}" && export CC
+  test -n "${CC}" && export CC
 
 fi
 
@@ -13308,7 +13308,7 @@ MAKE_NAME="${make_name}"
 MAKE_NAME_UPPER=`echo ${make_name} | tr a-z A-Z`
 
 if test "x${make_name}" != "x"; then
-  test ! -z "${make_name}"
+  test -n "${make_name}" && echo "make_name is ${make_name}"
 
 printf "%s\n" "#define program_name \"${make_name}\"" >>confdefs.h
 

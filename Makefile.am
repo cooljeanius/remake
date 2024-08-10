@@ -139,7 +139,7 @@ EXTRA_DIST =	README build.sh.in $(man_MANS) \
 
 # This is built during configure, but behind configure's back
 
-DISTCLEANFILES = build.sh
+DISTCLEANFILES = build.sh *.dSYM autoscan.log *~ config/*~ po/*~
 
 MOSTLYCLEANFILES = *.orig *.rej @MAKE_NAME@
 
@@ -197,6 +197,15 @@ dist-hook:
 	 sub=`find w32 tests -follow \( -name CVS -prune -o -name .cvsignore -o -name work -prune \) -o \( -name \*.orig -o -name \*.rej -o -name \*~ -prune \) -o -type f -print`; \
 	 tar chf - $$sub) \
 	| (cd $(distdir); tar xfBp -)
+
+distclean-local:
+	-rm -rfv autom4te.cache || rmdir autom4te.cache
+	-rm -rfv .deps || rmdir .deps
+	-rm -rfv debugger/.deps || rmdir debugger/.deps
+	-rm -rfv glob/.deps || rmdir glob/.deps
+	-rm -rfv w32/.deps || rmdir w32/.deps
+	-rm -rfv w32/subproc/.deps || rmdir w32/subproc/.deps
+	-rm -rfv *.dSYM || rmdir *.dSYM
 
 
 # --------------- Local CHECK Section
@@ -258,7 +267,7 @@ check-regression:
 	    echo "Cannot find a working Perl ($(PERL)); the test suite requires Perl."; \
 	  fi; \
 	 else \
-	  echo "Can't find the GNU Make test suite ($(srcdir)/tests)."; \
+	  echo "Cannot find the GNU Make test suite ($(srcdir)/tests)."; \
 	 fi
 
 %.short:

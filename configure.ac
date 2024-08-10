@@ -49,7 +49,7 @@ if test "x${CC}" = "x"; then
   test -z "${CC}"
   AC_PROG_CC
 else
-  test ! -z "${CC}" && export CC
+  test -n "${CC}" && export CC
   AC_SUBST([CC])
 fi
 AC_PROG_INSTALL
@@ -344,7 +344,7 @@ AC_SUBST([MAKE_NAME])
 MAKE_NAME_UPPER=`echo ${make_name} | tr a-z A-Z`
 AC_SUBST([MAKE_NAME_UPPER])
 if test "x${make_name}" != "x"; then
-  test ! -z "${make_name}"
+  test -n "${make_name}" && echo "make_name is ${make_name}"
   AC_DEFINE_UNQUOTED([program_name],["${make_name}"],[
 The calling program should define program_name and set it to the name
 of the executing program.])
