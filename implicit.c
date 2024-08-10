@@ -209,7 +209,7 @@ pattern_search (struct file *file, int archive,
   const char *filename = archive ? strchr (file->name, '(') : file->name;
 
   /* Length of FILENAME.  */
-  unsigned int namelen = strlen (filename);
+  size_t namelen = strlen(filename);
 
   /* The last slash in FILENAME (or nil if there is none).  */
   const char *lastslash;
@@ -219,25 +219,25 @@ pattern_search (struct file *file, int archive,
      except during a recursive call.  */
   struct file *int_file = 0;
 
-  /* List of dependencies found recursively.  */
-  struct patdeps *deplist
-    = xmalloc (max_pattern_deps * sizeof (struct patdeps));
+  /* List of dependencies found recursively: */
+  struct patdeps *deplist = xmalloc(max_pattern_deps * sizeof(struct patdeps));
   struct patdeps *pat = deplist;
 
-  /* All the prerequisites actually found for a rule, after expansion.  */
+  /* All the prerequisites actually found for a rule, after expansion: */
   struct dep *deps;
 
-  /* Names of possible dependencies are constructed in this buffer.  */
-  char *depname = alloca (namelen + max_pattern_dep_length);
+  /* Names of possible dependencies are constructed in this buffer: */
+  char *depname = alloca(namelen + max_pattern_dep_length);
 
-  /* The start and length of the stem of FILENAME for the current rule.  */
+  /* The start and length of the stem of FILENAME for the current rule: */
   const char *stem = 0;
   unsigned int stemlen = 0;
   unsigned int fullstemlen = 0;
 
-  /* Buffer in which we store all the rules that are possibly applicable.  */
-  struct tryrule *tryrules = xmalloc (num_pattern_rules * max_pattern_targets
-                                      * sizeof (struct tryrule));
+  /* Buffer in which we store all the rules that are possibly applicable: */
+  struct tryrule *tryrules =
+    xmalloc((size_t)(num_pattern_rules * max_pattern_targets)
+            * sizeof(struct tryrule));
 
   /* Number of valid elements in TRYRULES.  */
   unsigned int nrules;
