@@ -94,7 +94,7 @@ AC_CHECK_HEADERS([builtins.h ctype.h errno.h features.h fcntl.h fnmatch.h \
                   locale.h malloc.h malloc/malloc.h netdb.h perror.h \
                   pwd.h setjmp.h signal.h stddef.h stdio.h sys/file.h \
                   sys/param.h sys/resource.h sys/socket.h \
-                  sys/time.h sys/timeb.h time.h types.h \
+                  sys/time.h sys/timeb.h sys/vfork.h time.h types.h \
                   unixio.h unixlib.h wchar.h wctype.h windows.h])dnl
 
 if test "x${ac_cv_header_inttypes_h}" = "x"; then

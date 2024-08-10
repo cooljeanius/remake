@@ -24,7 +24,9 @@ this program.  If not, see <http://www.gnu.org/licenses/>.  */
 #define MAKE_H
 
 #include <config.h>
-#undef  HAVE_CONFIG_H
+#ifdef HAVE_CONFIG_H
+# undef HAVE_CONFIG_H
+#endif /* HAVE_CONFIG_H */
 #define HAVE_CONFIG_H 1
 
 /* Specify we want GNU source code. This must be defined before any
@@ -507,9 +509,13 @@ int strcache_setbufsize (int size);
 #if defined(HAVE_VFORK_H) || __has_include(<vfork.h>)
 # include <vfork.h>
 #else
-# if defined(__GNUC__) && !defined(__STRICT_ANSI__) && !defined(__APPLE__)
-#  warning "make.h expects <vfork.h> to be included."
-# endif /* __GNUC__ && !__STRICT_ANSI__ && !__APPLE__ */
+# if defined(HAVE_SYS_VFORK_H) || __has_include(<sys/vfork.h>)
+#  include <sys/vfork.h>
+# else
+#  if defined(__GNUC__) && !defined(__STRICT_ANSI__) && !defined(__APPLE__)
+#   warning "make.h expects either <vfork.h> or <sys/vfork.h> to be included."
+#  endif /* __GNUC__ && !__STRICT_ANSI__ && !__APPLE__ */
+# endif /* HAVE_SYS_VFORK_H */
 #endif /* HAVE_VFORK_H */
 
 /* We omit these declarations on non-POSIX systems which define _POSIX_VERSION,
