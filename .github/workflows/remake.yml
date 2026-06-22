@@ -21,7 +21,7 @@ jobs:
       - run: sync && (env | uniq | sort | uniq  | grep -v "\*\*\*" | grep -v "PWD\=") && sleep 1
       - run: sync && (autopoint --version || gettext --version) && sync && sleep 1
       - run: autoreconf -fvi -Wall -Wno-obsolete && ./configure
-      - run: sync && make update && (cd doc && make stamp-vti)
+      - run: sync && make update-po && (cd doc && make stamp-vti)
       - run: make && yamllint .github/dependabot.yml
         if: "${{ success() }}"
       - run: sync && make check-loadavg && sync && stat loadavg && sync
