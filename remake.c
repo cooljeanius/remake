@@ -330,8 +330,7 @@ update_file (struct file *file, unsigned int depth,
       status |= update_file_1 (f, depth, p_call_stack);
       check_renamed (f);
 
-      /* Clean up any alloca() used during the update.  */
-      alloca (0);
+      /* No explicit stack cleanup is needed here.  */
 
       /* If we got an error, don't bother with double_colon etc.  */
       if (status != 0 && !keep_going_flag)
