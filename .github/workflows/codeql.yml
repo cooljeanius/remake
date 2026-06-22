@@ -18,10 +18,14 @@ on:
     branches:
       - master
       - dependabot/*
+      - alert-autofix-*
+      - autofix-alert-*
   pull_request:
     branches:
       - master
       - dependabot/*
+      - alert-autofix-*
+      - autofix-alert-*
   schedule:
     - cron: '21 19 * * 1'
 
@@ -46,7 +50,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: ['c-cpp', 'ruby']
+        language: ['actions', 'c-cpp', 'ruby']
         # CodeQL supports:
         # ['c-cpp', 'csharp', 'go', 'java-kotlin', 'javascript-typescript', 'python', 'ruby', 'swift']
         # Use 'java-kotlin' to analyze code written in Java, Kotlin or both
@@ -83,7 +87,7 @@ jobs:
             echo "adding additional dependencies for 'c-cpp' analysis..."; \
             sudo apt-get -qq install curl gdb libelf-dev libdmalloc-dev \
               libc6-dev-amd64-cross libgcc-s1-amd64-cross gettext \
-              autopoint libasprintf-dev libgettextpo-dev; \
+              autopoint libasprintf-dev libgettextpo-dev libreadline-dev; \
             sync && echo "...and done."; \
           else \
             sync && echo "skipping 'c-cpp' dependencies (matrix.language is ${{ matrix.language }})..."; \
