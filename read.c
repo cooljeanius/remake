@@ -2296,7 +2296,8 @@ find_percent_cached (const char **string)
 {
   const char *p = *string;
   char *new = 0;
-  int slen = 0;
+  int slen = strlen(*string);
+  char *newbuf = alloca(slen + 1); /* FIXME: -Wreturn-local-addr */
 
   /* If the first char is a % return now.  This lets us avoid extra tests
      inside the loop.  */
@@ -2324,12 +2325,11 @@ find_percent_cached (const char **string)
           --i;
         ++i;
 
-        /* At this point we know we'll need to allocate a new string.
+        /* At this point we know we'll need to modify the string.
            Make a copy if we haven't yet done so.  */
         if (! new)
           {
-            slen = strlen(*string);
-            new = alloca(slen + 1); /* FIXME: -Wreturn-local-addr */
+            new = newbuf;
             memcpy(new, *string, slen + 1);
             p = (new + (p - *string));
             *string = new;
